@@ -121,7 +121,7 @@ export default function Home() {
 
         {view === "facts" && <FunFacts matches={matches} scorigami={scorigami} />}
 
-        <footer className="pt-6 border-t border-zinc-200 dark:border-zinc-800 text-xs text-zinc-400 flex items-center justify-between">
+        <footer className="pt-6 border-t border-zinc-200 dark:border-zinc-800 text-xs text-zinc-400 space-y-4">
           <div>
             {t("footer.dataFrom")}{" "}
             <a href="https://github.com/jfjelstul/worldcup" className="underline" target="_blank" rel="noopener noreferrer">
@@ -129,16 +129,18 @@ export default function Home() {
             </a>{" "}
             {t("footer.author")}
           </div>
-          <a
-            href="https://www.buymeacoffee.com/wap_"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium"
-            style={{ backgroundColor: "#FFDD00", color: "#000000", fontFamily: "Cookie, cursive" }}
-          >
-            <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" className="h-4 w-4" />
-            Buy me a coffee
-          </a>
+          <div className="flex justify-center">
+            <a
+              href="https://www.buymeacoffee.com/wap_"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium"
+              style={{ backgroundColor: "#FFDD00", color: "#000000", fontFamily: "Cookie, cursive" }}
+            >
+              <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" className="h-4 w-4" />
+              Buy me a coffee
+            </a>
+          </div>
         </footer>
       </main>
     </div>
