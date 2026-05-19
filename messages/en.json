@@ -1,0 +1,66 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Every unique final score in Men's FIFA World Cup history"
+  },
+  "explainer": {
+    "title": "What is Scorigami?",
+    "description": "Scorigami is the concept of a final score that has never happened before in a sport's history. The idea was popularized by Jon Bois, whose brilliant work on NFL scorigami inspired this project.",
+    "watchVideo": "Watch the original video",
+    "whyBuilt": "I built World Cupigami to bring a little American sporting culture to the world's biggest stage — in the spirit of sharing that makes the World Cup special. Scorigami works a bit differently in soccer than in American football, since goals are scored one at a time rather than in chunks of 2, 3, 6, or 7. That makes new scorigamis rarer and more meaningful.",
+    "mensOnly": "This currently covers the Men's FIFA World Cup only. A Women's World Cup edition is coming soon.",
+    "pointTitle": "What's the point of this?",
+    "pointDescription": "Honestly? Nothing. It's just fun if you're a sports analytics nerd like me. But if there's one good thing that can come out of this — when your team scores a scorigami, consider donating to a charity in the losing team's country. A historic scoreline is a great excuse to do some good in the world."
+  },
+  "stats": {
+    "matches": "matches",
+    "uniqueScores": "unique scores",
+    "neverHappened": "never happened",
+    "tournaments": "Tournaments"
+  },
+  "views": {
+    "heatmap": "Heatmap",
+    "allMatches": "All Matches"
+  },
+  "grid": {
+    "description": "Rows = losing score · Columns = winning score · Click any cell",
+    "never": "Never",
+    "unique": "Unique (1×)",
+    "veryRare": "Very Rare",
+    "rare": "Rare",
+    "common": "Common",
+    "veryCommon": "Very Common",
+    "neverHappened": "{low}–{high}: Never",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "{low}–{high} has never happened in World Cup history.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Close"
+  },
+  "table": {
+    "searchPlaceholder": "Search teams, tournaments, scores...",
+    "date": "Date",
+    "home": "Home",
+    "score": "Score",
+    "away": "Away",
+    "stage": "Stage",
+    "year": "Year",
+    "showingOf": "Showing {shown} of {total} matches."
+  },
+  "stages": {
+    "group stage": "Group Stage",
+    "round of 16": "Round of 16",
+    "quarter-finals": "Quarter-Finals",
+    "semi-finals": "Semi-Finals",
+    "third-place match": "Third-Place Match",
+    "final": "Final"
+  },
+  "footer": {
+    "dataFrom": "Data from",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

@@ -1,0 +1,66 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Cada marcador único en la historia de la Copa Mundial Masculina de la FIFA"
+  },
+  "explainer": {
+    "title": "¿Qué es Scorigami?",
+    "description": "Scorigami es el concepto de un marcador final que nunca ha ocurrido en la historia de un deporte. La idea fue popularizada por Jon Bois, cuyo brillante trabajo sobre el scorigami de la NFL inspiró este proyecto.",
+    "watchVideo": "Ver el video original",
+    "whyBuilt": "Creé World Cupigami para llevar un poco de la cultura deportiva estadounidense al escenario más grande del mundo — en el espíritu de compartir que hace especial a la Copa Mundial. El scorigami funciona un poco diferente en el fútbol que en el fútbol americano, ya que los goles se anotan de uno en uno en lugar de en grupos de 2, 3, 6 o 7. Eso hace que los nuevos scorigamis sean más raros y significativos.",
+    "mensOnly": "Actualmente esto cubre solo la Copa Mundial Masculina de la FIFA. Una edición de la Copa Mundial Femenina llegará pronto.",
+    "pointTitle": "¿Cuál es el objetivo de esto?",
+    "pointDescription": "¿Honestamente? Nada. Es solo diversión para nerds de la analítica deportiva como yo. Pero si algo bueno puede salir de esto — cuando tu equipo logre un scorigami, considera donar a una organización benéfica en el país del equipo perdedor. Un marcador histórico es una gran excusa para hacer algo bueno en el mundo."
+  },
+  "stats": {
+    "matches": "partidos",
+    "uniqueScores": "marcadores únicos",
+    "neverHappened": "nunca ocurridos",
+    "tournaments": "Torneos"
+  },
+  "views": {
+    "heatmap": "Mapa de calor",
+    "allMatches": "Todos los partidos"
+  },
+  "grid": {
+    "description": "Filas = marcador perdedor · Columnas = marcador ganador · Haz clic en cualquier celda",
+    "never": "Nunca",
+    "unique": "Único (1×)",
+    "veryRare": "Muy raro",
+    "rare": "Raro",
+    "common": "Común",
+    "veryCommon": "Muy común",
+    "neverHappened": "{low}–{high}: Nunca",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "¡Scorigami!",
+    "scorigamiDescription": "{low}–{high} nunca ha ocurrido en la historia de la Copa Mundial.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Cerrar"
+  },
+  "table": {
+    "searchPlaceholder": "Buscar equipos, torneos, marcadores...",
+    "date": "Fecha",
+    "home": "Local",
+    "score": "Marcador",
+    "away": "Visitante",
+    "stage": "Fase",
+    "year": "Año",
+    "showingOf": "Mostrando {shown} de {total} partidos."
+  },
+  "stages": {
+    "group stage": "Fase de grupos",
+    "round of 16": "Octavos de final",
+    "quarter-finals": "Cuartos de final",
+    "semi-finals": "Semifinales",
+    "third-place match": "Tercer puesto",
+    "final": "Final"
+  },
+  "footer": {
+    "dataFrom": "Datos de",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "por Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}
