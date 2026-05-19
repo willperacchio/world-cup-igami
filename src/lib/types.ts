@@ -10,6 +10,10 @@ export interface Match {
   awayScore: number;
   extraTime: boolean;
   penaltyShootout: boolean;
+  penaltyScore: string;
+  stadium: string;
+  city: string;
+  country: string;
 }
 
 export interface ScorigamiEntry {

@@ -58,6 +58,10 @@ interface Match {
   awayScore: number;
   extraTime: boolean;
   penaltyShootout: boolean;
+  penaltyScore: string;
+  stadium: string;
+  city: string;
+  country: string;
 }
 
 const allMatches = lines.slice(1).map((line) => {
@@ -76,6 +80,10 @@ const allMatches = lines.slice(1).map((line) => {
     awayScore: parseInt(getCol(cols, "away_team_score")),
     extraTime: getCol(cols, "extra_time") === "1",
     penaltyShootout: getCol(cols, "penalty_shootout") === "1",
+    penaltyScore: getCol(cols, "score_penalties"),
+    stadium: getCol(cols, "stadium_name"),
+    city: getCol(cols, "city_name"),
+    country: getCol(cols, "country_name"),
   };
 });
 

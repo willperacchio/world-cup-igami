@@ -46,6 +46,7 @@
     "score": "Marcador",
     "away": "Visitante",
     "stage": "Fase",
+    "venue": "Sede",
     "year": "Año",
     "showingOf": "Mostrando {shown} de {total} partidos.",
     "allTournaments": "Todos los torneos",

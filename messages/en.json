@@ -46,6 +46,7 @@
     "score": "Score",
     "away": "Away",
     "stage": "Stage",
+    "venue": "Venue",
     "year": "Year",
     "showingOf": "Showing {shown} of {total} matches.",
     "allTournaments": "All Tournaments",

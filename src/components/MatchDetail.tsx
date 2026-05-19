@@ -54,12 +54,19 @@ export default function MatchDetail({ entry, allMatches, lowScore, highScore, on
               {m.homeTeam}
               <img src={getFlagSrc(m.homeCode, parseInt(m.date.slice(0, 4)))} alt={m.homeTeam} className="w-5 h-3.5 object-cover rounded-sm border border-zinc-200 dark:border-zinc-700" />
             </span>
-            <span className="font-bold w-12 text-center">{m.homeScore}–{m.awayScore}</span>
+            <span className="font-bold w-20 text-center">
+              {m.homeScore}–{m.awayScore}
+              {m.extraTime && !m.penaltyShootout && <span className="text-[10px] text-zinc-400 block">(aet)</span>}
+              {m.penaltyShootout && <span className="text-[10px] text-zinc-400 block">({m.penaltyScore} pen)</span>}
+            </span>
             <span className="flex-1 font-medium flex items-center gap-1.5">
               <img src={getFlagSrc(m.awayCode, parseInt(m.date.slice(0, 4)))} alt={m.awayTeam} className="w-5 h-3.5 object-cover rounded-sm border border-zinc-200 dark:border-zinc-700" />
               {m.awayTeam}
             </span>
-            <span className="text-zinc-400 text-xs w-24 text-right">{tStages(m.stage)}</span>
+            <span className="text-zinc-400 text-xs w-32 text-right">
+              <span className="block">{tStages(m.stage)}</span>
+              <span className="text-zinc-500">{m.city}, {m.country}</span>
+            </span>
           </div>
         ))}
       </div>

@@ -109,6 +109,7 @@ export default function MatchTable({ matches }: Props) {
             <th className="py-2 px-2 text-center cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100" onClick={() => toggleSort("score")}>{t("score")}{sortField === "score" ? arrow : ""}</th>
             <th className="py-2 px-2">{t("away")}</th>
             <th className="py-2 px-2">{t("stage")}</th>
+            <th className="py-2 px-2">{t("venue")}</th>
             <th className="py-2 px-2">{t("year")}</th>
           </tr>
         </thead>
@@ -123,13 +124,14 @@ export default function MatchTable({ matches }: Props) {
               <td className="py-2 px-2 text-center font-bold">
                 {m.homeScore}–{m.awayScore}
                 {m.extraTime && !m.penaltyShootout && <span className="text-xs text-zinc-400 ml-1">(aet)</span>}
-                {m.penaltyShootout && <span className="text-xs text-zinc-400 ml-1">(pen)</span>}
+                {m.penaltyShootout && <span className="text-xs text-zinc-400 ml-1">({m.penaltyScore} pen)</span>}
               </td>
               <td className="py-2 px-2 font-medium">
                 <img src={getFlagSrc(m.awayCode, parseInt(m.date.slice(0, 4)))} alt={m.awayTeam} className="inline-block w-5 h-3.5 object-cover mr-1.5 rounded-sm border border-zinc-200 dark:border-zinc-700" />
                 {m.awayTeam}
               </td>
               <td className="py-2 px-2 text-zinc-500 text-xs">{tStages(m.stage)}</td>
+              <td className="py-2 px-2 text-zinc-400 text-xs">{m.city}, {m.country}</td>
               <td className="py-2 px-2 text-zinc-400 text-xs">{m.tournament.replace(" FIFA Men's World Cup", "")}</td>
             </tr>
           ))}
