@@ -20,7 +20,8 @@
   },
   "views": {
     "heatmap": "Heatmap",
-    "allMatches": "All Matches"
+    "allMatches": "All Matches",
+    "funFacts": "Fun Facts"
   },
   "grid": {
     "description": "Rows = losing score · Columns = winning score · Click any cell",
@@ -67,6 +68,27 @@
     "dataFrom": "Data from",
     "dataSource": "The Fjelstul World Cup Database",
     "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "funFacts": {
+    "mostRecentTitle": "Most Recent Scorigami",
+    "mostRecentNote": "This was the first time this scoreline had ever occurred in World Cup history.",
+    "trueScorigamisTitle": "True Scorigamis",
+    "trueScorigamisDesc": "Scorelines that have happened exactly once — never before, never since.",
+    "mostCommonTitle": "Most Common Scorelines",
+    "highestScoringTitle": "Highest-Scoring Matches",
+    "biggestBlowoutsTitle": "Biggest Blowouts",
+    "scorigamiKingsTitle": "Scorigami Kings",
+    "scorigamiKingsDesc": "Teams involved in the most unique scorelines.",
+    "finalsTitle": "World Cup Finals",
+    "finalsDesc": "The most common finals scoreline is {score}, which has happened {count} times ({years}).",
+    "extraTimeGames": "extra time games",
+    "penaltyShootouts": "penalty shootouts",
+    "totalGoals": "total goals",
+    "goalsPerEraTitle": "Goals Per Game by Decade",
+    "goalsPerEraPeak": "Peak: {peak} ({peakAvg}/game). Lowest: {trough} ({troughAvg}/game).",
+    "frontierTitle": "The Scorigami Frontier",
+    "frontierDesc": "These scores have never happened but are the most likely to occur next.",
+    "frontierNote": "With the 2026 World Cup expanding to 48 teams and 104 matches, more mismatches could finally break new ground."
   },
   "locale": {}
 }

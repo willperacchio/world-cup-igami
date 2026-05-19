@@ -20,7 +20,8 @@
   },
   "views": {
     "heatmap": "Mapa de calor",
-    "allMatches": "Todos los partidos"
+    "allMatches": "Todos los partidos",
+    "funFacts": "Datos curiosos"
   },
   "grid": {
     "description": "Filas = marcador perdedor · Columnas = marcador ganador · Haz clic en cualquier celda",
@@ -67,6 +68,27 @@
     "dataFrom": "Datos de",
     "dataSource": "The Fjelstul World Cup Database",
     "author": "por Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "funFacts": {
+    "mostRecentTitle": "Scorigami más reciente",
+    "mostRecentNote": "Esta fue la primera vez que este marcador ocurrió en la historia de la Copa Mundial.",
+    "trueScorigamisTitle": "Scorigamis verdaderos",
+    "trueScorigamisDesc": "Marcadores que han ocurrido exactamente una vez — nunca antes, nunca después.",
+    "mostCommonTitle": "Marcadores más comunes",
+    "highestScoringTitle": "Partidos con más goles",
+    "biggestBlowoutsTitle": "Mayores goleadas",
+    "scorigamiKingsTitle": "Reyes del Scorigami",
+    "scorigamiKingsDesc": "Equipos involucrados en los marcadores más únicos.",
+    "finalsTitle": "Finales de la Copa Mundial",
+    "finalsDesc": "El marcador más común en finales es {score}, que ha ocurrido {count} veces ({years}).",
+    "extraTimeGames": "partidos con prórroga",
+    "penaltyShootouts": "tandas de penaltis",
+    "totalGoals": "goles totales",
+    "goalsPerEraTitle": "Goles por partido por década",
+    "goalsPerEraPeak": "Máximo: {peak} ({peakAvg}/partido). Mínimo: {trough} ({troughAvg}/partido).",
+    "frontierTitle": "La frontera del Scorigami",
+    "frontierDesc": "Estos marcadores nunca han ocurrido pero son los más probables de suceder.",
+    "frontierNote": "Con la Copa Mundial 2026 expandiéndose a 48 equipos y 104 partidos, más desigualdades podrían finalmente romper nuevos récords."
   },
   "locale": {}
 }

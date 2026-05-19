@@ -2,14 +2,15 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { matches, summary, getScorigamiGrid } from "@/lib/data";
+import { matches, scorigami, summary, getScorigamiGrid } from "@/lib/data";
 import type { ScorigamiEntry } from "@/lib/types";
 import ScorigamiGrid from "@/components/ScorigamiGrid";
 import MatchTable from "@/components/MatchTable";
 import MatchDetail from "@/components/MatchDetail";
+import FunFacts from "@/components/FunFacts";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
 
-type View = "grid" | "table";
+type View = "grid" | "table" | "facts";
 
 export default function Home() {
   const [view, setView] = useState<View>("grid");
@@ -83,6 +84,16 @@ export default function Home() {
           >
             {t("views.allMatches")}
           </button>
+          <button
+            onClick={() => setView("facts")}
+            className={`px-3 py-1.5 rounded text-sm font-medium ${
+              view === "facts"
+                ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900"
+                : "bg-zinc-100 dark:bg-zinc-800"
+            }`}
+          >
+            {t("views.funFacts")}
+          </button>
         </div>
 
         {view === "grid" && (
@@ -107,6 +118,8 @@ export default function Home() {
         )}
 
         {view === "table" && <MatchTable matches={matches} />}
+
+        {view === "facts" && <FunFacts matches={matches} scorigami={scorigami} />}
 
         <footer className="pt-6 border-t border-zinc-200 dark:border-zinc-800 text-xs text-zinc-400">
           {t("footer.dataFrom")}{" "}
