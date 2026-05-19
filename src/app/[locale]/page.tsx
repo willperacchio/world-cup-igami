@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Script from "next/script";
 import { useTranslations } from "next-intl";
 import { matches, scorigami, summary, getScorigamiGrid } from "@/lib/data";
 import type { ScorigamiEntry } from "@/lib/types";
@@ -130,21 +129,16 @@ export default function Home() {
             </a>{" "}
             {t("footer.author")}
           </div>
-          <div>
-            <Script
-              src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
-              data-name="bmc-button"
-              data-slug="wap_"
-              data-color="#FFDD00"
-              data-emoji=""
-              data-font="Cookie"
-              data-text="Buy me a coffee"
-              data-outline-color="#000000"
-              data-font-color="#000000"
-              data-coffee-color="#ffffff"
-              strategy="lazyOnload"
-            />
-          </div>
+          <a
+            href="https://www.buymeacoffee.com/wap_"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium"
+            style={{ backgroundColor: "#FFDD00", color: "#000000", fontFamily: "Cookie, cursive" }}
+          >
+            <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" className="h-4 w-4" />
+            Buy me a coffee
+          </a>
         </footer>
       </main>
     </div>
