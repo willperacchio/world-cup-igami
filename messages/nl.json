@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Elke unieke eindstand in de geschiedenis van het FIFA WK voor mannen"
+  },
+  "explainer": {
+    "title": "Wat is Scorigami?",
+    "description": "Scorigami is het concept van een eindstand die nog nooit eerder is voorgekomen in de geschiedenis van een sport. Het idee werd populair gemaakt door Jon Bois, wiens briljante werk over NFL scorigami dit project inspireerde.",
+    "watchVideo": "Bekijk de originele video",
+    "whyBuilt": "Ik bouwde World Cupigami om een beetje Amerikaanse sportcultuur naar het grootste podium ter wereld te brengen — in de geest van delen die het WK zo bijzonder maakt. Scorigami werkt in voetbal iets anders dan in American football, omdat doelpunten één voor één worden gescoord in plaats van in brokken van 2, 3, 6 of 7. Daardoor zijn nieuwe scorigami's zeldzamer en betekenisvoller.",
+    "mensOnly": "Dit omvat momenteel alleen het FIFA WK voor mannen. Een editie voor het WK vrouwen komt binnenkort.",
+    "pointTitle": "Wat is het nut hiervan?",
+    "pointDescription": "Eerlijk gezegd? Niets. Het is gewoon leuk als je een sportanalyse-nerd bent zoals ik. Maar als er één goed iets uit kan voortkomen — als jouw team een scorigami scoort, overweeg dan een donatie aan een goed doel in het land van de verliezende ploeg. Een historische stand is een prima reden om iets goeds te doen in de wereld."
+  },
+  "stats": {
+    "matches": "wedstrijden",
+    "uniqueScores": "unieke standen",
+    "neverHappened": "nooit voorgekomen",
+    "tournaments": "Toernooien"
+  },
+  "views": {
+    "heatmap": "Heatmap",
+    "allMatches": "Alle Wedstrijden"
+  },
+  "grid": {
+    "description": "Rijen = verliezende stand · Kolommen = winnende stand · Klik op een cel",
+    "never": "Nooit",
+    "unique": "Uniek (1×)",
+    "veryRare": "Zeer zeldzaam",
+    "rare": "Zeldzaam",
+    "common": "Gewoon",
+    "veryCommon": "Zeer gewoon",
+    "neverHappened": "{low}–{high}: Nooit",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "{low}–{high} is nog nooit voorgekomen in de WK-geschiedenis.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Sluiten"
+  },
+  "table": {
+    "searchPlaceholder": "Zoek teams, toernooien, standen...",
+    "date": "Datum",
+    "home": "Thuis",
+    "score": "Stand",
+    "away": "Uit",
+    "stage": "Fase",
+    "venue": "Stadion",
+    "year": "Jaar",
+    "showingOf": "{shown} van {total} wedstrijden weergegeven.",
+    "allTournaments": "Alle Toernooien",
+    "allStages": "Alle Fases",
+    "showAll": "Alles tonen",
+    "showLess": "Minder tonen"
+  },
+  "stages": {
+    "group stage": "Groepsfase",
+    "round of 32": "Ronde van 32",
+    "round of 16": "Ronde van 16",
+    "quarter-finals": "Kwartfinales",
+    "semi-finals": "Halve finales",
+    "third-place match": "Troostfinale",
+    "final": "Finale"
+  },
+  "footer": {
+    "dataFrom": "Gegevens van",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Alle unike sluttresultater i herrenes FIFA World Cup-historie"
+  },
+  "explainer": {
+    "title": "Hva er Scorigami?",
+    "description": "Scorigami er konseptet om et sluttresultat som aldri har forekommet før i en idretts historie. Ideen ble popularisert av Jon Bois, hvis fremragende arbeid med NFL-scorigami inspirerte dette prosjektet.",
+    "watchVideo": "Se originalvideoen",
+    "whyBuilt": "Jeg bygde World Cupigami for å bringe litt amerikansk idrettskultur til verdens største scene – i delingsånden som gjør VM så spesielt. Scorigami fungerer litt annerledes i fotball enn i amerikansk fotball, siden mål scores ett om gangen i stedet for i bolker på 2, 3, 6 eller 7. Det gjør nye scorigamier sjeldnere og mer betydningsfulle.",
+    "mensOnly": "Dette dekker foreløpig kun herrenes FIFA World Cup. En utgave for dame-VM kommer snart.",
+    "pointTitle": "Hva er vitsen med dette?",
+    "pointDescription": "Ærlig talt? Ingenting. Det er bare gøy hvis du er en sportsanalytiker-nerd som meg. Men hvis det er én god ting som kan komme ut av dette – når laget ditt scorer en scorigami, vurder å donere til en veldedig organisasjon i det tapende lagets land. Et historisk resultat er en god unnskyldning for å gjøre noe godt i verden."
+  },
+  "stats": {
+    "matches": "kamper",
+    "uniqueScores": "unike resultater",
+    "neverHappened": "har aldri skjedd",
+    "tournaments": "Turneringer"
+  },
+  "views": {
+    "heatmap": "Varmekart",
+    "allMatches": "Alle kamper"
+  },
+  "grid": {
+    "description": "Rader = tapende score · Kolonner = vinnende score · Klikk på en celle",
+    "never": "Aldri",
+    "unique": "Unik (1×)",
+    "veryRare": "Svært sjelden",
+    "rare": "Sjelden",
+    "common": "Vanlig",
+    "veryCommon": "Svært vanlig",
+    "neverHappened": "{low}–{high}: Aldri",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "{low}–{high} har aldri skjedd i VM-historien.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Lukk"
+  },
+  "table": {
+    "searchPlaceholder": "Søk etter lag, turneringer, resultater...",
+    "date": "Dato",
+    "home": "Hjemmelag",
+    "score": "Resultat",
+    "away": "Bortelag",
+    "stage": "Runde",
+    "venue": "Stadion",
+    "year": "År",
+    "showingOf": "Viser {shown} av {total} kamper.",
+    "allTournaments": "Alle turneringer",
+    "allStages": "Alle runder",
+    "showAll": "Vis alle",
+    "showLess": "Vis færre"
+  },
+  "stages": {
+    "group stage": "Gruppespill",
+    "round of 32": "Runde av 32",
+    "round of 16": "Runde av 16",
+    "quarter-finals": "Kvartfinaler",
+    "semi-finals": "Semifinaler",
+    "third-place match": "Bronsefinale",
+    "final": "Finale"
+  },
+  "footer": {
+    "dataFrom": "Data fra",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

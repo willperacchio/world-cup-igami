@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Varje unikt slutresultat i herrarnas FIFA World Cup-historia"
+  },
+  "explainer": {
+    "title": "Vad är Scorigami?",
+    "description": "Scorigami är konceptet av ett slutresultat som aldrig tidigare förekommit i en sports historia. Idén populariserades av Jon Bois, vars briljanta arbete om NFL-scorigami inspirerade det här projektet.",
+    "watchVideo": "Se originalvideon",
+    "whyBuilt": "Jag byggde World Cupigami för att ta med lite amerikansk sportkultur till världens största scen — i den anda av delande som gör VM så speciellt. Scorigami fungerar lite annorlunda i fotboll än i amerikansk fotboll, eftersom mål görs ett i taget snarare än i klumpar om 2, 3, 6 eller 7. Det gör nya scorigamis mer sällsynta och mer betydelsefulla.",
+    "mensOnly": "Det här täcker för närvarande endast herrarnas FIFA World Cup. En utgåva för Dam-VM kommer snart.",
+    "pointTitle": "Vad är poängen med detta?",
+    "pointDescription": "Ärligt talat? Ingenting. Det är bara kul om man är ett sportanalys-nörd som jag. Men om det finns en bra sak som kan komma ut av det här — när ditt lag gör en scorigami, överväg att donera till en välgörenhetsorganisation i det förlorande lagets land. En historisk målsiffra är ett utmärkt tillfälle att göra något gott i världen."
+  },
+  "stats": {
+    "matches": "matcher",
+    "uniqueScores": "unika resultat",
+    "neverHappened": "har aldrig hänt",
+    "tournaments": "Turneringar"
+  },
+  "views": {
+    "heatmap": "Värmekarta",
+    "allMatches": "Alla matcher"
+  },
+  "grid": {
+    "description": "Rader = förlorarens poäng · Kolumner = vinnares poäng · Klicka på valfri cell",
+    "never": "Aldrig",
+    "unique": "Unikt (1×)",
+    "veryRare": "Mycket sällsynt",
+    "rare": "Sällsynt",
+    "common": "Vanligt",
+    "veryCommon": "Mycket vanligt",
+    "neverHappened": "{low}–{high}: Aldrig",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "{low}–{high} har aldrig förekommit i VM-historien.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Stäng"
+  },
+  "table": {
+    "searchPlaceholder": "Sök lag, turneringar, resultat...",
+    "date": "Datum",
+    "home": "Hemmalag",
+    "score": "Resultat",
+    "away": "Bortalag",
+    "stage": "Omgång",
+    "venue": "Arena",
+    "year": "År",
+    "showingOf": "Visar {shown} av {total} matcher.",
+    "allTournaments": "Alla turneringar",
+    "allStages": "Alla omgångar",
+    "showAll": "Visa alla",
+    "showLess": "Visa färre"
+  },
+  "stages": {
+    "group stage": "Gruppspel",
+    "round of 32": "Omgång 32",
+    "round of 16": "Omgång 16",
+    "quarter-finals": "Kvartsfinaler",
+    "semi-finals": "Semifinaler",
+    "third-place match": "Bronsmatch",
+    "final": "Final"
+  },
+  "footer": {
+    "dataFrom": "Data från",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Každé jedinečné konečné skóre v historii mužského mistrovství světa FIFA"
+  },
+  "explainer": {
+    "title": "Co je Scorigami?",
+    "description": "Scorigami je koncept konečného skóre, které se v historii daného sportu ještě nikdy nestalo. Myšlenku zpopularizoval Jon Bois, jehož skvělá práce o NFL scorigami tento projekt inspirovala.",
+    "watchVideo": "Zhlédnout původní video",
+    "whyBuilt": "World Cupigami jsem vytvořil, abych přinesl kousek americké sportovní kultury na největší světovou scénu — v duchu sdílení, které dělá mistrovství světa výjimečným. Scorigami funguje ve fotbale trochu jinak než v americkém fotbale, protože góly padají vždy po jednom, nikoli po skupinách 2, 3, 6 nebo 7. To dělá nová scorigami vzácnějšími a významnějšími.",
+    "mensOnly": "Momentálně jsou zde zahrnuty pouze mužské mistrovství světa FIFA. Ženská verze se brzy chystá.",
+    "pointTitle": "K čemu to je?",
+    "pointDescription": "Upřímně? K ničemu. Je to prostě zábava pro ty, kdo milují sportovní analytiku jako já. Ale pokud z toho může vzejít aspoň jedna dobrá věc — až váš tým dosáhne scorigami, zvažte dar charitativní organizaci v zemi poraženého týmu. Historické skóre je skvělá záminka udělat něco dobrého pro svět."
+  },
+  "stats": {
+    "matches": "zápasů",
+    "uniqueScores": "jedinečných skóre",
+    "neverHappened": "nikdy nenastalo",
+    "tournaments": "Turnaje"
+  },
+  "views": {
+    "heatmap": "Heatmapa",
+    "allMatches": "Všechny zápasy"
+  },
+  "grid": {
+    "description": "Řádky = skóre poraženého · Sloupce = skóre vítěze · Klikněte na libovolné pole",
+    "never": "Nikdy",
+    "unique": "Jedinečné (1×)",
+    "veryRare": "Velmi vzácné",
+    "rare": "Vzácné",
+    "common": "Časté",
+    "veryCommon": "Velmi časté",
+    "neverHappened": "{low}–{high}: Nikdy",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "{low}–{high} se v historii mistrovství světa ještě nikdy nestalo.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Zavřít"
+  },
+  "table": {
+    "searchPlaceholder": "Hledat týmy, turnaje, skóre...",
+    "date": "Datum",
+    "home": "Domácí",
+    "score": "Skóre",
+    "away": "Hosté",
+    "stage": "Fáze",
+    "venue": "Místo",
+    "year": "Rok",
+    "showingOf": "Zobrazeno {shown} z {total} zápasů.",
+    "allTournaments": "Všechny turnaje",
+    "allStages": "Všechny fáze",
+    "showAll": "Zobrazit vše",
+    "showLess": "Zobrazit méně"
+  },
+  "stages": {
+    "group stage": "Skupinová fáze",
+    "round of 32": "Kolo 32 týmů",
+    "round of 16": "Osmifinále",
+    "quarter-finals": "Čtvrtfinále",
+    "semi-finals": "Semifinále",
+    "third-place match": "Zápas o třetí místo",
+    "final": "Finále"
+  },
+  "footer": {
+    "dataFrom": "Data z",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

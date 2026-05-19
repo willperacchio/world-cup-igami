@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Mọi tỷ số cuối trận duy nhất trong lịch sử FIFA World Cup Nam"
+  },
+  "explainer": {
+    "title": "Scorigami là gì?",
+    "description": "Scorigami là khái niệm chỉ một tỷ số cuối trận chưa từng xảy ra trong lịch sử của một môn thể thao. Ý tưởng này được Jon Bois phổ biến rộng rãi, và công trình xuất sắc của ông về NFL scorigami đã truyền cảm hứng cho dự án này.",
+    "watchVideo": "Xem video gốc",
+    "whyBuilt": "Tôi xây dựng World Cupigami để mang một chút văn hóa thể thao Mỹ đến với sân khấu lớn nhất thế giới — theo tinh thần chia sẻ làm nên sự đặc biệt của World Cup. Scorigami hoạt động hơi khác trong bóng đá so với bóng bầu dục Mỹ, vì bàn thắng được ghi từng cái một thay vì theo từng cụm 2, 3, 6 hay 7 điểm. Điều đó khiến những scorigami mới trở nên hiếm hoi và có ý nghĩa hơn.",
+    "mensOnly": "Hiện tại trang này chỉ bao gồm FIFA World Cup Nam. Phiên bản World Cup Nữ sẽ sớm ra mắt.",
+    "pointTitle": "Mục đích của trang này là gì?",
+    "pointDescription": "Thật lòng mà nói? Không có gì cả. Chỉ đơn giản là thú vui cho những ai mê phân tích thể thao như tôi. Nhưng nếu có một điều tốt có thể xuất phát từ đây — khi đội của bạn ghi được một scorigami, hãy cân nhắc quyên góp cho một tổ chức từ thiện ở đất nước của đội thua. Một tỷ số lịch sử là lý do tuyệt vời để làm điều gì đó có ích cho thế giới."
+  },
+  "stats": {
+    "matches": "trận đấu",
+    "uniqueScores": "tỷ số duy nhất",
+    "neverHappened": "chưa từng xảy ra",
+    "tournaments": "Giải đấu"
+  },
+  "views": {
+    "heatmap": "Bản đồ nhiệt",
+    "allMatches": "Tất cả trận đấu"
+  },
+  "grid": {
+    "description": "Hàng = tỷ số thua · Cột = tỷ số thắng · Nhấp vào ô bất kỳ",
+    "never": "Chưa từng",
+    "unique": "Duy nhất (1×)",
+    "veryRare": "Rất hiếm",
+    "rare": "Hiếm",
+    "common": "Phổ biến",
+    "veryCommon": "Rất phổ biến",
+    "neverHappened": "{low}–{high}: Chưa từng xảy ra",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "{low}–{high} chưa từng xảy ra trong lịch sử World Cup.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Đóng"
+  },
+  "table": {
+    "searchPlaceholder": "Tìm kiếm đội, giải đấu, tỷ số...",
+    "date": "Ngày",
+    "home": "Chủ nhà",
+    "score": "Tỷ số",
+    "away": "Khách",
+    "stage": "Vòng đấu",
+    "venue": "Sân vận động",
+    "year": "Năm",
+    "showingOf": "Hiển thị {shown} trong tổng số {total} trận đấu.",
+    "allTournaments": "Tất cả giải đấu",
+    "allStages": "Tất cả vòng đấu",
+    "showAll": "Hiển thị tất cả",
+    "showLess": "Thu gọn"
+  },
+  "stages": {
+    "group stage": "Vòng bảng",
+    "round of 32": "Vòng 32",
+    "round of 16": "Vòng 16",
+    "quarter-finals": "Tứ kết",
+    "semi-finals": "Bán kết",
+    "third-place match": "Tranh hạng ba",
+    "final": "Chung kết"
+  },
+  "footer": {
+    "dataFrom": "Dữ liệu từ",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

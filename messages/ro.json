@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Fiecare scor final unic din istoria Cupei Mondiale Masculine FIFA"
+  },
+  "explainer": {
+    "title": "Ce este Scorigami?",
+    "description": "Scorigami este conceptul unui scor final care nu s-a mai întâmplat niciodată în istoria unui sport. Ideea a fost popularizată de Jon Bois, al cărui lucru strălucit despre NFL scorigami a inspirat acest proiect.",
+    "watchVideo": "Vezi videoclipul original",
+    "whyBuilt": "Am construit World Cupigami pentru a aduce puțină cultură sportivă americană pe cea mai mare scenă a lumii — în spiritul împărtășirii care face Cupa Mondială specială. Scorigami funcționează puțin diferit în fotbal față de fotbalul american, deoarece golurile sunt marcate câte unul, nu în grupuri de 2, 3, 6 sau 7. Asta face ca noile scorigami să fie mai rare și mai semnificative.",
+    "mensOnly": "Aceasta acoperă în prezent doar Cupa Mondială Masculină FIFA. O ediție pentru Cupa Mondială Feminină va apărea în curând.",
+    "pointTitle": "Care este rostul?",
+    "pointDescription": "Sincer? Niciunul. E pur și simplu distractiv dacă ești un pasionat de analitica sportivă ca mine. Dar dacă există un lucru bun care poate ieși din asta — când echipa ta înscrie un scorigami, gândește-te să donezi unei organizații caritabile din țara echipei învinse. Un scor istoric este un motiv excelent pentru a face ceva bun în lume."
+  },
+  "stats": {
+    "matches": "meciuri",
+    "uniqueScores": "scoruri unice",
+    "neverHappened": "nu s-a întâmplat niciodată",
+    "tournaments": "Turnee"
+  },
+  "views": {
+    "heatmap": "Hartă termică",
+    "allMatches": "Toate meciurile"
+  },
+  "grid": {
+    "description": "Rânduri = scorul perdantului · Coloane = scorul câștigătorului · Apasă pe orice celulă",
+    "never": "Niciodată",
+    "unique": "Unic (1×)",
+    "veryRare": "Foarte rar",
+    "rare": "Rar",
+    "common": "Comun",
+    "veryCommon": "Foarte comun",
+    "neverHappened": "{low}–{high}: Niciodată",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "{low}–{high} nu s-a întâmplat niciodată în istoria Cupei Mondiale.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Închide"
+  },
+  "table": {
+    "searchPlaceholder": "Caută echipe, turnee, scoruri...",
+    "date": "Dată",
+    "home": "Acasă",
+    "score": "Scor",
+    "away": "Deplasare",
+    "stage": "Fază",
+    "venue": "Stadion",
+    "year": "An",
+    "showingOf": "Se afișează {shown} din {total} meciuri.",
+    "allTournaments": "Toate turneele",
+    "allStages": "Toate fazele",
+    "showAll": "Arată toate",
+    "showLess": "Arată mai puțin"
+  },
+  "stages": {
+    "group stage": "Faza grupelor",
+    "round of 32": "Turul 32",
+    "round of 16": "Turul 16",
+    "quarter-finals": "Sferturi de finală",
+    "semi-finals": "Semifinale",
+    "third-place match": "Meciul pentru locul 3",
+    "final": "Finală"
+  },
+  "footer": {
+    "dataFrom": "Date din",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Minden egyedi végeredmény a férfi FIFA Világbajnokság történetében"
+  },
+  "explainer": {
+    "title": "Mi az a Scorigami?",
+    "description": "A Scorigami olyan végeredményt jelöl, amely egy sport történetében még soha nem fordult elő. Az ötletet Jon Bois tette népszerűvé, akinek zseniális NFL-es scorigami munkája ihlette ezt a projektet.",
+    "watchVideo": "Nézd meg az eredeti videót",
+    "whyBuilt": "A World Cupigamit azért hoztam létre, hogy egy kis amerikai sportkultúrát vigyek el a világ legnagyobb sporteseményére — abban a megosztó szellemben, amely a Világbajnokságot különlegessé teszi. A Scorigami kicsit másképp működik a labdarúgásban, mint az amerikai fociban, mivel a gólokat egyenként szerzik, nem 2, 3, 6 vagy 7-es csoportokban. Ez ritkábbá és értékesebbé teszi az új scorigamikat.",
+    "mensOnly": "Ez jelenleg csak a férfi FIFA Világbajnokságot fedi le. A női Világbajnokság verziója hamarosan érkezik.",
+    "pointTitle": "Mi értelme ennek?",
+    "pointDescription": "Őszintén? Semmi. Csak szórakoztató, ha olyan sportstatisztika-megszállott vagy, mint én. De ha valami jó is kisülhet belőle — amikor a csapatod scorigamit szerez, fontold meg, hogy adományozol egy jótékonysági szervezetnek a vesztes csapat országában. Egy történelmi eredmény remek alkalom arra, hogy jót tegyünk a világban."
+  },
+  "stats": {
+    "matches": "mérkőzés",
+    "uniqueScores": "egyedi eredmény",
+    "neverHappened": "még nem fordult elő",
+    "tournaments": "Tornák"
+  },
+  "views": {
+    "heatmap": "Hőtérkép",
+    "allMatches": "Összes mérkőzés"
+  },
+  "grid": {
+    "description": "Sorok = vesztes góljai · Oszlopok = győztes góljai · Kattints bármelyik cellára",
+    "never": "Soha",
+    "unique": "Egyedi (1×)",
+    "veryRare": "Nagyon ritka",
+    "rare": "Ritka",
+    "common": "Gyakori",
+    "veryCommon": "Nagyon gyakori",
+    "neverHappened": "{low}–{high}: Soha",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "A {low}–{high} még soha nem fordult elő a Világbajnokság történetében.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Bezárás"
+  },
+  "table": {
+    "searchPlaceholder": "Keresés csapatok, tornák, eredmények alapján...",
+    "date": "Dátum",
+    "home": "Hazai",
+    "score": "Eredmény",
+    "away": "Vendég",
+    "stage": "Szakasz",
+    "venue": "Helyszín",
+    "year": "Év",
+    "showingOf": "{total} mérkőzésből {shown} látható.",
+    "allTournaments": "Összes torna",
+    "allStages": "Összes szakasz",
+    "showAll": "Összes mutatása",
+    "showLess": "Kevesebb mutatása"
+  },
+  "stages": {
+    "group stage": "Csoportkör",
+    "round of 32": "32 közé",
+    "round of 16": "16 közé",
+    "quarter-finals": "Negyeddöntő",
+    "semi-finals": "Elődöntő",
+    "third-place match": "Bronzmérkőzés",
+    "final": "Döntő"
+  },
+  "footer": {
+    "dataFrom": "Adatok forrása:",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

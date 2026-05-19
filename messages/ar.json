@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "كل نتيجة نهائية فريدة في تاريخ كأس العالم FIFA للرجال"
+  },
+  "explainer": {
+    "title": "ما هو Scorigami؟",
+    "description": "Scorigami هو مفهوم النتيجة النهائية التي لم تحدث قط في تاريخ رياضة ما. نشر هذه الفكرة Jon Bois، الذي ألهم عمله الرائع في NFL scorigami هذا المشروع.",
+    "watchVideo": "شاهد الفيديو الأصلي",
+    "whyBuilt": "بنيت World Cupigami لأجلب شيئاً من الثقافة الرياضية الأمريكية إلى أكبر مسرح في العالم — بروح المشاركة التي تجعل كأس العالم مميزاً. يعمل Scorigami بشكل مختلف قليلاً في كرة القدم عنه في كرة القدم الأمريكية، إذ تُسجَّل الأهداف واحداً تلو الآخر لا على شكل مجموعات من 2 أو 3 أو 6 أو 7. هذا يجعل نتائج Scorigami الجديدة أندر وأكثر أهمية.",
+    "mensOnly": "يغطي هذا حالياً كأس العالم FIFA للرجال فقط. نسخة كأس العالم للسيدات ستتوفر قريباً.",
+    "pointTitle": "ما الفائدة من هذا؟",
+    "pointDescription": "بصراحة؟ لا شيء. إنه مجرد متعة إذا كنت مهووساً بتحليل الرياضة مثلي. لكن إن كان ثمة شيء جيد يمكن أن يخرج من هذا — حين تحقق فريقك نتيجة Scorigami، فكّر في التبرع لجمعية خيرية في بلد الفريق الخاسر. نتيجة تاريخية هي ذريعة رائعة لفعل الخير في العالم."
+  },
+  "stats": {
+    "matches": "مباريات",
+    "uniqueScores": "نتائج فريدة",
+    "neverHappened": "لم تحدث قط",
+    "tournaments": "البطولات"
+  },
+  "views": {
+    "heatmap": "خريطة الحرارة",
+    "allMatches": "جميع المباريات"
+  },
+  "grid": {
+    "description": "الصفوف = نتيجة الخاسر · الأعمدة = نتيجة الفائز · انقر على أي خلية",
+    "never": "لم تحدث قط",
+    "unique": "فريدة (1×)",
+    "veryRare": "نادرة جداً",
+    "rare": "نادرة",
+    "common": "شائعة",
+    "veryCommon": "شائعة جداً",
+    "neverHappened": "{low}–{high}: لم تحدث قط",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "النتيجة {low}–{high} لم تحدث قط في تاريخ كأس العالم.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "إغلاق"
+  },
+  "table": {
+    "searchPlaceholder": "ابحث عن فرق، بطولات، نتائج...",
+    "date": "التاريخ",
+    "home": "المضيف",
+    "score": "النتيجة",
+    "away": "الضيف",
+    "stage": "الدور",
+    "venue": "الملعب",
+    "year": "السنة",
+    "showingOf": "عرض {shown} من أصل {total} مباراة.",
+    "allTournaments": "جميع البطولات",
+    "allStages": "جميع الأدوار",
+    "showAll": "عرض الكل",
+    "showLess": "عرض أقل"
+  },
+  "stages": {
+    "group stage": "دور المجموعات",
+    "round of 32": "دور الـ32",
+    "round of 16": "دور الـ16",
+    "quarter-finals": "ربع النهائي",
+    "semi-finals": "نصف النهائي",
+    "third-place match": "مباراة المركز الثالث",
+    "final": "النهائي"
+  },
+  "footer": {
+    "dataFrom": "البيانات من",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

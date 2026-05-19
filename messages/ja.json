@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Men's FIFA ワールドカップ史上のすべてのユニークな最終スコア"
+  },
+  "explainer": {
+    "title": "スコリガミとは？",
+    "description": "スコリガミとは、あるスポーツの歴史上一度も起きたことのない最終スコアのことです。このアイデアはJon Boisによって広められ、彼のNFLスコリガミに関する素晴らしい作品がこのプロジェクトのインスピレーションとなりました。",
+    "watchVideo": "オリジナル動画を見る",
+    "whyBuilt": "World Cupigamiを作ったのは、ワールドカップを特別なものにしている「分かち合いの精神」で、アメリカのスポーツ文化を世界最大の舞台に届けたかったからです。サッカーでのスコリガミはアメリカンフットボールとは少し異なります。得点は2・3・6・7点といったまとまりではなく、1点ずつ積み重ねられるため、新たなスコリガミはより稀で、より意味深いものになります。",
+    "mensOnly": "現在は男子FIFA ワールドカップのみを対象としています。女子ワールドカップ版も近日公開予定です。",
+    "pointTitle": "これに何の意味があるの？",
+    "pointDescription": "正直に言うと？別に何もありません。ただ、私のようなスポーツ分析好きには楽しいというだけです。でも、ひとつだけ良いことがあるとすれば――あなたのチームがスコリガミを達成したとき、負けたチームの国の慈善団体に寄付してみてください。歴史的なスコアは、世界のために良いことをする絶好の口実になります。"
+  },
+  "stats": {
+    "matches": "試合",
+    "uniqueScores": "ユニークスコア",
+    "neverHappened": "未達成",
+    "tournaments": "大会"
+  },
+  "views": {
+    "heatmap": "ヒートマップ",
+    "allMatches": "全試合"
+  },
+  "grid": {
+    "description": "行 = 負けチームのスコア · 列 = 勝ちチームのスコア · セルをクリック",
+    "never": "未達成",
+    "unique": "ユニーク（1回）",
+    "veryRare": "非常に稀",
+    "rare": "稀",
+    "common": "よくある",
+    "veryCommon": "非常によくある",
+    "neverHappened": "{low}–{high}：未達成",
+    "count": "{low}–{high}：{count}回"
+  },
+  "detail": {
+    "scorigamiTitle": "スコリガミ！",
+    "scorigamiDescription": "{low}–{high} はワールドカップ史上一度も起きたことがありません。",
+    "scorigamiBadge": "（スコリガミ）",
+    "close": "閉じる"
+  },
+  "table": {
+    "searchPlaceholder": "チーム、大会、スコアで検索...",
+    "date": "日付",
+    "home": "ホーム",
+    "score": "スコア",
+    "away": "アウェイ",
+    "stage": "ステージ",
+    "venue": "会場",
+    "year": "年",
+    "showingOf": "{total}試合中{shown}試合を表示中",
+    "allTournaments": "全大会",
+    "allStages": "全ステージ",
+    "showAll": "すべて表示",
+    "showLess": "表示を減らす"
+  },
+  "stages": {
+    "group stage": "グループステージ",
+    "round of 32": "ラウンド32",
+    "round of 16": "ラウンド16",
+    "quarter-finals": "準々決勝",
+    "semi-finals": "準決勝",
+    "third-place match": "3位決定戦",
+    "final": "決勝"
+  },
+  "footer": {
+    "dataFrom": "データ提供：",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

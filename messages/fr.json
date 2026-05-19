@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Tous les scores finaux uniques de l'histoire de la Coupe du Monde masculine de la FIFA"
+  },
+  "explainer": {
+    "title": "Qu'est-ce que le Scorigami ?",
+    "description": "Le Scorigami désigne un score final qui ne s'est jamais produit auparavant dans l'histoire d'un sport. Le concept a été popularisé par Jon Bois, dont le remarquable travail sur le Scorigami NFL a inspiré ce projet.",
+    "watchVideo": "Voir la vidéo originale",
+    "whyBuilt": "J'ai créé World Cupigami pour apporter un peu de la culture sportive américaine sur la plus grande scène du monde — dans l'esprit de partage qui rend la Coupe du Monde si spéciale. Le Scorigami fonctionne un peu différemment au football qu'au football américain, puisque les buts sont marqués un par un plutôt que par tranches de 2, 3, 6 ou 7 points. Cela rend les nouveaux scorigamis plus rares et plus significatifs.",
+    "mensOnly": "Ce site couvre actuellement uniquement la Coupe du Monde masculine de la FIFA. Une édition pour la Coupe du Monde féminine arrive bientôt.",
+    "pointTitle": "À quoi ça sert ?",
+    "pointDescription": "Honnêtement ? À rien. C'est juste amusant si vous êtes un passionné d'analyse sportive comme moi. Mais s'il y a une bonne chose qui peut en découler — lorsque votre équipe réalise un scorigami, pensez à faire un don à une association caritative dans le pays de l'équipe adverse. Un score historique est une excellente occasion de faire un peu de bien dans le monde."
+  },
+  "stats": {
+    "matches": "matchs",
+    "uniqueScores": "scores uniques",
+    "neverHappened": "jamais arrivé",
+    "tournaments": "Tournois"
+  },
+  "views": {
+    "heatmap": "Carte de chaleur",
+    "allMatches": "Tous les matchs"
+  },
+  "grid": {
+    "description": "Lignes = score perdant · Colonnes = score gagnant · Cliquez sur une cellule",
+    "never": "Jamais",
+    "unique": "Unique (1×)",
+    "veryRare": "Très rare",
+    "rare": "Rare",
+    "common": "Courant",
+    "veryCommon": "Très courant",
+    "neverHappened": "{low}–{high} : Jamais",
+    "count": "{low}–{high} : {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami !",
+    "scorigamiDescription": "{low}–{high} ne s'est jamais produit dans l'histoire de la Coupe du Monde.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Fermer"
+  },
+  "table": {
+    "searchPlaceholder": "Rechercher des équipes, tournois, scores...",
+    "date": "Date",
+    "home": "Domicile",
+    "score": "Score",
+    "away": "Extérieur",
+    "stage": "Phase",
+    "venue": "Stade",
+    "year": "Année",
+    "showingOf": "{shown} sur {total} matchs affichés.",
+    "allTournaments": "Tous les tournois",
+    "allStages": "Toutes les phases",
+    "showAll": "Tout afficher",
+    "showLess": "Afficher moins"
+  },
+  "stages": {
+    "group stage": "Phase de groupes",
+    "round of 32": "Tour de 32",
+    "round of 16": "Huitièmes de finale",
+    "quarter-finals": "Quarts de finale",
+    "semi-finals": "Demi-finales",
+    "third-place match": "Match pour la troisième place",
+    "final": "Finale"
+  },
+  "footer": {
+    "dataFrom": "Données issues de",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

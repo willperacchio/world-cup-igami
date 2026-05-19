@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "男子FIFA世界杯历史上每一个独特的终场比分"
+  },
+  "explainer": {
+    "title": "什么是Scorigami？",
+    "description": "Scorigami是指某项运动历史上从未出现过的终场比分。这一概念由Jon Bois推广，他关于NFL scorigami的精彩作品启发了这个项目。",
+    "watchVideo": "观看原版视频",
+    "whyBuilt": "我创建World Cupigami，是想把一点美式体育文化带到世界最大的舞台上——以那种让世界杯变得特别的分享精神。Scorigami在足球中的运作方式与美式橄榄球有些不同，因为进球是一个一个地得分，而不是一次得2、3、6或7分。这使得新的scorigami更加罕见，也更有意义。",
+    "mensOnly": "目前仅涵盖男子FIFA世界杯。女子世界杯版本即将推出。",
+    "pointTitle": "这有什么意义？",
+    "pointDescription": "说实话？没什么。如果你像我一样是个体育数据迷，这只是件好玩的事。但如果说有什么积极的意义——当你支持的球队打出一个scorigami时，不妨向负队所在国家的慈善机构捐款。一个历史性的比分，是为世界做些好事的绝佳理由。"
+  },
+  "stats": {
+    "matches": "场比赛",
+    "uniqueScores": "独特比分",
+    "neverHappened": "从未出现",
+    "tournaments": "届赛事"
+  },
+  "views": {
+    "heatmap": "热力图",
+    "allMatches": "全部比赛"
+  },
+  "grid": {
+    "description": "行 = 负队比分 · 列 = 胜队比分 · 点击任意格",
+    "never": "从未出现",
+    "unique": "唯一（1×）",
+    "veryRare": "极为罕见",
+    "rare": "较为罕见",
+    "common": "较为常见",
+    "veryCommon": "非常常见",
+    "neverHappened": "{low}–{high}：从未出现",
+    "count": "{low}–{high}：{count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami！",
+    "scorigamiDescription": "{low}–{high} 这一比分在世界杯历史上从未出现过。",
+    "scorigamiBadge": "（Scorigami）",
+    "close": "关闭"
+  },
+  "table": {
+    "searchPlaceholder": "搜索球队、赛事、比分……",
+    "date": "日期",
+    "home": "主队",
+    "score": "比分",
+    "away": "客队",
+    "stage": "阶段",
+    "venue": "场馆",
+    "year": "年份",
+    "showingOf": "显示 {total} 场比赛中的 {shown} 场。",
+    "allTournaments": "全部赛事",
+    "allStages": "全部阶段",
+    "showAll": "显示全部",
+    "showLess": "收起"
+  },
+  "stages": {
+    "group stage": "小组赛",
+    "round of 32": "32强赛",
+    "round of 16": "16强赛",
+    "quarter-finals": "四分之一决赛",
+    "semi-finals": "半决赛",
+    "third-place match": "季军赛",
+    "final": "决赛"
+  },
+  "footer": {
+    "dataFrom": "数据来源",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

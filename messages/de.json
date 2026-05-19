@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Jedes einzigartige Endergebnis in der Geschichte der FIFA-Fußballweltmeisterschaft der Männer"
+  },
+  "explainer": {
+    "title": "Was ist Scorigami?",
+    "description": "Scorigami bezeichnet ein Endergebnis, das in der Geschichte einer Sportart noch nie vorgekommen ist. Das Konzept wurde von Jon Bois bekannt gemacht, dessen großartige Arbeit zum NFL-Scorigami dieses Projekt inspiriert hat.",
+    "watchVideo": "Originalvideo ansehen",
+    "whyBuilt": "Ich habe World Cupigami entwickelt, um ein Stück amerikanische Sportkultur auf die größte Bühne der Welt zu bringen – im Geiste des Teilens, der die Weltmeisterschaft so besonders macht. Scorigami funktioniert im Fußball etwas anders als im American Football, da Tore einzeln erzielt werden und nicht in Blöcken von 2, 3, 6 oder 7 Punkten. Das macht neue Scorigamis seltener und bedeutsamer.",
+    "mensOnly": "Dies umfasst derzeit nur die FIFA-Weltmeisterschaft der Männer. Eine Ausgabe zur Frauen-Weltmeisterschaft folgt in Kürze.",
+    "pointTitle": "Was soll das Ganze?",
+    "pointDescription": "Ehrlich gesagt? Nichts. Es macht einfach Spaß, wenn man ein Sportstatistik-Nerd wie ich ist. Aber wenn doch etwas Gutes dabei herauskommen kann: Wenn dein Team ein Scorigami erzielt, überleg doch, eine Wohltätigkeitsorganisation im Land der unterlegenen Mannschaft zu unterstützen. Ein historisches Ergebnis ist ein schöner Anlass, der Welt etwas Gutes zu tun."
+  },
+  "stats": {
+    "matches": "Spiele",
+    "uniqueScores": "einzigartige Ergebnisse",
+    "neverHappened": "noch nie vorgekommen",
+    "tournaments": "Turniere"
+  },
+  "views": {
+    "heatmap": "Heatmap",
+    "allMatches": "Alle Spiele"
+  },
+  "grid": {
+    "description": "Zeilen = Verlierer-Tore · Spalten = Gewinner-Tore · Auf eine Zelle klicken",
+    "never": "Nie",
+    "unique": "Einmalig (1×)",
+    "veryRare": "Sehr selten",
+    "rare": "Selten",
+    "common": "Häufig",
+    "veryCommon": "Sehr häufig",
+    "neverHappened": "{low}–{high}: Noch nie",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "{low}–{high} ist in der Geschichte der Weltmeisterschaft noch nie vorgekommen.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Schließen"
+  },
+  "table": {
+    "searchPlaceholder": "Teams, Turniere, Ergebnisse suchen...",
+    "date": "Datum",
+    "home": "Heim",
+    "score": "Ergebnis",
+    "away": "Gast",
+    "stage": "Runde",
+    "venue": "Spielort",
+    "year": "Jahr",
+    "showingOf": "{shown} von {total} Spielen werden angezeigt.",
+    "allTournaments": "Alle Turniere",
+    "allStages": "Alle Runden",
+    "showAll": "Alle anzeigen",
+    "showLess": "Weniger anzeigen"
+  },
+  "stages": {
+    "group stage": "Gruppenphase",
+    "round of 32": "Runde der 32",
+    "round of 16": "Achtelfinale",
+    "quarter-finals": "Viertelfinale",
+    "semi-finals": "Halbfinale",
+    "third-place match": "Spiel um Platz 3",
+    "final": "Finale"
+  },
+  "footer": {
+    "dataFrom": "Daten aus",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

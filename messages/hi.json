@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "पुरुष FIFA विश्व कप इतिहास में हर अनोखा अंतिम स्कोर"
+  },
+  "explainer": {
+    "title": "Scorigami क्या है?",
+    "description": "Scorigami एक ऐसे अंतिम स्कोर की अवधारणा है जो किसी खेल के इतिहास में पहले कभी नहीं हुआ हो। इस विचार को Jon Bois ने लोकप्रिय बनाया, जिनके NFL scorigami पर शानदार काम ने इस प्रोजेक्ट को प्रेरित किया।",
+    "watchVideo": "मूल वीडियो देखें",
+    "whyBuilt": "मैंने World Cupigami इसलिए बनाया ताकि अमेरिकी खेल संस्कृति की एक झलक दुनिया के सबसे बड़े मंच तक पहुँचे — उसी साझा भावना के साथ जो विश्व कप को खास बनाती है। फुटबॉल में Scorigami अमेरिकी फुटबॉल से थोड़ा अलग काम करता है, क्योंकि यहाँ गोल 2, 3, 6 या 7 के बजाय एक-एक करके होते हैं। इससे नए scorigami दुर्लभ और ज़्यादा मायनेदार बन जाते हैं।",
+    "mensOnly": "यह अभी केवल पुरुष FIFA विश्व कप को कवर करता है। महिला विश्व कप संस्करण जल्द आने वाला है।",
+    "pointTitle": "इसका मकसद क्या है?",
+    "pointDescription": "सच कहूँ तो? कुछ खास नहीं। यह बस मेरे जैसे स्पोर्ट्स एनालिटिक्स के दीवानों के लिए मज़ेदार है। लेकिन अगर इसमें से कोई एक अच्छी बात निकल सकती है — तो जब आपकी टीम scorigami करे, तो हारने वाली टीम के देश में किसी दान संस्था को दान देने पर विचार करें। एक ऐतिहासिक स्कोरलाइन दुनिया में कुछ अच्छा करने का बेहतरीन बहाना है।"
+  },
+  "stats": {
+    "matches": "मैच",
+    "uniqueScores": "अनोखे स्कोर",
+    "neverHappened": "कभी नहीं हुआ",
+    "tournaments": "टूर्नामेंट"
+  },
+  "views": {
+    "heatmap": "हीटमैप",
+    "allMatches": "सभी मैच"
+  },
+  "grid": {
+    "description": "पंक्तियाँ = हारने वाले का स्कोर · स्तंभ = जीतने वाले का स्कोर · किसी भी सेल पर क्लिक करें",
+    "never": "कभी नहीं",
+    "unique": "अनोखा (1×)",
+    "veryRare": "बहुत दुर्लभ",
+    "rare": "दुर्लभ",
+    "common": "सामान्य",
+    "veryCommon": "बहुत सामान्य",
+    "neverHappened": "{low}–{high}: कभी नहीं हुआ",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "{low}–{high} विश्व कप इतिहास में कभी नहीं हुआ।",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "बंद करें"
+  },
+  "table": {
+    "searchPlaceholder": "टीम, टूर्नामेंट, स्कोर खोजें...",
+    "date": "तारीख",
+    "home": "होम",
+    "score": "स्कोर",
+    "away": "अवे",
+    "stage": "चरण",
+    "venue": "स्थान",
+    "year": "वर्ष",
+    "showingOf": "{total} में से {shown} मैच दिखाए जा रहे हैं।",
+    "allTournaments": "सभी टूर्नामेंट",
+    "allStages": "सभी चरण",
+    "showAll": "सभी दिखाएँ",
+    "showLess": "कम दिखाएँ"
+  },
+  "stages": {
+    "group stage": "ग्रुप चरण",
+    "round of 32": "राउंड ऑफ 32",
+    "round of 16": "राउंड ऑफ 16",
+    "quarter-finals": "क्वार्टर-फाइनल",
+    "semi-finals": "सेमी-फाइनल",
+    "third-place match": "तीसरे स्थान का मैच",
+    "final": "फाइनल"
+  },
+  "footer": {
+    "dataFrom": "डेटा स्रोत",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

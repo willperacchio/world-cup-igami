@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Svaki jedinstveni konačni rezultat u povijesti Muškog FIFA Svjetskog Prvenstva"
+  },
+  "explainer": {
+    "title": "Što je Scorigami?",
+    "description": "Scorigami je koncept konačnog rezultata koji se nikada prije nije dogodio u povijesti nekog sporta. Ideju je popularizirao Jon Bois, čiji je izvanredan rad na NFL scorigamiju nadahnuo ovaj projekt.",
+    "watchVideo": "Pogledaj originalni video",
+    "whyBuilt": "Izgradio sam World Cupigami kako bih donio malo američke sportske kulture na najveću svjetsku scenu — u duhu dijeljenja koji čini Svjetsko Prvenstvo posebnim. Scorigami u nogometu funkcionira nešto drugačije nego u američkom nogometu, jer se golovi postižu jedan po jedan, a ne u skupinama od 2, 3, 6 ili 7. To čini nove scorigamije rjeđima i značajnijima.",
+    "mensOnly": "Trenutno obuhvaća samo Muško FIFA Svjetsko Prvenstvo. Izdanje za Žensko Svjetsko Prvenstvo uskoro stiže.",
+    "pointTitle": "Koja je svrha ovoga?",
+    "pointDescription": "Iskreno? Nikakva. Jednostavno je zabavno ako si štreberom sportske analitike poput mene. Ali ako iz ovoga može izaći nešto dobro — kada tvoja ekipa postigne scorigami, razmotri doniranje dobrotvornoj organizaciji u zemlji poražene ekipe. Povijesni rezultat odličan je povod za činjenje dobra u svijetu."
+  },
+  "stats": {
+    "matches": "utakmica",
+    "uniqueScores": "jedinstvenih rezultata",
+    "neverHappened": "nikada se nije dogodilo",
+    "tournaments": "Turniri"
+  },
+  "views": {
+    "heatmap": "Toplinska mapa",
+    "allMatches": "Sve utakmice"
+  },
+  "grid": {
+    "description": "Redci = rezultat gubitnika · Stupci = rezultat pobjednika · Klikni na bilo koje polje",
+    "never": "Nikada",
+    "unique": "Jedinstveno (1×)",
+    "veryRare": "Vrlo rijetko",
+    "rare": "Rijetko",
+    "common": "Često",
+    "veryCommon": "Vrlo često",
+    "neverHappened": "{low}–{high}: Nikada",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "{low}–{high} se nikada nije dogodilo u povijesti Svjetskog Prvenstva.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Zatvori"
+  },
+  "table": {
+    "searchPlaceholder": "Pretraži ekipe, turnire, rezultate...",
+    "date": "Datum",
+    "home": "Domaćin",
+    "score": "Rezultat",
+    "away": "Gost",
+    "stage": "Faza",
+    "venue": "Stadion",
+    "year": "Godina",
+    "showingOf": "Prikazano {shown} od {total} utakmica.",
+    "allTournaments": "Svi turniri",
+    "allStages": "Sve faze",
+    "showAll": "Prikaži sve",
+    "showLess": "Prikaži manje"
+  },
+  "stages": {
+    "group stage": "Skupinska faza",
+    "round of 32": "Runda 32",
+    "round of 16": "Šesnaestina finala",
+    "quarter-finals": "Četvrtfinale",
+    "semi-finals": "Polufinale",
+    "third-place match": "Utakmica za treće mjesto",
+    "final": "Finale"
+  },
+  "footer": {
+    "dataFrom": "Podaci iz",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

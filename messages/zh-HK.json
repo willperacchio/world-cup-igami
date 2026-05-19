@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "男子FIFA世界盃歷史上每個獨特的最終比分"
+  },
+  "explainer": {
+    "title": "什麼是Scorigami？",
+    "description": "Scorigami是指一個在某項運動歷史上從未出現過的最終比分。這個概念由Jon Bois推廣，他在NFL scorigami上的精彩創作啟發了這個項目。",
+    "watchVideo": "觀看原版影片",
+    "whyBuilt": "我建立World Cupigami，是為了將一點美式體育文化帶到世界最大的舞台——秉承令世界盃別具意義的分享精神。Scorigami在足球中的運作方式與美式足球略有不同，因為進球是一個一個累積的，而非以2、3、6或7分為單位。這令新的scorigami更為罕見，也更具意義。",
+    "mensOnly": "目前僅涵蓋男子FIFA世界盃。女子世界盃版本即將推出。",
+    "pointTitle": "這有什麼意義？",
+    "pointDescription": "說真的？沒什麼特別意義。對於像我這樣的體育數據迷來說，這純粹是一種樂趣。不過，如果真的能帶來一點好處——當你支持的球隊創下scorigami時，不妨向負隊所在國家的慈善機構捐款。歷史性的比分，正是行善的好藉口。"
+  },
+  "stats": {
+    "matches": "場比賽",
+    "uniqueScores": "個獨特比分",
+    "neverHappened": "從未出現",
+    "tournaments": "屆賽事"
+  },
+  "views": {
+    "heatmap": "熱力圖",
+    "allMatches": "所有比賽"
+  },
+  "grid": {
+    "description": "橫行 = 負方比分 · 縱列 = 勝方比分 · 點擊任意格",
+    "never": "從未出現",
+    "unique": "獨一無二（1次）",
+    "veryRare": "極為罕見",
+    "rare": "罕見",
+    "common": "常見",
+    "veryCommon": "非常常見",
+    "neverHappened": "{low}–{high}：從未出現",
+    "count": "{low}–{high}：{count}次"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami！",
+    "scorigamiDescription": "{low}–{high} 在世界盃歷史上從未出現過。",
+    "scorigamiBadge": "（Scorigami）",
+    "close": "關閉"
+  },
+  "table": {
+    "searchPlaceholder": "搜尋球隊、賽事、比分……",
+    "date": "日期",
+    "home": "主隊",
+    "score": "比分",
+    "away": "客隊",
+    "stage": "賽段",
+    "venue": "場館",
+    "year": "年份",
+    "showingOf": "顯示 {total} 場比賽中的 {shown} 場。",
+    "allTournaments": "所有賽事",
+    "allStages": "所有賽段",
+    "showAll": "顯示全部",
+    "showLess": "收起"
+  },
+  "stages": {
+    "group stage": "小組賽",
+    "round of 32": "三十二強",
+    "round of 16": "十六強",
+    "quarter-finals": "八強",
+    "semi-finals": "四強",
+    "third-place match": "季軍賽",
+    "final": "決賽"
+  },
+  "footer": {
+    "dataFrom": "數據來源",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

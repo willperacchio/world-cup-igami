@@ -1,0 +1,51 @@
+name: Translate i18n strings
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Force re-translate all locales"
+        type: boolean
+        default: false
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      contains(github.event.head_commit.message, '[translate]')
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Run translation script
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ "${{ inputs.force }}" = "true" ]; then
+            npx tsx scripts/translate.ts --force
+          else
+            npx tsx scripts/translate.ts
+          fi
+
+      - name: Commit translations
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add messages/
+          if git diff --cached --quiet; then
+            echo "No translation changes"
+          else
+            git commit -m "Update translations from en.json changes"
+            git push
+          fi

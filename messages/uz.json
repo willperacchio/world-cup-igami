@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Erkaklar FIFA Jahon Kubogi tarixidagi barcha noyob yakuniy hisoblar"
+  },
+  "explainer": {
+    "title": "Scorigami nima?",
+    "description": "Scorigami — bu sport tarixida hech qachon bo'lmagan yakuniy hisob tushunchasidir. Bu g'oyani Jon Bois ommalashtirib, uning NFL scorigami bo'yicha ajoyib ishi ushbu loyihaga ilhom berdi.",
+    "watchVideo": "Asl videoni tomosha qiling",
+    "whyBuilt": "Men World Cupigami ni Amerika sport madaniyatini dunyo sahnasiga olib kelish uchun yaratdim — Jahon Kubogini alohida qiladigan o'rtoqlashuv ruhida. Scorigami futbolda amerikalik futbolga qaraganda biroz boshqacha ishlaydi, chunki gollar 2, 3, 6 yoki 7 talik bloklarda emas, birma-bir uriladi. Bu yangi scorigamilarni kamroq va qimmatroq qiladi.",
+    "mensOnly": "Hozircha bu faqat Erkaklar FIFA Jahon Kubogini qamrab oladi. Ayollar Jahon Kubogi versiyasi tez orada keladi.",
+    "pointTitle": "Buning nima foydasi bor?",
+    "pointDescription": "Halol aytsam? Hech nima. Agar siz menga o'xshash sport tahlili bo'yicha nerd bo'lsangiz, bu shunchaki qiziqarli. Lekin undan bir yaxshilik chiqishi mumkin bo'lsa — jamoangiz scorigami qilganda, yutqazgan jamoa mamlakatidagi xayriya tashkilotiga xayriya qilishni ko'rib chiqing. Tarixiy hisob — dunyoda yaxshilik qilish uchun ajoyib bahona."
+  },
+  "stats": {
+    "matches": "o'yinlar",
+    "uniqueScores": "noyob hisoblar",
+    "neverHappened": "hech bo'lmagan",
+    "tournaments": "Turnirlar"
+  },
+  "views": {
+    "heatmap": "Issiqlik xaritasi",
+    "allMatches": "Barcha o'yinlar"
+  },
+  "grid": {
+    "description": "Qatorlar = yutqazuvchi hisob · Ustunlar = g'olib hisob · Istalgan katakni bosing",
+    "never": "Hech qachon",
+    "unique": "Noyob (1×)",
+    "veryRare": "Juda kam uchraydi",
+    "rare": "Kam uchraydi",
+    "common": "Ko'p uchraydi",
+    "veryCommon": "Juda ko'p uchraydi",
+    "neverHappened": "{low}–{high}: Hech qachon bo'lmagan",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "{low}–{high} Jahon Kubogi tarixida hech qachon bo'lmagan.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Yopish"
+  },
+  "table": {
+    "searchPlaceholder": "Jamoalar, turnirlar, hisoblar bo'yicha qidiring...",
+    "date": "Sana",
+    "home": "Uy",
+    "score": "Hisob",
+    "away": "Mehmon",
+    "stage": "Bosqich",
+    "venue": "Maydon",
+    "year": "Yil",
+    "showingOf": "{total} ta o'yindan {shown} tasi ko'rsatilmoqda.",
+    "allTournaments": "Barcha turnirlar",
+    "allStages": "Barcha bosqichlar",
+    "showAll": "Hammasini ko'rsatish",
+    "showLess": "Kamroq ko'rsatish"
+  },
+  "stages": {
+    "group stage": "Guruh bosqichi",
+    "round of 32": "32 jamoali bosqich",
+    "round of 16": "16 jamoali bosqich",
+    "quarter-finals": "Chorak final",
+    "semi-finals": "Yarim final",
+    "third-place match": "Uchinchi o'rin uchun o'yin",
+    "final": "Final"
+  },
+  "footer": {
+    "dataFrom": "Ma'lumotlar manba:",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

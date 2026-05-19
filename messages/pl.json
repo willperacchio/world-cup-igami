@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Każdy unikalny wynik końcowy w historii Mistrzostw Świata FIFA mężczyzn"
+  },
+  "explainer": {
+    "title": "Czym jest Scorigami?",
+    "description": "Scorigami to pojęcie oznaczające wynik końcowy, który nigdy wcześniej nie pojawił się w historii danego sportu. Koncepcję spopularyzował Jon Bois, którego znakomita praca poświęcona NFL scorigami zainspirowała ten projekt.",
+    "watchVideo": "Obejrzyj oryginalny film",
+    "whyBuilt": "Stworzyłem World Cupigami, by wnieść odrobinę amerykańskiej kultury sportowej na największą światową scenę — w duchu dzielenia się, który czyni Mistrzostwa Świata wyjątkowymi. Scorigami działa w piłce nożnej nieco inaczej niż w futbolu amerykańskim, ponieważ gole padają pojedynczo, a nie porcjami po 2, 3, 6 czy 7 punktów. Sprawia to, że nowe scorigami są rzadsze i bardziej znaczące.",
+    "mensOnly": "Projekt obejmuje obecnie tylko Mistrzostwa Świata FIFA mężczyzn. Edycja poświęcona Mistrzostwom Świata kobiet już wkrótce.",
+    "pointTitle": "Jaki to ma sens?",
+    "pointDescription": "Szczerze? Żaden. To po prostu zabawa dla takich maniaków analityki sportowej jak ja. Ale jeśli może z tego wyniknąć coś dobrego — gdy twoja drużyna strzeli scorigami, rozważ darowiznę na rzecz organizacji charytatywnej w kraju przegranej drużyny. Historyczny wynik to świetna okazja, by zrobić coś dobrego dla świata."
+  },
+  "stats": {
+    "matches": "mecze",
+    "uniqueScores": "unikalne wyniki",
+    "neverHappened": "nigdy nie padły",
+    "tournaments": "Turnieje"
+  },
+  "views": {
+    "heatmap": "Mapa ciepła",
+    "allMatches": "Wszystkie mecze"
+  },
+  "grid": {
+    "description": "Wiersze = wynik przegranych · Kolumny = wynik zwycięzców · Kliknij dowolną komórkę",
+    "never": "Nigdy",
+    "unique": "Unikalny (1×)",
+    "veryRare": "Bardzo rzadki",
+    "rare": "Rzadki",
+    "common": "Częsty",
+    "veryCommon": "Bardzo częsty",
+    "neverHappened": "{low}–{high}: Nigdy",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "{low}–{high} nigdy nie padło w historii Mistrzostw Świata.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Zamknij"
+  },
+  "table": {
+    "searchPlaceholder": "Szukaj drużyn, turniejów, wyników...",
+    "date": "Data",
+    "home": "Gospodarz",
+    "score": "Wynik",
+    "away": "Gość",
+    "stage": "Faza",
+    "venue": "Stadion",
+    "year": "Rok",
+    "showingOf": "Wyświetlono {shown} z {total} meczów.",
+    "allTournaments": "Wszystkie turnieje",
+    "allStages": "Wszystkie fazy",
+    "showAll": "Pokaż wszystkie",
+    "showLess": "Pokaż mniej"
+  },
+  "stages": {
+    "group stage": "Faza grupowa",
+    "round of 32": "Runda 32 drużyn",
+    "round of 16": "1/8 finału",
+    "quarter-finals": "Ćwierćfinały",
+    "semi-finals": "Półfinały",
+    "third-place match": "Mecz o trzecie miejsce",
+    "final": "Finał"
+  },
+  "footer": {
+    "dataFrom": "Dane pochodzą z",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

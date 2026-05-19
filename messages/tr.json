@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Erkekler FIFA Dünya Kupası tarihindeki her benzersiz final skoru"
+  },
+  "explainer": {
+    "title": "Scorigami Nedir?",
+    "description": "Scorigami, bir spor dalının tarihinde daha önce hiç gerçekleşmemiş bir final skoru kavramıdır. Bu fikir, NFL scorigami üzerine yaptığı muhteşem çalışmayla Jon Bois tarafından popüler hale getirilmiş ve bu projeye ilham kaynağı olmuştur.",
+    "watchVideo": "Orijinal videoyu izle",
+    "whyBuilt": "World Cupigami'yi, Dünya Kupası'nı özel kılan paylaşım ruhundan hareketle Amerikan spor kültürünü dünyanın en büyük sahnesine taşımak için kurdum. Scorigami, futbolda Amerikan futboluna kıyasla biraz farklı işliyor; çünkü goller 2, 3, 6 ya da 7'lik gruplar halinde değil, birer birer atılıyor. Bu da yeni scorigami'leri daha nadir ve daha anlamlı kılıyor.",
+    "mensOnly": "Bu site şu an yalnızca Erkekler FIFA Dünya Kupası'nı kapsamaktadır. Kadınlar Dünya Kupası sürümü yakında geliyor.",
+    "pointTitle": "Bunun amacı ne?",
+    "pointDescription": "Dürüst olmak gerekirse? Hiçbir şey. Benim gibi spor analitiği meraklısıysanız sadece eğlenceli. Ama bundan çıkabilecek güzel bir şey varsa şu: Takımınız bir scorigami yapınca, kaybeden takımın ülkesindeki bir hayır kurumuna bağış yapmayı düşünün. Tarihe geçen bir skor, dünyaya biraz iyilik katmak için harika bir vesile olabilir."
+  },
+  "stats": {
+    "matches": "maç",
+    "uniqueScores": "benzersiz skor",
+    "neverHappened": "hiç olmadı",
+    "tournaments": "Turnuvalar"
+  },
+  "views": {
+    "heatmap": "Isı Haritası",
+    "allMatches": "Tüm Maçlar"
+  },
+  "grid": {
+    "description": "Satırlar = kaybeden skoru · Sütunlar = kazanan skoru · Herhangi bir hücreye tıkla",
+    "never": "Hiç Olmadı",
+    "unique": "Benzersiz (1×)",
+    "veryRare": "Çok Nadir",
+    "rare": "Nadir",
+    "common": "Yaygın",
+    "veryCommon": "Çok Yaygın",
+    "neverHappened": "{low}–{high}: Hiç Olmadı",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "{low}–{high} skoru Dünya Kupası tarihinde hiç gerçekleşmedi.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Kapat"
+  },
+  "table": {
+    "searchPlaceholder": "Takım, turnuva, skor ara...",
+    "date": "Tarih",
+    "home": "Ev Sahibi",
+    "score": "Skor",
+    "away": "Deplasman",
+    "stage": "Aşama",
+    "venue": "Stat",
+    "year": "Yıl",
+    "showingOf": "{total} maçtan {shown} tanesi gösteriliyor.",
+    "allTournaments": "Tüm Turnuvalar",
+    "allStages": "Tüm Aşamalar",
+    "showAll": "Tümünü göster",
+    "showLess": "Daha az göster"
+  },
+  "stages": {
+    "group stage": "Grup Aşaması",
+    "round of 32": "Son 32",
+    "round of 16": "Son 16",
+    "quarter-finals": "Çeyrek Finaller",
+    "semi-finals": "Yarı Finaller",
+    "third-place match": "Üçüncülük Maçı",
+    "final": "Final"
+  },
+  "footer": {
+    "dataFrom": "Veriler:",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

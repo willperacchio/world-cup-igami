@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Kila matokeo ya mwisho ya kipekee katika historia ya Kombe la Dunia la FIFA la Wanaume"
+  },
+  "explainer": {
+    "title": "Scorigami ni nini?",
+    "description": "Scorigami ni dhana ya matokeo ya mwisho ambayo hayajawahi kutokea kabla katika historia ya mchezo. Wazo hili lilifahamishwa na Jon Bois, ambaye kazi yake ya ajabu kuhusu NFL scorigami ilihamasisha mradi huu.",
+    "watchVideo": "Tazama video ya asili",
+    "whyBuilt": "Nilijenga World Cupigami kuleta kidogo ya utamaduni wa michezo ya Amerika kwenye jukwaa kubwa zaidi duniani — kwa roho ya kushiriki ambayo inafanya Kombe la Dunia kuwa maalum. Scorigami inafanya kazi tofauti kidogo katika soka kuliko katika mpira wa miguu wa Kiamerika, kwa sababu magoli hupigwa mmoja mmoja badala ya vikundi vya 2, 3, 6, au 7. Hii inafanya scorigami mpya kuwa nadra zaidi na zenye maana zaidi.",
+    "mensOnly": "Hii kwa sasa inashughulikia Kombe la Dunia la FIFA la Wanaume pekee. Toleo la Kombe la Dunia la Wanawake linakuja hivi karibuni.",
+    "pointTitle": "Lengo lake ni nini?",
+    "pointDescription": "Kwa kweli? Hakuna. Ni burudani tu kama wewe ni mpenzi wa uchambuzi wa michezo kama mimi. Lakini kama kuna jambo jema moja linaloweza kutokana na hili — timu yako ikipiga scorigami, fikiria kuchangia shirika la hisani nchini timu iliyoshindwa. Matokeo ya kihistoria ni sababu nzuri ya kufanya mema duniani."
+  },
+  "stats": {
+    "matches": "mechi",
+    "uniqueScores": "matokeo ya kipekee",
+    "neverHappened": "hayajawahi kutokea",
+    "tournaments": "Mashindano"
+  },
+  "views": {
+    "heatmap": "Ramani ya Joto",
+    "allMatches": "Mechi Zote"
+  },
+  "grid": {
+    "description": "Safu = matokeo ya kushindwa · Nguzo = matokeo ya kushinda · Bonyeza seli yoyote",
+    "never": "Kamwe",
+    "unique": "Kipekee (1×)",
+    "veryRare": "Nadra Sana",
+    "rare": "Nadra",
+    "common": "Kawaida",
+    "veryCommon": "Kawaida Sana",
+    "neverHappened": "{low}–{high}: Kamwe",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "{low}–{high} haijawahi kutokea katika historia ya Kombe la Dunia.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Funga"
+  },
+  "table": {
+    "searchPlaceholder": "Tafuta timu, mashindano, matokeo...",
+    "date": "Tarehe",
+    "home": "Nyumbani",
+    "score": "Matokeo",
+    "away": "Ughaibuni",
+    "stage": "Hatua",
+    "venue": "Uwanja",
+    "year": "Mwaka",
+    "showingOf": "Inaonyesha {shown} kati ya {total} mechi.",
+    "allTournaments": "Mashindano Yote",
+    "allStages": "Hatua Zote",
+    "showAll": "Onyesha zote",
+    "showLess": "Onyesha kidogo"
+  },
+  "stages": {
+    "group stage": "Hatua ya Makundi",
+    "round of 32": "Raundi ya 32",
+    "round of 16": "Raundi ya 16",
+    "quarter-finals": "Robo Fainali",
+    "semi-finals": "Nusu Fainali",
+    "third-place match": "Mechi ya Nafasi ya Tatu",
+    "final": "Fainali"
+  },
+  "footer": {
+    "dataFrom": "Data kutoka",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

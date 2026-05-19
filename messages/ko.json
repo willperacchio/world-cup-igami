@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "FIFA 남자 월드컵 역사상 존재했던 모든 고유한 최종 스코어"
+  },
+  "explainer": {
+    "title": "스코리가미란?",
+    "description": "스코리가미는 스포츠 역사상 한 번도 나온 적 없는 최종 스코어를 뜻하는 개념입니다. Jon Bois가 NFL 스코리가미에 관한 훌륭한 작업으로 이 개념을 널리 알렸고, 그것이 이 프로젝트의 영감이 되었습니다.",
+    "watchVideo": "원본 영상 보기",
+    "whyBuilt": "저는 월드컵을 특별하게 만드는 공유의 정신으로, 미국 스포츠 문화를 세계 최대의 무대에 소개하고자 World Cupigami를 만들었습니다. 축구에서의 스코리가미는 미식축구와는 조금 다르게 작동합니다. 미식축구처럼 2점, 3점, 6점, 7점 단위가 아니라 한 골씩 득점하기 때문에, 새로운 스코리가미는 더 드물고 그만큼 더 의미 있습니다.",
+    "mensOnly": "현재는 FIFA 남자 월드컵만 다루고 있습니다. 여자 월드컵 버전도 곧 출시될 예정입니다.",
+    "pointTitle": "이게 무슨 의미가 있나요?",
+    "pointDescription": "솔직히 말하면? 별 의미 없습니다. 저처럼 스포츠 데이터에 빠진 사람에게 그냥 재미있는 것뿐이에요. 하지만 한 가지 좋은 점이 있다면 — 당신의 팀이 스코리가미를 달성했을 때, 패배한 팀의 나라에 있는 자선단체에 기부하는 건 어떨까요? 역사적인 스코어는 세상에 선한 일을 할 좋은 핑계가 됩니다."
+  },
+  "stats": {
+    "matches": "경기",
+    "uniqueScores": "고유 스코어",
+    "neverHappened": "미발생",
+    "tournaments": "토너먼트"
+  },
+  "views": {
+    "heatmap": "히트맵",
+    "allMatches": "전체 경기"
+  },
+  "grid": {
+    "description": "행 = 패팀 점수 · 열 = 승팀 점수 · 셀을 클릭하세요",
+    "never": "없음",
+    "unique": "유일 (1×)",
+    "veryRare": "매우 희귀",
+    "rare": "희귀",
+    "common": "보통",
+    "veryCommon": "매우 흔함",
+    "neverHappened": "{low}–{high}: 발생 없음",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "스코리가미!",
+    "scorigamiDescription": "{low}–{high}는 월드컵 역사상 한 번도 나온 적 없는 스코어입니다.",
+    "scorigamiBadge": "(스코리가미)",
+    "close": "닫기"
+  },
+  "table": {
+    "searchPlaceholder": "팀, 토너먼트, 스코어 검색...",
+    "date": "날짜",
+    "home": "홈",
+    "score": "스코어",
+    "away": "원정",
+    "stage": "라운드",
+    "venue": "경기장",
+    "year": "연도",
+    "showingOf": "전체 {total}경기 중 {shown}경기 표시 중",
+    "allTournaments": "전체 토너먼트",
+    "allStages": "전체 라운드",
+    "showAll": "모두 보기",
+    "showLess": "접기"
+  },
+  "stages": {
+    "group stage": "조별 리그",
+    "round of 32": "32강",
+    "round of 16": "16강",
+    "quarter-finals": "8강",
+    "semi-finals": "4강",
+    "third-place match": "3·4위전",
+    "final": "결승"
+  },
+  "footer": {
+    "dataFrom": "데이터 출처",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}

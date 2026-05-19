@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "World Cupigami",
+    "subtitle": "Setiap skor akhir unik dalam sejarah Piala Dunia FIFA Putra"
+  },
+  "explainer": {
+    "title": "Apa itu Scorigami?",
+    "description": "Scorigami adalah konsep skor akhir yang belum pernah terjadi sebelumnya dalam sejarah suatu olahraga. Ide ini dipopulerkan oleh Jon Bois, yang karyanya tentang NFL scorigami menginspirasi proyek ini.",
+    "watchVideo": "Tonton video aslinya",
+    "whyBuilt": "Saya membangun World Cupigami untuk membawa sedikit budaya olahraga Amerika ke panggung terbesar dunia — dengan semangat berbagi yang membuat Piala Dunia begitu istimewa. Scorigami bekerja sedikit berbeda dalam sepak bola dibanding American football, karena gol dicetak satu per satu, bukan dalam kelipatan 2, 3, 6, atau 7. Itu membuat scorigami baru lebih jarang terjadi dan lebih bermakna.",
+    "mensOnly": "Saat ini hanya mencakup Piala Dunia FIFA Putra. Edisi Piala Dunia Putri akan segera hadir.",
+    "pointTitle": "Apa gunanya ini?",
+    "pointDescription": "Jujur? Tidak ada. Ini hanya menyenangkan jika kamu penggemar analitik olahraga seperti saya. Tapi kalau ada satu hal baik yang bisa muncul dari ini — ketika timmu mencetak scorigami, pertimbangkan untuk berdonasi ke badan amal di negara tim yang kalah. Skor bersejarah adalah alasan yang tepat untuk berbuat kebaikan di dunia."
+  },
+  "stats": {
+    "matches": "pertandingan",
+    "uniqueScores": "skor unik",
+    "neverHappened": "belum pernah terjadi",
+    "tournaments": "Turnamen"
+  },
+  "views": {
+    "heatmap": "Peta Panas",
+    "allMatches": "Semua Pertandingan"
+  },
+  "grid": {
+    "description": "Baris = skor kalah · Kolom = skor menang · Klik sel mana saja",
+    "never": "Belum Pernah",
+    "unique": "Unik (1×)",
+    "veryRare": "Sangat Langka",
+    "rare": "Langka",
+    "common": "Umum",
+    "veryCommon": "Sangat Umum",
+    "neverHappened": "{low}–{high}: Belum pernah",
+    "count": "{low}–{high}: {count}×"
+  },
+  "detail": {
+    "scorigamiTitle": "Scorigami!",
+    "scorigamiDescription": "{low}–{high} belum pernah terjadi dalam sejarah Piala Dunia.",
+    "scorigamiBadge": "(Scorigami)",
+    "close": "Tutup"
+  },
+  "table": {
+    "searchPlaceholder": "Cari tim, turnamen, skor...",
+    "date": "Tanggal",
+    "home": "Tuan Rumah",
+    "score": "Skor",
+    "away": "Tamu",
+    "stage": "Babak",
+    "venue": "Venue",
+    "year": "Tahun",
+    "showingOf": "Menampilkan {shown} dari {total} pertandingan.",
+    "allTournaments": "Semua Turnamen",
+    "allStages": "Semua Babak",
+    "showAll": "Tampilkan semua",
+    "showLess": "Tampilkan lebih sedikit"
+  },
+  "stages": {
+    "group stage": "Fase Grup",
+    "round of 32": "Babak 32 Besar",
+    "round of 16": "Babak 16 Besar",
+    "quarter-finals": "Perempat Final",
+    "semi-finals": "Semi Final",
+    "third-place match": "Perebutan Tempat Ketiga",
+    "final": "Final"
+  },
+  "footer": {
+    "dataFrom": "Data dari",
+    "dataSource": "The Fjelstul World Cup Database",
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+  },
+  "locale": {}
+}
