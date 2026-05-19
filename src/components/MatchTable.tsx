@@ -9,23 +9,46 @@ interface Props {
   matches: Match[];
 }
 
+const PAGE_SIZE = 100;
+
 export default function MatchTable({ matches }: Props) {
   const [search, setSearch] = useState("");
+  const [tournamentFilter, setTournamentFilter] = useState("all");
+  const [stageFilter, setStageFilter] = useState("all");
   const [sortField, setSortField] = useState<"date" | "score">("date");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
+  const [showAll, setShowAll] = useState(false);
   const t = useTranslations("table");
   const tStages = useTranslations("stages");
 
+  const tournaments = useMemo(() => {
+    const fromData = [...new Set(matches.map((m) => m.tournament))];
+    const upcoming = "2026 FIFA Men's World Cup";
+    if (!fromData.includes(upcoming)) fromData.push(upcoming);
+    return fromData.sort().reverse();
+  }, [matches]);
+
+  const stages = useMemo(() => {
+    const order = ["group stage", "round of 32", "round of 16", "quarter-finals", "semi-finals", "third-place match", "final"];
+    return order;
+  }, []);
+
   const filtered = useMemo(() => {
     const q = search.toLowerCase();
-    let result = matches.filter(
-      (m) =>
-        m.homeTeam.toLowerCase().includes(q) ||
-        m.awayTeam.toLowerCase().includes(q) ||
-        m.tournament.toLowerCase().includes(q) ||
-        m.stage.toLowerCase().includes(q) ||
-        `${m.homeScore}-${m.awayScore}`.includes(q)
-    );
+    let result = matches.filter((m) => {
+      if (tournamentFilter !== "all" && m.tournament !== tournamentFilter) return false;
+      if (stageFilter !== "all" && m.stage !== stageFilter) return false;
+      if (q) {
+        return (
+          m.homeTeam.toLowerCase().includes(q) ||
+          m.awayTeam.toLowerCase().includes(q) ||
+          m.tournament.toLowerCase().includes(q) ||
+          m.stage.toLowerCase().includes(q) ||
+          `${m.homeScore}-${m.awayScore}`.includes(q)
+        );
+      }
+      return true;
+    });
     result.sort((a, b) => {
       if (sortField === "date") {
         const cmp = a.date.localeCompare(b.date);
@@ -36,7 +59,7 @@ export default function MatchTable({ matches }: Props) {
       return sortDir === "asc" ? totalA - totalB : totalB - totalA;
     });
     return result;
-  }, [matches, search, sortField, sortDir]);
+  }, [matches, search, tournamentFilter, stageFilter, sortField, sortDir]);
 
   function toggleSort(field: "date" | "score") {
     if (sortField === field) setSortDir((d) => (d === "asc" ? "desc" : "asc"));
@@ -44,16 +67,40 @@ export default function MatchTable({ matches }: Props) {
   }
 
   const arrow = sortDir === "asc" ? " ↑" : " ↓";
+  const displayCount = showAll ? filtered.length : Math.min(PAGE_SIZE, filtered.length);
+  const hasMore = !showAll && filtered.length > PAGE_SIZE;
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder={t("searchPlaceholder")}
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        className="w-full max-w-sm px-3 py-2 mb-4 border border-zinc-300 dark:border-zinc-600 rounded bg-white dark:bg-zinc-900 text-sm focus:outline-none focus:ring-1 focus:ring-zinc-400"
-      />
+      <div className="flex flex-wrap items-center gap-2 mb-4">
+        <input
+          type="text"
+          placeholder={t("searchPlaceholder")}
+          value={search}
+          onChange={(e) => { setSearch(e.target.value); setShowAll(false); }}
+          className="flex-1 min-w-[180px] px-3 py-1.5 border border-zinc-300 dark:border-zinc-600 rounded bg-white dark:bg-zinc-900 text-sm focus:outline-none focus:ring-1 focus:ring-zinc-400"
+        />
+        <select
+          value={tournamentFilter}
+          onChange={(e) => { setTournamentFilter(e.target.value); setShowAll(false); }}
+          className="px-2 py-1.5 border border-zinc-300 dark:border-zinc-600 rounded bg-white dark:bg-zinc-900 text-sm focus:outline-none focus:ring-1 focus:ring-zinc-400"
+        >
+          <option value="all">{t("allTournaments")}</option>
+          {tournaments.map((tourney) => (
+            <option key={tourney} value={tourney}>{tourney.replace(" FIFA Men's World Cup", "")}</option>
+          ))}
+        </select>
+        <select
+          value={stageFilter}
+          onChange={(e) => { setStageFilter(e.target.value); setShowAll(false); }}
+          className="px-2 py-1.5 border border-zinc-300 dark:border-zinc-600 rounded bg-white dark:bg-zinc-900 text-sm focus:outline-none focus:ring-1 focus:ring-zinc-400"
+        >
+          <option value="all">{t("allStages")}</option>
+          {stages.map((s) => (
+            <option key={s} value={s}>{tStages(s)}</option>
+          ))}
+        </select>
+      </div>
       <table className="w-full text-sm">
         <thead>
           <tr className="border-b border-zinc-200 dark:border-zinc-700 text-left text-xs text-zinc-500 uppercase">
@@ -66,7 +113,7 @@ export default function MatchTable({ matches }: Props) {
           </tr>
         </thead>
         <tbody>
-          {filtered.slice(0, 100).map((m, i) => (
+          {filtered.slice(0, displayCount).map((m, i) => (
             <tr key={i} className="border-b border-zinc-100 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-800/50">
               <td className="py-2 px-2 text-zinc-400 text-xs">{m.date}</td>
               <td className="py-2 px-2 font-medium">
@@ -88,9 +135,27 @@ export default function MatchTable({ matches }: Props) {
           ))}
         </tbody>
       </table>
-      {filtered.length > 100 && (
-        <p className="text-xs text-zinc-400 mt-2">{t("showingOf", { shown: 100, total: filtered.length })}</p>
-      )}
+      <div className="flex items-center justify-between mt-2">
+        <p className="text-xs text-zinc-400">
+          {t("showingOf", { shown: displayCount, total: filtered.length })}
+        </p>
+        {hasMore && (
+          <button
+            onClick={() => setShowAll(true)}
+            className="text-xs text-blue-500 hover:text-blue-400 underline"
+          >
+            {t("showAll")}
+          </button>
+        )}
+        {showAll && filtered.length > PAGE_SIZE && (
+          <button
+            onClick={() => setShowAll(false)}
+            className="text-xs text-blue-500 hover:text-blue-400 underline"
+          >
+            {t("showLess")}
+          </button>
+        )}
+      </div>
     </div>
   );
 }

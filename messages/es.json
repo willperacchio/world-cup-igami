@@ -47,10 +47,15 @@
     "away": "Visitante",
     "stage": "Fase",
     "year": "Año",
-    "showingOf": "Mostrando {shown} de {total} partidos."
+    "showingOf": "Mostrando {shown} de {total} partidos.",
+    "allTournaments": "Todos los torneos",
+    "allStages": "Todas las fases",
+    "showAll": "Mostrar todos",
+    "showLess": "Mostrar menos"
   },
   "stages": {
     "group stage": "Fase de grupos",
+    "round of 32": "Dieciseisavos de final",
     "round of 16": "Octavos de final",
     "quarter-finals": "Cuartos de final",
     "semi-finals": "Semifinales",
