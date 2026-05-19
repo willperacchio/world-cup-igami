@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Script from "next/script";
 import { useTranslations } from "next-intl";
 import { matches, scorigami, summary, getScorigamiGrid } from "@/lib/data";
 import type { ScorigamiEntry } from "@/lib/types";
@@ -121,12 +122,29 @@ export default function Home() {
 
         {view === "facts" && <FunFacts matches={matches} scorigami={scorigami} />}
 
-        <footer className="pt-6 border-t border-zinc-200 dark:border-zinc-800 text-xs text-zinc-400">
-          {t("footer.dataFrom")}{" "}
-          <a href="https://github.com/jfjelstul/worldcup" className="underline" target="_blank" rel="noopener noreferrer">
-            {t("footer.dataSource")}
-          </a>{" "}
-          {t("footer.author")}
+        <footer className="pt-6 border-t border-zinc-200 dark:border-zinc-800 text-xs text-zinc-400 flex items-center justify-between">
+          <div>
+            {t("footer.dataFrom")}{" "}
+            <a href="https://github.com/jfjelstul/worldcup" className="underline" target="_blank" rel="noopener noreferrer">
+              {t("footer.dataSource")}
+            </a>{" "}
+            {t("footer.author")}
+          </div>
+          <div>
+            <Script
+              src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+              data-name="bmc-button"
+              data-slug="wap_"
+              data-color="#FFDD00"
+              data-emoji=""
+              data-font="Cookie"
+              data-text="Buy me a coffee"
+              data-outline-color="#000000"
+              data-font-color="#000000"
+              data-coffee-color="#ffffff"
+              strategy="lazyOnload"
+            />
+          </div>
         </footer>
       </main>
     </div>
