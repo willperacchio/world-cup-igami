@@ -179,10 +179,10 @@ export default function FunFacts({ matches, scorigami }: Props) {
     const goalCounts: Record<number, number> = {};
     for (const m of matches) {
       const total = m.homeScore + m.awayScore;
-      const bucket = total >= 8 ? 8 : total;
+      const bucket = total >= 12 ? 12 : total;
       goalCounts[bucket] = (goalCounts[bucket] || 0) + 1;
     }
-    for (let i = 0; i <= 8; i++) {
+    for (let i = 0; i <= 12; i++) {
       goalDistribution.push({ totalGoals: i, count: goalCounts[i] || 0 });
     }
 
@@ -342,7 +342,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
                 <span className="text-zinc-400 text-xs w-4">{i + 1}.</span>
                 <span className="font-bold w-10">{s.highScore}–{s.lowScore}</span>
                 <div className="flex-1 flex items-center gap-2">
-                  <div className="h-2 rounded-full bg-zinc-900 dark:bg-zinc-100" style={{ width: `${(s.count / facts.mostCommon[0].count) * 100}%` }} />
+                  <div className="h-2 rounded-full" style={{ width: `${(s.count / facts.mostCommon[0].count) * 100}%`, backgroundColor: getRarityColor(s.count, facts.mostCommon[0].count) }} />
                   <span className="text-zinc-500 text-xs">{s.count}×</span>
                 </div>
               </div>
@@ -517,8 +517,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
         {/* Per-stage horizontal bars */}
         <div className="space-y-2">
           {facts.stageBreakdown.map((s) => {
-            const maxRate = Math.max(...facts.stageBreakdown.map((sb) => sb.rate));
-            const barWidth = maxRate > 0 ? (s.rate / maxRate) * 100 : 0;
+            const barWidth = s.rate; // Scale to 100% so rarity is visible
             const isTop = facts.topScorigamiStage && s.stage === facts.topScorigamiStage.stage;
             return (
               <div key={s.stage} className="flex items-center gap-2 text-sm">
@@ -625,7 +624,7 @@ function GoalDistributionHistogram({
           const y = pad.top + plotH - barH;
           const pct = ((d.count / totalMatches) * 100).toFixed(1);
           const isHovered = hovered?.totalGoals === d.totalGoals;
-          const label = d.totalGoals === 8 ? "8+" : `${d.totalGoals}`;
+          const label = d.totalGoals === 12 ? "12+" : `${d.totalGoals}`;
 
           return (
             <g key={d.totalGoals}>
@@ -1139,7 +1138,7 @@ function ScoreDistribution({ mostCommon, totalMatches }: { mostCommon: Scorigami
                     <span className="font-bold">{a.label}</span>
                     <span className="text-zinc-400">{a.pct}%</span>
                   </div>
-                  <div className="text-[10px] text-zinc-500 ml-5 mt-0.5">{a.scores.slice(0, 5).join(", ")}{a.scores.length > 5 ? ` +${a.scores.length - 5}` : ""}</div>
+                  <div className="text-[10px] text-zinc-500 ml-5 mt-0.5">{a.scores.join(", ")}</div>
                 </div>
               ))}
             </div>

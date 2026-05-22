@@ -218,6 +218,7 @@ export default function Home() {
             </a>{" "}
             {t("footer.author")}
           </div>
+          <p className="text-zinc-500">{t("footer.disclaimer")}</p>
           <div className="flex justify-center">
             <a
               href="https://www.buymeacoffee.com/wap_"

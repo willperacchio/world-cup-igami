@@ -7,7 +7,7 @@
     "title": "What is Scorigami?",
     "description": "Scorigami is the concept of a final score that has never happened before in a sport's history. The idea was popularized by Jon Bois, whose brilliant work on NFL scorigami inspired this project.",
     "watchVideo": "Watch the original video",
-    "whyBuilt": "I built World Cupigami to bring a little American sporting culture to the world's biggest stage — in the spirit of sharing that makes the World Cup special. Scorigami works a bit differently in soccer than in American football, since goals are scored one at a time rather than in chunks of 2, 3, 6, or 7. That makes new scorigamis rarer and more meaningful.",
+    "whyBuilt": "I built World Cupigami to bring a little American sporting culture to the world's biggest stage — in the spirit of sharing that makes the World Cup special. Scorigami works a bit differently in soccer than in American football, since goals are scored one at a time rather than in chunks of 2, 3, 6, 7, or 8. That makes new scorigamis rarer and more meaningful.",
     "mensOnly": "This currently covers the Men's FIFA World Cup only. A Women's World Cup edition is coming soon.",
     "pointTitle": "What's the point of this?",
     "pointDescription": "Honestly? Nothing. It's just fun if you're a sports analytics nerd like me. But if there's one good thing that can come out of this — when your team scores a scorigami, consider donating to a charity in the losing team's country. A historic scoreline is a great excuse to do some good in the world."
@@ -72,7 +72,8 @@
   "footer": {
     "dataFrom": "Data from",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "disclaimer": "FIFA World Cup™ is a trademark of FIFA. This site is not affiliated with, endorsed by, or connected to FIFA."
   },
   "funFacts": {
     "mostRecentTitle": "Most Recent Scorigami",

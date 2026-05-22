@@ -7,7 +7,7 @@
     "title": "¿Qué es Scorigami?",
     "description": "Scorigami es el concepto de un marcador final que nunca ha ocurrido en la historia de un deporte. La idea fue popularizada por Jon Bois, cuyo brillante trabajo sobre el scorigami de la NFL inspiró este proyecto.",
     "watchVideo": "Ver el video original",
-    "whyBuilt": "Creé World Cupigami para llevar un poco de la cultura deportiva estadounidense al escenario más grande del mundo — en el espíritu de compartir que hace especial a la Copa Mundial. El scorigami funciona un poco diferente en el fútbol que en el fútbol americano, ya que los goles se anotan de uno en uno en lugar de en grupos de 2, 3, 6 o 7. Eso hace que los nuevos scorigamis sean más raros y significativos.",
+    "whyBuilt": "Creé World Cupigami para llevar un poco de la cultura deportiva estadounidense al escenario más grande del mundo — en el espíritu de compartir que hace especial a la Copa Mundial. El scorigami funciona un poco diferente en el fútbol que en el fútbol americano, ya que los goles se anotan de uno en uno en lugar de en grupos de 2, 3, 6, 7 u 8. Eso hace que los nuevos scorigamis sean más raros y significativos.",
     "mensOnly": "Actualmente esto cubre solo la Copa Mundial Masculina de la FIFA. Una edición de la Copa Mundial Femenina llegará pronto.",
     "pointTitle": "¿Cuál es el objetivo de esto?",
     "pointDescription": "¿Honestamente? Nada. Es solo diversión para nerds de la analítica deportiva como yo. Pero si algo bueno puede salir de esto — cuando tu equipo logre un scorigami, considera donar a una organización benéfica en el país del equipo perdedor. Un marcador histórico es una gran excusa para hacer algo bueno en el mundo."
@@ -72,7 +72,8 @@
   "footer": {
     "dataFrom": "Datos de",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "por Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "por Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "disclaimer": "FIFA World Cup™ es una marca registrada de la FIFA. Este sitio no está afiliado, respaldado ni conectado con la FIFA."
   },
   "funFacts": {
     "mostRecentTitle": "Scorigami más reciente",
