@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo, useRef, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
-import { matches, scorigami, summary, getScorigamiGrid } from "@/lib/data";
+import { matches, scorigami, summary, getScorigamiGrid, buildGridFromMatches, tournamentYears } from "@/lib/data";
 import type { ScorigamiEntry } from "@/lib/types";
 import ScorigamiGrid from "@/components/ScorigamiGrid";
 import MatchTable from "@/components/MatchTable";
@@ -19,9 +19,53 @@ export default function Home() {
     low: number;
     high: number;
   } | null>(null);
+  const [yearIndex, setYearIndex] = useState(tournamentYears.length - 1);
+  const [playing, setPlaying] = useState(false);
+  const playingRef = useRef(false);
+  const indexRef = useRef(yearIndex);
+
+  useEffect(() => { indexRef.current = yearIndex; }, [yearIndex]);
+  useEffect(() => { playingRef.current = playing; }, [playing]);
+
+  useEffect(() => {
+    if (!playing) return;
+    if (yearIndex === tournamentYears.length - 1) {
+      setYearIndex(0);
+      setSelectedCell(null);
+    }
+    const id = setInterval(() => {
+      if (indexRef.current >= tournamentYears.length - 1) {
+        setPlaying(false);
+        return;
+      }
+      setYearIndex((i) => i + 1);
+      setSelectedCell(null);
+    }, 1200);
+    return () => clearInterval(id);
+  }, [playing]);
+
+  const togglePlay = useCallback(() => {
+    setPlaying((p) => !p);
+  }, []);
 
   const t = useTranslations();
-  const grid = getScorigamiGrid();
+  const fullGrid = getScorigamiGrid();
+
+  const selectedYear = tournamentYears[yearIndex];
+  const isLatest = yearIndex === tournamentYears.length - 1;
+
+  const { grid, filteredMatches, filteredStats } = useMemo(() => {
+    if (isLatest) {
+      return { grid: fullGrid, filteredMatches: matches, filteredStats: { total: summary.totalMatches, unique: summary.uniqueScores } };
+    }
+    const fm = matches.filter((m) => {
+      const yr = parseInt(m.tournament.replace(" FIFA Men's World Cup", ""));
+      return yr <= selectedYear;
+    });
+    const g = buildGridFromMatches(fm);
+    return { grid: g, filteredMatches: fm, filteredStats: { total: fm.length, unique: g.size } };
+  }, [selectedYear, isLatest, fullGrid]);
+
   const displayMax = Math.min(summary.maxScore, 10);
   const totalPossible = ((displayMax + 1) * (displayMax + 2)) / 2;
   const neverHappened = totalPossible - summary.uniqueScores;
@@ -57,10 +101,10 @@ export default function Home() {
         </section>
 
         <div className="flex gap-6 text-sm">
-          <div><span className="font-bold">{summary.totalMatches}</span> {t("stats.matches")}</div>
-          <div><span className="font-bold">{summary.uniqueScores}</span> {t("stats.uniqueScores")}</div>
-          <div><span className="font-bold">{neverHappened}</span> {t("stats.neverHappened")}</div>
-          <div>{summary.dateRange.first.slice(0, 4)}–{summary.dateRange.last.slice(0, 4)}</div>
+          <div><span className="font-bold">{filteredStats.total}</span> {t("stats.matches")}</div>
+          <div><span className="font-bold">{filteredStats.unique}</span> {t("stats.uniqueScores")}</div>
+          <div><span className="font-bold">{totalPossible - filteredStats.unique}</span> {t("stats.neverHappened")}</div>
+          <div>{summary.dateRange.first.slice(0, 4)}–{isLatest ? summary.dateRange.last.slice(0, 4) : selectedYear}</div>
         </div>
 
         <div className="flex gap-2">
@@ -98,6 +142,51 @@ export default function Home() {
 
         {view === "grid" && (
           <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => { setPlaying(false); setYearIndex(Math.max(0, yearIndex - 1)); }}
+                disabled={yearIndex === 0}
+                className="px-2 py-1 rounded text-sm font-medium bg-zinc-100 dark:bg-zinc-800 disabled:opacity-30"
+              >
+                ◀
+              </button>
+              <div className="flex-1 flex flex-col gap-1">
+                <input
+                  type="range"
+                  min={0}
+                  max={tournamentYears.length - 1}
+                  value={yearIndex}
+                  onChange={(e) => { setPlaying(false); setYearIndex(parseInt(e.target.value)); setSelectedCell(null); }}
+                  className="w-full accent-amber-500"
+                />
+                <div className="flex justify-between text-[10px] text-zinc-400 px-0.5">
+                  {tournamentYears.map((yr, i) => (
+                    <span key={yr} className={`${i === yearIndex ? "text-amber-500 font-bold" : ""} ${i !== 0 && i !== tournamentYears.length - 1 && i !== yearIndex ? "hidden sm:inline" : ""}`}>
+                      {i === yearIndex || i === 0 || i === tournamentYears.length - 1 ? yr : "·"}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <button
+                onClick={() => { setPlaying(false); setYearIndex(Math.min(tournamentYears.length - 1, yearIndex + 1)); }}
+                disabled={yearIndex === tournamentYears.length - 1}
+                className="px-2 py-1 rounded text-sm font-medium bg-zinc-100 dark:bg-zinc-800 disabled:opacity-30"
+              >
+                ▶
+              </button>
+              <button
+                onClick={togglePlay}
+                className={`px-2.5 py-1 rounded text-sm font-medium ${
+                  playing
+                    ? "bg-amber-500 text-black"
+                    : "bg-zinc-100 dark:bg-zinc-800"
+                }`}
+                title={playing ? "Pause" : "Play"}
+              >
+                {playing ? "⏸" : "▶️"}
+              </button>
+              <span className="text-sm font-bold min-w-[4ch] text-center">{selectedYear}</span>
+            </div>
             <ScorigamiGrid
               grid={grid}
               maxScore={summary.maxScore}
@@ -108,7 +197,7 @@ export default function Home() {
             {selectedCell && (
               <MatchDetail
                 entry={selectedCell.entry}
-                allMatches={matches}
+                allMatches={filteredMatches}
                 lowScore={selectedCell.low}
                 highScore={selectedCell.high}
                 onClose={() => setSelectedCell(null)}
@@ -117,7 +206,7 @@ export default function Home() {
           </div>
         )}
 
-        {view === "table" && <MatchTable matches={matches} />}
+        {view === "table" && <MatchTable matches={matches} scorigami={scorigami} />}
 
         {view === "facts" && <FunFacts matches={matches} scorigami={scorigami} />}
 
@@ -135,10 +224,10 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium"
-              style={{ backgroundColor: "#FFDD00", color: "#000000", fontFamily: "Cookie, cursive" }}
+              style={{ backgroundColor: "#FFDD00", color: "#000000", fontFamily: "Lato, sans-serif" }}
             >
               <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" className="h-4 w-4" />
-              Buy me a coffee
+              Buy me a coffee (I am a grad student - anything appreciated!)
             </a>
           </div>
         </footer>

@@ -2,24 +2,35 @@
 
 import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
-import type { Match } from "@/lib/types";
+import type { Match, ScorigamiEntry } from "@/lib/types";
 import { getFlagSrc } from "@/lib/flags";
 
 interface Props {
   matches: Match[];
+  scorigami: ScorigamiEntry[];
 }
 
 const PAGE_SIZE = 100;
 
-export default function MatchTable({ matches }: Props) {
+export default function MatchTable({ matches, scorigami }: Props) {
   const [search, setSearch] = useState("");
   const [tournamentFilter, setTournamentFilter] = useState("all");
   const [stageFilter, setStageFilter] = useState("all");
-  const [sortField, setSortField] = useState<"date" | "score">("date");
+  const [sortField, setSortField] = useState<"date" | "home" | "score" | "away" | "stage" | "venue" | "year">("date");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
   const [showAll, setShowAll] = useState(false);
+  const [scorigamiOnly, setScorigamiOnly] = useState(false);
   const t = useTranslations("table");
   const tStages = useTranslations("stages");
+
+  const scorigamiKeys = useMemo(() => {
+    const keys = new Set<string>();
+    for (const s of scorigami) {
+      const m = s.firstMatch;
+      keys.add(`${m.date}|${m.homeTeam}|${m.awayTeam}`);
+    }
+    return keys;
+  }, [scorigami]);
 
   const tournaments = useMemo(() => {
     const fromData = [...new Set(matches.map((m) => m.tournament))];
@@ -29,7 +40,7 @@ export default function MatchTable({ matches }: Props) {
   }, [matches]);
 
   const stages = useMemo(() => {
-    const order = ["group stage", "round of 32", "round of 16", "quarter-finals", "semi-finals", "third-place match", "final"];
+    const order = ["group stage", "second group stage", "round of 32", "round of 16", "quarter-finals", "semi-finals", "third-place match", "final round", "final"];
     return order;
   }, []);
 
@@ -38,6 +49,7 @@ export default function MatchTable({ matches }: Props) {
     let result = matches.filter((m) => {
       if (tournamentFilter !== "all" && m.tournament !== tournamentFilter) return false;
       if (stageFilter !== "all" && m.stage !== stageFilter) return false;
+      if (scorigamiOnly && !scorigamiKeys.has(`${m.date}|${m.homeTeam}|${m.awayTeam}`)) return false;
       if (q) {
         return (
           m.homeTeam.toLowerCase().includes(q) ||
@@ -49,19 +61,32 @@ export default function MatchTable({ matches }: Props) {
       }
       return true;
     });
+    const stageOrder = ["group stage", "second group stage", "round of 32", "round of 16", "quarter-finals", "semi-finals", "third-place match", "final round", "final"];
     result.sort((a, b) => {
+      let cmp = 0;
       if (sortField === "date") {
-        const cmp = a.date.localeCompare(b.date);
-        return sortDir === "asc" ? cmp : -cmp;
+        cmp = a.date.localeCompare(b.date);
+      } else if (sortField === "home") {
+        cmp = a.homeTeam.localeCompare(b.homeTeam);
+      } else if (sortField === "away") {
+        cmp = a.awayTeam.localeCompare(b.awayTeam);
+      } else if (sortField === "score") {
+        cmp = (a.homeScore + a.awayScore) - (b.homeScore + b.awayScore);
+        if (cmp === 0) cmp = Math.max(a.homeScore, a.awayScore) - Math.max(b.homeScore, b.awayScore);
+        if (cmp === 0) cmp = a.date.localeCompare(b.date);
+      } else if (sortField === "stage") {
+        cmp = stageOrder.indexOf(a.stage) - stageOrder.indexOf(b.stage);
+      } else if (sortField === "venue") {
+        cmp = `${a.city}, ${a.country}`.localeCompare(`${b.city}, ${b.country}`);
+      } else if (sortField === "year") {
+        cmp = a.tournament.localeCompare(b.tournament);
       }
-      const totalA = a.homeScore + a.awayScore;
-      const totalB = b.homeScore + b.awayScore;
-      return sortDir === "asc" ? totalA - totalB : totalB - totalA;
+      return sortDir === "asc" ? cmp : -cmp;
     });
     return result;
-  }, [matches, search, tournamentFilter, stageFilter, sortField, sortDir]);
+  }, [matches, search, tournamentFilter, stageFilter, scorigamiOnly, scorigamiKeys, sortField, sortDir]);
 
-  function toggleSort(field: "date" | "score") {
+  function toggleSort(field: typeof sortField) {
     if (sortField === field) setSortDir((d) => (d === "asc" ? "desc" : "asc"));
     else { setSortField(field); setSortDir("desc"); }
   }
@@ -100,41 +125,58 @@ export default function MatchTable({ matches }: Props) {
             <option key={s} value={s}>{tStages(s)}</option>
           ))}
         </select>
+        <button
+          onClick={() => { setScorigamiOnly((v) => !v); setShowAll(false); }}
+          className={`px-3 py-1.5 rounded text-sm font-medium ${
+            scorigamiOnly
+              ? "bg-amber-500 text-black"
+              : "bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400"
+          }`}
+        >
+          ⚽ Scorigami
+        </button>
       </div>
       <table className="w-full text-sm">
         <thead>
           <tr className="border-b border-zinc-200 dark:border-zinc-700 text-left text-xs text-zinc-500 uppercase">
             <th className="py-2 px-2 cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100" onClick={() => toggleSort("date")}>{t("date")}{sortField === "date" ? arrow : ""}</th>
-            <th className="py-2 px-2">{t("home")}</th>
-            <th className="py-2 px-2 text-center cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100" onClick={() => toggleSort("score")}>{t("score")}{sortField === "score" ? arrow : ""}</th>
-            <th className="py-2 px-2">{t("away")}</th>
-            <th className="py-2 px-2">{t("stage")}</th>
-            <th className="py-2 px-2">{t("venue")}</th>
-            <th className="py-2 px-2">{t("year")}</th>
+            <th className="py-2 px-2 cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100" onClick={() => toggleSort("home")}>{t("home")}{sortField === "home" ? arrow : ""}</th>
+            <th className="py-2 px-2 text-center cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100" onClick={() => toggleSort("score")} title="Sort by total goals">{t("score")}{sortField === "score" ? ` (total)${arrow}` : ""}</th>
+            <th className="py-2 px-2 cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100" onClick={() => toggleSort("away")}>{t("away")}{sortField === "away" ? arrow : ""}</th>
+            <th className="py-2 px-2 cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100" onClick={() => toggleSort("stage")}>{t("stage")}{sortField === "stage" ? arrow : ""}</th>
+            <th className="py-2 px-2 cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100" onClick={() => toggleSort("venue")}>{t("venue")}{sortField === "venue" ? arrow : ""}</th>
+            <th className="py-2 px-2 cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100" onClick={() => toggleSort("year")}>{t("year")}{sortField === "year" ? arrow : ""}</th>
+            <th className="py-2 px-2 text-center">Scorigami</th>
           </tr>
         </thead>
         <tbody>
-          {filtered.slice(0, displayCount).map((m, i) => (
+          {filtered.slice(0, displayCount).map((m, i) => {
+            const year = parseInt(m.date.slice(0, 4));
+            return (
             <tr key={i} className="border-b border-zinc-100 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-800/50">
               <td className="py-2 px-2 text-zinc-400 text-xs">{m.date}</td>
               <td className="py-2 px-2 font-medium">
-                <img src={getFlagSrc(m.homeCode, parseInt(m.date.slice(0, 4)))} alt={m.homeTeam} className="inline-block w-5 h-3.5 object-cover mr-1.5 rounded-sm border border-zinc-200 dark:border-zinc-700" />
+                <img src={getFlagSrc(m.homeCode, year)} alt={m.homeTeam} className="inline-block w-5 h-3.5 object-cover mr-1.5 rounded-sm border border-zinc-200 dark:border-zinc-700" />
                 {m.homeTeam}
               </td>
-              <td className="py-2 px-2 text-center font-bold">
-                {m.homeScore}–{m.awayScore}
-                {m.extraTime && !m.penaltyShootout && <span className="text-xs text-zinc-400 ml-1">(aet)</span>}
-                {m.penaltyShootout && <span className="text-xs text-zinc-400 ml-1">({m.penaltyScore} pen)</span>}
+              <td className="py-2 px-2 text-center">
+                <div className="font-bold">{m.homeScore}–{m.awayScore}</div>
+                {m.extraTime && !m.penaltyShootout && <div className="text-[10px] text-zinc-400 leading-tight">aet</div>}
+                {m.penaltyShootout && <div className="text-[10px] text-zinc-400 leading-tight">{m.penaltyScore} pen</div>}
               </td>
               <td className="py-2 px-2 font-medium">
-                <img src={getFlagSrc(m.awayCode, parseInt(m.date.slice(0, 4)))} alt={m.awayTeam} className="inline-block w-5 h-3.5 object-cover mr-1.5 rounded-sm border border-zinc-200 dark:border-zinc-700" />
+                <img src={getFlagSrc(m.awayCode, year)} alt={m.awayTeam} className="inline-block w-5 h-3.5 object-cover mr-1.5 rounded-sm border border-zinc-200 dark:border-zinc-700" />
                 {m.awayTeam}
               </td>
               <td className="py-2 px-2 text-zinc-500 text-xs">{tStages(m.stage)}</td>
               <td className="py-2 px-2 text-zinc-400 text-xs">{m.city}, {m.country}</td>
               <td className="py-2 px-2 text-zinc-400 text-xs">{m.tournament.replace(" FIFA Men's World Cup", "")}</td>
+              <td className="py-2 px-2 text-center">
+                {scorigamiKeys.has(`${m.date}|${m.homeTeam}|${m.awayTeam}`) && "⚽"}
+              </td>
             </tr>
-          ))}
+            );
+          })}
         </tbody>
       </table>
       <div className="flex items-center justify-between mt-2">
