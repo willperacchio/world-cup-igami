@@ -46,14 +46,14 @@ export default function LocaleSwitcher() {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-1 w-72 max-h-80 overflow-y-auto rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 shadow-lg z-50">
+        <div className="absolute end-0 top-full mt-1 w-64 sm:w-72 max-w-[calc(100vw-2rem)] max-h-80 overflow-y-auto rounded-lg border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 shadow-lg z-50">
           {locales.map((loc) => {
             const cfg = localeConfig[loc];
             return (
               <button
                 key={loc}
                 onClick={() => switchLocale(loc)}
-                className={`w-full text-left px-3 py-2 text-sm hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors border-b border-zinc-100 dark:border-zinc-800 last:border-0 flex items-center gap-2 ${
+                className={`w-full text-start px-3 py-2 text-sm hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors border-b border-zinc-100 dark:border-zinc-800 last:border-0 flex items-center gap-2 ${
                   locale === loc ? "bg-zinc-50 dark:bg-zinc-800" : ""
                 }`}
               >

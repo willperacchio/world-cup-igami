@@ -1,5 +1,17 @@
-import { readFileSync, writeFileSync } from "fs";
+/**
+ * Build matches.json / scorigami.json / summary.json from:
+ *   1. matches.csv         — historical record (Fjelstul World Cup Database)
+ *   2. live-matches.json   — recently-finished matches from football-data.org
+ *                            (written by scripts/fetch-live-matches.ts)
+ *   3. overrides.json      — hand-curated corrections (optional, wins over both)
+ *
+ * Dedup key is (date|homeTeam|awayTeam). Precedence: overrides > live > csv.
+ * Run via: `npx tsx scripts/process-data.ts`
+ */
+
+import { readFileSync, writeFileSync, existsSync } from "fs";
 import { join } from "path";
+import { mergeMatches } from "./lib/merge-matches";
 
 const dataDir = join(__dirname, "../data");
 const raw = readFileSync(join(dataDir, "matches.csv"), "utf-8");
@@ -88,9 +100,32 @@ const allMatches = lines.slice(1).map((line) => {
 });
 
 // Filter to Men's World Cup only
-const matches: Match[] = allMatches.filter((m) =>
+const historicalMatches: Match[] = allMatches.filter((m) =>
   m.tournament.includes("Men's World Cup")
 );
+
+// Merge in live results from football-data.org (if present) and any
+// hand-curated overrides. Precedence: overrides > live > historical CSV.
+const livePath = join(dataDir, "live-matches.json");
+const liveMatches: Match[] = existsSync(livePath)
+  ? (JSON.parse(readFileSync(livePath, "utf-8")) as { matches: Match[] }).matches
+  : [];
+
+const overridesPath = join(dataDir, "overrides.json");
+let overrideMatches: Match[] = [];
+if (existsSync(overridesPath)) {
+  const raw = JSON.parse(readFileSync(overridesPath, "utf-8")) as
+    | Match[]
+    | { matches: Match[] };
+  overrideMatches = Array.isArray(raw) ? raw : raw.matches;
+}
+
+const { matches, liveAdded, overridesApplied } = mergeMatches(
+  historicalMatches,
+  liveMatches,
+  overrideMatches,
+);
+const overridesAdded = overridesApplied;
 
 // Build scorigami matrix: key is "lowScore-highScore" to normalize
 const scorigamiMap = new Map<
@@ -142,7 +177,10 @@ writeFileSync(join(dataDir, "scorigami.json"), JSON.stringify(scorigami, null, 2
 writeFileSync(join(dataDir, "summary.json"), JSON.stringify(summary, null, 2));
 
 console.log("Processed data:");
-console.log(`  ${summary.totalMatches} matches`);
+console.log(`  ${historicalMatches.length} matches from historical CSV`);
+console.log(`  ${liveAdded} new match(es) from live-matches.json`);
+console.log(`  ${overridesAdded} override(s) applied`);
+console.log(`  ${summary.totalMatches} matches total`);
 console.log(`  ${summary.uniqueScores} unique score combinations`);
 console.log(`  Max score in a match: ${maxScore}`);
 console.log(`  Date range: ${summary.dateRange.first} to ${summary.dateRange.last}`);

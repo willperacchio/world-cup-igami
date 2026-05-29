@@ -1,0 +1,54 @@
+/**
+ * Pure merge: combine historical CSV-derived matches with live results from
+ * football-data.org and any hand-curated overrides.
+ *
+ * Dedup key is (date|homeTeam|awayTeam). Precedence (last write wins):
+ *   overrides > live > historical
+ *
+ * Returned array is sorted by date ascending so downstream consumers don't
+ * have to re-sort.
+ */
+
+export interface MatchLike {
+  date: string;
+  homeTeam: string;
+  awayTeam: string;
+}
+
+export interface MergeResult<T extends MatchLike> {
+  matches: T[];
+  /** How many live matches were new (i.e. not already in historical). */
+  liveAdded: number;
+  /** How many override entries were applied. */
+  overridesApplied: number;
+}
+
+const key = (m: MatchLike) => `${m.date}|${m.homeTeam}|${m.awayTeam}`;
+
+export function mergeMatches<T extends MatchLike>(
+  historical: T[],
+  live: T[] = [],
+  overrides: T[] = [],
+): MergeResult<T> {
+  const merged = new Map<string, T>();
+
+  for (const m of historical) merged.set(key(m), m);
+
+  let liveAdded = 0;
+  for (const m of live) {
+    if (!merged.has(key(m))) liveAdded++;
+    merged.set(key(m), m);
+  }
+
+  let overridesApplied = 0;
+  for (const m of overrides) {
+    overridesApplied++;
+    merged.set(key(m), m);
+  }
+
+  const matches = Array.from(merged.values()).sort((a, b) =>
+    a.date.localeCompare(b.date),
+  );
+
+  return { matches, liveAdded, overridesApplied };
+}

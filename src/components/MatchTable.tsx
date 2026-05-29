@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import type { Match, ScorigamiEntry } from "@/lib/types";
-import { getFlagSrc } from "@/lib/flags";
+import { Flag } from "./Flag";
 
 interface Props {
   matches: Match[];
@@ -46,7 +46,7 @@ export default function MatchTable({ matches, scorigami }: Props) {
 
   const filtered = useMemo(() => {
     const q = search.toLowerCase();
-    let result = matches.filter((m) => {
+    const result = matches.filter((m) => {
       if (tournamentFilter !== "all" && m.tournament !== tournamentFilter) return false;
       if (stageFilter !== "all" && m.stage !== stageFilter) return false;
       if (scorigamiOnly && !scorigamiKeys.has(`${m.date}|${m.homeTeam}|${m.awayTeam}`)) return false;
@@ -136,9 +136,10 @@ export default function MatchTable({ matches, scorigami }: Props) {
           ⚽ Scorigami
         </button>
       </div>
-      <table className="w-full text-sm">
+      <div className="overflow-x-auto -mx-2 sm:mx-0">
+      <table className="w-full text-sm min-w-[640px]">
         <thead>
-          <tr className="border-b border-zinc-200 dark:border-zinc-700 text-left text-xs text-zinc-500 uppercase">
+          <tr className="border-b border-zinc-200 dark:border-zinc-700 text-start text-xs text-zinc-500 uppercase">
             <th className="py-2 px-2 cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100" onClick={() => toggleSort("date")}>{t("date")}{sortField === "date" ? arrow : ""}</th>
             <th className="py-2 px-2 cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100" onClick={() => toggleSort("home")}>{t("home")}{sortField === "home" ? arrow : ""}</th>
             <th className="py-2 px-2 text-center cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100" onClick={() => toggleSort("score")} title="Sort by total goals">{t("score")}{sortField === "score" ? ` (total)${arrow}` : ""}</th>
@@ -156,7 +157,7 @@ export default function MatchTable({ matches, scorigami }: Props) {
             <tr key={i} className="border-b border-zinc-100 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-800/50">
               <td className="py-2 px-2 text-zinc-400 text-xs">{m.date}</td>
               <td className="py-2 px-2 font-medium">
-                <img src={getFlagSrc(m.homeCode, year)} alt={m.homeTeam} className="inline-block w-5 h-3.5 object-cover mr-1.5 rounded-sm border border-zinc-200 dark:border-zinc-700" />
+                <Flag code={m.homeCode} year={year} alt={m.homeTeam} className="me-1.5" />
                 {m.homeTeam}
               </td>
               <td className="py-2 px-2 text-center">
@@ -165,7 +166,7 @@ export default function MatchTable({ matches, scorigami }: Props) {
                 {m.penaltyShootout && <div className="text-[10px] text-zinc-400 leading-tight">{m.penaltyScore} pen</div>}
               </td>
               <td className="py-2 px-2 font-medium">
-                <img src={getFlagSrc(m.awayCode, year)} alt={m.awayTeam} className="inline-block w-5 h-3.5 object-cover mr-1.5 rounded-sm border border-zinc-200 dark:border-zinc-700" />
+                <Flag code={m.awayCode} year={year} alt={m.awayTeam} className="me-1.5" />
                 {m.awayTeam}
               </td>
               <td className="py-2 px-2 text-zinc-500 text-xs">{tStages(m.stage)}</td>
@@ -179,6 +180,7 @@ export default function MatchTable({ matches, scorigami }: Props) {
           })}
         </tbody>
       </table>
+      </div>
       <div className="flex items-center justify-between mt-2">
         <p className="text-xs text-zinc-400">
           {t("showingOf", { shown: displayCount, total: filtered.length })}

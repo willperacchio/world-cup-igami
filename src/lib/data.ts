@@ -2,6 +2,7 @@ import matchesData from "../../data/matches.json";
 import scorigamiData from "../../data/scorigami.json";
 import summaryData from "../../data/summary.json";
 import type { Match, ScorigamiEntry, Summary } from "./types";
+import { getEffectiveTournamentYears } from "./tournament";
 
 export const matches = matchesData as Match[];
 export const scorigami = scorigamiData as ScorigamiEntry[];
@@ -52,6 +53,8 @@ export function buildGridFromMatches(filtered: Match[]): Map<string, ScorigamiEn
 }
 
 export const tournamentYears: number[] = (() => {
-  const years = new Set(matches.map((m) => parseInt(m.tournament.replace(" FIFA Men's World Cup", ""))));
-  return [...years].sort((a, b) => a - b);
+  const years = matches.map((m) =>
+    parseInt(m.tournament.replace(" FIFA Men's World Cup", "")),
+  );
+  return getEffectiveTournamentYears(years);
 })();

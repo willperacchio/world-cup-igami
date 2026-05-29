@@ -1,14 +1,24 @@
 "use client";
 
-import { useState, useMemo, useRef, useEffect, useCallback } from "react";
-import { useTranslations } from "next-intl";
+import { useState, useMemo } from "react";
+import { useTranslations, useLocale } from "next-intl";
 import { matches, scorigami, summary, getScorigamiGrid, buildGridFromMatches, tournamentYears } from "@/lib/data";
+import { getUpcomingTournamentStatus } from "@/lib/tournament";
 import type { ScorigamiEntry } from "@/lib/types";
+import { useTimelinePlayer } from "@/hooks/useTimelinePlayer";
 import ScorigamiGrid from "@/components/ScorigamiGrid";
 import MatchTable from "@/components/MatchTable";
 import MatchDetail from "@/components/MatchDetail";
 import FunFacts from "@/components/FunFacts";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
+import Footer from "@/components/Footer";
+
+// Pre-computed once at module load: every year that has at least one historical
+// match in the dataset. Used to decide whether a scrubber position points at
+// an upcoming-but-not-yet-started tournament.
+const HISTORICAL_MATCH_YEARS = matches.map((m) =>
+  parseInt(m.tournament.replace(" FIFA Men's World Cup", "")),
+);
 
 type View = "grid" | "table" | "facts";
 
@@ -19,44 +29,38 @@ export default function Home() {
     low: number;
     high: number;
   } | null>(null);
-  const [yearIndex, setYearIndex] = useState(tournamentYears.length - 1);
-  const [playing, setPlaying] = useState(false);
-  const playingRef = useRef(false);
-  const indexRef = useRef(yearIndex);
 
-  useEffect(() => { indexRef.current = yearIndex; }, [yearIndex]);
-  useEffect(() => { playingRef.current = playing; }, [playing]);
-
-  useEffect(() => {
-    if (!playing) return;
-    if (yearIndex === tournamentYears.length - 1) {
-      setYearIndex(0);
-      setSelectedCell(null);
-    }
-    const id = setInterval(() => {
-      if (indexRef.current >= tournamentYears.length - 1) {
-        setPlaying(false);
-        return;
-      }
-      setYearIndex((i) => i + 1);
-      setSelectedCell(null);
-    }, 1200);
-    return () => clearInterval(id);
-  }, [playing]);
-
-  const togglePlay = useCallback(() => {
-    setPlaying((p) => !p);
-  }, []);
+  const timeline = useTimelinePlayer({ frameCount: tournamentYears.length });
 
   const t = useTranslations();
+  const locale = useLocale();
   const fullGrid = getScorigamiGrid();
 
-  const selectedYear = tournamentYears[yearIndex];
-  const isLatest = yearIndex === tournamentYears.length - 1;
+  const selectedYear = tournamentYears[timeline.index];
+
+  // If the user has scrubbed to a tournament we know is upcoming AND it
+  // hasn't kicked off yet (no matches in the dataset for it), surface a
+  // contextual "awaiting kickoff" banner above the grid.
+  const upcomingStatus = useMemo(
+    () => getUpcomingTournamentStatus(selectedYear, HISTORICAL_MATCH_YEARS),
+    [selectedYear],
+  );
+
+  const formattedKickoffDate = useMemo(() => {
+    if (!upcomingStatus) return "";
+    return new Intl.DateTimeFormat(locale, { dateStyle: "long" }).format(
+      // Parse as UTC-noon to dodge timezone edge cases.
+      new Date(`${upcomingStatus.firstMatchDate}T12:00:00Z`),
+    );
+  }, [upcomingStatus, locale]);
 
   const { grid, filteredMatches, filteredStats } = useMemo(() => {
-    if (isLatest) {
-      return { grid: fullGrid, filteredMatches: matches, filteredStats: { total: summary.totalMatches, unique: summary.uniqueScores } };
+    if (timeline.isAtEnd) {
+      return {
+        grid: fullGrid,
+        filteredMatches: matches,
+        filteredStats: { total: summary.totalMatches, unique: summary.uniqueScores },
+      };
     }
     const fm = matches.filter((m) => {
       const yr = parseInt(m.tournament.replace(" FIFA Men's World Cup", ""));
@@ -64,30 +68,74 @@ export default function Home() {
     });
     const g = buildGridFromMatches(fm);
     return { grid: g, filteredMatches: fm, filteredStats: { total: fm.length, unique: g.size } };
-  }, [selectedYear, isLatest, fullGrid]);
+  }, [selectedYear, timeline.isAtEnd, fullGrid]);
 
   const displayMax = Math.min(summary.maxScore, 10);
   const totalPossible = ((displayMax + 1) * (displayMax + 2)) / 2;
-  const neverHappened = totalPossible - summary.uniqueScores;
+
+  const endYear = timeline.isAtEnd ? summary.dateRange.last.slice(0, 4) : selectedYear;
 
   return (
-    <div className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
-      <header className="border-b border-zinc-200 dark:border-zinc-800 px-6 py-6 max-w-5xl mx-auto flex items-start justify-between">
-        <div>
-          <h1 className="text-3xl font-bold">{t("header.title")}</h1>
-          <p className="text-zinc-500 text-sm mt-1">{t("header.subtitle")}</p>
+    <div className="min-h-screen text-stone-200">
+      {/* Tri-color stripe — gold / cream / rust, vintage tournament-poster nod */}
+      <div className="h-1 w-full flex">
+        <div className="flex-1" style={{ background: "#d4af37" }} />
+        <div className="flex-1" style={{ background: "#ece5d0" }} />
+        <div className="flex-1" style={{ background: "#b8431f" }} />
+      </div>
+
+      <header className="px-4 sm:px-6 pt-8 sm:pt-10 pb-6 sm:pb-8 max-w-5xl mx-auto">
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex-1 min-w-0">
+            <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-amber-400/80 mb-3">
+              {t("header.kicker")}
+            </p>
+            <h1
+              className="font-display font-medium leading-[0.92] tracking-tight text-stone-100"
+              style={{ fontSize: "clamp(2.5rem, 7vw, 4.5rem)" }}
+            >
+              World{" "}
+              <em
+                className="font-display italic"
+                style={{ color: "#d4af37", fontFeatureSettings: '"ss01"' }}
+              >
+                Cupigami
+              </em>
+            </h1>
+            <p className="text-stone-400 text-sm sm:text-base mt-4 max-w-md leading-relaxed">
+              {t("header.subtitle")}
+            </p>
+          </div>
+          <LocaleSwitcher />
         </div>
-        <LocaleSwitcher />
+
+        {/* Scoreboard stat strip */}
+        <div className="mt-7 flex items-center border border-amber-400/30 rounded-sm font-mono text-[11px] tracking-[0.06em] uppercase text-stone-400">
+          <span className="flex-1 text-center py-2.5">
+            <strong className="text-amber-300 font-medium text-sm sb-numeral">{filteredStats.total}</strong>{" "}
+            {t("stats.matches")}
+          </span>
+          <span className="text-amber-400/30">|</span>
+          <span className="flex-1 text-center py-2.5">
+            <strong className="text-amber-300 font-medium text-sm sb-numeral">{filteredStats.unique}</strong>{" "}
+            {t("stats.uniqueScores")}
+          </span>
+          <span className="text-amber-400/30">|</span>
+          <span className="flex-1 text-center py-2.5">
+            <strong className="text-amber-300 font-medium text-sm sb-numeral">{t("stats.editionNumber")}</strong>{" "}
+            {t("stats.editionLabel")}
+          </span>
+        </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-6 py-6 space-y-6">
-        <section className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4 space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-          <h2 className="font-semibold text-zinc-900 dark:text-zinc-100">{t("explainer.title")}</h2>
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 pb-10 space-y-6">
+        <section className="rounded-sm border-l-2 border-amber-400/60 bg-[#161f1c]/60 p-5 space-y-2 text-sm text-stone-300 leading-relaxed">
+          <h2 className="font-display font-medium text-lg text-stone-100">{t("explainer.title")}</h2>
           <p>
             {t("explainer.description")}{" "}
             <a
               href="https://www.youtube.com/watch?v=9l5C8cGMueY"
-              className="underline text-blue-600 dark:text-blue-400"
+              className="underline decoration-amber-400/60 underline-offset-2 text-amber-300 hover:text-amber-200 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -95,58 +143,41 @@ export default function Home() {
             </a>
           </p>
           <p>{t("explainer.whyBuilt")}</p>
-          <p className="text-xs italic">{t("explainer.mensOnly")}</p>
-          <h2 className="font-semibold text-zinc-900 dark:text-zinc-100 pt-2">{t("explainer.pointTitle")}</h2>
+          <p className="text-xs italic text-stone-500">{t("explainer.mensOnly")}</p>
+          <h2 className="font-display font-medium text-lg text-stone-100 pt-2">{t("explainer.pointTitle")}</h2>
           <p>{t("explainer.pointDescription")}</p>
         </section>
 
-        <div className="flex gap-6 text-sm">
-          <div><span className="font-bold">{filteredStats.total}</span> {t("stats.matches")}</div>
-          <div><span className="font-bold">{filteredStats.unique}</span> {t("stats.uniqueScores")}</div>
-          <div><span className="font-bold">{totalPossible - filteredStats.unique}</span> {t("stats.neverHappened")}</div>
-          <div>{summary.dateRange.first.slice(0, 4)}–{isLatest ? summary.dateRange.last.slice(0, 4) : selectedYear}</div>
-        </div>
-
+        {/* View tabs — scoreboard buttons */}
         <div className="flex gap-2">
-          <button
-            onClick={() => setView("grid")}
-            className={`px-3 py-1.5 rounded text-sm font-medium ${
-              view === "grid"
-                ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900"
-                : "bg-zinc-100 dark:bg-zinc-800"
-            }`}
-          >
-            {t("views.heatmap")}
-          </button>
-          <button
-            onClick={() => setView("table")}
-            className={`px-3 py-1.5 rounded text-sm font-medium ${
-              view === "table"
-                ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900"
-                : "bg-zinc-100 dark:bg-zinc-800"
-            }`}
-          >
-            {t("views.allMatches")}
-          </button>
-          <button
-            onClick={() => setView("facts")}
-            className={`px-3 py-1.5 rounded text-sm font-medium ${
-              view === "facts"
-                ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900"
-                : "bg-zinc-100 dark:bg-zinc-800"
-            }`}
-          >
-            {t("views.funFacts")}
-          </button>
+          {([
+            { id: "grid" as const, label: t("views.heatmap") },
+            { id: "table" as const, label: t("views.allMatches") },
+            { id: "facts" as const, label: t("views.funFacts") },
+          ]).map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setView(tab.id)}
+              className={`flex-1 px-3.5 py-1.5 rounded-sm font-mono text-[11px] tracking-[0.1em] uppercase transition-colors ${
+                view === tab.id
+                  ? "bg-amber-300 text-zinc-900 border border-amber-300"
+                  : "border border-amber-400/30 text-stone-300 hover:border-amber-400/60 hover:text-amber-200"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
         </div>
 
         {view === "grid" && (
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
+            {/* Timeline scrubber — scoreboard styling */}
+            <div className="flex items-center gap-3 p-3 rounded-sm border border-amber-400/20 bg-[#161f1c]/40">
               <button
-                onClick={() => { setPlaying(false); setYearIndex(Math.max(0, yearIndex - 1)); }}
-                disabled={yearIndex === 0}
-                className="px-2 py-1 rounded text-sm font-medium bg-zinc-100 dark:bg-zinc-800 disabled:opacity-30"
+                onClick={timeline.stepBack}
+                disabled={timeline.index === 0}
+                className="w-7 h-7 rounded-sm border border-amber-400/30 text-amber-300 text-xs hover:border-amber-400/60 hover:text-amber-200 disabled:opacity-25 disabled:cursor-not-allowed transition-colors"
+                aria-label="Step back"
               >
                 ◀
               </button>
@@ -155,44 +186,70 @@ export default function Home() {
                   type="range"
                   min={0}
                   max={tournamentYears.length - 1}
-                  value={yearIndex}
-                  onChange={(e) => { setPlaying(false); setYearIndex(parseInt(e.target.value)); setSelectedCell(null); }}
-                  className="w-full accent-amber-500"
+                  value={timeline.index}
+                  onChange={(e) => { timeline.setIndex(parseInt(e.target.value)); setSelectedCell(null); }}
+                  className="w-full sb-range accent-amber-300"
                 />
-                <div className="flex justify-between text-[10px] text-zinc-400 px-0.5">
+                <div className="flex justify-between text-[10px] text-stone-500 px-0.5 sb-numeral">
                   {tournamentYears.map((yr, i) => (
-                    <span key={yr} className={`${i === yearIndex ? "text-amber-500 font-bold" : ""} ${i !== 0 && i !== tournamentYears.length - 1 && i !== yearIndex ? "hidden sm:inline" : ""}`}>
-                      {i === yearIndex || i === 0 || i === tournamentYears.length - 1 ? yr : "·"}
+                    <span
+                      key={yr}
+                      className={`${i === timeline.index ? "text-amber-300 font-medium" : ""} ${
+                        i !== 0 && i !== tournamentYears.length - 1 && i !== timeline.index ? "hidden sm:inline" : ""
+                      }`}
+                    >
+                      {i === timeline.index || i === 0 || i === tournamentYears.length - 1 ? yr : "·"}
                     </span>
                   ))}
                 </div>
               </div>
               <button
-                onClick={() => { setPlaying(false); setYearIndex(Math.min(tournamentYears.length - 1, yearIndex + 1)); }}
-                disabled={yearIndex === tournamentYears.length - 1}
-                className="px-2 py-1 rounded text-sm font-medium bg-zinc-100 dark:bg-zinc-800 disabled:opacity-30"
+                onClick={timeline.stepForward}
+                disabled={timeline.isAtEnd}
+                className="w-7 h-7 rounded-sm border border-amber-400/30 text-amber-300 text-xs hover:border-amber-400/60 hover:text-amber-200 disabled:opacity-25 disabled:cursor-not-allowed transition-colors"
+                aria-label="Step forward"
               >
                 ▶
               </button>
               <button
-                onClick={togglePlay}
-                className={`px-2.5 py-1 rounded text-sm font-medium ${
-                  playing
-                    ? "bg-amber-500 text-black"
-                    : "bg-zinc-100 dark:bg-zinc-800"
+                onClick={() => { timeline.togglePlay(); setSelectedCell(null); }}
+                className={`px-2.5 h-7 rounded-sm text-xs font-mono uppercase tracking-wider transition-colors ${
+                  timeline.playing
+                    ? "bg-amber-300 text-zinc-900 border border-amber-300"
+                    : "border border-amber-400/30 text-amber-300 hover:border-amber-400/60 hover:text-amber-200"
                 }`}
-                title={playing ? "Pause" : "Play"}
+                title={timeline.playing ? "Pause" : "Play"}
               >
-                {playing ? "⏸" : "▶️"}
+                {timeline.playing ? "Pause" : "Play"}
               </button>
-              <span className="text-sm font-bold min-w-[4ch] text-center">{selectedYear}</span>
+              <span className="text-base font-display font-medium sb-numeral min-w-[4ch] text-center text-amber-200">{selectedYear}</span>
             </div>
+
+            {/* Awaiting-kickoff banner — appears only when the scrubber points at an
+                upcoming tournament that has no matches in the dataset yet. */}
+            {upcomingStatus && (
+              <aside className="rounded-sm border border-amber-400/40 bg-[#161f1c]/60 px-5 py-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
+                <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-amber-400/80 shrink-0">
+                  {t("upcoming.kickerLabel")} · {formattedKickoffDate}
+                </div>
+                <div className="flex-1 space-y-1">
+                  <p className="font-display font-medium text-stone-100 text-lg leading-tight">
+                    {t("upcoming.title", { year: upcomingStatus.year })}
+                  </p>
+                  <p className="text-stone-400 text-sm leading-relaxed">
+                    {t("upcoming.description", {
+                      year: upcomingStatus.year,
+                      date: formattedKickoffDate,
+                    })}
+                  </p>
+                </div>
+              </aside>
+            )}
+
             <ScorigamiGrid
               grid={grid}
               maxScore={summary.maxScore}
-              onCellClick={(entry, low, high) =>
-                setSelectedCell({ entry, low, high })
-              }
+              onCellClick={(entry, low, high) => setSelectedCell({ entry, low, high })}
             />
             {selectedCell && (
               <MatchDetail
@@ -210,28 +267,7 @@ export default function Home() {
 
         {view === "facts" && <FunFacts matches={matches} scorigami={scorigami} />}
 
-        <footer className="pt-6 border-t border-zinc-200 dark:border-zinc-800 text-xs text-zinc-400 space-y-4">
-          <div>
-            {t("footer.dataFrom")}{" "}
-            <a href="https://github.com/jfjelstul/worldcup" className="underline" target="_blank" rel="noopener noreferrer">
-              {t("footer.dataSource")}
-            </a>{" "}
-            {t("footer.author")}
-          </div>
-          <p className="text-zinc-500">{t("footer.disclaimer")}</p>
-          <div className="flex justify-center">
-            <a
-              href="https://www.buymeacoffee.com/wap_"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium"
-              style={{ backgroundColor: "#FFDD00", color: "#000000", fontFamily: "Lato, sans-serif" }}
-            >
-              <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="" className="h-4 w-4" />
-              Buy me a coffee (I am a grad student - anything appreciated!)
-            </a>
-          </div>
-        </footer>
+        <Footer />
       </main>
     </div>
   );

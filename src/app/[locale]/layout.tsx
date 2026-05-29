@@ -1,18 +1,35 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Fraunces } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
+import { Analytics } from "@vercel/analytics/next";
 import { routing } from "@/i18n/routing";
 import "./globals.css";
 
+// Geist supports Latin, Latin Extended, and Cyrillic — enough for the 24
+// European locales in src/i18n/locales.ts (en, es, fr, de, pl, cs, hr, hu,
+// ro, bs, it, nl, no, pt, sv, sw, tr, uz, vi, ru, uk, …). For Greek/Arabic/
+// Persian/Hindi/Thai/CJK locales, the browser falls back to system fonts
+// per the chain in globals.css, which on modern OSes renders cleanly.
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext", "cyrillic"],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext", "cyrillic"],
+});
+
+// Editorial display face — italic gets the playful "Cupigami" gag.
+// "Cupigami" is a brand name, so it always renders in Latin script regardless
+// of the locale. Fraunces' subsets: latin, latin-ext, vietnamese.
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin", "latin-ext", "vietnamese"],
+  axes: ["SOFT", "WONK", "opsz"],
+  style: ["normal", "italic"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -46,12 +63,14 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      dir="ltr"
+      className={`dark ${geistSans.variable} ${geistMono.variable} ${fraunces.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );

@@ -1,10 +1,58 @@
 @import "tailwindcss";
 
+/* Class-based dark mode (overrides Tailwind v4's default prefers-color-scheme). */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-fraunces);
+
+  /* Scoreboard palette — direction B, pushed warmer. */
+  --color-scoreboard-bg: #0e1714;
+  --color-scoreboard-surface: #161f1c;
+  --color-scoreboard-surface-2: #1d2825;
+  --color-scoreboard-border: #2a3633;
+  --color-scoreboard-cream: #ece5d0;
+  --color-scoreboard-cream-muted: #a8a292;
+  --color-scoreboard-gold: #d4af37;
+  --color-scoreboard-gold-soft: #b8932f;
+  --color-scoreboard-rust: #b8431f;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+html, body {
+  background: var(--color-scoreboard-bg);
+  color: var(--color-scoreboard-cream);
+  /* Geist covers Latin + Latin-ext + Cyrillic. For Greek / Arabic / Persian /
+     Hindi / Thai / CJK locales, the browser walks this stack per-glyph and
+     picks the first family that has the codepoint. `system-ui` resolves to the
+     OS's modern UI font (Apple system, Segoe UI, Roboto, etc.), all of which
+     ship comprehensive coverage for the scripts Geist doesn't include. */
+  font-family:
+    var(--font-geist-sans),
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    "Noto Sans",
+    "Noto Sans Arabic",
+    "Noto Sans Devanagari",
+    "Noto Sans Thai",
+    "Noto Sans SC",
+    "Noto Sans JP",
+    "Noto Sans KR",
+    sans-serif;
+}
+
+/* Scoreboard-styled range slider thumb (gold accent). */
+input[type="range"].sb-range {
+  accent-color: var(--color-scoreboard-gold);
+}
+
+/* Subtle "engraved" treatment for scoreboard numerals. */
+.sb-numeral {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
 }

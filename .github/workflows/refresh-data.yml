@@ -1,0 +1,69 @@
+name: Refresh live World Cup data
+
+on:
+  schedule:
+    # Every 15 minutes. football-data.org free tier permits 10 req/min,
+    # so this stays well under the cap (1 req per run).
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Why are you running this manually?"
+        required: false
+        default: "manual refresh"
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # Need write access to commit data updates back to main.
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Fetch live matches from football-data.org
+        env:
+          FOOTBALL_ORG_AUTH_TOKEN: ${{ secrets.FOOTBALL_ORG_AUTH_TOKEN }}
+          # Flip this in repo Settings → Variables to pause updates without
+          # disabling the cron (e.g. if the API misbehaves mid-tournament).
+          DATA_FREEZE: ${{ vars.DATA_FREEZE }}
+        run: npx tsx scripts/fetch-live-matches.ts
+
+      - name: Rebuild matches.json / scorigami.json / summary.json
+        run: npx tsx scripts/process-data.ts
+
+      - name: Commit data updates if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/live-matches.json data/matches.json data/scorigami.json data/summary.json
+          if git diff --staged --quiet; then
+            echo "No data changes — skipping commit."
+          else
+            # Try to pull the latest scoreline out of live-matches.json for a
+            # useful commit message; fall back to a generic refresh message.
+            LATEST=$(node -e "
+              try {
+                const d = require('./data/live-matches.json');
+                const last = d.matches[d.matches.length - 1];
+                if (last) {
+                  console.log(\`\${last.homeTeam} \${last.homeScore}-\${last.awayScore} \${last.awayTeam} (\${last.stage})\`);
+                }
+              } catch {}
+            ")
+            if [ -n "$LATEST" ]; then
+              git commit -m "chore(data): refresh — latest: $LATEST"
+            else
+              git commit -m "chore(data): refresh live World Cup data"
+            fi
+            git push
+          fi

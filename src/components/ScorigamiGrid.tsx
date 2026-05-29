@@ -3,27 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import type { ScorigamiEntry } from "@/lib/types";
-
-type Rarity = "never" | "unique" | "veryRare" | "rare" | "common" | "veryCommon";
-
-function getRarity(count: number, maxCount: number): Rarity {
-  if (count === 0) return "never";
-  if (count === 1) return "unique";
-  const ratio = count / maxCount;
-  if (ratio < 0.02) return "veryRare";
-  if (ratio < 0.15) return "rare";
-  if (ratio < 0.4) return "common";
-  return "veryCommon";
-}
-
-const rarityColors: Record<Rarity, string> = {
-  never: "bg-zinc-100 dark:bg-zinc-800",
-  unique: "bg-amber-400 dark:bg-amber-600 text-zinc-900",
-  veryRare: "bg-orange-300 dark:bg-orange-700",
-  rare: "bg-blue-300 dark:bg-blue-700",
-  common: "bg-blue-500 dark:bg-blue-500 text-white",
-  veryCommon: "bg-blue-700 dark:bg-blue-300 text-white dark:text-zinc-900",
-};
+import { getRarity, RARITY_CELL_CLASSES } from "@/lib/rarity";
 
 interface Props {
   grid: Map<string, ScorigamiEntry>;
@@ -39,27 +19,24 @@ export default function ScorigamiGrid({ grid, maxScore, onCellClick }: Props) {
 
   return (
     <div className="overflow-x-auto">
-      <p className="text-xs text-zinc-500 mb-2">{t("description")}</p>
-      <table style={{ borderSpacing: "2px" }}>
+      <p className="text-xs text-stone-400 mb-2 sb-numeral text-center">{t("description")}</p>
+      <table className="mx-auto" style={{ borderSpacing: "2px" }}>
         <thead>
           <tr>
-            <th className="w-10 h-10 text-xs text-zinc-400" />
+            <th className="w-10 h-10 text-xs text-stone-500" />
             {Array.from({ length: displayMax + 1 }, (_, i) => (
-              <th key={i} className="w-10 h-10 text-xs font-semibold text-zinc-500">{i}</th>
+              <th key={i} className="w-10 h-10 text-xs font-medium text-amber-300/80 sb-numeral">{i}</th>
             ))}
           </tr>
         </thead>
         <tbody>
           {Array.from({ length: displayMax + 1 }, (_, row) => (
             <tr key={row}>
-              <td className="w-10 h-10 text-xs font-semibold text-zinc-500 text-center">{row}</td>
+              <td className="w-10 h-10 text-xs font-medium text-amber-300/80 text-center sb-numeral">{row}</td>
               {Array.from({ length: displayMax + 1 }, (_, col) => {
                 if (col < row) {
                   return (
-                    <td
-                      key={col}
-                      className="w-10 h-10 rounded bg-zinc-200/30 dark:bg-zinc-800/30"
-                    />
+                    <td key={col} className="w-10 h-10 rounded bg-[#0a100e]/40" />
                   );
                 }
 
@@ -69,22 +46,33 @@ export default function ScorigamiGrid({ grid, maxScore, onCellClick }: Props) {
                 const rarity = getRarity(count, maxCount);
                 const isHovered = hoveredCell === key;
 
+                const ariaLabel =
+                  count > 0
+                    ? t("count", { low: row, high: col, count })
+                    : t("neverHappened", { low: row, high: col });
+
                 return (
-                  <td
-                    key={col}
-                    className={`w-10 h-10 text-center text-xs font-medium rounded cursor-pointer transition-transform ${rarityColors[rarity]} ${
-                      isHovered ? "scale-125 z-10 relative ring-2 ring-zinc-900 dark:ring-zinc-100" : ""
-                    }`}
-                    onMouseEnter={() => setHoveredCell(key)}
-                    onMouseLeave={() => setHoveredCell(null)}
-                    onClick={() => onCellClick(entry ?? null, row, col)}
-                    title={
-                      count > 0
-                        ? t("count", { low: row, high: col, count })
-                        : t("neverHappened", { low: row, high: col })
-                    }
-                  >
-                    {count > 0 ? count : ""}
+                  <td key={col} className="w-10 h-10 p-0">
+                    <div
+                      role="button"
+                      tabIndex={0}
+                      aria-label={ariaLabel}
+                      className={`w-10 h-10 flex items-center justify-center text-xs font-medium rounded cursor-pointer transition-transform sb-numeral outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:scale-125 focus-visible:z-10 focus-visible:relative ${RARITY_CELL_CLASSES[rarity]} ${
+                        isHovered ? "scale-125 z-10 relative ring-2 ring-amber-300" : ""
+                      }`}
+                      onMouseEnter={() => setHoveredCell(key)}
+                      onMouseLeave={() => setHoveredCell(null)}
+                      onClick={() => onCellClick(entry ?? null, row, col)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          onCellClick(entry ?? null, row, col);
+                      }
+                    }}
+                      title={ariaLabel}
+                    >
+                      {count > 0 ? count : ""}
+                    </div>
                   </td>
                 );
               })}
@@ -92,13 +80,13 @@ export default function ScorigamiGrid({ grid, maxScore, onCellClick }: Props) {
           ))}
         </tbody>
       </table>
-      <div className="flex flex-wrap gap-3 mt-3 text-xs text-zinc-500">
-        <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-blue-700 dark:bg-blue-300" /> {t("veryCommon")}</span>
-        <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-blue-500" /> {t("common")}</span>
-        <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-blue-300 dark:bg-blue-700" /> {t("rare")}</span>
-        <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-orange-300 dark:bg-orange-700" /> {t("veryRare")}</span>
-        <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-amber-400 dark:bg-amber-600" /> {t("unique")}</span>
-        <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700" /> {t("never")}</span>
+      <div className="flex flex-wrap gap-3 mt-3 text-[11px] text-stone-400 font-mono uppercase tracking-wider justify-center">
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-slate-700" /> {t("veryCommon")}</span>
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-slate-400" /> {t("common")}</span>
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-stone-300" /> {t("rare")}</span>
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-amber-400" /> {t("veryRare")}</span>
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-orange-500" /> {t("unique")}</span>
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-[#0a100e] border border-[#1d2825]" /> {t("never")}</span>
       </div>
     </div>
   );

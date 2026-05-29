@@ -1,6 +1,7 @@
 {
   "header": {
     "title": "World Cupigami",
+    "kicker": "A scorigami project",
     "subtitle": "Every unique final score in Men's FIFA World Cup history"
   },
   "explainer": {
@@ -15,13 +16,21 @@
   "stats": {
     "matches": "matches",
     "uniqueScores": "unique scores",
-    "neverHappened": "never happened",
+    "neverHappened": "still possible",
+    "editionNumber": "23rd",
+    "editionLabel": "Edition of the Men's World Cup",
     "tournaments": "Tournaments"
   },
   "views": {
     "heatmap": "Heatmap",
     "allMatches": "All Matches",
     "funFacts": "Fun Facts"
+  },
+  "upcoming": {
+    "kickerLabel": "Awaiting kickoff",
+    "title": "{year} World Cup hasn't started yet",
+    "description": "The {year} FIFA Men's World Cup kicks off on {date}. Match results will land here in real time as games finish — and the heatmap above shows the state of scorigami right before the tournament begins.",
+    "kickoffDateFormat": "MMMM d, yyyy"
   },
   "grid": {
     "description": "Rows = losing score · Columns = winning score · Scores shown as winner–loser · Click any cell",
@@ -39,7 +48,9 @@
     "noScorigamiTitle": "No Scorigami — Yet",
     "scorigamiDescription": "{high}–{low} has never happened in World Cup history.",
     "scorigamiBadge": "(Scorigami)",
-    "close": "Close"
+    "close": "Close",
+    "readMore": "Wikipedia",
+    "readMoreAria": "Read more about this match on Wikipedia"
   },
   "table": {
     "searchPlaceholder": "Search teams, tournaments, scores...",
@@ -70,9 +81,12 @@
     "second group stage": "Second Group Stage"
   },
   "footer": {
-    "dataFrom": "Data from",
+    "dataFrom": "Historical data from",
     "dataSource": "The Fjelstul World Cup Database",
     "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "Live 2026 results from",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "Scorigami concept by Jon Bois",
     "disclaimer": "FIFA World Cup™ is a trademark of FIFA. This site is not affiliated with, endorsed by, or connected to FIFA."
   },
   "funFacts": {
@@ -81,6 +95,7 @@
     "trueScorigamisTitle": "Unique Scorigamis",
     "trueScorigamisDesc": "Scorelines that have happened exactly once — never before, never since.",
     "mostCommonTitle": "Most Common Scorelines",
+    "mostCommonNote": "Nearly 1 in 5 matches end in a 1-nil win.",
     "highestScoringTitle": "Highest-Scoring Matches (10+ goals)",
     "biggestBlowoutsTitle": "Biggest Blowouts",
     "scorigamiLeadersTitle": "Scorigami Leaderboard",
@@ -111,6 +126,12 @@
     "stageKnockoutLabel": "Knockout",
     "stageSummaryDetail": "{scorigamis} scorigamis in {total} matches",
     "stageTopNote": "{stage} leads with {count} scorigamis ({rate}% of matches at that stage).",
+    "penaltigamiTitle": "Penaltigami",
+    "penaltigamiDesc": "Every penalty shootout in World Cup history. A \"penaltigami\" is a match score + shootout result combination that has only happened once.",
+    "penaltigamiUnique": "Only happened once",
+    "penaltigamiRepeated": "Happened {count}×",
+    "penaltigamiSummary": "{unique} unique match-penalty combos out of {total} shootouts",
+    "penaltigamiOnlyPenScore": "The only penalty scoreline that has occurred just once — every other shootout result (like 4–2 or 5–3) has happened multiple times.",
     "frontierTitle": "The Scorigami Frontier",
     "frontierDesc": "These scores have never happened but are the most likely to occur next.",
     "frontierNote": "With the 2026 World Cup expanding to 48 teams and 104 matches, more mismatches could finally break new ground."
