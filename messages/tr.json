@@ -1,50 +1,65 @@
 {
   "header": {
     "title": "World Cupigami",
-    "subtitle": "Erkekler FIFA Dünya Kupası tarihindeki her benzersiz final skoru"
+    "kicker": "Bir scorigami projesi",
+    "subtitle": "FIFA Erkekler Dünya Kupası tarihindeki her benzersiz final skoru"
   },
   "explainer": {
     "title": "Scorigami Nedir?",
-    "description": "Scorigami, bir spor dalının tarihinde daha önce hiç gerçekleşmemiş bir final skoru kavramıdır. Bu fikir, NFL scorigami üzerine yaptığı muhteşem çalışmayla Jon Bois tarafından popüler hale getirilmiş ve bu projeye ilham kaynağı olmuştur.",
+    "description": "Scorigami, bir spor dalının tarihinde daha önce hiç yaşanmamış final skorunu ifade eden bir kavramdır. Bu fikri popüler hâle getiren Jon Bois'un NFL scorigami üzerine yaptığı parlak çalışma, bu projeye ilham kaynağı oldu.",
     "watchVideo": "Orijinal videoyu izle",
-    "whyBuilt": "World Cupigami'yi, Dünya Kupası'nı özel kılan paylaşım ruhundan hareketle Amerikan spor kültürünü dünyanın en büyük sahnesine taşımak için kurdum. Scorigami, futbolda Amerikan futboluna kıyasla biraz farklı işliyor; çünkü goller 2, 3, 6 ya da 7'lik gruplar halinde değil, birer birer atılıyor. Bu da yeni scorigami'leri daha nadir ve daha anlamlı kılıyor.",
-    "mensOnly": "Bu site şu an yalnızca Erkekler FIFA Dünya Kupası'nı kapsamaktadır. Kadınlar Dünya Kupası sürümü yakında geliyor.",
-    "pointTitle": "Bunun amacı ne?",
-    "pointDescription": "Dürüst olmak gerekirse? Hiçbir şey. Benim gibi spor analitiği meraklısıysanız sadece eğlenceli. Ama bundan çıkabilecek güzel bir şey varsa şu: Takımınız bir scorigami yapınca, kaybeden takımın ülkesindeki bir hayır kurumuna bağış yapmayı düşünün. Tarihe geçen bir skor, dünyaya biraz iyilik katmak için harika bir vesile olabilir."
+    "whyBuilt": "World Cupigami'yi, dünyanın en büyük sahnesine biraz Amerikan spor kültürü taşımak için kurdum — Dünya Kupası'nı özel kılan paylaşım ruhuna uygun olarak. Scorigami, futbolda Amerikan futboluna kıyasla biraz farklı işliyor; çünkü goller 2, 3, 6, 7 veya 8'lik gruplar hâlinde değil, birer birer atılıyor. Bu da yeni scorigamileri daha nadir ve daha anlamlı kılıyor.",
+    "mensOnly": "Bu proje şu an yalnızca FIFA Erkekler Dünya Kupası'nı kapsıyor. Kadınlar Dünya Kupası sürümü yakında geliyor.",
+    "pointTitle": "Bunun ne anlamı var?",
+    "pointDescription": "Dürüst olmak gerekirse? Hiçbir şey. Benim gibi spor analitiği tutkunu biriyseniz sadece eğlenceli. Ama buradan tek bir güzel şey çıkabilirse şöyle düşünün — takımınız bir scorigami yaparsa, yenilen takımın ülkesindeki bir hayır kurumuna bağış yapmayı düşünün. Tarihe geçen bir skor, dünyaya iyilik yapmak için harika bir bahane olabilir."
   },
   "stats": {
     "matches": "maç",
     "uniqueScores": "benzersiz skor",
-    "neverHappened": "hiç olmadı",
-    "tournaments": "Turnuvalar"
+    "neverHappened": "hâlâ mümkün",
+    "editionNumber": "23.",
+    "editionLabel": "Erkekler Dünya Kupası",
+    "tournaments": "Turnuva"
   },
   "views": {
     "heatmap": "Isı Haritası",
-    "allMatches": "Tüm Maçlar"
+    "allMatches": "Tüm Maçlar",
+    "funFacts": "İlginç Bilgiler"
+  },
+  "upcoming": {
+    "kickerLabel": "Başlangıç bekleniyor",
+    "title": "{year} Dünya Kupası henüz başlamadı",
+    "description": "{year} FIFA Erkekler Dünya Kupası {date} tarihinde başlıyor. Maç sonuçları oyunlar bittikçe burada gerçek zamanlı olarak görünecek — yukarıdaki ısı haritası ise turnuva başlamadan önceki scorigami durumunu gösteriyor.",
+    "kickoffDateFormat": "d MMMM yyyy"
   },
   "grid": {
-    "description": "Satırlar = kaybeden skoru · Sütunlar = kazanan skoru · Herhangi bir hücreye tıkla",
-    "never": "Hiç Olmadı",
+    "description": "Satırlar = yenilen skor · Sütunlar = kazanan skor · Skorlar kazanan–yenilen şeklinde gösterilir · Herhangi bir hücreye tıklayın",
+    "never": "Hiç olmadı",
     "unique": "Benzersiz (1×)",
     "veryRare": "Çok Nadir",
     "rare": "Nadir",
     "common": "Yaygın",
     "veryCommon": "Çok Yaygın",
-    "neverHappened": "{low}–{high}: Hiç Olmadı",
-    "count": "{low}–{high}: {count}×"
+    "neverHappened": "{high}–{low}: Hiç olmadı",
+    "count": "{high}–{low}: {count}×"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
-    "scorigamiDescription": "{low}–{high} skoru Dünya Kupası tarihinde hiç gerçekleşmedi.",
+    "noScorigamiTitle": "Henüz Scorigami Yok",
+    "scorigamiDescription": "{high}–{low} skoru Dünya Kupası tarihinde hiç yaşanmadı.",
     "scorigamiBadge": "(Scorigami)",
-    "close": "Kapat"
+    "close": "Kapat",
+    "readMore": "Wikipedia",
+    "readMoreAria": "Bu maç hakkında Wikipedia'da daha fazla bilgi al"
   },
   "table": {
     "searchPlaceholder": "Takım, turnuva, skor ara...",
     "date": "Tarih",
     "home": "Ev Sahibi",
+    "winner": "Kazanan",
     "score": "Skor",
     "away": "Deplasman",
+    "loser": "Yenilen",
     "stage": "Aşama",
     "venue": "Stat",
     "year": "Yıl",
@@ -58,15 +73,68 @@
     "group stage": "Grup Aşaması",
     "round of 32": "Son 32",
     "round of 16": "Son 16",
-    "quarter-finals": "Çeyrek Finaller",
-    "semi-finals": "Yarı Finaller",
+    "quarter-finals": "Çeyrek Final",
+    "semi-finals": "Yarı Final",
     "third-place match": "Üçüncülük Maçı",
-    "final": "Final"
+    "final": "Final",
+    "final round": "Final Turu",
+    "second group stage": "İkinci Grup Aşaması"
   },
   "footer": {
-    "dataFrom": "Veriler:",
+    "dataFrom": "Tarihsel veriler:",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "2026 canlı sonuçları:",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "Scorigami kavramı: Jon Bois",
+    "disclaimer": "FIFA Dünya Kupası™ FIFA'nın ticari markasıdır. Bu site FIFA ile hiçbir şekilde bağlantılı, onaylı veya ilişkili değildir."
+  },
+  "funFacts": {
+    "mostRecentTitle": "En Son Scorigami",
+    "mostRecentNote": "Bu skor Dünya Kupası tarihinde ilk kez bu maçta gerçekleşti.",
+    "trueScorigamisTitle": "Benzersiz Scorigamiler",
+    "trueScorigamisDesc": "Tam olarak bir kez yaşanan skorlar — ne öncesinde ne de sonrasında tekrarlandı.",
+    "mostCommonTitle": "En Yaygın Skorlar",
+    "mostCommonNote": "Maçların yaklaşık beşte biri 1-0 galibiyetle sona eriyor.",
+    "highestScoringTitle": "En Golcü Maçlar (10+ gol)",
+    "biggestBlowoutsTitle": "En Büyük Farklar",
+    "scorigamiLeadersTitle": "Scorigami Sıralaması",
+    "scorigamiLeadersDesc": "Tüm Dünya Kupalarında en çok ilk kez yaşanan skora dahil olan takımlar.",
+    "scorigamiKingsNote": "En fazla benzersiz scorigamiye sahip takımlar: {teams}.",
+    "finalsTitle": "Dünya Kupası Finalleri",
+    "finalsDesc": "Finallerde en yaygın skor {score}; bu sonuç {count} kez gerçekleşti ({years}).",
+    "finalsScorigamiTitle": "Final Scorigamileri",
+    "finalsScorigamiDesc": "Skorun daha önce hiçbir Dünya Kupası maçında yaşanmadığı finaller.",
+    "homeTurfTitle": "Ev Sahibi Scorigami",
+    "homeTurfDesc": "Bir ev sahibi ülkenin kendi Dünya Kupası'nda yepyeni bir skorun debüt yaptığı maç sayısı: {count}.",
+    "allTimeStatsTitle": "Tüm Zamanların İstatistikleri",
+    "extraTimeGames": "uzatmalı maç",
+    "penaltyShootouts": "penaltı atışması",
+    "totalGoals": "toplam gol",
+    "tournamentTrendsTitle": "Dünya Kupası Trendleri",
+    "trendTeams": "Takım Sayısı",
+    "trendMatches": "Oynanan Maçlar",
+    "trendGoalsPerGame": "Maç Başına Gol",
+    "trendScorigamis": "Yeni Scorigamiler",
+    "wwiiNote": "1942 ve 1946 Dünya Kupaları İkinci Dünya Savaşı nedeniyle iptal edildi.",
+    "goalDistTitle": "Gol Dağılımı",
+    "goalDistDesc": "Tüm Dünya Kupalarında her toplam gol sayısına sahip kaç maç olduğu.",
+    "goalDistNote": "Dağılım kabaca bir Poisson eğrisi şeklinde — çoğu maç 2–3 toplam gol civarında yoğunlaşıyor, ardından yüksek golcü maçlara doğru uzun bir kuyruk uzanıyor.",
+    "stageBreakdownTitle": "Aşamaya Göre Scorigami",
+    "stageBreakdownDesc": "Turnuvanın her aşamasında yepyeni bir skor ne sıklıkla ilk kez yaşanıyor?",
+    "stageGroupLabel": "Grup Aşaması",
+    "stageKnockoutLabel": "Eleme",
+    "stageSummaryDetail": "{total} maçta {scorigamis} scorigami",
+    "stageTopNote": "{stage}, {count} scorigami ile öne çıkıyor (o aşamadaki maçların %{rate}'i).",
+    "penaltigamiTitle": "Penaltigami",
+    "penaltigamiDesc": "Dünya Kupası tarihindeki tüm penaltı atışmaları. \"Penaltigami\", yalnızca bir kez gerçekleşmiş bir maç skoru + atışma sonucu kombinasyonudur.",
+    "penaltigamiUnique": "Yalnızca bir kez yaşandı",
+    "penaltigamiRepeated": "{count}× yaşandı",
+    "penaltigamiSummary": "{total} atışmadan {unique} benzersiz maç-penaltı kombinasyonu",
+    "penaltigamiOnlyPenScore": "Yalnızca bir kez gerçekleşen tek penaltı skoru — 4–2 veya 5–3 gibi diğer tüm atışma sonuçları birden fazla kez yaşandı.",
+    "frontierTitle": "Scorigami Sınırı",
+    "frontierDesc": "Hiç yaşanmamış ama bir sonraki en olası skorlar bunlar.",
+    "frontierNote": "2026 Dünya Kupası 48 takım ve 104 maçla genişleyerek, daha önce hiç görülmemiş skorların nihayet kapıyı aralayabileceği daha fazla fırsatı beraberinde getirebilir."
   },
   "locale": {}
 }

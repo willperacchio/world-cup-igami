@@ -1,50 +1,65 @@
 {
   "header": {
     "title": "World Cupigami",
-    "subtitle": "Setiap skor akhir unik dalam sejarah Piala Dunia FIFA Putra"
+    "kicker": "Sebuah proyek scorigami",
+    "subtitle": "Setiap skor akhir unik dalam sejarah FIFA World Cup Putra"
   },
   "explainer": {
     "title": "Apa itu Scorigami?",
-    "description": "Scorigami adalah konsep skor akhir yang belum pernah terjadi sebelumnya dalam sejarah suatu olahraga. Ide ini dipopulerkan oleh Jon Bois, yang karyanya tentang NFL scorigami menginspirasi proyek ini.",
+    "description": "Scorigami adalah konsep skor akhir yang belum pernah terjadi sebelumnya dalam sejarah suatu olahraga. Ide ini dipopulerkan oleh Jon Bois, yang karyanya yang brilian tentang NFL scorigami menginspirasi proyek ini.",
     "watchVideo": "Tonton video aslinya",
-    "whyBuilt": "Saya membangun World Cupigami untuk membawa sedikit budaya olahraga Amerika ke panggung terbesar dunia — dengan semangat berbagi yang membuat Piala Dunia begitu istimewa. Scorigami bekerja sedikit berbeda dalam sepak bola dibanding American football, karena gol dicetak satu per satu, bukan dalam kelipatan 2, 3, 6, atau 7. Itu membuat scorigami baru lebih jarang terjadi dan lebih bermakna.",
-    "mensOnly": "Saat ini hanya mencakup Piala Dunia FIFA Putra. Edisi Piala Dunia Putri akan segera hadir.",
+    "whyBuilt": "Saya membangun World Cupigami untuk membawa sedikit budaya olahraga Amerika ke panggung terbesar dunia — dengan semangat berbagi yang membuat Piala Dunia begitu istimewa. Scorigami bekerja sedikit berbeda dalam sepak bola dibanding American football, karena gol dicetak satu per satu, bukan dalam kelipatan 2, 3, 6, 7, atau 8. Hal itu membuat scorigami baru lebih langka dan lebih bermakna.",
+    "mensOnly": "Ini saat ini hanya mencakup FIFA World Cup Putra. Edisi Piala Dunia Wanita akan segera hadir.",
     "pointTitle": "Apa gunanya ini?",
-    "pointDescription": "Jujur? Tidak ada. Ini hanya menyenangkan jika kamu penggemar analitik olahraga seperti saya. Tapi kalau ada satu hal baik yang bisa muncul dari ini — ketika timmu mencetak scorigami, pertimbangkan untuk berdonasi ke badan amal di negara tim yang kalah. Skor bersejarah adalah alasan yang tepat untuk berbuat kebaikan di dunia."
+    "pointDescription": "Jujur saja? Tidak ada. Ini hanya menyenangkan jika kamu seorang penggemar analitik olahraga seperti saya. Tapi jika ada satu hal baik yang bisa lahir dari ini — ketika timmu mencetak scorigami, pertimbangkan untuk berdonasi ke badan amal di negara tim yang kalah. Skor bersejarah adalah alasan yang tepat untuk berbuat kebaikan di dunia."
   },
   "stats": {
     "matches": "pertandingan",
     "uniqueScores": "skor unik",
-    "neverHappened": "belum pernah terjadi",
+    "neverHappened": "masih mungkin terjadi",
+    "editionNumber": "ke-23",
+    "editionLabel": "Edisi World Cup Putra",
     "tournaments": "Turnamen"
   },
   "views": {
     "heatmap": "Peta Panas",
-    "allMatches": "Semua Pertandingan"
+    "allMatches": "Semua Pertandingan",
+    "funFacts": "Fakta Menarik"
+  },
+  "upcoming": {
+    "kickerLabel": "Menunggu kick-off",
+    "title": "Piala Dunia {year} belum dimulai",
+    "description": "FIFA Men's World Cup {year} dimulai pada {date}. Hasil pertandingan akan muncul di sini secara langsung saat pertandingan selesai — dan peta panas di atas menunjukkan keadaan scorigami tepat sebelum turnamen dimulai.",
+    "kickoffDateFormat": "d MMMM yyyy"
   },
   "grid": {
-    "description": "Baris = skor kalah · Kolom = skor menang · Klik sel mana saja",
-    "never": "Belum Pernah",
+    "description": "Baris = skor tim kalah · Kolom = skor tim menang · Skor ditampilkan sebagai pemenang–pecundang · Klik sel mana saja",
+    "never": "Belum pernah",
     "unique": "Unik (1×)",
     "veryRare": "Sangat Langka",
     "rare": "Langka",
     "common": "Umum",
     "veryCommon": "Sangat Umum",
-    "neverHappened": "{low}–{high}: Belum pernah",
-    "count": "{low}–{high}: {count}×"
+    "neverHappened": "{high}–{low}: Belum pernah",
+    "count": "{high}–{low}: {count}×"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
-    "scorigamiDescription": "{low}–{high} belum pernah terjadi dalam sejarah Piala Dunia.",
+    "noScorigamiTitle": "Belum Scorigami",
+    "scorigamiDescription": "{high}–{low} belum pernah terjadi dalam sejarah Piala Dunia.",
     "scorigamiBadge": "(Scorigami)",
-    "close": "Tutup"
+    "close": "Tutup",
+    "readMore": "Wikipedia",
+    "readMoreAria": "Baca lebih lanjut tentang pertandingan ini di Wikipedia"
   },
   "table": {
     "searchPlaceholder": "Cari tim, turnamen, skor...",
     "date": "Tanggal",
     "home": "Tuan Rumah",
+    "winner": "Pemenang",
     "score": "Skor",
     "away": "Tamu",
+    "loser": "Pecundang",
     "stage": "Babak",
     "venue": "Venue",
     "year": "Tahun",
@@ -55,18 +70,71 @@
     "showLess": "Tampilkan lebih sedikit"
   },
   "stages": {
-    "group stage": "Fase Grup",
+    "group stage": "Babak Grup",
     "round of 32": "Babak 32 Besar",
     "round of 16": "Babak 16 Besar",
     "quarter-finals": "Perempat Final",
     "semi-finals": "Semi Final",
     "third-place match": "Perebutan Tempat Ketiga",
-    "final": "Final"
+    "final": "Final",
+    "final round": "Babak Final",
+    "second group stage": "Babak Grup Kedua"
   },
   "footer": {
-    "dataFrom": "Data dari",
+    "dataFrom": "Data historis dari",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "Hasil langsung 2026 dari",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "Konsep Scorigami oleh Jon Bois",
+    "disclaimer": "FIFA World Cup™ adalah merek dagang FIFA. Situs ini tidak berafiliasi, didukung, atau terhubung dengan FIFA."
+  },
+  "funFacts": {
+    "mostRecentTitle": "Scorigami Terbaru",
+    "mostRecentNote": "Ini adalah pertama kalinya skor ini terjadi dalam sejarah Piala Dunia.",
+    "trueScorigamisTitle": "Scorigami Unik",
+    "trueScorigamisDesc": "Skor yang hanya terjadi tepat satu kali — tidak sebelumnya, tidak setelahnya.",
+    "mostCommonTitle": "Skor Paling Umum",
+    "mostCommonNote": "Hampir 1 dari 5 pertandingan berakhir dengan kemenangan 1-0.",
+    "highestScoringTitle": "Pertandingan dengan Gol Terbanyak (10+ gol)",
+    "biggestBlowoutsTitle": "Kekalahan Terbesar",
+    "scorigamiLeadersTitle": "Papan Peringkat Scorigami",
+    "scorigamiLeadersDesc": "Tim yang paling banyak terlibat dalam skor pertama kali sepanjang semua Piala Dunia.",
+    "scorigamiKingsNote": "Tim dengan scorigami unik terbanyak: {teams}.",
+    "finalsTitle": "Final Piala Dunia",
+    "finalsDesc": "Skor final yang paling umum adalah {score}, yang telah terjadi sebanyak {count} kali ({years}).",
+    "finalsScorigamiTitle": "Scorigami di Babak Final",
+    "finalsScorigamiDesc": "Final di mana skor tersebut belum pernah terjadi sebelumnya dalam pertandingan Piala Dunia mana pun.",
+    "homeTurfTitle": "Scorigami Tuan Rumah",
+    "homeTurfDesc": "Sebanyak {count} kali tuan rumah terlibat saat skor baru pertama kali muncul di Piala Dunia mereka sendiri.",
+    "allTimeStatsTitle": "Statistik Sepanjang Masa",
+    "extraTimeGames": "pertandingan perpanjangan waktu",
+    "penaltyShootouts": "adu penalti",
+    "totalGoals": "total gol",
+    "tournamentTrendsTitle": "Tren Piala Dunia",
+    "trendTeams": "Jumlah Tim",
+    "trendMatches": "Pertandingan Dimainkan",
+    "trendGoalsPerGame": "Gol Per Pertandingan",
+    "trendScorigamis": "Scorigami Baru",
+    "wwiiNote": "Piala Dunia 1942 dan 1946 dibatalkan karena Perang Dunia II.",
+    "goalDistTitle": "Distribusi Gol",
+    "goalDistDesc": "Berapa banyak pertandingan dengan total gol tertentu di semua Piala Dunia.",
+    "goalDistNote": "Distribusinya kira-kira mengikuti bentuk Poisson — sebagian besar pertandingan berkumpul di sekitar 2–3 total gol, dengan ekor panjang pertandingan bertensi tinggi.",
+    "stageBreakdownTitle": "Scorigami per Babak",
+    "stageBreakdownDesc": "Seberapa sering skor baru pertama kali muncul di setiap babak turnamen?",
+    "stageGroupLabel": "Babak Grup",
+    "stageKnockoutLabel": "Babak Gugur",
+    "stageSummaryDetail": "{scorigamis} scorigami dalam {total} pertandingan",
+    "stageTopNote": "{stage} memimpin dengan {count} scorigami ({rate}% dari pertandingan di babak tersebut).",
+    "penaltigamiTitle": "Penaltigami",
+    "penaltigamiDesc": "Setiap adu penalti dalam sejarah Piala Dunia. \"Penaltigami\" adalah kombinasi skor pertandingan + hasil adu penalti yang hanya terjadi satu kali.",
+    "penaltigamiUnique": "Hanya terjadi sekali",
+    "penaltigamiRepeated": "Terjadi {count}×",
+    "penaltigamiSummary": "{unique} kombinasi pertandingan-penalti unik dari {total} adu penalti",
+    "penaltigamiOnlyPenScore": "Satu-satunya skor penalti yang hanya terjadi sekali — setiap hasil adu penalti lainnya (seperti 4–2 atau 5–3) telah terjadi beberapa kali.",
+    "frontierTitle": "Batas Scorigami",
+    "frontierDesc": "Skor-skor ini belum pernah terjadi tetapi paling mungkin terjadi berikutnya.",
+    "frontierNote": "Dengan Piala Dunia 2026 yang berkembang menjadi 48 tim dan 104 pertandingan, lebih banyak ketimpangan skor mungkin akhirnya membuka lahan baru."
   },
   "locale": {}
 }

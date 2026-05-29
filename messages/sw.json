@@ -1,50 +1,65 @@
 {
   "header": {
     "title": "World Cupigami",
+    "kicker": "Mradi wa scorigami",
     "subtitle": "Kila matokeo ya mwisho ya kipekee katika historia ya Kombe la Dunia la FIFA la Wanaume"
   },
   "explainer": {
     "title": "Scorigami ni nini?",
-    "description": "Scorigami ni dhana ya matokeo ya mwisho ambayo hayajawahi kutokea kabla katika historia ya mchezo. Wazo hili lilifahamishwa na Jon Bois, ambaye kazi yake ya ajabu kuhusu NFL scorigami ilihamasisha mradi huu.",
+    "description": "Scorigami ni dhana ya matokeo ya mwisho ambayo hayajawahi kutokea kabla katika historia ya mchezo. Wazo hili lilipopea kupitia Jon Bois, ambaye kazi yake ya ajabu kuhusu scorigami ya NFL ilihamasisha mradi huu.",
     "watchVideo": "Tazama video ya asili",
-    "whyBuilt": "Nilijenga World Cupigami kuleta kidogo ya utamaduni wa michezo ya Amerika kwenye jukwaa kubwa zaidi duniani — kwa roho ya kushiriki ambayo inafanya Kombe la Dunia kuwa maalum. Scorigami inafanya kazi tofauti kidogo katika soka kuliko katika mpira wa miguu wa Kiamerika, kwa sababu magoli hupigwa mmoja mmoja badala ya vikundi vya 2, 3, 6, au 7. Hii inafanya scorigami mpya kuwa nadra zaidi na zenye maana zaidi.",
-    "mensOnly": "Hii kwa sasa inashughulikia Kombe la Dunia la FIFA la Wanaume pekee. Toleo la Kombe la Dunia la Wanawake linakuja hivi karibuni.",
-    "pointTitle": "Lengo lake ni nini?",
-    "pointDescription": "Kwa kweli? Hakuna. Ni burudani tu kama wewe ni mpenzi wa uchambuzi wa michezo kama mimi. Lakini kama kuna jambo jema moja linaloweza kutokana na hili — timu yako ikipiga scorigami, fikiria kuchangia shirika la hisani nchini timu iliyoshindwa. Matokeo ya kihistoria ni sababu nzuri ya kufanya mema duniani."
+    "whyBuilt": "Nilijenga World Cupigami kuleta kidogo ya utamaduni wa michezo ya Amerika kwenye jukwaa kubwa zaidi duniani — kwa roho ya kushiriki inayofanya Kombe la Dunia kuwa maalum. Scorigami inafanya kazi tofauti kidogo katika soka kuliko katika mpira wa miguu wa Kiamerika, kwani magoli yanafungwa moja kwa wakati mmoja badala ya vipande vya 2, 3, 6, 7, au 8. Hii inafanya scorigami mpya kuwa nadra zaidi na zenye maana zaidi.",
+    "mensOnly": "Hii kwa sasa inashughulikia Kombe la Dunia la FIFA la Wanaume peke yake. Toleo la Kombe la Dunia la Wanawake linakuja hivi karibuni.",
+    "pointTitle": "Kwa nini hii ipo?",
+    "pointDescription": "Kwa uaminifu? Hakuna sababu kubwa. Ni burudani tu kama wewe ni mpenzi wa takwimu za michezo kama mimi. Lakini kama kuna jambo jema linaweza kutokea — wakati timu yako inafunga goli la scorigami, fikiria kutoa sadaka kwa shirika la hisani nchini mwa timu iliyoshindwa. Matokeo ya kihistoria ni sababu nzuri ya kufanya jambo jema duniani."
   },
   "stats": {
     "matches": "mechi",
     "uniqueScores": "matokeo ya kipekee",
-    "neverHappened": "hayajawahi kutokea",
+    "neverHappened": "bado yanawezekana",
+    "editionNumber": "ya 23",
+    "editionLabel": "Toleo la Kombe la Dunia la Wanaume",
     "tournaments": "Mashindano"
   },
   "views": {
     "heatmap": "Ramani ya Joto",
-    "allMatches": "Mechi Zote"
+    "allMatches": "Mechi Zote",
+    "funFacts": "Mambo ya Kuvutia"
+  },
+  "upcoming": {
+    "kickerLabel": "Inasubiri kuanza",
+    "title": "Kombe la Dunia la {year} halijanza bado",
+    "description": "Kombe la Dunia la FIFA la Wanaume la {year} linaanza tarehe {date}. Matokeo ya mechi yataonekana hapa mara moja baada ya mechi kuisha — na ramani ya joto hapo juu inaonyesha hali ya scorigami kabla ya mashindano kuanza.",
+    "kickoffDateFormat": "MMMM d, yyyy"
   },
   "grid": {
-    "description": "Safu = matokeo ya kushindwa · Nguzo = matokeo ya kushinda · Bonyeza seli yoyote",
-    "never": "Kamwe",
-    "unique": "Kipekee (1×)",
+    "description": "Safu mlalo = matokeo ya mshindwa · Safu wima = matokeo ya mshindi · Matokeo yanaonyeshwa kama mshindi–mshindwa · Bonyeza kisanduku chochote",
+    "never": "Haijawahi",
+    "unique": "Ya kipekee (1×)",
     "veryRare": "Nadra Sana",
     "rare": "Nadra",
     "common": "Kawaida",
-    "veryCommon": "Kawaida Sana",
-    "neverHappened": "{low}–{high}: Kamwe",
-    "count": "{low}–{high}: {count}×"
+    "veryCommon": "Ya Kawaida Sana",
+    "neverHappened": "{high}–{low}: Haijawahi",
+    "count": "{high}–{low}: {count}×"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
-    "scorigamiDescription": "{low}–{high} haijawahi kutokea katika historia ya Kombe la Dunia.",
+    "noScorigamiTitle": "Hakuna Scorigami — Bado",
+    "scorigamiDescription": "{high}–{low} haijawahi kutokea katika historia ya Kombe la Dunia.",
     "scorigamiBadge": "(Scorigami)",
-    "close": "Funga"
+    "close": "Funga",
+    "readMore": "Wikipedia",
+    "readMoreAria": "Soma zaidi kuhusu mechi hii kwenye Wikipedia"
   },
   "table": {
     "searchPlaceholder": "Tafuta timu, mashindano, matokeo...",
     "date": "Tarehe",
     "home": "Nyumbani",
+    "winner": "Mshindi",
     "score": "Matokeo",
-    "away": "Ughaibuni",
+    "away": "Mgeni",
+    "loser": "Mshindwa",
     "stage": "Hatua",
     "venue": "Uwanja",
     "year": "Mwaka",
@@ -60,13 +75,66 @@
     "round of 16": "Raundi ya 16",
     "quarter-finals": "Robo Fainali",
     "semi-finals": "Nusu Fainali",
-    "third-place match": "Mechi ya Nafasi ya Tatu",
-    "final": "Fainali"
+    "third-place match": "Mechi ya Tatu",
+    "final": "Fainali",
+    "final round": "Raundi ya Mwisho",
+    "second group stage": "Hatua ya Pili ya Makundi"
   },
   "footer": {
-    "dataFrom": "Data kutoka",
+    "dataFrom": "Data ya kihistoria kutoka",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "Matokeo ya moja kwa moja ya 2026 kutoka",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "Dhana ya Scorigami na Jon Bois",
+    "disclaimer": "FIFA World Cup™ ni alama ya biashara ya FIFA. Tovuti hii haina uhusiano na FIFA, haijaidhinishwa nao, wala haihusiani nao."
+  },
+  "funFacts": {
+    "mostRecentTitle": "Scorigami ya Hivi Karibuni",
+    "mostRecentNote": "Hii ilikuwa mara ya kwanza matokeo haya kutokea katika historia ya Kombe la Dunia.",
+    "trueScorigamisTitle": "Scorigami za Kipekee",
+    "trueScorigamisDesc": "Matokeo ambayo yametokea mara moja tu — kamwe kabla, kamwe baadaye.",
+    "mostCommonTitle": "Matokeo ya Kawaida Zaidi",
+    "mostCommonNote": "Karibu mechi moja kati ya tano huisha kwa ushindi wa 1-0.",
+    "highestScoringTitle": "Mechi zenye Magoli Mengi Zaidi (magoli 10+)",
+    "biggestBlowoutsTitle": "Ushindi Mkubwa Zaidi",
+    "scorigamiLeadersTitle": "Orodha ya Scorigami",
+    "scorigamiLeadersDesc": "Timu zilizohusika katika matokeo ya kwanza kabisa katika Kombe la Dunia zote.",
+    "scorigamiKingsNote": "Timu zenye scorigami nyingi zaidi za kipekee: {teams}.",
+    "finalsTitle": "Fainali za Kombe la Dunia",
+    "finalsDesc": "Matokeo ya kawaida zaidi ya fainali ni {score}, ambayo yametokea mara {count} ({years}).",
+    "finalsScorigamiTitle": "Scorigami za Fainali",
+    "finalsScorigamiDesc": "Fainali ambazo matokeo yake hayajawahi kutokea kabla katika mechi yoyote ya Kombe la Dunia.",
+    "homeTurfTitle": "Scorigami ya Mwenyeji",
+    "homeTurfDesc": "Mara {count} timu ya mwenyeji ilihusika wakati matokeo mapya kabisa yalipofika kwanza katika Kombe la Dunia lao.",
+    "allTimeStatsTitle": "Takwimu za Wakati Wote",
+    "extraTimeGames": "mechi za muda wa ziada",
+    "penaltyShootouts": "mapambano ya penalti",
+    "totalGoals": "magoli yote kwa jumla",
+    "tournamentTrendsTitle": "Mwenendo wa Kombe la Dunia",
+    "trendTeams": "Idadi ya Timu",
+    "trendMatches": "Mechi Zilizochezwa",
+    "trendGoalsPerGame": "Magoli kwa Mechi",
+    "trendScorigamis": "Scorigami Mpya",
+    "wwiiNote": "Kombe la Dunia la 1942 na 1946 zilifutwa kutokana na Vita vya Pili vya Dunia.",
+    "goalDistTitle": "Mgawanyo wa Magoli",
+    "goalDistDesc": "Idadi ya mechi zilizokuwa na jumla fulani ya magoli katika Kombe la Dunia zote.",
+    "goalDistNote": "Mgawanyo huu unafuata takriban umbo la Poisson — mechi nyingi zinaungana karibu na magoli 2–3 kwa jumla, huku mkia mrefu ukiwakilisha mechi zenye magoli mengi.",
+    "stageBreakdownTitle": "Scorigami kwa Hatua",
+    "stageBreakdownDesc": "Mara ngapi matokeo mapya kabisa yanafika kwanza katika kila hatua ya mashindano?",
+    "stageGroupLabel": "Hatua ya Makundi",
+    "stageKnockoutLabel": "Kwa Kuondolewa",
+    "stageSummaryDetail": "scorigami {scorigamis} katika mechi {total}",
+    "stageTopNote": "{stage} inaongoza na scorigami {count} ({rate}% ya mechi katika hatua hiyo).",
+    "penaltigamiTitle": "Penaltigami",
+    "penaltigamiDesc": "Kila mapambano ya penalti katika historia ya Kombe la Dunia. \"Penaltigami\" ni mchanganyiko wa matokeo ya mechi na mapambano ya penalti ambao umetokea mara moja tu.",
+    "penaltigamiUnique": "Imetokea mara moja tu",
+    "penaltigamiRepeated": "Imetokea {count}×",
+    "penaltigamiSummary": "michanganyiko {unique} ya kipekee ya mechi-penalti kati ya mapambano {total} ya penalti",
+    "penaltigamiOnlyPenScore": "Matokeo pekee ya penalti ambayo yametokea mara moja tu — kila matokeo mengine ya mapambano ya penalti (kama 4–2 au 5–3) yametokea mara nyingi.",
+    "frontierTitle": "Mpaka wa Scorigami",
+    "frontierDesc": "Matokeo haya hayajawahi kutokea lakini yana uwezekano mkubwa zaidi wa kutokea ijayo.",
+    "frontierNote": "Kwa Kombe la Dunia la 2026 kupanuka hadi timu 48 na mechi 104, mechi nyingi za kutofautiana zinaweza hatimaye kuvuka mipaka mipya."
   },
   "locale": {}
 }

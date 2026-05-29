@@ -1,52 +1,67 @@
 {
   "header": {
     "title": "World Cupigami",
-    "subtitle": "Erkaklar FIFA Jahon Kubogi tarixidagi barcha noyob yakuniy hisoblar"
+    "kicker": "Scorigami loyihasi",
+    "subtitle": "FIFA Jahon Chempionati tarixidagi har bir noyob yakuniy hisob"
   },
   "explainer": {
     "title": "Scorigami nima?",
-    "description": "Scorigami — bu sport tarixida hech qachon bo'lmagan yakuniy hisob tushunchasidir. Bu g'oyani Jon Bois ommalashtirib, uning NFL scorigami bo'yicha ajoyib ishi ushbu loyihaga ilhom berdi.",
+    "description": "Scorigami — sport tarixida hech qachon ro'y bermagan yakuniy hisob tushunchasi. Bu g'oyani Jon Bois mashhur qildi; uning NFL scorigami bo'yicha ajoyib ishi ushbu loyihaga ilhom berdi.",
     "watchVideo": "Asl videoni tomosha qiling",
-    "whyBuilt": "Men World Cupigami ni Amerika sport madaniyatini dunyo sahnasiga olib kelish uchun yaratdim — Jahon Kubogini alohida qiladigan o'rtoqlashuv ruhida. Scorigami futbolda amerikalik futbolga qaraganda biroz boshqacha ishlaydi, chunki gollar 2, 3, 6 yoki 7 talik bloklarda emas, birma-bir uriladi. Bu yangi scorigamilarni kamroq va qimmatroq qiladi.",
-    "mensOnly": "Hozircha bu faqat Erkaklar FIFA Jahon Kubogini qamrab oladi. Ayollar Jahon Kubogi versiyasi tez orada keladi.",
-    "pointTitle": "Buning nima foydasi bor?",
-    "pointDescription": "Halol aytsam? Hech nima. Agar siz menga o'xshash sport tahlili bo'yicha nerd bo'lsangiz, bu shunchaki qiziqarli. Lekin undan bir yaxshilik chiqishi mumkin bo'lsa — jamoangiz scorigami qilganda, yutqazgan jamoa mamlakatidagi xayriya tashkilotiga xayriya qilishni ko'rib chiqing. Tarixiy hisob — dunyoda yaxshilik qilish uchun ajoyib bahona."
+    "whyBuilt": "Men World Cupigamini dunyoning eng katta musobaqasiga biroz Amerika sport madaniyatini olib kirish uchun yaratdim — Jahon Chempionatini o'ziga xos qiladigan ulashish ruhida. Scorigami futbolda Amerika futboliga qaraganda biroz boshqacha ishlaydi, chunki gollar 2, 3, 6, 7 yoki 8 talik to'plamlarda emas, balki birma-bir uriladi. Bu yangi scorigamilarni kamroq va mazmunliroq qiladi.",
+    "mensOnly": "Hozircha bu faqat Erkaklar FIFA Jahon Chempionatini qamrab oladi. Ayollar Jahon Chempionati versiyasi tez orada keladi.",
+    "pointTitle": "Buning nima keragi bor?",
+    "pointDescription": "Rostini aytsam? Hech nima. Bu shunchaki men kabi sport tahlili muxlislari uchun qiziqarli. Lekin bundan bitta yaxshi narsa chiqishi mumkin bo'lsa — jamoangiz scorigami qilganda, mag'lub jamoaning mamlakatidagi xayriya tashkilotiga xayriya qilishni o'ylab ko'ring. Tarixiy hisob — dunyoda yaxshilik qilish uchun ajoyib bahona."
   },
   "stats": {
-    "matches": "o'yinlar",
-    "uniqueScores": "noyob hisoblar",
-    "neverHappened": "hech bo'lmagan",
+    "matches": "o'yin",
+    "uniqueScores": "noyob hisob",
+    "neverHappened": "hali mumkin",
+    "editionNumber": "23-",
+    "editionLabel": "Erkaklar Jahon Chempionati",
     "tournaments": "Turnirlar"
   },
   "views": {
     "heatmap": "Issiqlik xaritasi",
-    "allMatches": "Barcha o'yinlar"
+    "allMatches": "Barcha o'yinlar",
+    "funFacts": "Qiziqarli faktlar"
+  },
+  "upcoming": {
+    "kickerLabel": "Boshlanishini kutmoqda",
+    "title": "{year} yilgi Jahon Chempionati hali boshlanmagan",
+    "description": "{year} yilgi FIFA Erkaklar Jahon Chempionati {date} kuni boshlanadi. O'yin natijalari tugaши bilanoq bu yerda real vaqt rejimida paydo bo'ladi — yuqoridagi issiqlik xaritasi esa turnir boshlanishidan oldingi scorigami holatini ko'rsatadi.",
+    "kickoffDateFormat": "d MMMM, yyyy"
   },
   "grid": {
-    "description": "Qatorlar = yutqazuvchi hisob · Ustunlar = g'olib hisob · Istalgan katakni bosing",
+    "description": "Qatorlar = mag'lub hisob · Ustunlar = g'olib hisob · Hisob g'olib–mag'lub sifatida ko'rsatiladi · Istalgan katakchani bosing",
     "never": "Hech qachon",
     "unique": "Noyob (1×)",
-    "veryRare": "Juda kam uchraydi",
-    "rare": "Kam uchraydi",
-    "common": "Ko'p uchraydi",
-    "veryCommon": "Juda ko'p uchraydi",
-    "neverHappened": "{low}–{high}: Hech qachon bo'lmagan",
-    "count": "{low}–{high}: {count}×"
+    "veryRare": "Juda kam",
+    "rare": "Kam",
+    "common": "Ko'p",
+    "veryCommon": "Juda ko'p",
+    "neverHappened": "{high}–{low}: Hech qachon",
+    "count": "{high}–{low}: {count}×"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
-    "scorigamiDescription": "{low}–{high} Jahon Kubogi tarixida hech qachon bo'lmagan.",
+    "noScorigamiTitle": "Hali scorigami emas",
+    "scorigamiDescription": "{high}–{low} hisob Jahon Chempionati tarixida hech qachon bo'lmagan.",
     "scorigamiBadge": "(Scorigami)",
-    "close": "Yopish"
+    "close": "Yopish",
+    "readMore": "Wikipedia",
+    "readMoreAria": "Bu o'yin haqida Wikipediada ko'proq o'qing"
   },
   "table": {
     "searchPlaceholder": "Jamoalar, turnirlar, hisoblar bo'yicha qidiring...",
     "date": "Sana",
     "home": "Uy",
+    "winner": "G'olib",
     "score": "Hisob",
     "away": "Mehmon",
+    "loser": "Mag'lub",
     "stage": "Bosqich",
-    "venue": "Maydon",
+    "venue": "Joy",
     "year": "Yil",
     "showingOf": "{total} ta o'yindan {shown} tasi ko'rsatilmoqda.",
     "allTournaments": "Barcha turnirlar",
@@ -56,17 +71,70 @@
   },
   "stages": {
     "group stage": "Guruh bosqichi",
-    "round of 32": "32 jamoali bosqich",
-    "round of 16": "16 jamoali bosqich",
+    "round of 32": "1/16 final",
+    "round of 16": "1/8 final",
     "quarter-finals": "Chorak final",
     "semi-finals": "Yarim final",
     "third-place match": "Uchinchi o'rin uchun o'yin",
-    "final": "Final"
+    "final": "Final",
+    "final round": "Yakuniy bosqich",
+    "second group stage": "Ikkinchi guruh bosqichi"
   },
   "footer": {
-    "dataFrom": "Ma'lumotlar manba:",
+    "dataFrom": "Tarixiy ma'lumotlar:",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "2026 yilgi jonli natijalar:",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "Scorigami tushunchasi muallifi: Jon Bois",
+    "disclaimer": "FIFA World Cup™ — FIFA savdo belgisi. Ushbu sayt FIFA bilan bog'liq, uning tomonidan qo'llab-quvvatlanmagan yoki tasdiqlangan emas."
+  },
+  "funFacts": {
+    "mostRecentTitle": "Eng so'nggi Scorigami",
+    "mostRecentNote": "Bu hisob Jahon Chempionati tarixida birinchi marta ro'y berdi.",
+    "trueScorigamisTitle": "Noyob Scorigamilar",
+    "trueScorigamisDesc": "Aynan bir marta ro'y bergan hisoblar — ilgari ham, keyin ham bo'lmagan.",
+    "mostCommonTitle": "Eng ko'p uchraydigan hisoblar",
+    "mostCommonNote": "Har 5 o'yindan deyarli 1 tasi 1:0 hisob bilan tugaydi.",
+    "highestScoringTitle": "Eng ko'p gollli o'yinlar (10 va undan ko'p gol)",
+    "biggestBlowoutsTitle": "Eng katta farqli g'alabalar",
+    "scorigamiLeadersTitle": "Scorigami reytingi",
+    "scorigamiLeadersDesc": "Barcha Jahon Chempionatlari bo'yicha eng ko'p birinchi marta bo'lgan hisoblarni qayd etgan jamoalar.",
+    "scorigamiKingsNote": "Eng ko'p noyob scorigamiga ega jamoalar: {teams}.",
+    "finalsTitle": "Jahon Chempionati finallari",
+    "finalsDesc": "Finallardagi eng keng tarqalgan hisob — {score}, bu {count} marta ro'y bergan ({years}).",
+    "finalsScorigamiTitle": "Final scorigamilari",
+    "finalsScorigamiDesc": "Hisobi Jahon Chempionatining birorta o'yinida ilgari bo'lmagan finallar.",
+    "homeTurfTitle": "Uy maydoni scorigamisi",
+    "homeTurfDesc": "{count} marta xo'jayin jamoa o'z Jahon Chempionatida mutlaqo yangi hisob qayd etilishida ishtirok etgan.",
+    "allTimeStatsTitle": "Umumiy statistika",
+    "extraTimeGames": "qo'shimcha vaqtli o'yinlar",
+    "penaltyShootouts": "penalti seriyalari",
+    "totalGoals": "jami gollar",
+    "tournamentTrendsTitle": "Jahon Chempionati tendensiyalari",
+    "trendTeams": "Jamoalar soni",
+    "trendMatches": "O'tkazilgan o'yinlar",
+    "trendGoalsPerGame": "O'yin boshiga gollar",
+    "trendScorigamis": "Yangi scorigamilar",
+    "wwiiNote": "1942 va 1946 yilgi Jahon Chempionatlari Ikkinchi Jahon Urushi sababli bekor qilindi.",
+    "goalDistTitle": "Gollar taqsimoti",
+    "goalDistDesc": "Barcha Jahon Chempionatlarida har bir jami gol soniga mos o'yinlar soni.",
+    "goalDistNote": "Taqsimot taxminan Puasson egri chizig'iga o'xshaydi — o'yinlarning aksariyati jami 2–3 gol atrofida to'planadi, yuqori gollik o'yinlar esa uzun quyruq hosil qiladi.",
+    "stageBreakdownTitle": "Bosqichlar bo'yicha scorigami",
+    "stageBreakdownDesc": "Turnirning har bir bosqichida mutlaqo yangi hisob qanchalik tez-tez qayd etiladi?",
+    "stageGroupLabel": "Guruh bosqichi",
+    "stageKnockoutLabel": "To'g'ridan-to'g'ri o'yin",
+    "stageSummaryDetail": "{total} ta o'yinda {scorigamis} ta scorigami",
+    "stageTopNote": "{stage} {count} ta scorigami bilan yetakchilik qiladi (shu bosqichdagi o'yinlarning {rate}%).",
+    "penaltigamiTitle": "Penaltigami",
+    "penaltigamiDesc": "Jahon Chempionati tarixidagi barcha penalti seriyalari. \"Penaltigami\" — faqat bir marta ro'y bergan o'yin hisobi va penalti natijasi kombinatsiyasi.",
+    "penaltigamiUnique": "Faqat bir marta bo'lgan",
+    "penaltigamiRepeated": "{count}× bo'lgan",
+    "penaltigamiSummary": "{total} ta penalti seriyasidan {unique} tasi noyob o'yin-penalti kombinatsiyasi",
+    "penaltigamiOnlyPenScore": "Faqat bir marta ro'y bergan penalti hisobi — boshqa barcha penalti natijalari (masalan, 4–2 yoki 5–3) bir necha marta takrorlangan.",
+    "frontierTitle": "Scorigami chegarasi",
+    "frontierDesc": "Bu hisoblar hali bo'lmagan, lekin keyingi eng ehtimollilar.",
+    "frontierNote": "2026 yilgi Jahon Chempionati 48 ta jamoa va 104 ta o'yin bilan kengayishi bilan ko'proq nomutanosib o'yinlar nihoyat yangi yo'llar ochishi mumkin."
   },
   "locale": {}
 }

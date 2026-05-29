@@ -1,56 +1,71 @@
 {
   "header": {
     "title": "World Cupigami",
-    "subtitle": "FIFA 남자 월드컵 역사상 존재했던 모든 고유한 최종 스코어"
+    "kicker": "스코리가미 프로젝트",
+    "subtitle": "FIFA 남자 월드컵 역사상 등장한 모든 고유 최종 스코어"
   },
   "explainer": {
     "title": "스코리가미란?",
-    "description": "스코리가미는 스포츠 역사상 한 번도 나온 적 없는 최종 스코어를 뜻하는 개념입니다. Jon Bois가 NFL 스코리가미에 관한 훌륭한 작업으로 이 개념을 널리 알렸고, 그것이 이 프로젝트의 영감이 되었습니다.",
+    "description": "스코리가미란 스포츠 역사상 한 번도 나온 적 없는 최종 스코어를 뜻하는 개념입니다. Jon Bois가 NFL 스코리가미에 관한 탁월한 작업으로 이 개념을 널리 알렸고, 그것이 이 프로젝트의 영감이 되었습니다.",
     "watchVideo": "원본 영상 보기",
-    "whyBuilt": "저는 월드컵을 특별하게 만드는 공유의 정신으로, 미국 스포츠 문화를 세계 최대의 무대에 소개하고자 World Cupigami를 만들었습니다. 축구에서의 스코리가미는 미식축구와는 조금 다르게 작동합니다. 미식축구처럼 2점, 3점, 6점, 7점 단위가 아니라 한 골씩 득점하기 때문에, 새로운 스코리가미는 더 드물고 그만큼 더 의미 있습니다.",
+    "whyBuilt": "저는 월드컵을 특별하게 만드는 공유의 정신으로, 미국 스포츠 문화를 세계 최대의 무대에 조금이나마 전하고자 World Cupigami를 만들었습니다. 축구에서의 스코리가미는 미식축구와는 조금 다릅니다. 미식축구처럼 2, 3, 6, 7, 8점씩 한꺼번에 득점하는 것이 아니라, 골이 하나씩 쌓이기 때문입니다. 그래서 새로운 스코리가미는 더 드물고, 더 의미 있습니다.",
     "mensOnly": "현재는 FIFA 남자 월드컵만 다루고 있습니다. 여자 월드컵 버전도 곧 출시될 예정입니다.",
     "pointTitle": "이게 무슨 의미가 있나요?",
-    "pointDescription": "솔직히 말하면? 별 의미 없습니다. 저처럼 스포츠 데이터에 빠진 사람에게 그냥 재미있는 것뿐이에요. 하지만 한 가지 좋은 점이 있다면 — 당신의 팀이 스코리가미를 달성했을 때, 패배한 팀의 나라에 있는 자선단체에 기부하는 건 어떨까요? 역사적인 스코어는 세상에 선한 일을 할 좋은 핑계가 됩니다."
+    "pointDescription": "솔직히? 딱히 없습니다. 저처럼 스포츠 통계에 빠진 사람이라면 그냥 재미있을 뿐이에요. 하지만 한 가지 좋은 일이 생길 수 있다면 — 여러분의 팀이 스코리가미를 달성했을 때, 상대 팀 나라의 자선단체에 기부해보는 건 어떨까요? 역사적인 스코어는 세상에 선한 일을 할 좋은 핑계가 됩니다."
   },
   "stats": {
     "matches": "경기",
     "uniqueScores": "고유 스코어",
-    "neverHappened": "미발생",
-    "tournaments": "토너먼트"
+    "neverHappened": "아직 가능",
+    "editionNumber": "23번째",
+    "editionLabel": "남자 월드컵 대회",
+    "tournaments": "대회"
   },
   "views": {
     "heatmap": "히트맵",
-    "allMatches": "전체 경기"
+    "allMatches": "전체 경기",
+    "funFacts": "흥미로운 사실"
+  },
+  "upcoming": {
+    "kickerLabel": "킥오프 대기 중",
+    "title": "{year} 월드컵은 아직 시작되지 않았습니다",
+    "description": "{year} FIFA 남자 월드컵은 {date}에 개막합니다. 경기가 끝나는 대로 결과가 실시간으로 반영되며, 위의 히트맵은 대회 시작 직전의 스코리가미 현황을 보여줍니다.",
+    "kickoffDateFormat": "yyyy년 M월 d일"
   },
   "grid": {
-    "description": "행 = 패팀 점수 · 열 = 승팀 점수 · 셀을 클릭하세요",
-    "never": "없음",
+    "description": "행 = 진 팀 점수 · 열 = 이긴 팀 점수 · 스코어는 승팀–패팀 순 · 셀을 클릭하세요",
+    "never": "미발생",
     "unique": "유일 (1×)",
     "veryRare": "매우 희귀",
     "rare": "희귀",
     "common": "보통",
     "veryCommon": "매우 흔함",
-    "neverHappened": "{low}–{high}: 발생 없음",
-    "count": "{low}–{high}: {count}×"
+    "neverHappened": "{high}–{low}: 미발생",
+    "count": "{high}–{low}: {count}×"
   },
   "detail": {
     "scorigamiTitle": "스코리가미!",
-    "scorigamiDescription": "{low}–{high}는 월드컵 역사상 한 번도 나온 적 없는 스코어입니다.",
+    "noScorigamiTitle": "아직 스코리가미 아님",
+    "scorigamiDescription": "{high}–{low}는 월드컵 역사상 단 한 번도 나온 적이 없는 스코어입니다.",
     "scorigamiBadge": "(스코리가미)",
-    "close": "닫기"
+    "close": "닫기",
+    "readMore": "Wikipedia",
+    "readMoreAria": "이 경기에 대해 Wikipedia에서 더 읽어보기"
   },
   "table": {
-    "searchPlaceholder": "팀, 토너먼트, 스코어 검색...",
+    "searchPlaceholder": "팀, 대회, 스코어 검색...",
     "date": "날짜",
     "home": "홈",
+    "winner": "승팀",
     "score": "스코어",
-    "away": "원정",
-    "stage": "라운드",
+    "away": "어웨이",
+    "loser": "패팀",
+    "stage": "단계",
     "venue": "경기장",
     "year": "연도",
-    "showingOf": "전체 {total}경기 중 {shown}경기 표시 중",
-    "allTournaments": "전체 토너먼트",
-    "allStages": "전체 라운드",
+    "showingOf": "전체 {total}경기 중 {shown}경기 표시 중.",
+    "allTournaments": "전체 대회",
+    "allStages": "전체 단계",
     "showAll": "모두 보기",
     "showLess": "접기"
   },
@@ -61,12 +76,65 @@
     "quarter-finals": "8강",
     "semi-finals": "4강",
     "third-place match": "3·4위전",
-    "final": "결승"
+    "final": "결승",
+    "final round": "최종 라운드",
+    "second group stage": "2차 조별 리그"
   },
   "footer": {
-    "dataFrom": "데이터 출처",
+    "dataFrom": "역사 데이터 출처:",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "2026 실시간 결과 출처:",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "스코리가미 개념: Jon Bois",
+    "disclaimer": "FIFA 월드컵™은 FIFA의 등록 상표입니다. 이 사이트는 FIFA와 관련이 없으며, FIFA의 승인이나 지원을 받지 않습니다."
+  },
+  "funFacts": {
+    "mostRecentTitle": "가장 최근 스코리가미",
+    "mostRecentNote": "이 스코어는 월드컵 역사상 처음으로 나온 것입니다.",
+    "trueScorigamisTitle": "고유 스코리가미",
+    "trueScorigamisDesc": "단 한 번만 기록된 스코어 — 이전에도, 이후에도 없었던.",
+    "mostCommonTitle": "가장 흔한 스코어",
+    "mostCommonNote": "전체 경기의 약 5분의 1이 1대 0으로 끝납니다.",
+    "highestScoringTitle": "최다 득점 경기 (10골 이상)",
+    "biggestBlowoutsTitle": "최대 점수차 경기",
+    "scorigamiLeadersTitle": "스코리가미 리더보드",
+    "scorigamiLeadersDesc": "역대 모든 월드컵에서 최초 스코어에 가장 많이 관여한 팀들.",
+    "scorigamiKingsNote": "스코리가미가 가장 많은 팀: {teams}.",
+    "finalsTitle": "월드컵 결승전",
+    "finalsDesc": "결승전에서 가장 많이 나온 스코어는 {score}으로, 총 {count}번 ({years}) 기록되었습니다.",
+    "finalsScorigamiTitle": "결승전 스코리가미",
+    "finalsScorigamiDesc": "해당 스코어가 월드컵 역사상 단 한 번도 나온 적 없는 상태에서 결승전이 치러진 경우.",
+    "homeTurfTitle": "홈 스코리가미",
+    "homeTurfDesc": "개최국이 자국 월드컵에서 새로운 스코어 탄생에 관여한 경우가 {count}번 있었습니다.",
+    "allTimeStatsTitle": "역대 통계",
+    "extraTimeGames": "연장전 경기",
+    "penaltyShootouts": "승부차기",
+    "totalGoals": "총 득점",
+    "tournamentTrendsTitle": "월드컵 트렌드",
+    "trendTeams": "참가 팀 수",
+    "trendMatches": "경기 수",
+    "trendGoalsPerGame": "경기당 득점",
+    "trendScorigamis": "신규 스코리가미",
+    "wwiiNote": "1942년과 1946년 월드컵은 제2차 세계대전으로 인해 취소되었습니다.",
+    "goalDistTitle": "득점 분포",
+    "goalDistDesc": "역대 모든 월드컵에서 총 득점별 경기 수.",
+    "goalDistNote": "분포는 대략 포아송 분포 형태를 따릅니다 — 대부분의 경기는 총 2~3골 구간에 집중되며, 고득점 경기는 긴 꼬리를 형성합니다.",
+    "stageBreakdownTitle": "단계별 스코리가미",
+    "stageBreakdownDesc": "대회의 각 단계에서 새로운 스코어가 얼마나 자주 탄생할까요?",
+    "stageGroupLabel": "조별 리그",
+    "stageKnockoutLabel": "토너먼트",
+    "stageSummaryDetail": "{total}경기 중 {scorigamis}개의 스코리가미",
+    "stageTopNote": "{stage}에서 스코리가미가 가장 많이 나왔습니다 — {count}개 (해당 단계 경기의 {rate}%).",
+    "penaltigamiTitle": "페널티가미",
+    "penaltigamiDesc": "월드컵 역사상 모든 승부차기 기록. \"페널티가미\"란 경기 스코어와 승부차기 결과의 조합이 단 한 번만 발생한 경우입니다.",
+    "penaltigamiUnique": "단 한 번 발생",
+    "penaltigamiRepeated": "{count}번 발생",
+    "penaltigamiSummary": "전체 {total}번의 승부차기 중 {unique}개의 고유한 경기-승부차기 조합",
+    "penaltigamiOnlyPenScore": "단 한 번만 나온 유일한 승부차기 스코어 — 4대 2, 5대 3 등 다른 모든 승부차기 결과는 여러 번 반복되었습니다.",
+    "frontierTitle": "스코리가미 프런티어",
+    "frontierDesc": "아직 한 번도 나오지 않았지만 다음에 가장 나올 가능성이 높은 스코어들.",
+    "frontierNote": "2026 월드컵은 48개 팀, 104경기로 확대되는 만큼, 그동안 나오지 않았던 스코어들이 마침내 등장할 수도 있습니다."
   },
   "locale": {}
 }

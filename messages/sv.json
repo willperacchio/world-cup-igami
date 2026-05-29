@@ -1,50 +1,65 @@
 {
   "header": {
     "title": "World Cupigami",
-    "subtitle": "Varje unikt slutresultat i herrarnas FIFA World Cup-historia"
+    "kicker": "Ett scorigami-projekt",
+    "subtitle": "Varje unikt slutresultat i herrarnas FIFA-VM genom historien"
   },
   "explainer": {
     "title": "Vad är Scorigami?",
-    "description": "Scorigami är konceptet av ett slutresultat som aldrig tidigare förekommit i en sports historia. Idén populariserades av Jon Bois, vars briljanta arbete om NFL-scorigami inspirerade det här projektet.",
+    "description": "Scorigami är konceptet att ett slutresultat aldrig tidigare har förekommit i en sports historia. Idén populariserades av Jon Bois, vars briljanta arbete om NFL-scorigami inspirerade det här projektet.",
     "watchVideo": "Se originalvideon",
-    "whyBuilt": "Jag byggde World Cupigami för att ta med lite amerikansk sportkultur till världens största scen — i den anda av delande som gör VM så speciellt. Scorigami fungerar lite annorlunda i fotboll än i amerikansk fotboll, eftersom mål görs ett i taget snarare än i klumpar om 2, 3, 6 eller 7. Det gör nya scorigamis mer sällsynta och mer betydelsefulla.",
-    "mensOnly": "Det här täcker för närvarande endast herrarnas FIFA World Cup. En utgåva för Dam-VM kommer snart.",
-    "pointTitle": "Vad är poängen med detta?",
-    "pointDescription": "Ärligt talat? Ingenting. Det är bara kul om man är ett sportanalys-nörd som jag. Men om det finns en bra sak som kan komma ut av det här — när ditt lag gör en scorigami, överväg att donera till en välgörenhetsorganisation i det förlorande lagets land. En historisk målsiffra är ett utmärkt tillfälle att göra något gott i världen."
+    "whyBuilt": "Jag byggde World Cupigami för att föra lite amerikansk sportkultur till världens största scen — i delningens anda som gör VM så speciellt. Scorigami fungerar lite annorlunda i fotboll jämfört med amerikansk fotboll, eftersom mål görs ett i taget snarare än i klumpar om 2, 3, 6, 7 eller 8. Det gör nya scorigamis mer sällsynta och mer betydelsefulla.",
+    "mensOnly": "Det här täcker för närvarande endast herrarnas FIFA-VM. En utgåva för damernas VM kommer snart.",
+    "pointTitle": "Vad är meningen med det här?",
+    "pointDescription": "Ärligt? Ingenting. Det är bara kul om du är ett sportsanalys-nörd som jag. Men om det finns en sak bra som kan komma ur det här — när ditt lag gör scorigami, fundera på att donera till en välgörenhetsorganisation i det förlorande lagets land. En historisk målsiffra är ett utmärkt skäl att göra något gott i världen."
   },
   "stats": {
     "matches": "matcher",
     "uniqueScores": "unika resultat",
-    "neverHappened": "har aldrig hänt",
+    "neverHappened": "fortfarande möjliga",
+    "editionNumber": "23:e",
+    "editionLabel": "upplagan av herrarnas VM",
     "tournaments": "Turneringar"
   },
   "views": {
     "heatmap": "Värmekarta",
-    "allMatches": "Alla matcher"
+    "allMatches": "Alla matcher",
+    "funFacts": "Roliga fakta"
+  },
+  "upcoming": {
+    "kickerLabel": "Väntar på avspark",
+    "title": "{year} års VM har inte börjat än",
+    "description": "FIFA:s herrars VM {year} sparkar igång den {date}. Matchresultat dyker upp här i realtid när matcherna avslutas — och värmekartan ovan visar scorigami-läget precis innan turneringen börjar.",
+    "kickoffDateFormat": "d MMMM yyyy"
   },
   "grid": {
-    "description": "Rader = förlorarens poäng · Kolumner = vinnares poäng · Klicka på valfri cell",
+    "description": "Rader = förlorarens poäng · Kolumner = vinnарens poäng · Resultat visas som vinnare–förlorare · Klicka på valfri cell",
     "never": "Aldrig",
     "unique": "Unikt (1×)",
     "veryRare": "Mycket sällsynt",
     "rare": "Sällsynt",
     "common": "Vanligt",
     "veryCommon": "Mycket vanligt",
-    "neverHappened": "{low}–{high}: Aldrig",
-    "count": "{low}–{high}: {count}×"
+    "neverHappened": "{high}–{low}: Aldrig",
+    "count": "{high}–{low}: {count}×"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
-    "scorigamiDescription": "{low}–{high} har aldrig förekommit i VM-historien.",
+    "noScorigamiTitle": "Ingen scorigami — ännu",
+    "scorigamiDescription": "{high}–{low} har aldrig förekommit i VM-historien.",
     "scorigamiBadge": "(Scorigami)",
-    "close": "Stäng"
+    "close": "Stäng",
+    "readMore": "Wikipedia",
+    "readMoreAria": "Läs mer om den här matchen på Wikipedia"
   },
   "table": {
     "searchPlaceholder": "Sök lag, turneringar, resultat...",
     "date": "Datum",
     "home": "Hemmalag",
+    "winner": "Vinnare",
     "score": "Resultat",
     "away": "Bortalag",
+    "loser": "Förlorare",
     "stage": "Omgång",
     "venue": "Arena",
     "year": "År",
@@ -56,17 +71,70 @@
   },
   "stages": {
     "group stage": "Gruppspel",
-    "round of 32": "Omgång 32",
-    "round of 16": "Omgång 16",
+    "round of 32": "Omgång av 32",
+    "round of 16": "Åttondelsfinaler",
     "quarter-finals": "Kvartsfinaler",
     "semi-finals": "Semifinaler",
     "third-place match": "Bronsmatch",
-    "final": "Final"
+    "final": "Final",
+    "final round": "Finalomgång",
+    "second group stage": "Andra gruppspelet"
   },
   "footer": {
-    "dataFrom": "Data från",
+    "dataFrom": "Historisk data från",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "Live-resultat för 2026 från",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "Scorigami-konceptet av Jon Bois",
+    "disclaimer": "FIFA World Cup™ är ett varumärke som tillhör FIFA. Den här webbplatsen är inte affilierad med, godkänd av eller kopplad till FIFA."
+  },
+  "funFacts": {
+    "mostRecentTitle": "Senaste scorigami",
+    "mostRecentNote": "Det här var första gången detta resultat någonsin förekommit i VM-historien.",
+    "trueScorigamisTitle": "Unika scorigamis",
+    "trueScorigamisDesc": "Resultat som har förekommit exakt en gång — aldrig tidigare, aldrig sedan.",
+    "mostCommonTitle": "Vanligaste resultaten",
+    "mostCommonNote": "Nästan var femte match slutar med en 1–0-seger.",
+    "highestScoringTitle": "Målrikaste matcherna (10+ mål)",
+    "biggestBlowoutsTitle": "Största krossarna",
+    "scorigamiLeadersTitle": "Scorigami-topplista",
+    "scorigamiLeadersDesc": "Lag som medverkat i flest aldrig-tidigare-sett-resultat över alla VM.",
+    "scorigamiKingsNote": "Lag med flest unika scorigamis: {teams}.",
+    "finalsTitle": "VM-finaler",
+    "finalsDesc": "Det vanligaste finalresultatet är {score}, vilket har hänt {count} gånger ({years}).",
+    "finalsScorigamiTitle": "Finalscorigami",
+    "finalsScorigamiDesc": "Finaler där resultatet aldrig tidigare förekommit i någon VM-match.",
+    "homeTurfTitle": "Hemmaplan-scorigami",
+    "homeTurfDesc": "{count} gånger har ett värdland medverkat när ett helt nytt resultat debüterade vid deras eget VM.",
+    "allTimeStatsTitle": "Statistik genom tiderna",
+    "extraTimeGames": "matcher med förlängning",
+    "penaltyShootouts": "straffläggningar",
+    "totalGoals": "mål totalt",
+    "tournamentTrendsTitle": "VM-trender",
+    "trendTeams": "Antal lag",
+    "trendMatches": "Spelade matcher",
+    "trendGoalsPerGame": "Mål per match",
+    "trendScorigamis": "Nya scorigamis",
+    "wwiiNote": "VM 1942 och 1946 ställdes in på grund av andra världskriget.",
+    "goalDistTitle": "Målfördelning",
+    "goalDistDesc": "Hur många matcher som hade varje totalt målantal över alla VM.",
+    "goalDistNote": "Fördelningen följer ungefär en Poisson-kurva — de flesta matcher klustrar kring 2–3 totala mål, med en lång svans av målrika tillställningar.",
+    "stageBreakdownTitle": "Scorigami per omgång",
+    "stageBreakdownDesc": "Hur ofta debuterar ett helt nytt resultat i varje omgång av turneringen?",
+    "stageGroupLabel": "Gruppspel",
+    "stageKnockoutLabel": "Slutspel",
+    "stageSummaryDetail": "{scorigamis} scorigamis på {total} matcher",
+    "stageTopNote": "{stage} leder med {count} scorigamis ({rate}% av matcherna i den omgången).",
+    "penaltigamiTitle": "Penaltigami",
+    "penaltigamiDesc": "Varje straffläggning i VM-historien. En \"penaltigami\" är en kombination av matchresultat och straffläggningsresultat som bara förekommit en gång.",
+    "penaltigamiUnique": "Har bara hänt en gång",
+    "penaltigamiRepeated": "Har hänt {count}×",
+    "penaltigamiSummary": "{unique} unika match-straffkombinationer av {total} straffläggningar",
+    "penaltigamiOnlyPenScore": "Det enda straffresultatet som bara förekommit en gång — alla andra straffläggningsresultat (som 4–2 eller 5–3) har hänt flera gånger.",
+    "frontierTitle": "Scorigami-fronten",
+    "frontierDesc": "Dessa resultat har aldrig hänt men är de mest sannolika att inträffa härnäst.",
+    "frontierNote": "När VM 2026 utökas till 48 lag och 104 matcher kan fler obalanserade möten äntligen bryta ny mark."
   },
   "locale": {}
 }

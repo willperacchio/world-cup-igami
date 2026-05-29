@@ -1,54 +1,69 @@
 {
   "header": {
     "title": "World Cupigami",
+    "kicker": "Un progetto scorigami",
     "subtitle": "Ogni risultato finale unico nella storia della Coppa del Mondo FIFA maschile"
   },
   "explainer": {
-    "title": "Cos'è lo Scorigami?",
-    "description": "Lo Scorigami è il concetto di un risultato finale mai verificatosi prima nella storia di uno sport. L'idea è stata resa popolare da Jon Bois, il cui brillante lavoro sullo Scorigami NFL ha ispirato questo progetto.",
+    "title": "Cos'è uno Scorigami?",
+    "description": "Lo scorigami è il concetto di un risultato finale che non si è mai verificato prima nella storia di uno sport. L'idea è stata resa popolare da Jon Bois, il cui brillante lavoro sullo scorigami NFL ha ispirato questo progetto.",
     "watchVideo": "Guarda il video originale",
-    "whyBuilt": "Ho creato World Cupigami per portare un po' di cultura sportiva americana sul palcoscenico più grande del mondo — nello spirito di condivisione che rende speciale la Coppa del Mondo. Lo Scorigami funziona in modo leggermente diverso nel calcio rispetto al football americano, poiché i gol vengono segnati uno alla volta anziché in gruppi da 2, 3, 6 o 7. Questo rende i nuovi scorigami più rari e significativi.",
-    "mensOnly": "Al momento questo sito copre solo la Coppa del Mondo FIFA maschile. Una versione per la Coppa del Mondo femminile è in arrivo.",
-    "pointTitle": "A cosa serve?",
-    "pointDescription": "Onestamente? A niente. È semplicemente divertente se sei un appassionato di analisi sportiva come me. Ma se c'è una cosa buona che può venirne fuori — quando la tua squadra segna uno scorigami, considera di fare una donazione a un'associazione benefica nel paese della squadra perdente. Un risultato storico è un ottimo pretesto per fare del bene nel mondo."
+    "whyBuilt": "Ho creato World Cupigami per portare un po' della cultura sportiva americana sul palcoscenico più grande del mondo — nello spirito di condivisione che rende speciale la Coppa del Mondo. Lo scorigami funziona in modo un po' diverso nel calcio rispetto al football americano, poiché i gol vengono segnati uno alla volta invece che in blocchi da 2, 3, 6, 7 o 8. Questo rende i nuovi scorigami più rari e più significativi.",
+    "mensOnly": "Al momento questo sito copre solo la Coppa del Mondo FIFA maschile. Un'edizione femminile è in arrivo.",
+    "pointTitle": "A che serve tutto questo?",
+    "pointDescription": "Onestamente? A niente. È solo divertente se sei un appassionato di analisi sportive come me. Ma se c'è una cosa buona che può venirne fuori — quando la tua squadra segna uno scorigami, considera di fare una donazione a un'organizzazione benefica nel paese della squadra perdente. Un risultato storico è un ottimo pretesto per fare del bene nel mondo."
   },
   "stats": {
     "matches": "partite",
     "uniqueScores": "risultati unici",
-    "neverHappened": "mai accaduto",
+    "neverHappened": "ancora possibili",
+    "editionNumber": "23ª",
+    "editionLabel": "Edizione della Coppa del Mondo maschile",
     "tournaments": "Tornei"
   },
   "views": {
     "heatmap": "Mappa di calore",
-    "allMatches": "Tutte le partite"
+    "allMatches": "Tutte le partite",
+    "funFacts": "Curiosità"
+  },
+  "upcoming": {
+    "kickerLabel": "In attesa del calcio d'inizio",
+    "title": "La Coppa del Mondo {year} non è ancora iniziata",
+    "description": "La Coppa del Mondo FIFA maschile {year} inizia il {date}. I risultati delle partite appariranno qui in tempo reale al termine di ogni incontro — e la mappa di calore qui sopra mostra lo stato dello scorigami appena prima dell'inizio del torneo.",
+    "kickoffDateFormat": "d MMMM yyyy"
   },
   "grid": {
-    "description": "Righe = punteggio perdente · Colonne = punteggio vincente · Clicca su una cella",
+    "description": "Righe = punteggio perdente · Colonne = punteggio vincente · Risultati mostrati come vincitore–perdente · Clicca su una cella",
     "never": "Mai",
     "unique": "Unico (1×)",
-    "veryRare": "Molto raro",
+    "veryRare": "Rarissimo",
     "rare": "Raro",
     "common": "Comune",
     "veryCommon": "Molto comune",
-    "neverHappened": "{low}–{high}: Mai",
-    "count": "{low}–{high}: {count}×"
+    "neverHappened": "{high}–{low}: Mai accaduto",
+    "count": "{high}–{low}: {count}×"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
-    "scorigamiDescription": "{low}–{high} non è mai accaduto nella storia della Coppa del Mondo.",
+    "noScorigamiTitle": "Nessuno Scorigami — per ora",
+    "scorigamiDescription": "{high}–{low} non è mai accaduto nella storia della Coppa del Mondo.",
     "scorigamiBadge": "(Scorigami)",
-    "close": "Chiudi"
+    "close": "Chiudi",
+    "readMore": "Wikipedia",
+    "readMoreAria": "Leggi di più su questa partita su Wikipedia"
   },
   "table": {
     "searchPlaceholder": "Cerca squadre, tornei, risultati...",
     "date": "Data",
     "home": "Casa",
+    "winner": "Vincitore",
     "score": "Risultato",
     "away": "Ospite",
+    "loser": "Perdente",
     "stage": "Fase",
     "venue": "Stadio",
     "year": "Anno",
-    "showingOf": "Visualizzate {shown} di {total} partite.",
+    "showingOf": "Visualizzazione di {shown} su {total} partite.",
     "allTournaments": "Tutti i tornei",
     "allStages": "Tutte le fasi",
     "showAll": "Mostra tutto",
@@ -61,12 +76,65 @@
     "quarter-finals": "Quarti di finale",
     "semi-finals": "Semifinali",
     "third-place match": "Finale terzo posto",
-    "final": "Finale"
+    "final": "Finale",
+    "final round": "Turno finale",
+    "second group stage": "Seconda fase a gironi"
   },
   "footer": {
-    "dataFrom": "Dati da",
+    "dataFrom": "Dati storici da",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "Risultati 2026 in tempo reale da",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "Concetto di scorigami di Jon Bois",
+    "disclaimer": "FIFA World Cup™ è un marchio registrato della FIFA. Questo sito non è affiliato, approvato né connesso alla FIFA."
+  },
+  "funFacts": {
+    "mostRecentTitle": "Scorigami più recente",
+    "mostRecentNote": "È stata la prima volta che questo risultato si è verificato nella storia della Coppa del Mondo.",
+    "trueScorigamisTitle": "Scorigami unici",
+    "trueScorigamisDesc": "Risultati che si sono verificati esattamente una volta — mai prima, mai dopo.",
+    "mostCommonTitle": "Risultati più comuni",
+    "mostCommonNote": "Quasi una partita su cinque si conclude con una vittoria per 1-0.",
+    "highestScoringTitle": "Partite con più gol (10 o più)",
+    "biggestBlowoutsTitle": "Le vittorie più nette",
+    "scorigamiLeadersTitle": "Classifica degli scorigami",
+    "scorigamiLeadersDesc": "Le squadre coinvolte nel maggior numero di risultati inediti in tutte le Coppe del Mondo.",
+    "scorigamiKingsNote": "Le squadre con più scorigami unici: {teams}.",
+    "finalsTitle": "Finali della Coppa del Mondo",
+    "finalsDesc": "Il risultato più comune nelle finali è {score}, che si è verificato {count} volte ({years}).",
+    "finalsScorigamiTitle": "Scorigami nelle finali",
+    "finalsScorigamiDesc": "Finali in cui il risultato non si era mai verificato prima in nessuna partita della Coppa del Mondo.",
+    "homeTurfTitle": "Scorigami in casa",
+    "homeTurfDesc": "{count} volte una nazione ospitante è stata coinvolta quando un risultato completamente nuovo ha fatto la sua prima apparizione nella propria Coppa del Mondo.",
+    "allTimeStatsTitle": "Statistiche storiche",
+    "extraTimeGames": "partite ai tempi supplementari",
+    "penaltyShootouts": "calci di rigore",
+    "totalGoals": "gol totali",
+    "tournamentTrendsTitle": "Tendenze della Coppa del Mondo",
+    "trendTeams": "Numero di squadre",
+    "trendMatches": "Partite giocate",
+    "trendGoalsPerGame": "Gol per partita",
+    "trendScorigamis": "Nuovi scorigami",
+    "wwiiNote": "Le Coppe del Mondo del 1942 e del 1946 furono cancellate a causa della Seconda Guerra Mondiale.",
+    "goalDistTitle": "Distribuzione dei gol",
+    "goalDistDesc": "Quante partite hanno avuto ciascun totale di gol in tutte le Coppe del Mondo.",
+    "goalDistNote": "La distribuzione segue approssimativamente una forma di Poisson — la maggior parte delle partite si concentra intorno a 2–3 gol totali, con una lunga coda di incontri ad alto punteggio.",
+    "stageBreakdownTitle": "Scorigami per fase",
+    "stageBreakdownDesc": "Con quale frequenza un risultato inedito fa la sua prima apparizione in ciascuna fase del torneo?",
+    "stageGroupLabel": "Fase a gironi",
+    "stageKnockoutLabel": "Eliminazione diretta",
+    "stageSummaryDetail": "{scorigamis} scorigami in {total} partite",
+    "stageTopNote": "{stage} è in testa con {count} scorigami ({rate}% delle partite in quella fase).",
+    "penaltigamiTitle": "Penaltigami",
+    "penaltigamiDesc": "Ogni serie di rigori nella storia della Coppa del Mondo. Un \"penaltigami\" è una combinazione di risultato della partita e dell'esito dei rigori che si è verificata una sola volta.",
+    "penaltigamiUnique": "Accaduto una sola volta",
+    "penaltigamiRepeated": "Accaduto {count}×",
+    "penaltigamiSummary": "{unique} combinazioni uniche partita-rigori su {total} serie di rigori",
+    "penaltigamiOnlyPenScore": "L'unico risultato ai rigori che si è verificato una sola volta — ogni altro esito (come 4–2 o 5–3) è accaduto più volte.",
+    "frontierTitle": "La frontiera dello scorigami",
+    "frontierDesc": "Questi risultati non sono mai accaduti ma sono i più probabili a verificarsi prossimamente.",
+    "frontierNote": "Con la Coppa del Mondo 2026 che si espande a 48 squadre e 104 partite, più squilibri potrebbero finalmente aprire nuovi territori inesplorati."
   },
   "locale": {}
 }

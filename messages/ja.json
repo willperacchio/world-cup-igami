@@ -1,58 +1,73 @@
 {
   "header": {
     "title": "World Cupigami",
-    "subtitle": "Men's FIFA ワールドカップ史上のすべてのユニークな最終スコア"
+    "kicker": "スコリガミ・プロジェクト",
+    "subtitle": "FIFA男子ワールドカップ史上、すべてのユニークな最終スコア"
   },
   "explainer": {
     "title": "スコリガミとは？",
-    "description": "スコリガミとは、あるスポーツの歴史上一度も起きたことのない最終スコアのことです。このアイデアはJon Boisによって広められ、彼のNFLスコリガミに関する素晴らしい作品がこのプロジェクトのインスピレーションとなりました。",
+    "description": "スコリガミとは、あるスポーツの歴史上一度も起きたことのない最終スコアのことです。このアイデアはJon Boisによって広まり、彼のNFLスコリガミに関する素晴らしい作品がこのプロジェクトのきっかけになりました。",
     "watchVideo": "オリジナル動画を見る",
-    "whyBuilt": "World Cupigamiを作ったのは、ワールドカップを特別なものにしている「分かち合いの精神」で、アメリカのスポーツ文化を世界最大の舞台に届けたかったからです。サッカーでのスコリガミはアメリカンフットボールとは少し異なります。得点は2・3・6・7点といったまとまりではなく、1点ずつ積み重ねられるため、新たなスコリガミはより稀で、より意味深いものになります。",
-    "mensOnly": "現在は男子FIFA ワールドカップのみを対象としています。女子ワールドカップ版も近日公開予定です。",
-    "pointTitle": "これに何の意味があるの？",
-    "pointDescription": "正直に言うと？別に何もありません。ただ、私のようなスポーツ分析好きには楽しいというだけです。でも、ひとつだけ良いことがあるとすれば――あなたのチームがスコリガミを達成したとき、負けたチームの国の慈善団体に寄付してみてください。歴史的なスコアは、世界のために良いことをする絶好の口実になります。"
+    "whyBuilt": "ワールドカップを特別にする「分かち合い」の精神で、アメリカのスポーツ文化を世界最大の舞台に持ち込みたくてWorld Cupigamiを作りました。サッカーのスコリガミはアメリカンフットボールと少し異なります。ゴールは2・3・6・7・8点といったまとまりではなく、1点ずつ入るからです。そのため、新しいスコリガミはより珍しく、より価値があります。",
+    "mensOnly": "現在はFIFA男子ワールドカップのみ対応しています。女子ワールドカップ版も近日公開予定です。",
+    "pointTitle": "このサイトに何の意味があるの？",
+    "pointDescription": "正直に言うと？何もありません。スポーツ分析オタクな私のような人間には楽しいだけです。でも一つ良いことがあるとすれば——あなたのチームがスコリガミを達成したとき、負けたチームの国の慈善団体に寄付してみてください。歴史的なスコアは、世界のために良いことをする絶好の理由です。"
   },
   "stats": {
     "matches": "試合",
     "uniqueScores": "ユニークスコア",
-    "neverHappened": "未達成",
+    "neverHappened": "まだ可能",
+    "editionNumber": "第23回",
+    "editionLabel": "男子ワールドカップ",
     "tournaments": "大会"
   },
   "views": {
     "heatmap": "ヒートマップ",
-    "allMatches": "全試合"
+    "allMatches": "全試合",
+    "funFacts": "豆知識"
+  },
+  "upcoming": {
+    "kickerLabel": "キックオフ待ち",
+    "title": "{year}年ワールドカップはまだ始まっていません",
+    "description": "{year}年FIFA男子ワールドカップは{date}に開幕します。試合が終了次第、結果はリアルタイムでここに反映されます。上のヒートマップは大会開幕直前のスコリガミの状況を示しています。",
+    "kickoffDateFormat": "yyyy年M月d日"
   },
   "grid": {
-    "description": "行 = 負けチームのスコア · 列 = 勝ちチームのスコア · セルをクリック",
+    "description": "行 = 負けチームのスコア · 列 = 勝ちチームのスコア · スコアは勝者–敗者で表示 · セルをクリック",
     "never": "未達成",
     "unique": "ユニーク（1回）",
-    "veryRare": "非常に稀",
-    "rare": "稀",
+    "veryRare": "非常にまれ",
+    "rare": "まれ",
     "common": "よくある",
     "veryCommon": "非常によくある",
-    "neverHappened": "{low}–{high}：未達成",
-    "count": "{low}–{high}：{count}回"
+    "neverHappened": "{high}–{low}：未達成",
+    "count": "{high}–{low}：{count}回"
   },
   "detail": {
     "scorigamiTitle": "スコリガミ！",
-    "scorigamiDescription": "{low}–{high} はワールドカップ史上一度も起きたことがありません。",
+    "noScorigamiTitle": "スコリガミならず——まだ",
+    "scorigamiDescription": "{high}–{low}はワールドカップ史上一度も起きたことがありません。",
     "scorigamiBadge": "（スコリガミ）",
-    "close": "閉じる"
+    "close": "閉じる",
+    "readMore": "Wikipedia",
+    "readMoreAria": "この試合についてWikipediaで詳しく読む"
   },
   "table": {
-    "searchPlaceholder": "チーム、大会、スコアで検索...",
+    "searchPlaceholder": "チーム、大会、スコアを検索...",
     "date": "日付",
     "home": "ホーム",
+    "winner": "勝者",
     "score": "スコア",
     "away": "アウェイ",
-    "stage": "ステージ",
+    "loser": "敗者",
+    "stage": "ラウンド",
     "venue": "会場",
     "year": "年",
     "showingOf": "{total}試合中{shown}試合を表示中",
     "allTournaments": "全大会",
-    "allStages": "全ステージ",
+    "allStages": "全ラウンド",
     "showAll": "すべて表示",
-    "showLess": "表示を減らす"
+    "showLess": "折りたたむ"
   },
   "stages": {
     "group stage": "グループステージ",
@@ -61,12 +76,65 @@
     "quarter-finals": "準々決勝",
     "semi-finals": "準決勝",
     "third-place match": "3位決定戦",
-    "final": "決勝"
+    "final": "決勝",
+    "final round": "最終ラウンド",
+    "second group stage": "第2グループステージ"
   },
   "footer": {
-    "dataFrom": "データ提供：",
+    "dataFrom": "過去データ提供元：",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "2026年ライブ結果提供元：",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "スコリガミの概念：Jon Bois",
+    "disclaimer": "FIFA ワールドカップ™はFIFAの商標です。このサイトはFIFAと提携・推薦・関連するものではありません。"
+  },
+  "funFacts": {
+    "mostRecentTitle": "最新のスコリガミ",
+    "mostRecentNote": "このスコアはワールドカップ史上初めて記録されました。",
+    "trueScorigamisTitle": "ユニークなスコリガミ",
+    "trueScorigamisDesc": "ちょうど一度だけ起きたスコア——それ以前にも以降にも起きていないもの。",
+    "mostCommonTitle": "最もよくあるスコア",
+    "mostCommonNote": "試合の約5分に1試合は1対0で終わっています。",
+    "highestScoringTitle": "最多得点試合（10ゴール以上）",
+    "biggestBlowoutsTitle": "最大の大差試合",
+    "scorigamiLeadersTitle": "スコリガミ・リーダーボード",
+    "scorigamiLeadersDesc": "全ワールドカップを通じて、最多の「初スコア」に関わったチーム。",
+    "scorigamiKingsNote": "最多ユニークスコリガミを持つチーム：{teams}。",
+    "finalsTitle": "ワールドカップ決勝",
+    "finalsDesc": "決勝で最もよくあるスコアは{score}で、{count}回記録されています（{years}）。",
+    "finalsScorigamiTitle": "決勝でのスコリガミ",
+    "finalsScorigamiDesc": "それまでのワールドカップ全試合で一度も出たことのないスコアで終わった決勝。",
+    "homeTurfTitle": "地元でのスコリガミ",
+    "homeTurfDesc": "開催国が自国のワールドカップで新スコアの誕生に関わった回数：{count}回。",
+    "allTimeStatsTitle": "歴代通算データ",
+    "extraTimeGames": "延長戦の試合",
+    "penaltyShootouts": "PK戦",
+    "totalGoals": "総得点",
+    "tournamentTrendsTitle": "ワールドカップの傾向",
+    "trendTeams": "出場チーム数",
+    "trendMatches": "試合数",
+    "trendGoalsPerGame": "1試合平均得点",
+    "trendScorigamis": "新スコリガミ数",
+    "wwiiNote": "1942年・1946年のワールドカップは第二次世界大戦により中止されました。",
+    "goalDistTitle": "得点分布",
+    "goalDistDesc": "全ワールドカップにおける、試合ごとの総得点数の分布。",
+    "goalDistNote": "分布はポアソン分布に近い形をしており、ほとんどの試合は合計2〜3ゴールに集中し、高得点試合は長い裾を形成しています。",
+    "stageBreakdownTitle": "ラウンド別スコリガミ",
+    "stageBreakdownDesc": "トーナメントの各ラウンドで、新しいスコアが生まれる頻度はどのくらい？",
+    "stageGroupLabel": "グループステージ",
+    "stageKnockoutLabel": "ノックアウトステージ",
+    "stageSummaryDetail": "{total}試合中{scorigamis}スコリガミ",
+    "stageTopNote": "{stage}が最多で{count}スコリガミ（同ラウンドの試合の{rate}%）。",
+    "penaltigamiTitle": "ペナルティガミ",
+    "penaltigamiDesc": "ワールドカップ史上すべてのPK戦。「ペナルティガミ」とは、試合スコアとPK戦の結果の組み合わせが一度しか起きていないもの。",
+    "penaltigamiUnique": "一度だけ起きた",
+    "penaltigamiRepeated": "{count}回起きた",
+    "penaltigamiSummary": "{total}回のPK戦のうち、{unique}のユニークな試合・PK組み合わせ",
+    "penaltigamiOnlyPenScore": "一度しか起きていない唯一のPKスコア——他のすべてのPK結果（4–2や5–3など）は複数回記録されています。",
+    "frontierTitle": "スコリガミの最前線",
+    "frontierDesc": "まだ起きていないが、次に最も起こりやすいスコア。",
+    "frontierNote": "2026年ワールドカップは48チーム・104試合に拡大され、これまで未踏のスコアがついに生まれるかもしれません。"
   },
   "locale": {}
 }

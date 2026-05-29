@@ -1,58 +1,73 @@
 {
   "header": {
     "title": "World Cupigami",
-    "subtitle": "Mọi tỷ số cuối trận duy nhất trong lịch sử FIFA World Cup Nam"
+    "kicker": "Dự án scorigami",
+    "subtitle": "Tất cả các tỷ số chung cuộc độc nhất trong lịch sử FIFA World Cup Nam"
   },
   "explainer": {
     "title": "Scorigami là gì?",
-    "description": "Scorigami là khái niệm chỉ một tỷ số cuối trận chưa từng xảy ra trong lịch sử của một môn thể thao. Ý tưởng này được Jon Bois phổ biến rộng rãi, và công trình xuất sắc của ông về NFL scorigami đã truyền cảm hứng cho dự án này.",
+    "description": "Scorigami là khái niệm chỉ một tỷ số chung cuộc chưa từng xảy ra trong lịch sử của một môn thể thao. Ý tưởng này được phổ biến bởi Jon Bois, người có công trình xuất sắc về NFL scorigami đã truyền cảm hứng cho dự án này.",
     "watchVideo": "Xem video gốc",
-    "whyBuilt": "Tôi xây dựng World Cupigami để mang một chút văn hóa thể thao Mỹ đến với sân khấu lớn nhất thế giới — theo tinh thần chia sẻ làm nên sự đặc biệt của World Cup. Scorigami hoạt động hơi khác trong bóng đá so với bóng bầu dục Mỹ, vì bàn thắng được ghi từng cái một thay vì theo từng cụm 2, 3, 6 hay 7 điểm. Điều đó khiến những scorigami mới trở nên hiếm hoi và có ý nghĩa hơn.",
-    "mensOnly": "Hiện tại trang này chỉ bao gồm FIFA World Cup Nam. Phiên bản World Cup Nữ sẽ sớm ra mắt.",
-    "pointTitle": "Mục đích của trang này là gì?",
-    "pointDescription": "Thật lòng mà nói? Không có gì cả. Chỉ đơn giản là thú vui cho những ai mê phân tích thể thao như tôi. Nhưng nếu có một điều tốt có thể xuất phát từ đây — khi đội của bạn ghi được một scorigami, hãy cân nhắc quyên góp cho một tổ chức từ thiện ở đất nước của đội thua. Một tỷ số lịch sử là lý do tuyệt vời để làm điều gì đó có ích cho thế giới."
+    "whyBuilt": "Tôi tạo ra World Cupigami để mang một chút văn hóa thể thao Mỹ đến với sân khấu lớn nhất thế giới — theo tinh thần chia sẻ khiến World Cup trở nên đặc biệt. Scorigami trong bóng đá hoạt động hơi khác so với bóng bầu dục Mỹ, vì bàn thắng được ghi từng cái một thay vì từng cụm 2, 3, 6, 7 hay 8 điểm. Điều đó khiến các scorigami mới trở nên hiếm hơn và có ý nghĩa hơn.",
+    "mensOnly": "Hiện tại đây chỉ bao gồm FIFA World Cup Nam. Phiên bản World Cup Nữ sẽ sớm ra mắt.",
+    "pointTitle": "Mục đích của điều này là gì?",
+    "pointDescription": "Thật lòng mà nói? Không có gì cả. Nó chỉ đơn giản là vui nếu bạn là một người mê phân tích thể thao như tôi. Nhưng nếu có một điều tốt đẹp có thể nảy sinh từ đây — khi đội của bạn ghi được một scorigami, hãy cân nhắc quyên góp cho một tổ chức từ thiện ở đất nước của đội thua. Một tỷ số lịch sử là cái cớ tuyệt vời để làm điều gì đó có ích cho thế giới."
   },
   "stats": {
     "matches": "trận đấu",
-    "uniqueScores": "tỷ số duy nhất",
-    "neverHappened": "chưa từng xảy ra",
+    "uniqueScores": "tỷ số độc nhất",
+    "neverHappened": "vẫn có thể xảy ra",
+    "editionNumber": "23",
+    "editionLabel": "Lần tổ chức World Cup Nam",
     "tournaments": "Giải đấu"
   },
   "views": {
     "heatmap": "Bản đồ nhiệt",
-    "allMatches": "Tất cả trận đấu"
+    "allMatches": "Tất cả trận đấu",
+    "funFacts": "Điều thú vị"
+  },
+  "upcoming": {
+    "kickerLabel": "Chờ khởi tranh",
+    "title": "World Cup {year} chưa bắt đầu",
+    "description": "FIFA World Cup Nam {year} khai mạc vào ngày {date}. Kết quả các trận đấu sẽ được cập nhật tại đây theo thời gian thực khi các trận kết thúc — và bản đồ nhiệt phía trên hiển thị trạng thái scorigami ngay trước thời điểm giải đấu bắt đầu.",
+    "kickoffDateFormat": "d MMMM, yyyy"
   },
   "grid": {
-    "description": "Hàng = tỷ số thua · Cột = tỷ số thắng · Nhấp vào ô bất kỳ",
+    "description": "Hàng = tỷ số thua · Cột = tỷ số thắng · Tỷ số hiển thị theo dạng thắng–thua · Nhấp vào ô bất kỳ",
     "never": "Chưa từng",
-    "unique": "Duy nhất (1×)",
+    "unique": "Độc nhất (1×)",
     "veryRare": "Rất hiếm",
     "rare": "Hiếm",
     "common": "Phổ biến",
     "veryCommon": "Rất phổ biến",
-    "neverHappened": "{low}–{high}: Chưa từng xảy ra",
-    "count": "{low}–{high}: {count}×"
+    "neverHappened": "{high}–{low}: Chưa từng xảy ra",
+    "count": "{high}–{low}: {count}×"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
-    "scorigamiDescription": "{low}–{high} chưa từng xảy ra trong lịch sử World Cup.",
+    "noScorigamiTitle": "Chưa phải Scorigami — Nhưng chưa biết chừng",
+    "scorigamiDescription": "{high}–{low} chưa từng xảy ra trong lịch sử World Cup.",
     "scorigamiBadge": "(Scorigami)",
-    "close": "Đóng"
+    "close": "Đóng",
+    "readMore": "Wikipedia",
+    "readMoreAria": "Đọc thêm về trận đấu này trên Wikipedia"
   },
   "table": {
-    "searchPlaceholder": "Tìm kiếm đội, giải đấu, tỷ số...",
+    "searchPlaceholder": "Tìm đội, giải đấu, tỷ số...",
     "date": "Ngày",
     "home": "Chủ nhà",
+    "winner": "Thắng",
     "score": "Tỷ số",
     "away": "Khách",
+    "loser": "Thua",
     "stage": "Vòng đấu",
     "venue": "Sân vận động",
     "year": "Năm",
-    "showingOf": "Hiển thị {shown} trong tổng số {total} trận đấu.",
+    "showingOf": "Hiển thị {shown} trong {total} trận đấu.",
     "allTournaments": "Tất cả giải đấu",
     "allStages": "Tất cả vòng đấu",
     "showAll": "Hiển thị tất cả",
-    "showLess": "Thu gọn"
+    "showLess": "Hiển thị ít hơn"
   },
   "stages": {
     "group stage": "Vòng bảng",
@@ -61,12 +76,65 @@
     "quarter-finals": "Tứ kết",
     "semi-finals": "Bán kết",
     "third-place match": "Tranh hạng ba",
-    "final": "Chung kết"
+    "final": "Chung kết",
+    "final round": "Vòng chung kết",
+    "second group stage": "Vòng bảng hai"
   },
   "footer": {
-    "dataFrom": "Dữ liệu từ",
+    "dataFrom": "Dữ liệu lịch sử từ",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "Kết quả trực tiếp 2026 từ",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "Khái niệm Scorigami bởi Jon Bois",
+    "disclaimer": "FIFA World Cup™ là thương hiệu của FIFA. Trang web này không liên kết, được chứng thực hay có quan hệ với FIFA."
+  },
+  "funFacts": {
+    "mostRecentTitle": "Scorigami Gần Nhất",
+    "mostRecentNote": "Đây là lần đầu tiên tỷ số này xuất hiện trong lịch sử World Cup.",
+    "trueScorigamisTitle": "Scorigami Độc Nhất",
+    "trueScorigamisDesc": "Những tỷ số chỉ xảy ra đúng một lần — chưa từng có trước đó, và chưa lặp lại sau đó.",
+    "mostCommonTitle": "Tỷ Số Phổ Biến Nhất",
+    "mostCommonNote": "Gần 1 trong 5 trận đấu kết thúc với tỷ số thắng 1–0.",
+    "highestScoringTitle": "Trận Đấu Nhiều Bàn Thắng Nhất (10+ bàn)",
+    "biggestBlowoutsTitle": "Những Chiến Thắng Áp Đảo Nhất",
+    "scorigamiLeadersTitle": "Bảng Xếp Hạng Scorigami",
+    "scorigamiLeadersDesc": "Các đội tham gia nhiều tỷ số lần đầu tiên nhất qua tất cả các kỳ World Cup.",
+    "scorigamiKingsNote": "Các đội có nhiều scorigami độc nhất nhất: {teams}.",
+    "finalsTitle": "Các Trận Chung Kết World Cup",
+    "finalsDesc": "Tỷ số chung kết phổ biến nhất là {score}, đã xảy ra {count} lần ({years}).",
+    "finalsScorigamiTitle": "Scorigami Chung Kết",
+    "finalsScorigamiDesc": "Những trận chung kết mà tỷ số chưa từng xuất hiện trước đó trong bất kỳ trận World Cup nào.",
+    "homeTurfTitle": "Scorigami Trên Sân Nhà",
+    "homeTurfDesc": "{count} lần đội chủ nhà góp mặt khi một tỷ số hoàn toàn mới lần đầu xuất hiện tại World Cup của họ.",
+    "allTimeStatsTitle": "Thống Kê Toàn Thời Đại",
+    "extraTimeGames": "trận đấu hiệp phụ",
+    "penaltyShootouts": "loạt đá luân lưu",
+    "totalGoals": "tổng số bàn thắng",
+    "tournamentTrendsTitle": "Xu Hướng World Cup",
+    "trendTeams": "Số đội tham dự",
+    "trendMatches": "Số trận đã đấu",
+    "trendGoalsPerGame": "Bàn thắng mỗi trận",
+    "trendScorigamis": "Scorigami mới",
+    "wwiiNote": "World Cup 1942 và 1946 bị hủy do Thế chiến thứ II.",
+    "goalDistTitle": "Phân Bố Bàn Thắng",
+    "goalDistDesc": "Số trận có tổng bàn thắng tương ứng qua tất cả các kỳ World Cup.",
+    "goalDistNote": "Phân bố xấp xỉ theo dạng Poisson — phần lớn các trận tập trung ở mức 2–3 bàn tổng cộng, với đuôi dài ở phía các trận nhiều bàn thắng.",
+    "stageBreakdownTitle": "Scorigami Theo Vòng Đấu",
+    "stageBreakdownDesc": "Tỷ số mới xuất hiện lần đầu thường xảy ra ở vòng đấu nào nhất?",
+    "stageGroupLabel": "Vòng bảng",
+    "stageKnockoutLabel": "Vòng loại trực tiếp",
+    "stageSummaryDetail": "{scorigamis} scorigami trong {total} trận",
+    "stageTopNote": "{stage} dẫn đầu với {count} scorigami ({rate}% số trận ở vòng đó).",
+    "penaltigamiTitle": "Penaltigami",
+    "penaltigamiDesc": "Tất cả các loạt đá luân lưu trong lịch sử World Cup. Một \"penaltigami\" là sự kết hợp giữa tỷ số trận đấu và kết quả luân lưu chỉ xảy ra đúng một lần.",
+    "penaltigamiUnique": "Chỉ xảy ra một lần",
+    "penaltigamiRepeated": "Đã xảy ra {count}×",
+    "penaltigamiSummary": "{unique} kết hợp trận–luân lưu độc nhất trong tổng số {total} loạt đá",
+    "penaltigamiOnlyPenScore": "Tỷ số luân lưu duy nhất chỉ xảy ra đúng một lần — mọi kết quả luân lưu khác (như 4–2 hay 5–3) đều đã xảy ra nhiều lần.",
+    "frontierTitle": "Ranh Giới Scorigami",
+    "frontierDesc": "Những tỷ số chưa từng xảy ra nhưng có khả năng xuất hiện tiếp theo cao nhất.",
+    "frontierNote": "Với World Cup 2026 mở rộng lên 48 đội và 104 trận, nhiều cách biệt lớn hơn có thể cuối cùng sẽ mở ra vùng đất mới."
   },
   "locale": {}
 }

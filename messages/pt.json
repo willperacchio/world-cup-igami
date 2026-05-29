@@ -1,50 +1,65 @@
 {
   "header": {
     "title": "World Cupigami",
+    "kicker": "Um projeto de scorigami",
     "subtitle": "Todos os placares finais únicos na história da Copa do Mundo Masculina da FIFA"
   },
   "explainer": {
     "title": "O que é Scorigami?",
-    "description": "Scorigami é o conceito de um placar final que nunca aconteceu antes na história de um esporte. A ideia foi popularizada por Jon Bois, cujo brilhante trabalho sobre o Scorigami da NFL inspirou este projeto.",
-    "watchVideo": "Assista ao vídeo original",
-    "whyBuilt": "Criei o World Cupigami para trazer um pouco da cultura esportiva americana ao maior palco do mundo — no espírito de compartilhamento que torna a Copa do Mundo tão especial. O Scorigami funciona de forma um pouco diferente no futebol em relação ao futebol americano, já que os gols são marcados um de cada vez, e não em blocos de 2, 3, 6 ou 7. Isso torna os novos scorigamis mais raros e significativos.",
-    "mensOnly": "Este projeto cobre apenas a Copa do Mundo Masculina da FIFA. Uma edição da Copa do Mundo Feminina está chegando em breve.",
+    "description": "Scorigami é o conceito de um placar final que nunca aconteceu antes na história de um esporte. A ideia foi popularizada por Jon Bois, cujo brilhante trabalho sobre scorigami na NFL inspirou este projeto.",
+    "watchVideo": "Assistir ao vídeo original",
+    "whyBuilt": "Criei o World Cupigami para trazer um pouco da cultura esportiva americana ao maior palco do mundo — no espírito de compartilhamento que torna a Copa do Mundo tão especial. O scorigami funciona de forma um pouco diferente no futebol do que no futebol americano, já que os gols são marcados um de cada vez, e não em blocos de 2, 3, 6, 7 ou 8. Isso torna os novos scorigamis mais raros e mais significativos.",
+    "mensOnly": "Por enquanto, este site cobre apenas a Copa do Mundo Masculina da FIFA. Uma edição feminina está a caminho.",
     "pointTitle": "Qual é o objetivo disso?",
-    "pointDescription": "Honestamente? Nenhum. É só diversão para quem é nerd de análise esportiva como eu. Mas se há uma coisa boa que pode sair disso — quando seu time fizer um scorigami, considere fazer uma doação para uma instituição de caridade no país do time adversário. Um placar histórico é uma ótima desculpa para fazer o bem no mundo."
+    "pointDescription": "Honestamente? Nenhum. É só divertido se você é um nerd de análise esportiva como eu. Mas se há uma coisa boa que pode sair disso — quando seu time marcar um scorigami, considere fazer uma doação para uma instituição de caridade no país do time perdedor. Um placar histórico é uma ótima desculpa para fazer o bem no mundo."
   },
   "stats": {
     "matches": "partidas",
     "uniqueScores": "placares únicos",
-    "neverHappened": "nunca aconteceu",
+    "neverHappened": "ainda possíveis",
+    "editionNumber": "23ª",
+    "editionLabel": "Edição da Copa do Mundo Masculina",
     "tournaments": "Torneios"
   },
   "views": {
     "heatmap": "Mapa de Calor",
-    "allMatches": "Todas as Partidas"
+    "allMatches": "Todas as Partidas",
+    "funFacts": "Curiosidades"
+  },
+  "upcoming": {
+    "kickerLabel": "Aguardando o apito inicial",
+    "title": "A Copa do Mundo de {year} ainda não começou",
+    "description": "A Copa do Mundo Masculina FIFA de {year} começa em {date}. Os resultados das partidas aparecerão aqui em tempo real assim que os jogos terminarem — e o mapa de calor acima mostra o estado do scorigami logo antes do início do torneio.",
+    "kickoffDateFormat": "d 'de' MMMM 'de' yyyy"
   },
   "grid": {
-    "description": "Linhas = placar do perdedor · Colunas = placar do vencedor · Clique em qualquer célula",
+    "description": "Linhas = placar do perdedor · Colunas = placar do vencedor · Placares exibidos como vencedor–perdedor · Clique em qualquer célula",
     "never": "Nunca",
     "unique": "Único (1×)",
     "veryRare": "Muito Raro",
     "rare": "Raro",
     "common": "Comum",
     "veryCommon": "Muito Comum",
-    "neverHappened": "{low}–{high}: Nunca aconteceu",
-    "count": "{low}–{high}: {count}×"
+    "neverHappened": "{high}–{low}: Nunca aconteceu",
+    "count": "{high}–{low}: {count}×"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
-    "scorigamiDescription": "{low}–{high} nunca aconteceu na história da Copa do Mundo.",
+    "noScorigamiTitle": "Ainda não é Scorigami",
+    "scorigamiDescription": "{high}–{low} nunca aconteceu na história da Copa do Mundo.",
     "scorigamiBadge": "(Scorigami)",
-    "close": "Fechar"
+    "close": "Fechar",
+    "readMore": "Wikipedia",
+    "readMoreAria": "Leia mais sobre esta partida na Wikipedia"
   },
   "table": {
     "searchPlaceholder": "Buscar times, torneios, placares...",
     "date": "Data",
     "home": "Mandante",
+    "winner": "Vencedor",
     "score": "Placar",
     "away": "Visitante",
+    "loser": "Perdedor",
     "stage": "Fase",
     "venue": "Estádio",
     "year": "Ano",
@@ -61,12 +76,65 @@
     "quarter-finals": "Quartas de Final",
     "semi-finals": "Semifinais",
     "third-place match": "Disputa do Terceiro Lugar",
-    "final": "Final"
+    "final": "Final",
+    "final round": "Rodada Final",
+    "second group stage": "Segunda Fase de Grupos"
   },
   "footer": {
-    "dataFrom": "Dados de",
+    "dataFrom": "Dados históricos de",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "Resultados ao vivo de 2026 de",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "Conceito de Scorigami por Jon Bois",
+    "disclaimer": "FIFA World Cup™ é uma marca registrada da FIFA. Este site não é afiliado, endossado ou conectado à FIFA."
+  },
+  "funFacts": {
+    "mostRecentTitle": "Scorigami Mais Recente",
+    "mostRecentNote": "Esta foi a primeira vez que este placar ocorreu na história da Copa do Mundo.",
+    "trueScorigamisTitle": "Scorigamis Únicos",
+    "trueScorigamisDesc": "Placares que aconteceram exatamente uma vez — nunca antes, nunca depois.",
+    "mostCommonTitle": "Placares Mais Comuns",
+    "mostCommonNote": "Quase 1 em cada 5 partidas termina com uma vitória por 1 a 0.",
+    "highestScoringTitle": "Partidas com Mais Gols (10 ou mais)",
+    "biggestBlowoutsTitle": "Maiores Goleadas",
+    "scorigamiLeadersTitle": "Ranking de Scorigami",
+    "scorigamiLeadersDesc": "Times envolvidos no maior número de placares inéditos em todas as Copas do Mundo.",
+    "scorigamiKingsNote": "Times com mais scorigamis únicos: {teams}.",
+    "finalsTitle": "Finais da Copa do Mundo",
+    "finalsDesc": "O placar mais comum nas finais é {score}, que aconteceu {count} vezes ({years}).",
+    "finalsScorigamiTitle": "Scorigami nas Finais",
+    "finalsScorigamiDesc": "Finais em que o placar nunca havia ocorrido antes em nenhuma partida da Copa do Mundo.",
+    "homeTurfTitle": "Scorigami em Casa",
+    "homeTurfDesc": "{count} vezes um país-sede esteve envolvido quando um placar inédito estreou em sua própria Copa do Mundo.",
+    "allTimeStatsTitle": "Estatísticas Históricas",
+    "extraTimeGames": "jogos na prorrogação",
+    "penaltyShootouts": "disputas por pênaltis",
+    "totalGoals": "gols no total",
+    "tournamentTrendsTitle": "Tendências da Copa do Mundo",
+    "trendTeams": "Número de Seleções",
+    "trendMatches": "Jogos Disputados",
+    "trendGoalsPerGame": "Gols por Jogo",
+    "trendScorigamis": "Novos Scorigamis",
+    "wwiiNote": "As Copas de 1942 e 1946 foram canceladas devido à Segunda Guerra Mundial.",
+    "goalDistTitle": "Distribuição de Gols",
+    "goalDistDesc": "Quantas partidas tiveram cada total de gols em todas as Copas do Mundo.",
+    "goalDistNote": "A distribuição segue aproximadamente uma curva de Poisson — a maioria das partidas se concentra em 2–3 gols no total, com uma longa cauda de jogos com muitos gols.",
+    "stageBreakdownTitle": "Scorigami por Fase",
+    "stageBreakdownDesc": "Com que frequência um placar inédito estreia em cada fase do torneio?",
+    "stageGroupLabel": "Fase de Grupos",
+    "stageKnockoutLabel": "Fase Eliminatória",
+    "stageSummaryDetail": "{scorigamis} scorigamis em {total} partidas",
+    "stageTopNote": "{stage} lidera com {count} scorigamis ({rate}% das partidas nessa fase).",
+    "penaltigamiTitle": "Penaltigami",
+    "penaltigamiDesc": "Todas as disputas por pênaltis na história da Copa do Mundo. Um \"penaltigami\" é a combinação de placar da partida + resultado da disputa que só aconteceu uma vez.",
+    "penaltigamiUnique": "Aconteceu apenas uma vez",
+    "penaltigamiRepeated": "Aconteceu {count}×",
+    "penaltigamiSummary": "{unique} combinações únicas de partida e pênaltis em {total} disputas",
+    "penaltigamiOnlyPenScore": "O único placar de pênaltis que ocorreu apenas uma vez — todos os outros resultados (como 4–2 ou 5–3) já aconteceram várias vezes.",
+    "frontierTitle": "A Fronteira do Scorigami",
+    "frontierDesc": "Esses placares nunca aconteceram, mas são os que têm mais chance de ocorrer em breve.",
+    "frontierNote": "Com a Copa do Mundo de 2026 expandindo para 48 seleções e 104 partidas, mais desequilíbrios podem finalmente abrir novos territórios."
   },
   "locale": {}
 }
