@@ -127,11 +127,11 @@
     "stageSummaryDetail": "{scorigamis} scorigamis in {total} matches",
     "stageTopNote": "{stage} leads with {count} scorigamis ({rate}% of matches at that stage).",
     "penaltigamiTitle": "Penaltigami",
-    "penaltigamiDesc": "Every penalty shootout in World Cup history. A \"penaltigami\" is a match score + shootout result combination that has only happened once.",
+    "penaltigamiDesc": "Every penalty shootout in World Cup history. A penaltigami is a match score + shootout result combination that has only happened once.",
     "penaltigamiUnique": "Only happened once",
     "penaltigamiRepeated": "Happened {count}×",
     "penaltigamiSummary": "{unique} unique match-penalty combos out of {total} shootouts",
-    "penaltigamiOnlyPenScore": "The only penalty scoreline that has occurred just once — every other shootout result (like 4–2 or 5–3) has happened multiple times.",
+    "penaltigamiOnlyPenScore": "The only penalty scoreline that has occurred just once. Every other shootout result (like 4-2 or 5-3) has happened multiple times.",
     "frontierTitle": "The Scorigami Frontier",
     "frontierDesc": "These scores have never happened but are the most likely to occur next.",
     "frontierNote": "With the 2026 World Cup expanding to 48 teams and 104 matches, more mismatches could finally break new ground."
