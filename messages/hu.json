@@ -1,54 +1,69 @@
 {
   "header": {
     "title": "World Cupigami",
-    "subtitle": "Minden egyedi végeredmény a férfi FIFA Világbajnokság történetében"
+    "kicker": "Egy scorigami projekt",
+    "subtitle": "A férfi FIFA Világbajnokság történetének minden egyedi végeredménye"
   },
   "explainer": {
     "title": "Mi az a Scorigami?",
-    "description": "A Scorigami olyan végeredményt jelöl, amely egy sport történetében még soha nem fordult elő. Az ötletet Jon Bois tette népszerűvé, akinek zseniális NFL-es scorigami munkája ihlette ezt a projektet.",
+    "description": "A scorigami egy olyan végeredmény, amely korábban még sohasem fordult elő egy sport történetében. Az ötletet Jon Bois tette népszerűvé, akinek zseniális NFL scorigami projektje ihlette ezt az oldalt.",
     "watchVideo": "Nézd meg az eredeti videót",
-    "whyBuilt": "A World Cupigamit azért hoztam létre, hogy egy kis amerikai sportkultúrát vigyek el a világ legnagyobb sporteseményére — abban a megosztó szellemben, amely a Világbajnokságot különlegessé teszi. A Scorigami kicsit másképp működik a labdarúgásban, mint az amerikai fociban, mivel a gólokat egyenként szerzik, nem 2, 3, 6 vagy 7-es csoportokban. Ez ritkábbá és értékesebbé teszi az új scorigamikat.",
-    "mensOnly": "Ez jelenleg csak a férfi FIFA Világbajnokságot fedi le. A női Világbajnokság verziója hamarosan érkezik.",
+    "whyBuilt": "A World Cupigamit azért hoztam létre, hogy egy kis amerikai sportolói kultúrát vigyek a világ legnagyobb futballünnepére — abban a megosztó szellemben, ami a Világbajnokságot különlegessé teszi. A scorigami kicsit másképp működik fociban, mint az amerikai futballban, hiszen a gólokat egyenként szerzik, nem 2, 3, 6, 7 vagy 8-as csomagokban. Ettől az új scorigamik ritkábbak és értékesebbek.",
+    "mensOnly": "Ez az oldal jelenleg csak a férfi FIFA Világbajnokságot fedi le. A női Világbajnokság hamarosan érkezik.",
     "pointTitle": "Mi értelme ennek?",
-    "pointDescription": "Őszintén? Semmi. Csak szórakoztató, ha olyan sportstatisztika-megszállott vagy, mint én. De ha valami jó is kisülhet belőle — amikor a csapatod scorigamit szerez, fontold meg, hogy adományozol egy jótékonysági szervezetnek a vesztes csapat országában. Egy történelmi eredmény remek alkalom arra, hogy jót tegyünk a világban."
+    "pointDescription": "Őszintén? Semmi különös. Csak szórakoztató, ha olyan sportstatisztika-megszállott vagy, mint én. De ha van egy pozitív hozadéka — amikor a csapatod scorigamit ér el, fontold meg, hogy adományozol egy jótékonysági szervezetnek a vesztes csapat országában. Egy történelmi végeredmény remek alkalom arra, hogy jót tegyünk a világban."
   },
   "stats": {
     "matches": "mérkőzés",
-    "uniqueScores": "egyedi eredmény",
-    "neverHappened": "még nem fordult elő",
+    "uniqueScores": "egyedi végeredmény",
+    "neverHappened": "még lehetséges",
+    "editionNumber": "23.",
+    "editionLabel": "Férfi Világbajnokság",
     "tournaments": "Tornák"
   },
   "views": {
     "heatmap": "Hőtérkép",
-    "allMatches": "Összes mérkőzés"
+    "allMatches": "Összes mérkőzés",
+    "funFacts": "Érdekességek"
+  },
+  "upcoming": {
+    "kickerLabel": "Várjuk a kezdőrúgást",
+    "title": "A {year}-es Világbajnokság még nem kezdődött el",
+    "description": "A {year}-es FIFA férfi Világbajnokság {date}-én startol. A mérkőzések eredményei valós időben jelennek meg itt, ahogy a meccsek véget érnek — a fenti hőtérkép pedig a scorigami állapotát mutatja közvetlenül a torna kezdete előtt.",
+    "kickoffDateFormat": "MMMM d, yyyy"
   },
   "grid": {
-    "description": "Sorok = vesztes góljai · Oszlopok = győztes góljai · Kattints bármelyik cellára",
+    "description": "Sorok = vesztes góljainak száma · Oszlopok = győztes góljainak száma · Eredmények győztes–vesztes sorrendben · Kattints bármely cellára",
     "never": "Soha",
     "unique": "Egyedi (1×)",
     "veryRare": "Nagyon ritka",
     "rare": "Ritka",
     "common": "Gyakori",
     "veryCommon": "Nagyon gyakori",
-    "neverHappened": "{low}–{high}: Soha",
-    "count": "{low}–{high}: {count}×"
+    "neverHappened": "{high}–{low}: Soha nem volt",
+    "count": "{high}–{low}: {count}×"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
-    "scorigamiDescription": "A {low}–{high} még soha nem fordult elő a Világbajnokság történetében.",
+    "noScorigamiTitle": "Még nem scorigami",
+    "scorigamiDescription": "A {high}–{low} végeredmény még sohasem fordult elő a Világbajnokság történetében.",
     "scorigamiBadge": "(Scorigami)",
-    "close": "Bezárás"
+    "close": "Bezárás",
+    "readMore": "Wikipedia",
+    "readMoreAria": "Olvass többet erről a mérkőzésről a Wikipédián"
   },
   "table": {
-    "searchPlaceholder": "Keresés csapatok, tornák, eredmények alapján...",
+    "searchPlaceholder": "Csapatok, tornák, eredmények keresése...",
     "date": "Dátum",
     "home": "Hazai",
+    "winner": "Győztes",
     "score": "Eredmény",
     "away": "Vendég",
+    "loser": "Vesztes",
     "stage": "Szakasz",
     "venue": "Helyszín",
     "year": "Év",
-    "showingOf": "{total} mérkőzésből {shown} látható.",
+    "showingOf": "{shown} mérkőzés látható a {total}-ból.",
     "allTournaments": "Összes torna",
     "allStages": "Összes szakasz",
     "showAll": "Összes mutatása",
@@ -56,17 +71,70 @@
   },
   "stages": {
     "group stage": "Csoportkör",
-    "round of 32": "32 közé",
-    "round of 16": "16 közé",
+    "round of 32": "32-es kör",
+    "round of 16": "Nyolcaddöntő",
     "quarter-finals": "Negyeddöntő",
     "semi-finals": "Elődöntő",
     "third-place match": "Bronzmérkőzés",
-    "final": "Döntő"
+    "final": "Döntő",
+    "final round": "Döntős kör",
+    "second group stage": "Második csoportkör"
   },
   "footer": {
-    "dataFrom": "Adatok forrása:",
+    "dataFrom": "Történeti adatok forrása",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "Élő 2026-os eredmények forrása",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "A scorigami koncepció Jon Bois nevéhez fűződik",
+    "disclaimer": "A FIFA World Cup™ a FIFA védjegye. Ez az oldal nem áll kapcsolatban a FIFA-val, nem élvezi annak jóváhagyását, és nem kötődik hozzá."
+  },
+  "funFacts": {
+    "mostRecentTitle": "Legutóbbi Scorigami",
+    "mostRecentNote": "Ez volt az első alkalom, hogy ez a végeredmény előfordult a Világbajnokság történetében.",
+    "trueScorigamisTitle": "Egyedi Scorigamik",
+    "trueScorigamisDesc": "Olyan végeredmények, amelyek pontosan egyszer fordultak elő — se előtte, se azóta.",
+    "mostCommonTitle": "Leggyakoribb Végeredmények",
+    "mostCommonNote": "Minden ötödik mérkőzés közel 1–0-ra végződik.",
+    "highestScoringTitle": "Legtöbb gólos mérkőzések (10+ gól)",
+    "biggestBlowoutsTitle": "Legnagyobb különbségű győzelmek",
+    "scorigamiLeadersTitle": "Scorigami Ranglista",
+    "scorigamiLeadersDesc": "Az összes Világbajnokságon legtöbb először előforduló végeredményben szereplő csapatok.",
+    "scorigamiKingsNote": "A legtöbb egyedi scorigamival rendelkező csapatok: {teams}.",
+    "finalsTitle": "Világbajnoki Döntők",
+    "finalsDesc": "A leggyakoribb döntős végeredmény {score}, amely {count} alkalommal fordult elő ({years}).",
+    "finalsScorigamiTitle": "Döntős Scorigami",
+    "finalsScorigamiDesc": "Olyan döntők, amelyekben a végeredmény korábban egyetlen Világbajnoki mérkőzésen sem fordult elő.",
+    "homeTurfTitle": "Hazai Pályán Született Scorigami",
+    "homeTurfDesc": "{count} alkalommal volt a házigazda ország érintett, amikor egy teljesen új végeredmény született a saját rendezésű Világbajnokságukon.",
+    "allTimeStatsTitle": "Örökranglistás Statisztikák",
+    "extraTimeGames": "hosszabbításos mérkőzés",
+    "penaltyShootouts": "büntetőpárbaj",
+    "totalGoals": "összes gól",
+    "tournamentTrendsTitle": "Világbajnoki Trendek",
+    "trendTeams": "Csapatok száma",
+    "trendMatches": "Lejátszott mérkőzések",
+    "trendGoalsPerGame": "Gól/mérkőzés",
+    "trendScorigamis": "Új Scorigamik",
+    "wwiiNote": "Az 1942-es és 1946-os Világbajnokságokat a második világháború miatt törölték.",
+    "goalDistTitle": "Gólok Megoszlása",
+    "goalDistDesc": "Hány mérkőzésen esett az adott számú gól az összes Világbajnokságon.",
+    "goalDistNote": "Az eloszlás nagyjából Poisson-görbét követ — a legtöbb mérkőzésen 2–3 gól esik összesen, és hosszú farok jellemzi a gólgazdag meccseket.",
+    "stageBreakdownTitle": "Scorigami szakaszok szerint",
+    "stageBreakdownDesc": "Milyen gyakran debütál egy teljesen új végeredmény a torna egyes szakaszaiban?",
+    "stageGroupLabel": "Csoportkör",
+    "stageKnockoutLabel": "Egyenes kieséses szakasz",
+    "stageSummaryDetail": "{scorigamis} scorigami {total} mérkőzésen",
+    "stageTopNote": "A {stage} vezet {count} scorigamival (az adott szakasz mérkőzéseinek {rate}%-a).",
+    "penaltigamiTitle": "Penaltigami",
+    "penaltigamiDesc": "A Világbajnokság történetének összes büntetőpárbaja. A penaltigami egy olyan mérkőzéseredmény és büntetősorozat-kombináció, amely csak egyszer fordult elő.",
+    "penaltigamiUnique": "Csak egyszer fordult elő",
+    "penaltigamiRepeated": "{count}× fordult elő",
+    "penaltigamiSummary": "{unique} egyedi mérkőzés-büntető kombináció {total} büntetőpárbajból",
+    "penaltigamiOnlyPenScore": "Ez az egyetlen büntetősorozat-eredmény, amely csak egyszer fordult elő. Minden más büntetősorozat-végeredmény (például 4–2 vagy 5–3) többször is megtörtént már.",
+    "frontierTitle": "A Scorigami Határ",
+    "frontierDesc": "Ezek a végeredmények még sosem fordultak elő, de a legvalószínűbb jelöltek a következő scorigamira.",
+    "frontierNote": "A 2026-os Világbajnokság 48 csapatra és 104 mérkőzésre bővül, így több egyenlőtlen találkozó végre új területre léphet."
   },
   "locale": {}
 }

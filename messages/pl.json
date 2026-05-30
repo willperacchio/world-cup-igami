@@ -1,50 +1,65 @@
 {
   "header": {
     "title": "World Cupigami",
-    "subtitle": "Każdy unikalny wynik końcowy w historii Mistrzostw Świata FIFA mężczyzn"
+    "kicker": "Projekt scorigami",
+    "subtitle": "Wszystkie unikalne wyniki końcowe w historii Mistrzostw Świata FIFA mężczyzn"
   },
   "explainer": {
     "title": "Czym jest Scorigami?",
-    "description": "Scorigami to pojęcie oznaczające wynik końcowy, który nigdy wcześniej nie pojawił się w historii danego sportu. Koncepcję spopularyzował Jon Bois, którego znakomita praca poświęcona NFL scorigami zainspirowała ten projekt.",
+    "description": "Scorigami to pojęcie oznaczające wynik końcowy, który nigdy wcześniej nie wystąpił w historii danego sportu. Pomysł spopularyzował Jon Bois, którego znakomita praca o scorigami w NFL zainspirowała ten projekt.",
     "watchVideo": "Obejrzyj oryginalny film",
-    "whyBuilt": "Stworzyłem World Cupigami, by wnieść odrobinę amerykańskiej kultury sportowej na największą światową scenę — w duchu dzielenia się, który czyni Mistrzostwa Świata wyjątkowymi. Scorigami działa w piłce nożnej nieco inaczej niż w futbolu amerykańskim, ponieważ gole padają pojedynczo, a nie porcjami po 2, 3, 6 czy 7 punktów. Sprawia to, że nowe scorigami są rzadsze i bardziej znaczące.",
-    "mensOnly": "Projekt obejmuje obecnie tylko Mistrzostwa Świata FIFA mężczyzn. Edycja poświęcona Mistrzostwom Świata kobiet już wkrótce.",
-    "pointTitle": "Jaki to ma sens?",
-    "pointDescription": "Szczerze? Żaden. To po prostu zabawa dla takich maniaków analityki sportowej jak ja. Ale jeśli może z tego wyniknąć coś dobrego — gdy twoja drużyna strzeli scorigami, rozważ darowiznę na rzecz organizacji charytatywnej w kraju przegranej drużyny. Historyczny wynik to świetna okazja, by zrobić coś dobrego dla świata."
+    "whyBuilt": "Stworzyłem World Cupigami, żeby przybliżyć trochę amerykańskiej kultury sportowej największej scenie świata — w duchu wymiany, która czyni Mistrzostwa Świata wyjątkowymi. Scorigami działa nieco inaczej w piłce nożnej niż w futbolu amerykańskim, bo gole padają po jednym, a nie w grupach po 2, 3, 6, 7 czy 8. To sprawia, że nowe scorigami są rzadsze i bardziej znaczące.",
+    "mensOnly": "Projekt obejmuje na razie tylko Mistrzostwa Świata FIFA mężczyzn. Edycja dla kobiet jest w przygotowaniu.",
+    "pointTitle": "Po co to wszystko?",
+    "pointDescription": "Szczerze? Dla zabawy. To po prostu frajda, jeśli jesteś takim maniakiem analityki sportowej jak ja. Ale jeśli coś dobrego może z tego wyniknąć — kiedy twoja drużyna zdobędzie scorigami, rozważ darowiznę na rzecz organizacji charytatywnej w kraju przegranego. Historyczny wynik to świetny pretekst, żeby zrobić coś dobrego dla świata."
   },
   "stats": {
     "matches": "mecze",
     "uniqueScores": "unikalne wyniki",
-    "neverHappened": "nigdy nie padły",
+    "neverHappened": "wciąż możliwe",
+    "editionNumber": "23.",
+    "editionLabel": "Edycja Mistrzostw Świata mężczyzn",
     "tournaments": "Turnieje"
   },
   "views": {
     "heatmap": "Mapa ciepła",
-    "allMatches": "Wszystkie mecze"
+    "allMatches": "Wszystkie mecze",
+    "funFacts": "Ciekawostki"
+  },
+  "upcoming": {
+    "kickerLabel": "Oczekiwanie na kickoff",
+    "title": "Mistrzostwa Świata {year} jeszcze się nie rozpoczęły",
+    "description": "Mistrzostwa Świata FIFA mężczyzn {year} startują {date}. Wyniki meczów będą pojawiać się tutaj w czasie rzeczywistym, gdy kolejne spotkania dobiegną końca — a mapa ciepła powyżej pokazuje stan scorigami tuż przed rozpoczęciem turnieju.",
+    "kickoffDateFormat": "MMMM d, yyyy"
   },
   "grid": {
-    "description": "Wiersze = wynik przegranych · Kolumny = wynik zwycięzców · Kliknij dowolną komórkę",
+    "description": "Wiersze = wynik przegranego · Kolumny = wynik zwycięzcy · Wyniki podane jako zwycięzca–przegrany · Kliknij dowolną komórkę",
     "never": "Nigdy",
-    "unique": "Unikalny (1×)",
+    "unique": "Unikat (1×)",
     "veryRare": "Bardzo rzadki",
     "rare": "Rzadki",
     "common": "Częsty",
     "veryCommon": "Bardzo częsty",
-    "neverHappened": "{low}–{high}: Nigdy",
-    "count": "{low}–{high}: {count}×"
+    "neverHappened": "{high}–{low}: Nigdy",
+    "count": "{high}–{low}: {count}×"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
-    "scorigamiDescription": "{low}–{high} nigdy nie padło w historii Mistrzostw Świata.",
+    "noScorigamiTitle": "Jeszcze nie scorigami",
+    "scorigamiDescription": "Wynik {high}–{low} nigdy nie wystąpił w historii Mistrzostw Świata.",
     "scorigamiBadge": "(Scorigami)",
-    "close": "Zamknij"
+    "close": "Zamknij",
+    "readMore": "Wikipedia",
+    "readMoreAria": "Przeczytaj więcej o tym meczu na Wikipedii"
   },
   "table": {
     "searchPlaceholder": "Szukaj drużyn, turniejów, wyników...",
     "date": "Data",
     "home": "Gospodarz",
+    "winner": "Zwycięzca",
     "score": "Wynik",
     "away": "Gość",
+    "loser": "Przegrany",
     "stage": "Faza",
     "venue": "Stadion",
     "year": "Rok",
@@ -61,12 +76,65 @@
     "quarter-finals": "Ćwierćfinały",
     "semi-finals": "Półfinały",
     "third-place match": "Mecz o trzecie miejsce",
-    "final": "Finał"
+    "final": "Finał",
+    "final round": "Runda finałowa",
+    "second group stage": "Druga faza grupowa"
   },
   "footer": {
-    "dataFrom": "Dane pochodzą z",
+    "dataFrom": "Dane historyczne pochodzą z",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "Wyniki na żywo 2026 z",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "Koncepcja scorigami autorstwa Jona Boisa",
+    "disclaimer": "FIFA World Cup™ jest znakiem towarowym FIFA. Ta strona nie jest powiązana z FIFA, nie jest przez nią sponsorowana ani zatwierdzona."
+  },
+  "funFacts": {
+    "mostRecentTitle": "Najnowsze Scorigami",
+    "mostRecentNote": "To był pierwszy raz, gdy ten wynik pojawił się w historii Mistrzostw Świata.",
+    "trueScorigamisTitle": "Unikalne Scorigami",
+    "trueScorigamisDesc": "Wyniki, które wystąpiły dokładnie raz — nigdy wcześniej, nigdy później.",
+    "mostCommonTitle": "Najczęstsze wyniki",
+    "mostCommonNote": "Prawie co piąty mecz kończy się wygraną 1:0.",
+    "highestScoringTitle": "Mecze z największą liczbą goli (10+)",
+    "biggestBlowoutsTitle": "Największe pogromы",
+    "scorigamiLeadersTitle": "Ranking scorigami",
+    "scorigamiLeadersDesc": "Drużyny uczestniczące w największej liczbie rekordowych wyników we wszystkich Mistrzostwach Świata.",
+    "scorigamiKingsNote": "Drużyny z największą liczbą unikalnych scorigami: {teams}.",
+    "finalsTitle": "Finały Mistrzostw Świata",
+    "finalsDesc": "Najczęstszy wynik finału to {score}, który padł {count} razy ({years}).",
+    "finalsScorigamiTitle": "Scorigami w finałach",
+    "finalsScorigamiDesc": "Finały, w których wynik nigdy wcześniej nie wystąpił w żadnym meczu Mistrzostw Świata.",
+    "homeTurfTitle": "Scorigami na własnym boisku",
+    "homeTurfDesc": "{count} razy gospodarz turnieju był uczestnikiem meczu, w którym padł zupełnie nowy wynik.",
+    "allTimeStatsTitle": "Statystyki wszech czasów",
+    "extraTimeGames": "mecze z dogrywką",
+    "penaltyShootouts": "rzuty karne",
+    "totalGoals": "gole łącznie",
+    "tournamentTrendsTitle": "Trendy na Mistrzostwach Świata",
+    "trendTeams": "Liczba drużyn",
+    "trendMatches": "Rozegrane mecze",
+    "trendGoalsPerGame": "Gole na mecz",
+    "trendScorigamis": "Nowe scorigami",
+    "wwiiNote": "Mistrzostwa Świata 1942 i 1946 zostały odwołane z powodu II wojny światowej.",
+    "goalDistTitle": "Rozkład goli",
+    "goalDistDesc": "Liczba meczów z daną łączną liczbą goli we wszystkich Mistrzostwach Świata.",
+    "goalDistNote": "Rozkład przypomina krzywą Poissona — większość meczów skupia się wokół 2–3 goli łącznie, z długim ogonem spotkań o wysokiej liczbie bramek.",
+    "stageBreakdownTitle": "Scorigami według fazy",
+    "stageBreakdownDesc": "Jak często zupełnie nowy wynik pojawia się po raz pierwszy na każdym etapie turnieju?",
+    "stageGroupLabel": "Faza grupowa",
+    "stageKnockoutLabel": "Faza pucharowa",
+    "stageSummaryDetail": "{scorigamis} scorigami w {total} meczach",
+    "stageTopNote": "Prowadzi {stage} z {count} scorigami ({rate}% meczów na tym etapie).",
+    "penaltigamiTitle": "Penaltigami",
+    "penaltigamiDesc": "Wszystkie serie rzutów karnych w historii Mistrzostw Świata. Penaltigami to kombinacja wyniku meczu i wyniku serii karnych, która wystąpiła tylko raz.",
+    "penaltigamiUnique": "Wystąpiło tylko raz",
+    "penaltigamiRepeated": "Wystąpiło {count}×",
+    "penaltigamiSummary": "{unique} unikalnych kombinacji mecz–karne spośród {total} serii rzutów karnych",
+    "penaltigamiOnlyPenScore": "Jedyny wynik serii karnych, który wystąpił dokładnie raz. Każdy inny rezultat (np. 4:2 czy 5:3) pojawił się wielokrotnie.",
+    "frontierTitle": "Granica scorigami",
+    "frontierDesc": "Te wyniki jeszcze nigdy nie padły, ale mają największe szanse pojawić się jako kolejne.",
+    "frontierNote": "Wraz z rozszerzeniem Mistrzostw Świata 2026 do 48 drużyn i 104 meczów, więcej niespodziewanych wyników może wreszcie wkroczyć na nieznane terytorium."
   },
   "locale": {}
 }

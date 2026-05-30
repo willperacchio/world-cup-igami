@@ -1,52 +1,67 @@
 {
   "header": {
     "title": "World Cupigami",
-    "subtitle": "Každé jedinečné konečné skóre v historii mužského mistrovství světa FIFA"
+    "kicker": "Projekt scorigami",
+    "subtitle": "Každý jedinečný konečný výsledek v historii mužského mistrovství světa FIFA"
   },
   "explainer": {
-    "title": "Co je Scorigami?",
-    "description": "Scorigami je koncept konečného skóre, které se v historii daného sportu ještě nikdy nestalo. Myšlenku zpopularizoval Jon Bois, jehož skvělá práce o NFL scorigami tento projekt inspirovala.",
+    "title": "Co je scorigami?",
+    "description": "Scorigami je koncept konečného výsledku, který se v historii daného sportu ještě nikdy nestal. Myšlenku proslavil Jon Bois, jehož skvělá práce o NFL scorigami inspirovala tento projekt.",
     "watchVideo": "Zhlédnout původní video",
-    "whyBuilt": "World Cupigami jsem vytvořil, abych přinesl kousek americké sportovní kultury na největší světovou scénu — v duchu sdílení, které dělá mistrovství světa výjimečným. Scorigami funguje ve fotbale trochu jinak než v americkém fotbale, protože góly padají vždy po jednom, nikoli po skupinách 2, 3, 6 nebo 7. To dělá nová scorigami vzácnějšími a významnějšími.",
-    "mensOnly": "Momentálně jsou zde zahrnuty pouze mužské mistrovství světa FIFA. Ženská verze se brzy chystá.",
-    "pointTitle": "K čemu to je?",
-    "pointDescription": "Upřímně? K ničemu. Je to prostě zábava pro ty, kdo milují sportovní analytiku jako já. Ale pokud z toho může vzejít aspoň jedna dobrá věc — až váš tým dosáhne scorigami, zvažte dar charitativní organizaci v zemi poraženého týmu. Historické skóre je skvělá záminka udělat něco dobrého pro svět."
+    "whyBuilt": "World Cupigami jsem vytvořil, abych přinesl trochu americké sportovní kultury na největší světovou scénu — v duchu sdílení, které dělá mistrovství světa výjimečným. Scorigami funguje ve fotbale trochu jinak než v americkém fotbale, protože góly padají vždy po jednom, nikoli v blocích po 2, 3, 6, 7 nebo 8 bodech. To dělá nová scorigami vzácnějšími a hodnotnějšími.",
+    "mensOnly": "Tato stránka zatím pokrývá pouze mužské mistrovství světa FIFA. Ženská verze bude brzy k dispozici.",
+    "pointTitle": "K čemu to vlastně je?",
+    "pointDescription": "Upřímně? K ničemu. Je to prostě zábava pro nadšence do sportovní analytiky, jako jsem já. Ale pokud z toho může vzejít něco dobrého — až váš tým dosáhne scorigami, zvažte dar charitativní organizaci v zemi poraženého týmu. Historický výsledek je skvělá záminka udělat něco dobrého pro svět."
   },
   "stats": {
     "matches": "zápasů",
-    "uniqueScores": "jedinečných skóre",
-    "neverHappened": "nikdy nenastalo",
+    "uniqueScores": "jedinečných výsledků",
+    "neverHappened": "stále možné",
+    "editionNumber": "23.",
+    "editionLabel": "ročník mužského mistrovství světa",
     "tournaments": "Turnaje"
   },
   "views": {
     "heatmap": "Heatmapa",
-    "allMatches": "Všechny zápasy"
+    "allMatches": "Všechny zápasy",
+    "funFacts": "Zajímavosti"
+  },
+  "upcoming": {
+    "kickerLabel": "Čekáme na výkop",
+    "title": "Mistrovství světa {year} ještě nezačalo",
+    "description": "Mužské mistrovství světa FIFA {year} odstartuje {date}. Výsledky zápasů se zde budou objevovat v reálném čase, jakmile skončí — a heatmapa výše ukazuje stav scorigami těsně před začátkem turnaje.",
+    "kickoffDateFormat": "MMMM d, yyyy"
   },
   "grid": {
-    "description": "Řádky = skóre poraženého · Sloupce = skóre vítěze · Klikněte na libovolné pole",
+    "description": "Řádky = skóre poraženého · Sloupce = skóre vítěze · Výsledky ve formátu vítěz–poražený · Klikněte na libovolnou buňku",
     "never": "Nikdy",
-    "unique": "Jedinečné (1×)",
-    "veryRare": "Velmi vzácné",
-    "rare": "Vzácné",
-    "common": "Časté",
-    "veryCommon": "Velmi časté",
-    "neverHappened": "{low}–{high}: Nikdy",
-    "count": "{low}–{high}: {count}×"
+    "unique": "Jedinečný (1×)",
+    "veryRare": "Velmi vzácný",
+    "rare": "Vzácný",
+    "common": "Běžný",
+    "veryCommon": "Velmi běžný",
+    "neverHappened": "{high}–{low}: Nikdy",
+    "count": "{high}–{low}: {count}×"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
-    "scorigamiDescription": "{low}–{high} se v historii mistrovství světa ještě nikdy nestalo.",
+    "noScorigamiTitle": "Zatím žádné scorigami",
+    "scorigamiDescription": "Výsledek {high}–{low} se v historii mistrovství světa ještě nikdy nestal.",
     "scorigamiBadge": "(Scorigami)",
-    "close": "Zavřít"
+    "close": "Zavřít",
+    "readMore": "Wikipedia",
+    "readMoreAria": "Přečíst více o tomto zápase na Wikipedii"
   },
   "table": {
-    "searchPlaceholder": "Hledat týmy, turnaje, skóre...",
+    "searchPlaceholder": "Hledat týmy, turnaje, výsledky...",
     "date": "Datum",
     "home": "Domácí",
-    "score": "Skóre",
+    "winner": "Vítěz",
+    "score": "Výsledek",
     "away": "Hosté",
+    "loser": "Poražený",
     "stage": "Fáze",
-    "venue": "Místo",
+    "venue": "Stadion",
     "year": "Rok",
     "showingOf": "Zobrazeno {shown} z {total} zápasů.",
     "allTournaments": "Všechny turnaje",
@@ -60,13 +75,66 @@
     "round of 16": "Osmifinále",
     "quarter-finals": "Čtvrtfinále",
     "semi-finals": "Semifinále",
-    "third-place match": "Zápas o třetí místo",
-    "final": "Finále"
+    "third-place match": "Zápas o 3. místo",
+    "final": "Finále",
+    "final round": "Závěrečné kolo",
+    "second group stage": "Druhá skupinová fáze"
   },
   "footer": {
-    "dataFrom": "Data z",
+    "dataFrom": "Historická data z",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "Živé výsledky 2026 z",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "Koncept scorigami od Jona Boise",
+    "disclaimer": "FIFA World Cup™ je ochranná známka FIFA. Tato stránka není přidružena k FIFA, není jí schválena ani s ní nijak spojena."
+  },
+  "funFacts": {
+    "mostRecentTitle": "Nejnovější scorigami",
+    "mostRecentNote": "Toto bylo poprvé, co se tento výsledek v historii mistrovství světa kdy objevil.",
+    "trueScorigamisTitle": "Jedinečná scorigami",
+    "trueScorigamisDesc": "Výsledky, které se staly přesně jednou — nikdy předtím, nikdy potom.",
+    "mostCommonTitle": "Nejčastější výsledky",
+    "mostCommonNote": "Téměř každý pátý zápas končí výhrou 1:0.",
+    "highestScoringTitle": "Nejgólovější zápasy (10 a více gólů)",
+    "biggestBlowoutsTitle": "Největší výprasky",
+    "scorigamiLeadersTitle": "Žebříček scorigami",
+    "scorigamiLeadersDesc": "Týmy, které se podílely na nejvíce prvních výsledcích v historii všech mistrovství světa.",
+    "scorigamiKingsNote": "Týmy s nejvíce jedinečnými scorigami: {teams}.",
+    "finalsTitle": "Finále mistrovství světa",
+    "finalsDesc": "Nejčastější výsledek finále je {score}, který padl {count}× ({years}).",
+    "finalsScorigamiTitle": "Scorigami ve finále",
+    "finalsScorigamiDesc": "Finálová utkání, jejichž výsledek se předtím nikdy v žádném zápase mistrovství světa neobjevil.",
+    "homeTurfTitle": "Scorigami na domácí půdě",
+    "homeTurfDesc": "{count}× byl hostitelský tým přítomen u zrodu zcela nového výsledku na svém vlastním mistrovství světa.",
+    "allTimeStatsTitle": "Celková statistika",
+    "extraTimeGames": "zápasů s prodloužením",
+    "penaltyShootouts": "penaltových rozstřelů",
+    "totalGoals": "vstřelených gólů celkem",
+    "tournamentTrendsTitle": "Trendy mistrovství světa",
+    "trendTeams": "Počet týmů",
+    "trendMatches": "Odehraných zápasů",
+    "trendGoalsPerGame": "Gólů na zápas",
+    "trendScorigamis": "Nová scorigami",
+    "wwiiNote": "Mistrovství světa 1942 a 1946 byla zrušena kvůli druhé světové válce.",
+    "goalDistTitle": "Rozdělení gólů",
+    "goalDistDesc": "Kolik zápasů skončilo s daným celkovým počtem gólů napříč všemi mistrovstvími světa.",
+    "goalDistNote": "Rozdělení přibližně odpovídá Poissonovu tvaru — většina zápasů se soustředí kolem 2–3 celkových gólů, s dlouhým ocasem gólovějších utkání.",
+    "stageBreakdownTitle": "Scorigami podle fáze turnaje",
+    "stageBreakdownDesc": "Jak často se v každé fázi turnaje poprvé objeví zcela nový výsledek?",
+    "stageGroupLabel": "Skupinová fáze",
+    "stageKnockoutLabel": "Vyřazovací fáze",
+    "stageSummaryDetail": "{scorigamis} scorigami v {total} zápasech",
+    "stageTopNote": "Nejvíce scorigami přináší {stage} s {count} případy ({rate} % zápasů v této fázi).",
+    "penaltigamiTitle": "Penaltigami",
+    "penaltigamiDesc": "Každý penaltový rozstřel v historii mistrovství světa. Penaltigami je kombinace výsledku zápasu a výsledku rozstřelu, která se stala jen jednou.",
+    "penaltigamiUnique": "Stalo se jen jednou",
+    "penaltigamiRepeated": "Stalo se {count}×",
+    "penaltigamiSummary": "{unique} jedinečných kombinací zápas–penalty z {total} rozstřelů",
+    "penaltigamiOnlyPenScore": "Jediný penaltový výsledek, který nastal přesně jednou. Každý jiný výsledek rozstřelu (jako 4:2 nebo 5:3) se opakoval vícekrát.",
+    "frontierTitle": "Hranice scorigami",
+    "frontierDesc": "Tyto výsledky se ještě nikdy nestaly, ale jsou nejpravděpodobnějšími kandidáty na ten další.",
+    "frontierNote": "S rozšířením mistrovství světa 2026 na 48 týmů a 104 zápasů by větší nerovnost soupeřů mohla konečně přinést nová průlomová skóre."
   },
   "locale": {}
 }

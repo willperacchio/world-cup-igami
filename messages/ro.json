@@ -1,72 +1,140 @@
 {
   "header": {
     "title": "World Cupigami",
-    "subtitle": "Fiecare scor final unic din istoria Cupei Mondiale Masculine FIFA"
+    "kicker": "Un proiect scorigami",
+    "subtitle": "Fiecare scor final unic din istoria Cupei Mondiale FIFA masculine"
   },
   "explainer": {
     "title": "Ce este Scorigami?",
-    "description": "Scorigami este conceptul unui scor final care nu s-a mai întâmplat niciodată în istoria unui sport. Ideea a fost popularizată de Jon Bois, al cărui lucru strălucit despre NFL scorigami a inspirat acest proiect.",
+    "description": "Scorigami este conceptul unui scor final care nu s-a mai înregistrat niciodată în istoria unui sport. Ideea a fost popularizată de Jon Bois, al cărui proiect strălucit despre scorigami în NFL a inspirat acest site.",
     "watchVideo": "Vezi videoclipul original",
-    "whyBuilt": "Am construit World Cupigami pentru a aduce puțină cultură sportivă americană pe cea mai mare scenă a lumii — în spiritul împărtășirii care face Cupa Mondială specială. Scorigami funcționează puțin diferit în fotbal față de fotbalul american, deoarece golurile sunt marcate câte unul, nu în grupuri de 2, 3, 6 sau 7. Asta face ca noile scorigami să fie mai rare și mai semnificative.",
-    "mensOnly": "Aceasta acoperă în prezent doar Cupa Mondială Masculină FIFA. O ediție pentru Cupa Mondială Feminină va apărea în curând.",
-    "pointTitle": "Care este rostul?",
-    "pointDescription": "Sincer? Niciunul. E pur și simplu distractiv dacă ești un pasionat de analitica sportivă ca mine. Dar dacă există un lucru bun care poate ieși din asta — când echipa ta înscrie un scorigami, gândește-te să donezi unei organizații caritabile din țara echipei învinse. Un scor istoric este un motiv excelent pentru a face ceva bun în lume."
+    "whyBuilt": "Am creat World Cupigami pentru a aduce puțin din cultura sportivă americană pe cea mai mare scenă a lumii — în spiritul împărtășirii care face Cupa Mondială specială. Scorigami funcționează puțin diferit în fotbal față de fotbalul american, deoarece golurile se marchează câte unul, nu în grupuri de 2, 3, 6, 7 sau 8. Asta face ca noile scorigami să fie mai rare și mai semnificative.",
+    "mensOnly": "Momentan, acesta acoperă doar Cupa Mondială FIFA masculină. O ediție pentru Cupa Mondială feminină urmează în curând.",
+    "pointTitle": "Care e rostul acestui proiect?",
+    "pointDescription": "Sincer? Niciunul. E pur și simplu amuzant dacă ești pasionat de analiza sportivă ca mine. Dar dacă poate ieși ceva bun din asta — când echipa ta marchează un scorigami, gândește-te să donezi unei organizații caritabile din țara echipei învinse. Un scor istoric e un motiv excelent să faci ceva bun în lume."
   },
   "stats": {
     "matches": "meciuri",
     "uniqueScores": "scoruri unice",
-    "neverHappened": "nu s-a întâmplat niciodată",
+    "neverHappened": "încă posibile",
+    "editionNumber": "a 23-a",
+    "editionLabel": "Ediție a Cupei Mondiale masculine",
     "tournaments": "Turnee"
   },
   "views": {
     "heatmap": "Hartă termică",
-    "allMatches": "Toate meciurile"
+    "allMatches": "Toate meciurile",
+    "funFacts": "Curiozități"
+  },
+  "upcoming": {
+    "kickerLabel": "Așteptăm startul",
+    "title": "Cupa Mondială {year} nu a început încă",
+    "description": "Cupa Mondială FIFA masculină {year} începe pe {date}. Rezultatele meciurilor vor apărea aici în timp real, pe măsură ce partidele se termină — iar harta termică de mai sus arată starea scorigami chiar înainte de startul turneului.",
+    "kickoffDateFormat": "MMMM d, yyyy"
   },
   "grid": {
-    "description": "Rânduri = scorul perdantului · Coloane = scorul câștigătorului · Apasă pe orice celulă",
+    "description": "Rânduri = scorul perdantului · Coloane = scorul câștigătorului · Scorurile sunt afișate câștigător–perdant · Apasă pe orice celulă",
     "never": "Niciodată",
     "unique": "Unic (1×)",
     "veryRare": "Foarte rar",
     "rare": "Rar",
     "common": "Comun",
     "veryCommon": "Foarte comun",
-    "neverHappened": "{low}–{high}: Niciodată",
-    "count": "{low}–{high}: {count}×"
+    "neverHappened": "{high}–{low}: Niciodată",
+    "count": "{high}–{low}: {count}×"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
-    "scorigamiDescription": "{low}–{high} nu s-a întâmplat niciodată în istoria Cupei Mondiale.",
+    "noScorigamiTitle": "Niciun Scorigami — Deocamdată",
+    "scorigamiDescription": "Scorul {high}–{low} nu s-a mai înregistrat niciodată în istoria Cupei Mondiale.",
     "scorigamiBadge": "(Scorigami)",
-    "close": "Închide"
+    "close": "Închide",
+    "readMore": "Wikipedia",
+    "readMoreAria": "Citește mai mult despre acest meci pe Wikipedia"
   },
   "table": {
     "searchPlaceholder": "Caută echipe, turnee, scoruri...",
     "date": "Dată",
-    "home": "Acasă",
+    "home": "Gazdă",
+    "winner": "Câștigător",
     "score": "Scor",
-    "away": "Deplasare",
+    "away": "Oaspete",
+    "loser": "Perdant",
     "stage": "Fază",
     "venue": "Stadion",
     "year": "An",
     "showingOf": "Se afișează {shown} din {total} meciuri.",
     "allTournaments": "Toate turneele",
     "allStages": "Toate fazele",
-    "showAll": "Arată toate",
+    "showAll": "Arată tot",
     "showLess": "Arată mai puțin"
   },
   "stages": {
     "group stage": "Faza grupelor",
     "round of 32": "Turul 32",
-    "round of 16": "Turul 16",
+    "round of 16": "Optimi de finală",
     "quarter-finals": "Sferturi de finală",
     "semi-finals": "Semifinale",
     "third-place match": "Meciul pentru locul 3",
-    "final": "Finală"
+    "final": "Finală",
+    "final round": "Runda finală",
+    "second group stage": "A doua fază a grupelor"
   },
   "footer": {
-    "dataFrom": "Date din",
+    "dataFrom": "Date istorice din",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "Rezultate live 2026 din",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "Conceptul Scorigami aparține lui Jon Bois",
+    "disclaimer": "FIFA World Cup™ este marcă înregistrată a FIFA. Acest site nu este afiliat, aprobat sau conectat cu FIFA."
+  },
+  "funFacts": {
+    "mostRecentTitle": "Cel Mai Recent Scorigami",
+    "mostRecentNote": "A fost prima dată când acest scor s-a înregistrat vreodată în istoria Cupei Mondiale.",
+    "trueScorigamisTitle": "Scorigami-uri unice",
+    "trueScorigamisDesc": "Scoruri care s-au înregistrat exact o singură dată — niciodată înainte, niciodată după.",
+    "mostCommonTitle": "Cele mai frecvente scoruri",
+    "mostCommonNote": "Aproape 1 din 5 meciuri se termină cu o victorie la scor 1-0.",
+    "highestScoringTitle": "Meciurile cu cele mai multe goluri (10+)",
+    "biggestBlowoutsTitle": "Cele mai mari diferențe de scor",
+    "scorigamiLeadersTitle": "Clasamentul Scorigami",
+    "scorigamiLeadersDesc": "Echipele implicate în cele mai multe scoruri premiere de-a lungul tuturor Cupelor Mondiale.",
+    "scorigamiKingsNote": "Echipele cu cele mai multe scorigami unice: {teams}.",
+    "finalsTitle": "Finalele Cupei Mondiale",
+    "finalsDesc": "Cel mai frecvent scor dintr-o finală este {score}, care s-a înregistrat de {count} ori ({years}).",
+    "finalsScorigamiTitle": "Scorigami în finale",
+    "finalsScorigamiDesc": "Finale în care scorul nu mai apăruse niciodată în niciun meci al Cupei Mondiale.",
+    "homeTurfTitle": "Scorigami pe teren propriu",
+    "homeTurfDesc": "De {count} ori, o echipă gazdă a fost implicată când un scor complet nou a debutat la propria Cupă Mondială.",
+    "allTimeStatsTitle": "Statistici all-time",
+    "extraTimeGames": "meciuri cu prelungiri",
+    "penaltyShootouts": "lovituri de departajare",
+    "totalGoals": "goluri total",
+    "tournamentTrendsTitle": "Tendințe la Cupa Mondială",
+    "trendTeams": "Număr de echipe",
+    "trendMatches": "Meciuri jucate",
+    "trendGoalsPerGame": "Goluri pe meci",
+    "trendScorigamis": "Scorigami-uri noi",
+    "wwiiNote": "Cupele Mondiale din 1942 și 1946 au fost anulate din cauza celui de-al Doilea Război Mondial.",
+    "goalDistTitle": "Distribuția golurilor",
+    "goalDistDesc": "Câte meciuri au avut fiecare număr total de goluri, în toate Cupele Mondiale.",
+    "goalDistNote": "Distribuția urmează aproximativ o formă Poisson — cele mai multe meciuri se grupează în jurul a 2–3 goluri total, cu o coadă lungă pentru meciurile cu multe goluri.",
+    "stageBreakdownTitle": "Scorigami pe faze",
+    "stageBreakdownDesc": "Cât de des debutează un scor complet nou în fiecare fază a turneului?",
+    "stageGroupLabel": "Faza grupelor",
+    "stageKnockoutLabel": "Eliminatorii",
+    "stageSummaryDetail": "{scorigamis} scorigami-uri în {total} meciuri",
+    "stageTopNote": "{stage} conduce cu {count} scorigami-uri ({rate}% din meciurile acelei faze).",
+    "penaltigamiTitle": "Penaltigami",
+    "penaltigamiDesc": "Toate seriile de lovituri de departajare din istoria Cupei Mondiale. Un penaltigami este o combinație de scor al meciului și rezultat al departajării care s-a înregistrat o singură dată.",
+    "penaltigamiUnique": "S-a întâmplat o singură dată",
+    "penaltigamiRepeated": "S-a întâmplat de {count}×",
+    "penaltigamiSummary": "{unique} combinații unice meci-penaltiuri din {total} departajări",
+    "penaltigamiOnlyPenScore": "Singurul scor la penaltiuri care a apărut exact o dată. Orice alt rezultat al departajării (cum ar fi 4-2 sau 5-3) s-a repetat de mai multe ori.",
+    "frontierTitle": "Frontiera Scorigami",
+    "frontierDesc": "Aceste scoruri nu s-au mai înregistrat niciodată, dar sunt cele mai susceptibile să apară în viitor.",
+    "frontierNote": "Odată cu extinderea Cupei Mondiale 2026 la 48 de echipe și 104 meciuri, mai multe scoruri dezechilibrate ar putea în sfârșit să deschidă noi teritorii."
   },
   "locale": {}
 }

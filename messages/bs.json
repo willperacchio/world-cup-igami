@@ -1,54 +1,69 @@
 {
   "header": {
     "title": "World Cupigami",
-    "subtitle": "Svaki jedinstveni konačni rezultat u historiji Muškog FIFA Svjetskog Kupa"
+    "kicker": "Scorigami projekat",
+    "subtitle": "Svaki jedinstveni konačni rezultat u historiji Muškog FIFA Svjetskog prvenstva"
   },
   "explainer": {
     "title": "Šta je Scorigami?",
     "description": "Scorigami je koncept konačnog rezultata koji se nikada ranije nije dogodio u historiji nekog sporta. Ideju je popularizovao Jon Bois, čiji je izvanredan rad na NFL scorigamiju inspirisao ovaj projekat.",
     "watchVideo": "Pogledajte originalni video",
-    "whyBuilt": "Izgradio sam World Cupigami kako bih donio dio američke sportske kulture na najveću svjetsku pozornicu — u duhu dijeljenja koji čini Svjetski Kup posebnim. Scorigami u fudbalu funkcioniše malo drugačije nego u američkom fudbalu, jer se golovi postižu jedan po jedan, a ne u skupovima od 2, 3, 6 ili 7. To čini nove scorigamije rjeđim i značajnijim.",
-    "mensOnly": "Ovo trenutno obuhvata samo Muški FIFA Svjetski Kup. Izdanje za Ženski Svjetski Kup dolazi uskoro.",
+    "whyBuilt": "Napravio sam World Cupigami kako bih unio malo američke sportske kulture na najveću svjetsku pozornicu — u duhu dijeljenja koji čini Svjetsko prvenstvo posebnim. Scorigami u fudbalu funkcioniše malo drugačije nego u američkom fudbalu, jer se golovi postižu jedan po jedan, a ne u grupama od 2, 3, 6, 7 ili 8. To čini nove scorigamije rjeđim i značajnijim.",
+    "mensOnly": "Ovo trenutno pokriva samo Muško FIFA Svjetsko prvenstvo. Izdanje za Žensko svjetsko prvenstvo uskoro stiže.",
     "pointTitle": "Koja je svrha ovoga?",
-    "pointDescription": "Iskreno? Nikakva. Jednostavno je zabavno ako ste sportski analitičar-štreberac poput mene. Ali ako nešto dobro može proizaći iz ovoga — kada vaš tim postigne scorigami, razmislite o doniranju nekoj dobrotvorne organizaciji u zemlji gubitničke ekipe. Historijski rezultat je odličan povod za malo dobra u svijetu."
+    "pointDescription": "Iskreno? Nikakva. Jednostavno je zabavno ako ste štreberski zainteresovani za sportsku analitiku kao ja. Ali ako iz ovoga može da izađe nešto dobro — kada vaš tim postigne scorigami, razmislite o donaciji nekoj dobrotvornoj organizaciji u zemlji poraženog tima. Historijski rezultat je odličan povod da se učini nešto dobro u svijetu."
   },
   "stats": {
     "matches": "utakmica",
     "uniqueScores": "jedinstvenih rezultata",
-    "neverHappened": "nikada se nije desilo",
+    "neverHappened": "još moguće",
+    "editionNumber": "23.",
+    "editionLabel": "Izdanje Muškog Svjetskog prvenstva",
     "tournaments": "Turniri"
   },
   "views": {
     "heatmap": "Toplotna mapa",
-    "allMatches": "Sve utakmice"
+    "allMatches": "Sve utakmice",
+    "funFacts": "Zanimljivosti"
+  },
+  "upcoming": {
+    "kickerLabel": "Čeka se početak",
+    "title": "Svjetsko prvenstvo {year}. godine još nije počelo",
+    "description": "FIFA Muško Svjetsko prvenstvo {year}. godine počinje {date}. Rezultati utakmica će se pojavljivati ovdje u realnom vremenu kako se utakmice završavaju — a toplotna mapa iznad prikazuje stanje scorigamija neposredno prije početka turnira.",
+    "kickoffDateFormat": "MMMM d, yyyy"
   },
   "grid": {
-    "description": "Redovi = rezultat gubitnika · Kolone = rezultat pobjednika · Kliknite na bilo koje polje",
-    "never": "Nikada",
+    "description": "Redovi = rezultat gubitnika · Kolone = rezultat pobjednika · Rezultati prikazani kao pobjednik–gubitnik · Kliknite na bilo koje polje",
+    "never": "Nikad",
     "unique": "Jedinstveno (1×)",
     "veryRare": "Vrlo rijetko",
     "rare": "Rijetko",
     "common": "Uobičajeno",
     "veryCommon": "Vrlo uobičajeno",
-    "neverHappened": "{low}–{high}: Nikada",
-    "count": "{low}–{high}: {count}×"
+    "neverHappened": "{high}–{low}: Nikad",
+    "count": "{high}–{low}: {count}×"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
-    "scorigamiDescription": "{low}–{high} se nikada nije dogodilo u historiji Svjetskog Kupa.",
+    "noScorigamiTitle": "Još uvijek nije scorigami",
+    "scorigamiDescription": "Rezultat {high}–{low} se nikada nije dogodio u historiji Svjetskog prvenstva.",
     "scorigamiBadge": "(Scorigami)",
-    "close": "Zatvori"
+    "close": "Zatvori",
+    "readMore": "Wikipedia",
+    "readMoreAria": "Pročitajte više o ovoj utakmici na Wikipediji"
   },
   "table": {
-    "searchPlaceholder": "Pretraži ekipe, turnire, rezultate...",
+    "searchPlaceholder": "Pretražite timove, turnire, rezultate...",
     "date": "Datum",
     "home": "Domaćin",
+    "winner": "Pobjednik",
     "score": "Rezultat",
     "away": "Gost",
+    "loser": "Gubitnik",
     "stage": "Faza",
     "venue": "Stadion",
     "year": "Godina",
-    "showingOf": "Prikazuje se {shown} od {total} utakmica.",
+    "showingOf": "Prikazano {shown} od {total} utakmica.",
     "allTournaments": "Svi turniri",
     "allStages": "Sve faze",
     "showAll": "Prikaži sve",
@@ -56,17 +71,70 @@
   },
   "stages": {
     "group stage": "Grupna faza",
-    "round of 32": "Runda 32",
-    "round of 16": "Šesnaestina finala",
+    "round of 32": "Krug 32",
+    "round of 16": "Krug 16",
     "quarter-finals": "Četvrtfinale",
     "semi-finals": "Polufinale",
     "third-place match": "Utakmica za treće mjesto",
-    "final": "Finale"
+    "final": "Finale",
+    "final round": "Završna runda",
+    "second group stage": "Druga grupna faza"
   },
   "footer": {
-    "dataFrom": "Podaci iz",
+    "dataFrom": "Historijski podaci iz",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "Uživo rezultati za 2026. od",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "Scorigami koncept — Jon Bois",
+    "disclaimer": "FIFA World Cup™ je zaštitni znak FIFA-e. Ovaj sajt nije povezan s FIFA-om, nije od nje odobren niti na bilo koji način pridružen."
+  },
+  "funFacts": {
+    "mostRecentTitle": "Najnoviji Scorigami",
+    "mostRecentNote": "Ovo je bio prvi put da se ovaj rezultat ikada pojavio u historiji Svjetskog prvenstva.",
+    "trueScorigamisTitle": "Jedinstveni Scorigamiji",
+    "trueScorigamisDesc": "Rezultati koji su se dogodili tačno jednom — nikada prije, nikada poslije.",
+    "mostCommonTitle": "Najčešći rezultati",
+    "mostCommonNote": "Skoro svaka peta utakmica završava pobjedom 1:0.",
+    "highestScoringTitle": "Utakmice s najviše golova (10+)",
+    "biggestBlowoutsTitle": "Najveće pobjede",
+    "scorigamiLeadersTitle": "Scorigami ljestvica",
+    "scorigamiLeadersDesc": "Timovi koji su bili uključeni u najviše prvih rezultata u historiji svih Svjetskih prvenstava.",
+    "scorigamiKingsNote": "Timovi s najviše jedinstvenih scorigamija: {teams}.",
+    "finalsTitle": "Finala Svjetskog prvenstva",
+    "finalsDesc": "Najčešći rezultat finala je {score}, koji se dogodio {count} puta ({years}).",
+    "finalsScorigamiTitle": "Finale Scorigami",
+    "finalsScorigamiDesc": "Finala u kojima se taj rezultat nikada ranije nije pojavio ni u jednoj utakmici Svjetskog prvenstva.",
+    "homeTurfTitle": "Scorigami domaćina",
+    "homeTurfDesc": "{count} puta je tim domaćina bio uključen kada se novi rezultat prvi put pojavio na njihovom Svjetskom prvenstvu.",
+    "allTimeStatsTitle": "Sveukupna statistika",
+    "extraTimeGames": "utakmica s produžecima",
+    "penaltyShootouts": "penalt serija",
+    "totalGoals": "ukupno golova",
+    "tournamentTrendsTitle": "Trendovi Svjetskog prvenstva",
+    "trendTeams": "Broj timova",
+    "trendMatches": "Odigrane utakmice",
+    "trendGoalsPerGame": "Golovi po utakmici",
+    "trendScorigamis": "Novi scorigamiji",
+    "wwiiNote": "Svjetska prvenstva 1942. i 1946. otkazana su zbog Drugog svjetskog rata.",
+    "goalDistTitle": "Raspodjela golova",
+    "goalDistDesc": "Koliko je utakmica imalo svaki ukupni broj golova na svim Svjetskim prvenstvima.",
+    "goalDistNote": "Raspodjela otprilike prati Poissonov oblik — većina utakmica se grupira oko 2–3 ukupna gola, s dugim repom visokoresultantnih susreta.",
+    "stageBreakdownTitle": "Scorigami po fazama",
+    "stageBreakdownDesc": "Koliko često se novi rezultat pojavljuje po prvi put u svakoj fazi turnira?",
+    "stageGroupLabel": "Grupna faza",
+    "stageKnockoutLabel": "Nokaut faza",
+    "stageSummaryDetail": "{scorigamis} scorigamija u {total} utakmica",
+    "stageTopNote": "{stage} prednjači s {count} scorigamija ({rate}% utakmica u toj fazi).",
+    "penaltigamiTitle": "Penaltigami",
+    "penaltigamiDesc": "Sve penalt serije u historiji Svjetskog prvenstva. Penaltigami je kombinacija rezultata utakmice i ishoda penalt serije koja se dogodila samo jednom.",
+    "penaltigamiUnique": "Dogodilo se samo jednom",
+    "penaltigamiRepeated": "Dogodilo se {count}×",
+    "penaltigamiSummary": "{unique} jedinstvenih kombinacija utakmica i penalta od {total} penalt serija",
+    "penaltigamiOnlyPenScore": "Jedini rezultat penalt serije koji se pojavio samo jednom. Svaki drugi ishod penalta (poput 4:2 ili 5:3) dogodio se više puta.",
+    "frontierTitle": "Scorigami granica",
+    "frontierDesc": "Ovi rezultati se nikada nisu dogodili, ali su najvjerovatniji sljedeći kandidati.",
+    "frontierNote": "S proširenjem Svjetskog prvenstva 2026. na 48 timova i 104 utakmice, veće razlike u golovima mogle bi konačno otvoriti novo poglavlje."
   },
   "locale": {}
 }

@@ -1,50 +1,65 @@
 {
   "header": {
     "title": "World Cupigami",
-    "subtitle": "Jedes einzigartige Endergebnis in der Geschichte der FIFA-Fußballweltmeisterschaft der Männer"
+    "kicker": "Ein scorigami-Projekt",
+    "subtitle": "Jedes einmalige Endergebnis in der Geschichte der FIFA Fußball-Weltmeisterschaft der Männer"
   },
   "explainer": {
     "title": "Was ist Scorigami?",
-    "description": "Scorigami bezeichnet ein Endergebnis, das in der Geschichte einer Sportart noch nie vorgekommen ist. Das Konzept wurde von Jon Bois bekannt gemacht, dessen großartige Arbeit zum NFL-Scorigami dieses Projekt inspiriert hat.",
+    "description": "Scorigami bezeichnet ein Endergebnis, das in der Geschichte einer Sportart noch nie zuvor vorgekommen ist. Bekannt gemacht hat das Konzept Jon Bois, dessen brillante Arbeit über NFL-scorigami dieses Projekt inspiriert hat.",
     "watchVideo": "Originalvideo ansehen",
-    "whyBuilt": "Ich habe World Cupigami entwickelt, um ein Stück amerikanische Sportkultur auf die größte Bühne der Welt zu bringen – im Geiste des Teilens, der die Weltmeisterschaft so besonders macht. Scorigami funktioniert im Fußball etwas anders als im American Football, da Tore einzeln erzielt werden und nicht in Blöcken von 2, 3, 6 oder 7 Punkten. Das macht neue Scorigamis seltener und bedeutsamer.",
-    "mensOnly": "Dies umfasst derzeit nur die FIFA-Weltmeisterschaft der Männer. Eine Ausgabe zur Frauen-Weltmeisterschaft folgt in Kürze.",
-    "pointTitle": "Was soll das Ganze?",
-    "pointDescription": "Ehrlich gesagt? Nichts. Es macht einfach Spaß, wenn man ein Sportstatistik-Nerd wie ich ist. Aber wenn doch etwas Gutes dabei herauskommen kann: Wenn dein Team ein Scorigami erzielt, überleg doch, eine Wohltätigkeitsorganisation im Land der unterlegenen Mannschaft zu unterstützen. Ein historisches Ergebnis ist ein schöner Anlass, der Welt etwas Gutes zu tun."
+    "whyBuilt": "Ich habe World Cupigami gebaut, um ein bisschen amerikanische Sportkultur auf die größte Bühne der Welt zu bringen — im Geist des Teilens, der die WM so besonders macht. Scorigami funktioniert im Fußball etwas anders als im American Football, da Tore einzeln erzielt werden statt in Blöcken von 2, 3, 6, 7 oder 8 Punkten. Das macht neue scorigamis seltener und bedeutungsvoller.",
+    "mensOnly": "Dies umfasst derzeit nur die FIFA Fußball-Weltmeisterschaft der Männer. Eine Ausgabe für die Frauen-WM folgt in Kürze.",
+    "pointTitle": "Wozu soll das gut sein?",
+    "pointDescription": "Ehrlich gesagt? Zu nichts. Es macht einfach Spaß, wenn man ein Sportstatistik-Nerd ist wie ich. Aber wenn doch etwas Gutes dabei herauskommen kann: Wenn deine Mannschaft ein scorigami erzielt, überleg doch, ob du für eine Wohltätigkeitsorganisation im Land des unterlegenen Teams spendest. Ein historisches Ergebnis ist ein toller Anlass, der Welt etwas Gutes zu tun."
   },
   "stats": {
     "matches": "Spiele",
-    "uniqueScores": "einzigartige Ergebnisse",
-    "neverHappened": "noch nie vorgekommen",
+    "uniqueScores": "einmalige Ergebnisse",
+    "neverHappened": "noch möglich",
+    "editionNumber": "23.",
+    "editionLabel": "Ausgabe der Männer-Weltmeisterschaft",
     "tournaments": "Turniere"
   },
   "views": {
     "heatmap": "Heatmap",
-    "allMatches": "Alle Spiele"
+    "allMatches": "Alle Spiele",
+    "funFacts": "Wissenswertes"
+  },
+  "upcoming": {
+    "kickerLabel": "Wartet auf den Anstoß",
+    "title": "Die WM {year} hat noch nicht begonnen",
+    "description": "Die FIFA Fußball-Weltmeisterschaft {year} der Männer beginnt am {date}. Spielergebnisse erscheinen hier in Echtzeit, sobald Partien enden — und die Heatmap oben zeigt den Stand des scorigami unmittelbar vor Turnierbeginn.",
+    "kickoffDateFormat": "MMMM d, yyyy"
   },
   "grid": {
-    "description": "Zeilen = Verlierer-Tore · Spalten = Gewinner-Tore · Auf eine Zelle klicken",
-    "never": "Nie",
+    "description": "Zeilen = Verliereranteil · Spalten = Siegeranteil · Ergebnisse als Sieger–Verlierer · Auf eine Zelle klicken",
+    "never": "Noch nie",
     "unique": "Einmalig (1×)",
     "veryRare": "Sehr selten",
     "rare": "Selten",
     "common": "Häufig",
     "veryCommon": "Sehr häufig",
-    "neverHappened": "{low}–{high}: Noch nie",
-    "count": "{low}–{high}: {count}×"
+    "neverHappened": "{high}–{low}: Noch nie",
+    "count": "{high}–{low}: {count}×"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
-    "scorigamiDescription": "{low}–{high} ist in der Geschichte der Weltmeisterschaft noch nie vorgekommen.",
+    "noScorigamiTitle": "Noch kein Scorigami",
+    "scorigamiDescription": "{high}–{low} ist in der WM-Geschichte noch nie vorgekommen.",
     "scorigamiBadge": "(Scorigami)",
-    "close": "Schließen"
+    "close": "Schließen",
+    "readMore": "Wikipedia",
+    "readMoreAria": "Mehr über dieses Spiel auf Wikipedia lesen"
   },
   "table": {
     "searchPlaceholder": "Teams, Turniere, Ergebnisse suchen...",
     "date": "Datum",
-    "home": "Heim",
+    "home": "Heimteam",
+    "winner": "Sieger",
     "score": "Ergebnis",
-    "away": "Gast",
+    "away": "Auswärtsteam",
+    "loser": "Verlierer",
     "stage": "Runde",
     "venue": "Spielort",
     "year": "Jahr",
@@ -61,12 +76,65 @@
     "quarter-finals": "Viertelfinale",
     "semi-finals": "Halbfinale",
     "third-place match": "Spiel um Platz 3",
-    "final": "Finale"
+    "final": "Finale",
+    "final round": "Abschlussrunde",
+    "second group stage": "Zweite Gruppenphase"
   },
   "footer": {
-    "dataFrom": "Daten aus",
+    "dataFrom": "Historische Daten aus",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "Live-Ergebnisse 2026 von",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "Scorigami-Konzept von Jon Bois",
+    "disclaimer": "FIFA World Cup™ ist eine Marke der FIFA. Diese Seite steht in keiner Verbindung zur FIFA und wird von ihr weder unterstützt noch ist sie ihr angegliedert."
+  },
+  "funFacts": {
+    "mostRecentTitle": "Jüngstes Scorigami",
+    "mostRecentNote": "Dieses Ergebnis kam in der WM-Geschichte zum allerersten Mal vor.",
+    "trueScorigamisTitle": "Einmalige Scorigamis",
+    "trueScorigamisDesc": "Ergebnisse, die genau einmal vorgekommen sind — nie davor, nie danach.",
+    "mostCommonTitle": "Häufigste Ergebnisse",
+    "mostCommonNote": "Fast jedes fünfte Spiel endet mit einem 1:0-Sieg.",
+    "highestScoringTitle": "Torreichste Spiele (10+ Tore)",
+    "biggestBlowoutsTitle": "Höchste Niederlagen",
+    "scorigamiLeadersTitle": "Scorigami-Rangliste",
+    "scorigamiLeadersDesc": "Teams, die an den meisten erstmaligen Ergebnissen über alle Weltmeisterschaften hinweg beteiligt waren.",
+    "scorigamiKingsNote": "Teams mit den meisten einmaligen scorigamis: {teams}.",
+    "finalsTitle": "WM-Finale",
+    "finalsDesc": "Das häufigste Finalergebnis ist {score}, das {count} Mal vorkam ({years}).",
+    "finalsScorigamiTitle": "Finale-Scorigami",
+    "finalsScorigamiDesc": "Finals, bei denen das Ergebnis zuvor noch in keinem WM-Spiel vorgekommen war.",
+    "homeTurfTitle": "Heimvorteil-Scorigami",
+    "homeTurfDesc": "{count} Mal war eine Gastgebernation beteiligt, als bei ihrer eigenen WM ein völlig neues Ergebnis erzielt wurde.",
+    "allTimeStatsTitle": "Ewige Statistiken",
+    "extraTimeGames": "Spiele mit Verlängerung",
+    "penaltyShootouts": "Elfmeterschießen",
+    "totalGoals": "Tore insgesamt",
+    "tournamentTrendsTitle": "WM-Trends",
+    "trendTeams": "Anzahl der Teams",
+    "trendMatches": "Gespielte Partien",
+    "trendGoalsPerGame": "Tore pro Spiel",
+    "trendScorigamis": "Neue Scorigamis",
+    "wwiiNote": "Die Weltmeisterschaften 1942 und 1946 wurden wegen des Zweiten Weltkriegs abgesagt.",
+    "goalDistTitle": "Torverteilung",
+    "goalDistDesc": "Wie viele Spiele über alle Weltmeisterschaften hinweg jeweils eine bestimmte Gesamtanzahl an Toren aufwiesen.",
+    "goalDistNote": "Die Verteilung folgt grob einer Poisson-Kurve — die meisten Spiele liegen bei 2–3 Toren insgesamt, mit einem langen Ausläufer zu torreichen Partien hin.",
+    "stageBreakdownTitle": "Scorigami nach Runde",
+    "stageBreakdownDesc": "Wie oft debütiert ein völlig neues Ergebnis in der jeweiligen Turnierphase?",
+    "stageGroupLabel": "Gruppenphase",
+    "stageKnockoutLabel": "K.-o.-Runde",
+    "stageSummaryDetail": "{scorigamis} Scorigamis in {total} Spielen",
+    "stageTopNote": "{stage} führt mit {count} Scorigamis ({rate}% der Spiele in dieser Runde).",
+    "penaltigamiTitle": "Penaltigami",
+    "penaltigamiDesc": "Alle Elfmeterschießen in der WM-Geschichte. Ein penaltigami ist eine Kombination aus Spielergebnis und Elfmeterschießen-Ausgang, die nur einmal vorkam.",
+    "penaltigamiUnique": "Nur einmal vorgekommen",
+    "penaltigamiRepeated": "{count}× vorgekommen",
+    "penaltigamiSummary": "{unique} einmalige Spiel-Elfmeter-Kombinationen von {total} Elfmeterschießen",
+    "penaltigamiOnlyPenScore": "Das einzige Elfmeterschießen-Ergebnis, das nur einmal vorkam. Jedes andere Elfmeterschießen-Ergebnis (wie 4:2 oder 5:3) trat mehrfach auf.",
+    "frontierTitle": "Die Scorigami-Grenze",
+    "frontierDesc": "Diese Ergebnisse sind noch nie vorgekommen, haben aber die größten Chancen, als Nächstes zu fallen.",
+    "frontierNote": "Mit der Erweiterung der WM 2026 auf 48 Teams und 104 Spiele könnten mehr Ungleichgewichte endlich Neuland erschließen."
   },
   "locale": {}
 }

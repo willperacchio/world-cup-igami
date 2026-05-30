@@ -1,56 +1,71 @@
 {
   "header": {
     "title": "World Cupigami",
+    "kicker": "一个 scorigami 项目",
     "subtitle": "男子FIFA世界杯历史上每一个独特的终场比分"
   },
   "explainer": {
-    "title": "什么是Scorigami？",
-    "description": "Scorigami是指某项运动历史上从未出现过的终场比分。这一概念由Jon Bois推广，他关于NFL scorigami的精彩作品启发了这个项目。",
+    "title": "什么是 Scorigami？",
+    "description": "Scorigami 是指某项运动历史上从未出现过的终场比分。这一概念由 Jon Bois 推广，他关于 NFL scorigami 的精彩作品启发了本项目的诞生。",
     "watchVideo": "观看原版视频",
-    "whyBuilt": "我创建World Cupigami，是想把一点美式体育文化带到世界最大的舞台上——以那种让世界杯变得特别的分享精神。Scorigami在足球中的运作方式与美式橄榄球有些不同，因为进球是一个一个地得分，而不是一次得2、3、6或7分。这使得新的scorigami更加罕见，也更有意义。",
-    "mensOnly": "目前仅涵盖男子FIFA世界杯。女子世界杯版本即将推出。",
+    "whyBuilt": "我创建 World Cupigami，是想将一点美式体育文化带到世界最大的舞台——以世界杯所特有的分享精神。Scorigami 在足球中的运作方式与美式橄榄球略有不同，因为进球是一个一个累积的，而不是一次得2、3、6、7或8分。这使得新的 scorigami 更为罕见，也更有意义。",
+    "mensOnly": "本站目前仅涵盖男子FIFA世界杯。女子世界杯版本即将推出。",
     "pointTitle": "这有什么意义？",
-    "pointDescription": "说实话？没什么。如果你像我一样是个体育数据迷，这只是件好玩的事。但如果说有什么积极的意义——当你支持的球队打出一个scorigami时，不妨向负队所在国家的慈善机构捐款。一个历史性的比分，是为世界做些好事的绝佳理由。"
+    "pointDescription": "说实话？没什么意义。如果你和我一样是个体育数据迷，这就纯粹是种乐趣。不过如果真要说有什么好事能从中而来——当你支持的球队打出一个 scorigami 时，不妨考虑向失利方所在国家的慈善机构捐款。一个历史性的比分，是在世界上做些好事的绝佳理由。"
   },
   "stats": {
     "matches": "场比赛",
-    "uniqueScores": "独特比分",
-    "neverHappened": "从未出现",
-    "tournaments": "届赛事"
+    "uniqueScores": "个独特比分",
+    "neverHappened": "仍有可能",
+    "editionNumber": "第23届",
+    "editionLabel": "男子世界杯",
+    "tournaments": "届锦标赛"
   },
   "views": {
     "heatmap": "热力图",
-    "allMatches": "全部比赛"
+    "allMatches": "所有比赛",
+    "funFacts": "趣味数据"
+  },
+  "upcoming": {
+    "kickerLabel": "等待开赛",
+    "title": "{year}年世界杯尚未开始",
+    "description": "{year}年FIFA男子世界杯将于{date}开幕。比赛结束后，结果将实时更新至此——上方热力图展示的是本届赛事开始前的 scorigami 现状。",
+    "kickoffDateFormat": "MMMM d, yyyy"
   },
   "grid": {
-    "description": "行 = 负队比分 · 列 = 胜队比分 · 点击任意格",
-    "never": "从未出现",
-    "unique": "唯一（1×）",
+    "description": "行 = 负方比分 · 列 = 胜方比分 · 比分以胜方–负方显示 · 点击任意格",
+    "never": "从未发生",
+    "unique": "独一无二（1次）",
     "veryRare": "极为罕见",
-    "rare": "较为罕见",
-    "common": "较为常见",
+    "rare": "罕见",
+    "common": "常见",
     "veryCommon": "非常常见",
-    "neverHappened": "{low}–{high}：从未出现",
-    "count": "{low}–{high}：{count}×"
+    "neverHappened": "{high}–{low}：从未发生",
+    "count": "{high}–{low}：{count}次"
   },
   "detail": {
     "scorigamiTitle": "Scorigami！",
-    "scorigamiDescription": "{low}–{high} 这一比分在世界杯历史上从未出现过。",
+    "noScorigamiTitle": "暂无 Scorigami",
+    "scorigamiDescription": "{high}–{low} 这一比分从未在世界杯历史上出现过。",
     "scorigamiBadge": "（Scorigami）",
-    "close": "关闭"
+    "close": "关闭",
+    "readMore": "Wikipedia",
+    "readMoreAria": "在 Wikipedia 上阅读更多关于此场比赛的信息"
   },
   "table": {
     "searchPlaceholder": "搜索球队、赛事、比分……",
     "date": "日期",
     "home": "主队",
+    "winner": "胜者",
     "score": "比分",
     "away": "客队",
+    "loser": "负者",
     "stage": "阶段",
     "venue": "场馆",
     "year": "年份",
     "showingOf": "显示 {total} 场比赛中的 {shown} 场。",
-    "allTournaments": "全部赛事",
-    "allStages": "全部阶段",
+    "allTournaments": "所有赛事",
+    "allStages": "所有阶段",
     "showAll": "显示全部",
     "showLess": "收起"
   },
@@ -61,12 +76,65 @@
     "quarter-finals": "四分之一决赛",
     "semi-finals": "半决赛",
     "third-place match": "季军赛",
-    "final": "决赛"
+    "final": "决赛",
+    "final round": "最终轮",
+    "second group stage": "第二轮小组赛"
   },
   "footer": {
-    "dataFrom": "数据来源",
+    "dataFrom": "历史数据来源",
     "dataSource": "The Fjelstul World Cup Database",
-    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)"
+    "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
+    "liveDataFrom": "2026年实时赛果来源",
+    "liveDataSource": "football-data.org",
+    "conceptCredit": "Scorigami 概念由 Jon Bois 提出",
+    "disclaimer": "FIFA World Cup™ 是 FIFA 的注册商标。本站与 FIFA 无任何关联，未获其认可或授权。"
+  },
+  "funFacts": {
+    "mostRecentTitle": "最新 Scorigami",
+    "mostRecentNote": "这是该比分在世界杯历史上首次出现。",
+    "trueScorigamisTitle": "独特 Scorigami",
+    "trueScorigamisDesc": "恰好只出现过一次的比分——前无古人，后无来者。",
+    "mostCommonTitle": "最常见比分",
+    "mostCommonNote": "近五分之一的比赛以1比0结束。",
+    "highestScoringTitle": "最高进球场次（10球以上）",
+    "biggestBlowoutsTitle": "最悬殊的比分",
+    "scorigamiLeadersTitle": "Scorigami 排行榜",
+    "scorigamiLeadersDesc": "历届世界杯中创造最多首次比分的球队。",
+    "scorigamiKingsNote": "拥有最多独特 scorigami 的球队：{teams}。",
+    "finalsTitle": "世界杯决赛",
+    "finalsDesc": "决赛中最常见的比分是 {score}，共出现过 {count} 次（{years}）。",
+    "finalsScorigamiTitle": "决赛 Scorigami",
+    "finalsScorigamiDesc": "该场决赛的比分在世界杯历史上从未出现过。",
+    "homeTurfTitle": "东道主 Scorigami",
+    "homeTurfDesc": "共有 {count} 次，东道主在本届世界杯中参与了全新比分的首次出现。",
+    "allTimeStatsTitle": "历史总体数据",
+    "extraTimeGames": "场加时赛",
+    "penaltyShootouts": "场点球大战",
+    "totalGoals": "个总进球",
+    "tournamentTrendsTitle": "世界杯趋势",
+    "trendTeams": "参赛队伍数",
+    "trendMatches": "比赛场数",
+    "trendGoalsPerGame": "场均进球数",
+    "trendScorigamis": "新 Scorigami 数",
+    "wwiiNote": "1942年和1946年世界杯因第二次世界大战而取消。",
+    "goalDistTitle": "进球数分布",
+    "goalDistDesc": "历届世界杯中，各总进球数对应的比赛场次分布。",
+    "goalDistNote": "分布大致呈泊松形态——大多数比赛集中在全场2至3球，高分场次形成较长的尾部。",
+    "stageBreakdownTitle": "各阶段 Scorigami 分布",
+    "stageBreakdownDesc": "全新比分在赛事各阶段首次出现的频率如何？",
+    "stageGroupLabel": "小组赛",
+    "stageKnockoutLabel": "淘汰赛",
+    "stageSummaryDetail": "{total} 场比赛中有 {scorigamis} 个 scorigami",
+    "stageTopNote": "{stage} 领先，共产生 {count} 个 scorigami（占该阶段比赛的 {rate}%）。",
+    "penaltigamiTitle": "Penaltigami",
+    "penaltigamiDesc": "世界杯历史上的每一场点球大战。Penaltigami 是指比赛比分与点球结果的组合只出现过一次。",
+    "penaltigamiUnique": "仅出现过一次",
+    "penaltigamiRepeated": "已出现 {count} 次",
+    "penaltigamiSummary": "{total} 场点球大战中有 {unique} 个独特的比赛-点球组合",
+    "penaltigamiOnlyPenScore": "唯一只出现过一次的点球比分。其他所有点球结果（如4比2或5比3）均出现过多次。",
+    "frontierTitle": "Scorigami 前沿",
+    "frontierDesc": "这些比分从未出现过，但最有可能成为下一个新 scorigami。",
+    "frontierNote": "随着2026年世界杯扩军至48支球队、共104场比赛，更多悬殊比分或许将首次踏入历史。"
   },
   "locale": {}
 }

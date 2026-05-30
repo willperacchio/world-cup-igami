@@ -5,18 +5,18 @@
     "subtitle": "Tous les scores finaux uniques de l'histoire de la Coupe du Monde masculine de la FIFA"
   },
   "explainer": {
-    "title": "Qu'est-ce que le Scorigami ?",
-    "description": "Le Scorigami désigne un score final qui ne s'est jamais produit auparavant dans l'histoire d'un sport. Le concept a été popularisé par Jon Bois, dont le remarquable travail sur le scorigami NFL a inspiré ce projet.",
+    "title": "C'est quoi le Scorigami ?",
+    "description": "Le scorigami désigne un score final qui ne s'est jamais produit auparavant dans l'histoire d'un sport. Le concept a été popularisé par Jon Bois, dont le remarquable travail sur le scorigami NFL a inspiré ce projet.",
     "watchVideo": "Voir la vidéo originale",
-    "whyBuilt": "J'ai créé World Cupigami pour apporter un peu de culture sportive américaine à la plus grande scène du monde — dans l'esprit de partage qui rend la Coupe du Monde si spéciale. Le scorigami fonctionne un peu différemment au football qu'au football américain, puisque les buts sont marqués un par un plutôt que par tranches de 2, 3, 6, 7 ou 8 points. Cela rend les nouveaux scorigamis plus rares et plus significatifs.",
-    "mensOnly": "Ce site couvre actuellement uniquement la Coupe du Monde masculine de la FIFA. Une édition féminine est bientôt disponible.",
+    "whyBuilt": "J'ai créé World Cupigami pour apporter un peu de culture sportive américaine sur la plus grande scène du monde — dans l'esprit de partage qui rend la Coupe du Monde si spéciale. Le scorigami fonctionne un peu différemment au football qu'au football américain, puisque les buts sont marqués un par un plutôt que par tranches de 2, 3, 6, 7 ou 8. Cela rend les nouveaux scorigamis plus rares et plus marquants.",
+    "mensOnly": "Ce site couvre uniquement la Coupe du Monde masculine de la FIFA pour l'instant. Une édition féminine arrive bientôt.",
     "pointTitle": "À quoi ça sert ?",
-    "pointDescription": "Honnêtement ? À rien. C'est juste amusant si vous êtes un passionné d'analytique sportive comme moi. Mais s'il y a une bonne chose qui peut en ressortir — quand votre équipe réalise un scorigami, pensez à faire un don à une association caritative dans le pays de l'équipe adverse. Un score historique est une excellente occasion de faire du bien dans le monde."
+    "pointDescription": "Honnêtement ? À rien. C'est juste amusant si vous êtes un passionné d'analyse sportive comme moi. Mais s'il y a une bonne chose qui peut en découler — lorsque votre équipe réalise un scorigami, pensez à faire un don à une association caritative dans le pays de l'équipe perdante. Un score historique est une excellente occasion de faire du bien dans le monde."
   },
   "stats": {
     "matches": "matchs",
     "uniqueScores": "scores uniques",
-    "neverHappened": "encore possibles",
+    "neverHappened": "encore possible",
     "editionNumber": "23e",
     "editionLabel": "Édition de la Coupe du Monde masculine",
     "tournaments": "Tournois"
@@ -29,8 +29,8 @@
   "upcoming": {
     "kickerLabel": "En attente du coup d'envoi",
     "title": "La Coupe du Monde {year} n'a pas encore commencé",
-    "description": "La Coupe du Monde masculine FIFA {year} débute le {date}. Les résultats des matchs apparaîtront ici en temps réel à la fin de chaque rencontre — et la carte thermique ci-dessus montre l'état du scorigami juste avant le début du tournoi.",
-    "kickoffDateFormat": "d MMMM yyyy"
+    "description": "La Coupe du Monde masculine FIFA {year} donne le coup d'envoi le {date}. Les résultats des matchs apparaîtront ici en temps réel à la fin de chaque rencontre — et la carte thermique ci-dessus reflète l'état du scorigami juste avant le début du tournoi.",
+    "kickoffDateFormat": "MMMM d, yyyy"
   },
   "grid": {
     "description": "Lignes = score du perdant · Colonnes = score du gagnant · Scores affichés gagnant–perdant · Cliquez sur une cellule",
@@ -49,8 +49,8 @@
     "scorigamiDescription": "{high}–{low} ne s'est jamais produit dans l'histoire de la Coupe du Monde.",
     "scorigamiBadge": "(Scorigami)",
     "close": "Fermer",
-    "readMore": "Wikipédia",
-    "readMoreAria": "En savoir plus sur ce match sur Wikipédia"
+    "readMore": "Wikipedia",
+    "readMoreAria": "En savoir plus sur ce match sur Wikipedia"
   },
   "table": {
     "searchPlaceholder": "Rechercher des équipes, tournois, scores…",
@@ -67,11 +67,11 @@
     "allTournaments": "Tous les tournois",
     "allStages": "Toutes les phases",
     "showAll": "Tout afficher",
-    "showLess": "Afficher moins"
+    "showLess": "Réduire"
   },
   "stages": {
     "group stage": "Phase de groupes",
-    "round of 32": "Trente-deuxièmes de finale",
+    "round of 32": "Tour préliminaire",
     "round of 16": "Huitièmes de finale",
     "quarter-finals": "Quarts de finale",
     "semi-finals": "Demi-finales",
@@ -86,55 +86,55 @@
     "author": "by Joshua C. Fjelstul, Ph.D. (CC-BY-SA 4.0)",
     "liveDataFrom": "Résultats 2026 en direct via",
     "liveDataSource": "football-data.org",
-    "conceptCredit": "Concept scorigami de Jon Bois",
+    "conceptCredit": "Concept scorigami par Jon Bois",
     "disclaimer": "FIFA World Cup™ est une marque déposée de la FIFA. Ce site n'est ni affilié à la FIFA, ni approuvé ou soutenu par elle."
   },
   "funFacts": {
     "mostRecentTitle": "Scorigami le plus récent",
-    "mostRecentNote": "C'était la première fois que ce score s'était produit dans l'histoire de la Coupe du Monde.",
+    "mostRecentNote": "C'était la première fois que ce score s'était jamais produit dans l'histoire de la Coupe du Monde.",
     "trueScorigamisTitle": "Scorigamis uniques",
     "trueScorigamisDesc": "Des scores qui ne se sont produits qu'une seule fois — ni avant, ni depuis.",
     "mostCommonTitle": "Scores les plus fréquents",
     "mostCommonNote": "Près d'un match sur cinq se termine sur une victoire 1-0.",
-    "highestScoringTitle": "Matchs avec le plus de buts (10 buts et plus)",
-    "biggestBlowoutsTitle": "Plus larges victoires",
+    "highestScoringTitle": "Matchs avec le plus de buts (10 buts ou plus)",
+    "biggestBlowoutsTitle": "Les plus larges écarts",
     "scorigamiLeadersTitle": "Classement des scorigamis",
-    "scorigamiLeadersDesc": "Les équipes ayant participé au plus grand nombre de scores inédits dans l'histoire de la Coupe du Monde.",
-    "scorigamiKingsNote": "Les équipes avec le plus grand nombre de scorigamis uniques : {teams}.",
+    "scorigamiLeadersDesc": "Les équipes impliquées dans le plus grand nombre de scores inédits à travers toutes les Coupes du Monde.",
+    "scorigamiKingsNote": "Les équipes avec le plus de scorigamis uniques : {teams}.",
     "finalsTitle": "Finales de la Coupe du Monde",
-    "finalsDesc": "Le score le plus fréquent en finale est {score}, qui s'est produit {count} fois ({years}).",
+    "finalsDesc": "Le score le plus courant en finale est {score}, survenu {count} fois ({years}).",
     "finalsScorigamiTitle": "Scorigami en finale",
-    "finalsScorigamiDesc": "Finales où le score ne s'était jamais produit auparavant dans aucun match de la Coupe du Monde.",
+    "finalsScorigamiDesc": "Les finales dont le score ne s'était jamais produit auparavant dans aucun match de Coupe du Monde.",
     "homeTurfTitle": "Scorigami à domicile",
-    "homeTurfDesc": "{count} fois, une nation hôte a été impliquée dans l'apparition d'un score totalement inédit lors de sa propre Coupe du Monde.",
+    "homeTurfDesc": "{count} fois où une nation hôte était impliquée lors de l'apparition d'un score inédit dans sa propre Coupe du Monde.",
     "allTimeStatsTitle": "Statistiques historiques",
-    "extraTimeGames": "matchs avec prolongations",
-    "penaltyShootouts": "séances de tirs au but",
+    "extraTimeGames": "matchs en prolongation",
+    "penaltyShootouts": "tirs au but",
     "totalGoals": "buts au total",
     "tournamentTrendsTitle": "Tendances de la Coupe du Monde",
     "trendTeams": "Nombre d'équipes",
-    "trendMatches": "Matchs disputés",
+    "trendMatches": "Matchs joués",
     "trendGoalsPerGame": "Buts par match",
     "trendScorigamis": "Nouveaux scorigamis",
     "wwiiNote": "Les Coupes du Monde 1942 et 1946 ont été annulées en raison de la Seconde Guerre mondiale.",
     "goalDistTitle": "Répartition des buts",
-    "goalDistDesc": "Le nombre de matchs par total de buts marqués, toutes Coupes du Monde confondues.",
-    "goalDistNote": "La distribution suit approximativement une loi de Poisson — la plupart des matchs se concentrent autour de 2 à 3 buts au total, avec une longue traîne de rencontres très prolifiques.",
-    "stageBreakdownTitle": "Scorigamis par phase",
-    "stageBreakdownDesc": "À quelle fréquence un score totalement inédit apparaît-il à chaque phase du tournoi ?",
+    "goalDistDesc": "Le nombre de matchs selon le total de buts marqués, toutes Coupes du Monde confondues.",
+    "goalDistNote": "La distribution suit approximativement une loi de Poisson — la majorité des matchs se regroupent autour de 2 à 3 buts au total, avec une longue traîne pour les rencontres très prolifiques.",
+    "stageBreakdownTitle": "Scorigami par phase",
+    "stageBreakdownDesc": "À quelle fréquence un score inédit apparaît-il à chaque phase du tournoi ?",
     "stageGroupLabel": "Phase de groupes",
     "stageKnockoutLabel": "Élimination directe",
     "stageSummaryDetail": "{scorigamis} scorigamis en {total} matchs",
-    "stageTopNote": "La {stage} est en tête avec {count} scorigamis ({rate} % des matchs à cette phase).",
+    "stageTopNote": "{stage} est en tête avec {count} scorigamis ({rate}% des matchs à ce stade).",
     "penaltigamiTitle": "Penaltigami",
-    "penaltigamiDesc": "Toutes les séances de tirs au but de l'histoire de la Coupe du Monde. Un « penaltigami » est une combinaison score de match + résultat aux tirs au but qui ne s'est produite qu'une seule fois.",
+    "penaltigamiDesc": "Toutes les séances de tirs au but de l'histoire de la Coupe du Monde. Un penaltigami est une combinaison score du match + résultat de la séance qui ne s'est produite qu'une seule fois.",
     "penaltigamiUnique": "Ne s'est produit qu'une seule fois",
     "penaltigamiRepeated": "S'est produit {count}×",
     "penaltigamiSummary": "{unique} combinaisons match-tirs au but uniques sur {total} séances",
-    "penaltigamiOnlyPenScore": "Le seul résultat aux tirs au but qui ne s'est produit qu'une seule fois — tous les autres résultats (comme 4–2 ou 5–3) se sont répétés plusieurs fois.",
+    "penaltigamiOnlyPenScore": "Le seul résultat de séance de tirs au but qui ne s'est produit qu'une seule fois. Tous les autres résultats (comme 4-2 ou 5-3) se sont répétés plusieurs fois.",
     "frontierTitle": "La frontière du scorigami",
-    "frontierDesc": "Ces scores ne se sont jamais produits mais sont les plus susceptibles de survenir prochainement.",
-    "frontierNote": "Avec la Coupe du Monde 2026 qui passe à 48 équipes et 104 matchs, certains écarts de score pourraient enfin ouvrir de nouveaux territoires."
+    "frontierDesc": "Ces scores ne se sont jamais produits, mais sont les plus susceptibles d'apparaître prochainement.",
+    "frontierNote": "Avec la Coupe du Monde 2026 qui s'élargit à 48 équipes et 104 matchs, de nouveaux écarts pourraient enfin franchir des territoires inexplorés."
   },
   "locale": {}
 }
