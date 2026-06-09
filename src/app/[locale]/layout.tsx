@@ -4,6 +4,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
 import { routing } from "@/i18n/routing";
+import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 // Geist supports Latin, Latin Extended, and Cyrillic — enough for the 24
@@ -32,9 +33,42 @@ const fraunces = Fraunces({
   display: "swap",
 });
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
   title: "World Cupigami",
   description: "Every unique final score in Men's FIFA World Cup history",
+  metadataBase: new URL(siteUrl),
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-icon.png",
+  },
+  openGraph: {
+    title: "World Cupigami",
+    description:
+      "Every unique final score in Men's FIFA World Cup history. Track scorigamis live during the 2026 World Cup.",
+    url: siteUrl,
+    siteName: "World Cupigami",
+    images: [
+      {
+        url: "/logo-1024.png",
+        width: 1024,
+        height: 1024,
+        alt: "World Cupigami — scorigami heatmap icon",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "World Cupigami",
+    description:
+      "Every unique final score in Men's FIFA World Cup history. Track scorigamis live during the 2026 World Cup.",
+    images: ["/logo-512.png"],
+  },
 };
 
 export default async function RootLayout({
