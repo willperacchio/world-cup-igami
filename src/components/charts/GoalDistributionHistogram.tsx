@@ -41,7 +41,7 @@ export default function GoalDistributionHistogram({
   return (
     <section className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4">
       <h3 className="font-bold mb-2">{title}</h3>
-      <p className="text-xs text-zinc-500 mb-3">{description}</p>
+      <p className="text-sm text-zinc-500 mb-3">{description}</p>
       <svg
         viewBox={`0 0 ${w} ${h}`}
         className="w-full"
@@ -116,7 +116,7 @@ export default function GoalDistributionHistogram({
           );
         })()}
       </svg>
-      <p className="text-[10px] text-zinc-400 mt-1 text-center">{footnote}</p>
+      <p className="text-xs text-zinc-400 mt-1 text-center">{footnote}</p>
     </section>
   );
 }

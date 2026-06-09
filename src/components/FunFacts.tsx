@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import { useTranslations } from "next-intl";
 import type { Match, ScorigamiEntry } from "@/lib/types";
 import { orientMatch } from "@/lib/match-utils";
+import { getWikipediaUrl, getFifaUrl } from "@/lib/external-links";
 import { getRarityChartColor } from "@/lib/rarity";
 import { computeFunFacts, type HostScorigami } from "@/lib/stats";
 import { Flag } from "./Flag";
@@ -36,10 +37,10 @@ export default function FunFacts({ matches, scorigami }: Props) {
           <h3 className="font-bold text-amber-700 dark:text-amber-400 mb-2">{t("mostRecentTitle")}</h3>
           <div className="text-sm space-y-1">
             <div>{matchLine(facts.mostRecent)}</div>
-            <p className="text-zinc-500 text-xs mt-2">
+            <p className="text-zinc-500 text-sm mt-2">
               {tStages(facts.mostRecent.stage)} · {facts.mostRecent.city}, {facts.mostRecent.country}
             </p>
-            <p className="text-zinc-500 text-xs">{t("mostRecentNote")}</p>
+            <p className="text-zinc-500 text-sm">{t("mostRecentNote")}</p>
           </div>
         </section>
       )}
@@ -48,7 +49,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
         {/* True scorigamis */}
         <section className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4 min-w-0 overflow-hidden">
           <h3 className="font-bold mb-3">{t("trueScorigamisTitle")}</h3>
-          <p className="text-xs text-zinc-500 mb-3">{t("trueScorigamisDesc")}</p>
+          <p className="text-sm text-zinc-500 mb-3">{t("trueScorigamisDesc")}</p>
           <div className="space-y-2 text-sm">
             {facts.uniqueScores
               .sort((a, b) => a.firstMatch.date.localeCompare(b.firstMatch.date))
@@ -61,7 +62,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
           </div>
           {facts.topTeams.filter((team) => team.count > 1).length > 0 && (
             <div className="mt-4 pt-3 border-t border-zinc-100 dark:border-zinc-800">
-              <p className="text-xs text-zinc-500">
+              <p className="text-sm text-zinc-500">
                 {t("scorigamiKingsNote", {
                   teams: facts.topTeams
                     .filter((team) => team.count > 1)
@@ -94,7 +95,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
               </div>
             ))}
           </div>
-          <p className="text-xs italic text-stone-500 mt-3 pt-1">
+          <p className="text-sm italic text-stone-500 mt-3 pt-1">
             {t("mostCommonNote")}
           </p>
         </section>
@@ -131,7 +132,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
         {/* Scorigami leaders */}
         <section className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4 min-w-0 overflow-hidden">
           <h3 className="font-bold mb-3">{t("scorigamiLeadersTitle")}</h3>
-          <p className="text-xs text-zinc-500 mb-3">{t("scorigamiLeadersDesc")}</p>
+          <p className="text-sm text-zinc-500 mb-3">{t("scorigamiLeadersDesc")}</p>
           <div className="space-y-2 text-sm">
             {facts.scorigamiLeaders.map((team, i) => (
               <div key={team.team} className="flex items-center gap-2 py-1 border-b border-zinc-100 dark:border-zinc-800 last:border-0">
@@ -160,19 +161,19 @@ export default function FunFacts({ matches, scorigami }: Props) {
             return (
               <div className="flex-1 grid grid-cols-1 gap-3">
                 <div className="flex-1 rounded-sm bg-[#161f1c]/60 border border-amber-400/20 px-5 py-4 flex flex-col justify-center">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-stone-500">
+                  <span className="text-xs font-mono uppercase tracking-wider text-stone-500">
                     {t("totalGoals")}
                   </span>
                   <span className="font-display text-3xl font-bold sb-numeral text-amber-300 mt-1">
                     {facts.totalGoals.toLocaleString()}
                   </span>
-                  <p className="text-xs text-stone-500 mt-1">
+                  <p className="text-sm text-stone-500 mt-1">
                     <strong className="text-stone-300 sb-numeral">{goalsPerGame}</strong> per game across{" "}
                     <strong className="text-stone-300 sb-numeral">{totalMatches}</strong> matches
                   </p>
                 </div>
                 <div className="flex-1 rounded-sm bg-[#161f1c]/60 border border-amber-400/20 px-5 py-4 flex flex-col justify-center">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-stone-500">
+                  <span className="text-xs font-mono uppercase tracking-wider text-stone-500">
                     {t("extraTimeGames")}
                   </span>
                   <div className="flex items-baseline gap-2 mt-1">
@@ -181,12 +182,12 @@ export default function FunFacts({ matches, scorigami }: Props) {
                     </span>
                     <span className="text-sm text-stone-400 sb-numeral">/ {knockoutMatches} knockout</span>
                   </div>
-                  <p className="text-xs text-stone-500 mt-1">
+                  <p className="text-sm text-stone-500 mt-1">
                     <strong className="text-stone-300 sb-numeral">{etPct}%</strong> of knockout matches went to extra time
                   </p>
                 </div>
                 <div className="flex-1 rounded-sm bg-[#161f1c]/60 border border-amber-400/20 px-5 py-4 flex flex-col justify-center">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-stone-500">
+                  <span className="text-xs font-mono uppercase tracking-wider text-stone-500">
                     {t("penaltyShootouts")}
                   </span>
                   <div className="flex items-baseline gap-2 mt-1">
@@ -195,7 +196,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
                     </span>
                     <span className="text-sm text-stone-400 sb-numeral">/ {knockoutMatches} knockout</span>
                   </div>
-                  <p className="text-xs text-stone-500 mt-1">
+                  <p className="text-sm text-stone-500 mt-1">
                     <strong className="text-stone-300 sb-numeral">{penPct}%</strong> of knockout matches decided by penalties
                   </p>
                 </div>
@@ -212,7 +213,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
             {/* The one finals scorigami */}
             {facts.finalsScorigamis.length > 0 && (
               <div className="space-y-1.5">
-                <p className="text-xs text-stone-500">{t("finalsScorigamiDesc")}</p>
+                <p className="text-sm text-stone-500">{t("finalsScorigamiDesc")}</p>
                 <div className="text-sm">
                   {facts.finalsScorigamis.map((m, i) => (
                     <div key={i}>{matchLine(m)}</div>
@@ -238,7 +239,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
 
               return (
                 <div className="space-y-1.5 flex-1 flex flex-col justify-center">
-                  <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-stone-500 text-center">
+                  <p className="font-mono text-xs tracking-[0.18em] uppercase text-stone-500 text-center">
                     Most common finals scores
                   </p>
                   <div className="space-y-1 text-sm mx-auto">
@@ -278,8 +279,8 @@ export default function FunFacts({ matches, scorigami }: Props) {
           <section className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4 min-w-0 space-y-4 overflow-hidden">
             <div>
               <h3 className="font-bold">{t("penaltigamiTitle")}</h3>
-              <p className="text-xs text-stone-500 mt-1">{t("penaltigamiDesc")}</p>
-              <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-amber-400/80 mt-2">
+              <p className="text-sm text-stone-500 mt-1">{t("penaltigamiDesc")}</p>
+              <p className="font-mono text-xs tracking-[0.18em] uppercase text-amber-400/80 mt-2">
                 {t("penaltigamiSummary", { unique: unique.length, total: facts.penaltyCount })}
               </p>
             </div>
@@ -287,7 +288,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
             <div className="grid md:grid-cols-[1fr_2fr] gap-6 items-center">
               {/* Left: Penalty score heatmap */}
               <div>
-                <p className="text-[10px] text-stone-500 font-mono uppercase tracking-wider mb-2 text-center">
+                <p className="text-xs text-stone-500 font-mono uppercase tracking-wider mb-2 text-center">
                   Loser ↓ · Winner →
                 </p>
                 <table className="mx-auto" style={{ borderSpacing: "3px" }}>
@@ -350,16 +351,16 @@ export default function FunFacts({ matches, scorigami }: Props) {
                 return (
                   <div className="min-w-0 space-y-4">
                     <div className="space-y-2">
-                      <p className="text-[10px] text-stone-500 font-mono uppercase tracking-wider">
+                      <p className="text-xs text-stone-500 font-mono uppercase tracking-wider">
                         Unique match + penalty combos
                       </p>
-                      <div className="space-y-0.5 text-xs">
+                      <div className="space-y-0.5 text-sm">
                         {unique.map((entry) => (
                           <div
                             key={entry.label}
                             className="flex items-center gap-1.5 py-1 border-b border-zinc-800 last:border-0 min-w-0"
                           >
-                            <span className="hidden md:inline font-mono text-amber-300/70 text-[10px] shrink-0">{entry.label}</span>
+                            <span className="hidden md:inline font-mono text-amber-300/70 text-xs shrink-0">{entry.label}</span>
                             <span className="flex-1 min-w-0 overflow-hidden">{matchLine(entry.matches[0])}</span>
                           </div>
                         ))}
@@ -367,13 +368,13 @@ export default function FunFacts({ matches, scorigami }: Props) {
                     </div>
                     {uniquePenOnly.length > 0 && (
                       <div className="rounded-sm border border-amber-400/30 bg-amber-400/5 px-3 py-2.5">
-                        <p className="text-[10px] text-stone-500 font-mono uppercase tracking-wider mb-1">
+                        <p className="text-xs text-stone-500 font-mono uppercase tracking-wider mb-1">
                           Only unique penalty score
                         </p>
                         <p className="text-sm font-bold text-amber-300 sb-numeral">
                           {uniquePenOnly[0].winner}–{uniquePenOnly[0].loser} pens
                         </p>
-                        <p className="text-xs text-stone-500 mt-1">
+                        <p className="text-sm text-stone-500 mt-1">
                           {t("penaltigamiOnlyPenScore")}
                         </p>
                       </div>
@@ -398,20 +399,20 @@ export default function FunFacts({ matches, scorigami }: Props) {
       {/* Stage breakdown */}
       <section className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4 min-w-0 overflow-hidden">
         <h3 className="font-bold mb-4">{t("stageBreakdownTitle")}</h3>
-        <p className="text-xs text-zinc-500 mb-4">{t("stageBreakdownDesc")}</p>
+        <p className="text-sm text-zinc-500 mb-4">{t("stageBreakdownDesc")}</p>
 
         <div className="grid grid-cols-2 gap-3 mb-5">
           <div className="rounded-lg bg-zinc-100 dark:bg-zinc-800 p-3 text-center">
             <div className="text-xs text-zinc-500 mb-1">{t("stageGroupLabel")}</div>
             <div className="font-bold text-lg">{facts.stageSummary.group.rate.toFixed(1)}%</div>
-            <div className="text-[10px] text-zinc-400">
+            <div className="text-xs text-zinc-400">
               {t("stageSummaryDetail", { scorigamis: facts.stageSummary.group.scorigamis, total: facts.stageSummary.group.total })}
             </div>
           </div>
           <div className="rounded-lg bg-zinc-100 dark:bg-zinc-800 p-3 text-center">
             <div className="text-xs text-zinc-500 mb-1">{t("stageKnockoutLabel")}</div>
             <div className="font-bold text-lg">{facts.stageSummary.knockout.rate.toFixed(1)}%</div>
-            <div className="text-[10px] text-zinc-400">
+            <div className="text-xs text-zinc-400">
               {t("stageSummaryDetail", { scorigamis: facts.stageSummary.knockout.scorigamis, total: facts.stageSummary.knockout.total })}
             </div>
           </div>
@@ -444,7 +445,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
         </div>
 
         {facts.topScorigamiStage && (
-          <p className="text-xs text-zinc-400 mt-3">
+          <p className="text-sm text-zinc-400 mt-3">
             {t("stageTopNote", {
               stage: tStages(facts.topScorigamiStage.stage),
               count: facts.topScorigamiStage.scorigamis,
@@ -473,7 +474,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
             />
           ))}
         </div>
-        <p className="text-[10px] text-zinc-400 mt-2 text-center">{t("wwiiNote")}</p>
+        <p className="text-xs text-zinc-400 mt-2 text-center">{t("wwiiNote")}</p>
       </section>
 
       {/* Scorigami frontier */}
@@ -490,7 +491,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-xs text-zinc-400 mt-3">{t("frontierNote")}</p>
+        <p className="text-sm text-zinc-400 mt-3">{t("frontierNote")}</p>
       </section>
     </div>
   );
@@ -510,7 +511,7 @@ function HomeTurfSection({
   return (
     <section className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4 min-w-0 overflow-hidden">
       <h3 className="font-bold mb-3">{t("homeTurfTitle")}</h3>
-      <p className="text-xs text-zinc-500 mb-3">{t("homeTurfDesc", { count: hostScorigamis.length })}</p>
+      <p className="text-sm text-zinc-500 mb-3">{t("homeTurfDesc", { count: hostScorigamis.length })}</p>
       <div className="space-y-2 text-sm">
         {hostScorigamis.map((h, i) => {
           const m = h.match;
@@ -532,9 +533,28 @@ function HomeTurfSection({
                   <Flag code={oriented.loserCode} year={oriented.year} alt={oriented.loserTeam} />
                   <span className={`truncate ${isLoserHost ? "underline decoration-amber-400 decoration-2 underline-offset-2" : ""}`}>{oriented.loserTeam}</span>
                 </span>
-                <span className="text-zinc-400 text-[10px] sm:text-xs shrink-0">({oriented.year})</span>
+                <span className="text-zinc-400 text-xs sm:text-sm shrink-0">({oriented.year})</span>
               </span>
-              <span className="text-xs text-zinc-400 hidden sm:inline">🏟️</span>
+              <span className="hidden sm:flex items-center gap-2 shrink-0 text-[10px]">
+                <a
+                  href={getWikipediaUrl(m)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-amber-400/70 hover:text-amber-300 underline decoration-amber-400/30 hover:decoration-amber-300 underline-offset-2 transition-colors"
+                  title="Read more on Wikipedia"
+                >
+                  W↗
+                </a>
+                <a
+                  href={getFifaUrl(m)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-stone-400 hover:text-stone-200 underline decoration-stone-400/30 hover:decoration-stone-200 underline-offset-2 transition-colors"
+                  title="View on FIFA"
+                >
+                  F↗
+                </a>
+              </span>
             </div>
           );
         })}

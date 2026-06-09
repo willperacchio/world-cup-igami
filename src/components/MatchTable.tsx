@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import type { Match, ScorigamiEntry } from "@/lib/types";
+import { getWikipediaUrl, getFifaUrl } from "@/lib/external-links";
 import { Flag } from "./Flag";
 
 interface Props {
@@ -137,7 +138,7 @@ export default function MatchTable({ matches, scorigami }: Props) {
         </button>
       </div>
       <div className="overflow-x-auto -mx-2 sm:mx-0">
-      <table className="w-full text-sm min-w-[640px]">
+      <table className="w-full text-sm min-w-[720px]">
         <thead>
           <tr className="border-b border-zinc-200 dark:border-zinc-700 text-start text-xs text-zinc-500 uppercase">
             <th className="py-2 px-2 cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100" onClick={() => toggleSort("date")}>{t("date")}{sortField === "date" ? arrow : ""}</th>
@@ -148,6 +149,7 @@ export default function MatchTable({ matches, scorigami }: Props) {
             <th className="py-2 px-2 cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100" onClick={() => toggleSort("venue")}>{t("venue")}{sortField === "venue" ? arrow : ""}</th>
             <th className="py-2 px-2 cursor-pointer hover:text-zinc-900 dark:hover:text-zinc-100" onClick={() => toggleSort("year")}>{t("year")}{sortField === "year" ? arrow : ""}</th>
             <th className="py-2 px-2 text-center">Scorigami</th>
+            <th className="py-2 px-2 text-center">Links</th>
           </tr>
         </thead>
         <tbody>
@@ -174,6 +176,28 @@ export default function MatchTable({ matches, scorigami }: Props) {
               <td className="py-2 px-2 text-zinc-400 text-xs">{m.tournament.replace(" FIFA Men's World Cup", "")}</td>
               <td className="py-2 px-2 text-center">
                 {scorigamiKeys.has(`${m.date}|${m.homeTeam}|${m.awayTeam}`) && "⚽"}
+              </td>
+              <td className="py-2 px-2 text-center">
+                <span className="flex items-center justify-center gap-2 text-[10px]">
+                  <a
+                    href={getWikipediaUrl(m)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-amber-400/70 hover:text-amber-300 underline decoration-amber-400/30 hover:decoration-amber-300 underline-offset-2 transition-colors"
+                    title="Read more on Wikipedia"
+                  >
+                    W↗
+                  </a>
+                  <a
+                    href={getFifaUrl(m)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-stone-400 hover:text-stone-200 underline decoration-stone-400/30 hover:decoration-stone-200 underline-offset-2 transition-colors"
+                    title="View on FIFA"
+                  >
+                    F↗
+                  </a>
+                </span>
               </td>
             </tr>
             );

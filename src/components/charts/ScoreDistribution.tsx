@@ -218,7 +218,7 @@ export default function ScoreDistribution({ mostCommon, totalMatches }: Props) {
                     <span className="font-bold">{a.label}</span>
                     <span className="text-zinc-400">{a.pct}%</span>
                   </div>
-                  <div className="text-[10px] text-zinc-500 ms-5 mt-0.5">{a.scores.join(", ")}</div>
+                  <div className="text-xs text-zinc-500 ms-5 mt-0.5">{a.scores.join(", ")}</div>
                 </div>
               ))}
             </div>
