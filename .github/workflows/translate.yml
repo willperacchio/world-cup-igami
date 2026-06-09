@@ -47,5 +47,10 @@ jobs:
             echo "No translation changes"
           else
             git commit -m "Update translations from en.json changes"
-            git push
+            # Retry push with rebase in case the data-refresh cron pushed while we were translating
+            for i in 1 2 3; do
+              git push && break
+              echo "Push failed (attempt $i), pulling and retrying..."
+              git pull --rebase
+            done
           fi
