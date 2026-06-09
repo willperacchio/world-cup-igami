@@ -2,9 +2,9 @@ name: Refresh live World Cup data
 
 on:
   schedule:
-    # Every 15 minutes. football-data.org free tier permits 10 req/min,
+    # Every 10 minutes. football-data.org free tier permits 10 req/min,
     # so this stays well under the cap (1 req per run).
-    - cron: "*/15 * * * *"
+    - cron: "*/10 * * * *"
   workflow_dispatch:
     inputs:
       reason:
@@ -41,11 +41,19 @@ jobs:
       - name: Rebuild matches.json / scorigami.json / summary.json
         run: npx tsx scripts/process-data.ts
 
+      - name: Tweet new match results
+        env:
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
+        run: npx tsx scripts/post-match-tweet.ts
+
       - name: Commit data updates if anything changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/live-matches.json data/matches.json data/scorigami.json data/summary.json
+          git add data/live-matches.json data/matches.json data/scorigami.json data/summary.json data/tweeted-matches.json
           if git diff --staged --quiet; then
             echo "No data changes — skipping commit."
           else
