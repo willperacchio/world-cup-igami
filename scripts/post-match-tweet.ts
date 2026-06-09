@@ -206,13 +206,9 @@ function flag(code: string): string {
     URU: "UY", UZB: "UZ", VAN: "VU", VEN: "VE", VIE: "VN", YEM: "YE",
     ZAM: "ZM", ZIM: "ZW", ENG: "GB", SCO: "GB", WAL: "GB", NIR: "GB",
     CUR: "CW", BOE: "BQ",
-    // ISO 3166-1 alpha-3 codes used in the CSV (not FIFA TLA)
-    HRV: "HR", BIH: "BA", SRB: "RS", MNE: "ME", SVN: "SI", SVK: "SK",
-    CZE: "CZ", DEU: "DE", NLD: "NL", CHE: "CH", SWE: "SE", DNK: "DK",
-    NOR: "NO", FIN: "FI", ISL: "IS", AUT: "AT", HUN: "HU", POL: "PL",
-    ROU: "RO", BGR: "BG", UKR: "UA", RUS: "RU", PRT: "PT", GRC: "GR",
-    TUR: "TR", SAU: "SA", ARE: "AE", IRN: "IR", IRQ: "IQ", JPN: "JP",
-    KOR: "KR", PRK: "KP", CHN: "CN", ZAF: "ZA",
+    // ISO 3166-1 alpha-3 codes that differ from the FIFA TLA already above
+    HRV: "HR", DEU: "DE", NLD: "NL", BGR: "BG", PRT: "PT", GRC: "GR",
+    DNK: "DK", CHE: "CH", ZAF: "ZA",
     // Defunct nations — use successor or historical flag
     YUG: "RS", TCH: "CZ", URS: "RU", FRG: "DE", GDR: "DE", SCG: "RS",
     ZAI: "CD", DEI: "ID",
