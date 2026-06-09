@@ -4,9 +4,9 @@ import { useTranslations } from "next-intl";
 import { TwitterIcon, InstagramIcon, EmailIcon } from "./icons";
 
 const SOCIAL_LINKS = [
-  { href: "https://twitter.com/YOUR_HANDLE", label: "Twitter", Icon: TwitterIcon },
-  { href: "https://instagram.com/YOUR_HANDLE", label: "Instagram", Icon: InstagramIcon },
-  { href: "mailto:your@email.com", label: "Email", Icon: EmailIcon },
+  { href: "https://x.com/WorldCupigami", label: "Twitter", Icon: TwitterIcon },
+  { href: "https://instagram.com/worldcupigami", label: "Instagram", Icon: InstagramIcon },
+  { href: "mailto:waperacchio@gmail.com", label: "Email", Icon: EmailIcon },
 ] as const;
 
 export default function Footer() {

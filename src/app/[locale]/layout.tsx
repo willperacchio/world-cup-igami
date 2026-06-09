@@ -68,6 +68,8 @@ export const metadata: Metadata = {
     description:
       "Every unique final score in Men's FIFA World Cup history. Track scorigamis live during the 2026 World Cup.",
     images: ["/logo-512.png"],
+    creator: "@WorldCupigami",
+    site: "@WorldCupigami",
   },
 };
 
