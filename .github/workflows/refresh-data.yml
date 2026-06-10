@@ -12,6 +12,13 @@ on:
         required: false
         default: "manual refresh"
 
+# Never run two refreshes at once — overlapping runs could both see the same
+# untweeted match and double-post it. Queue instead of cancelling so a tweet
+# in flight is never killed mid-run.
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -74,5 +81,19 @@ jobs:
             else
               git commit -m "chore(data): refresh live World Cup data"
             fi
-            git push
+            # If anything else landed on main since checkout (translate
+            # workflow, manual push), a plain push fails and this run's
+            # tweeted-matches.json update is lost — the next run would then
+            # re-tweet the same matches. Rebase and retry instead.
+            for attempt in 1 2 3; do
+              if git push; then
+                break
+              fi
+              echo "Push failed (attempt $attempt) — rebasing onto latest main and retrying..."
+              git pull --rebase origin main
+              if [ "$attempt" = "3" ]; then
+                echo "Giving up after 3 attempts."
+                exit 1
+              fi
+            done
           fi

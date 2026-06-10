@@ -83,8 +83,12 @@ interface Summary {
 }
 
 interface TweetedLog {
-  tweets: { key: string; tweetId?: string; tweetText: string; timestamp: string }[];
+  tweets: { key: string; tweetId?: string; tweetText: string; timestamp: string; failed?: boolean }[];
 }
+
+type PostResult =
+  | { ok: true; id: string }
+  | { ok: false; permanent: boolean; detail: string };
 
 // ─── Twitter OAuth 1.0a ─────────────────────────────────────────────────────
 // Minimal implementation — no external dependencies needed.
@@ -111,7 +115,7 @@ function buildOAuthSignature(
   return crypto.createHmac("sha1", signingKey).update(baseString).digest("base64");
 }
 
-async function postTweet(text: string): Promise<{ id: string } | null> {
+async function postTweet(text: string): Promise<PostResult> {
   const apiKey = process.env.TWITTER_API_KEY;
   const apiSecret = process.env.TWITTER_API_SECRET;
   const accessToken = process.env.TWITTER_ACCESS_TOKEN;
@@ -119,7 +123,8 @@ async function postTweet(text: string): Promise<{ id: string } | null> {
 
   if (!apiKey || !apiSecret || !accessToken || !accessSecret) {
     console.error("Missing Twitter API credentials — set TWITTER_API_KEY, TWITTER_API_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_SECRET");
-    return null;
+    // Credentials problem: transient so matches tweet once secrets are fixed.
+    return { ok: false, permanent: false, detail: "missing credentials" };
   }
 
   const url = "https://api.x.com/2/tweets";
@@ -156,11 +161,24 @@ async function postTweet(text: string): Promise<{ id: string } | null> {
   if (!res.ok) {
     const body = await res.text().catch(() => "");
     console.error(`Twitter API error: ${res.status} ${res.statusText}\n${body}`);
-    return null;
+    // Classify so the caller can avoid retrying forever on errors that will
+    // never succeed. Retrying is only useful for rate limits (429), server
+    // errors (5xx), and auth problems the user can fix (401/403 permissions).
+    const lower = body.toLowerCase();
+    const isDuplicate = res.status === 403 && lower.includes("duplicate");
+    const isValidation = res.status === 400; // malformed/too-long text
+    return {
+      ok: false,
+      permanent: isDuplicate || isValidation,
+      detail: `${res.status}: ${body.slice(0, 200)}`,
+    };
   }
 
   const data = (await res.json()) as { data?: { id: string } };
-  return data.data || null;
+  if (!data.data) {
+    return { ok: false, permanent: false, detail: "no tweet id in response" };
+  }
+  return { ok: true, id: data.data.id };
 }
 
 // ─── tweet composition ──────────────────────────────────────────────────────
@@ -245,7 +263,24 @@ function yearsSinceFirst(): number {
   return new Date().getFullYear() - 1930;
 }
 
-function composeScorigamiTweet(match: Match, entry: ScorigamiEntry, summary: Summary): string {
+/**
+ * Approximate X's weighted tweet length. Counts astral-plane characters
+ * (emoji, flags) as 2 and everything else as 1. Slightly overestimates flag
+ * emoji (4 vs X's 2) and the trailing URL (raw length vs t.co's 23), which is
+ * the safe direction — we'd rather shorten unnecessarily than get a tweet
+ * rejected.
+ */
+function approxTweetLength(text: string): number {
+  let len = 0;
+  for (const ch of text) {
+    len += ch.codePointAt(0)! > 0xffff ? 2 : 1;
+  }
+  return len;
+}
+
+const TWEET_LIMIT = 280;
+
+function composeScorigamiTweet(match: Match, entry: ScorigamiEntry, summary: Summary, compact = false): string {
   const hf = flag(match.homeCode);
   const af = flag(match.awayCode);
   const score = `${match.homeScore}–${match.awayScore}`;
@@ -277,6 +312,21 @@ function composeScorigamiTweet(match: Match, entry: ScorigamiEntry, summary: Sum
   ];
   const closer = closers[(match.homeScore + match.awayScore * 3) % closers.length];
 
+  // Compact variant for long team names: drop the closer and the unique-score
+  // line, which are flavor rather than substance.
+  if (compact) {
+    return [
+      opener,
+      ``,
+      `${hf} ${match.homeTeam} ${score} ${match.awayTeam} ${af}${extra}`,
+      `${stage}`,
+      ``,
+      `THIS SCORELINE HAS NEVER HAPPENED IN ${years} YEARS AND ${summary.totalMatches.toLocaleString()} MATCHES OF WORLD CUP HISTORY.`,
+      ``,
+      `${SITE_URL}`,
+    ].join("\n");
+  }
+
   const lines = [
     opener,
     ``,
@@ -294,7 +344,7 @@ function composeScorigamiTweet(match: Match, entry: ScorigamiEntry, summary: Sum
   return lines.join("\n");
 }
 
-function composeNonScorigamiTweet(match: Match, entry: ScorigamiEntry, allMatches: Match[], summary: Summary): string {
+function composeNonScorigamiTweet(match: Match, entry: ScorigamiEntry, allMatches: Match[], summary: Summary, compact = false): string {
   const hf = flag(match.homeCode);
   const af = flag(match.awayCode);
   const score = `${match.homeScore}–${match.awayScore}`;
@@ -331,7 +381,9 @@ function composeNonScorigamiTweet(match: Match, entry: ScorigamiEntry, allMatche
     `First: ${ff} ${first.homeTeam} ${first.homeScore}–${first.awayScore} ${first.awayTeam} ${fa} (${firstYear})`,
   ];
 
-  if (prev && matchKey(prev) !== matchKey(first)) {
+  // Compact variant: the Previous line is the first thing to go when long
+  // team names push the tweet over the limit.
+  if (!compact && prev && matchKey(prev) !== matchKey(first)) {
     const pf = flag(prev.homeCode);
     const pa = flag(prev.awayCode);
     const prevYear = prev.date.slice(0, 4);
@@ -396,9 +448,18 @@ async function main() {
       entry.firstMatch.homeTeam === match.homeTeam &&
       entry.firstMatch.awayTeam === match.awayTeam;
 
-    const tweetText = isScorigami
+    let tweetText = isScorigami
       ? composeScorigamiTweet(match, entry, summary)
       : composeNonScorigamiTweet(match, entry, matches, summary);
+
+    // Long team names (e.g. Bosnia and Herzegovina) can push the full format
+    // past 280 weighted characters, which Twitter rejects outright.
+    if (approxTweetLength(tweetText) > TWEET_LIMIT) {
+      tweetText = isScorigami
+        ? composeScorigamiTweet(match, entry, summary, true)
+        : composeNonScorigamiTweet(match, entry, matches, summary, true);
+      console.log(`  (using compact format — full format was over ${TWEET_LIMIT} chars)`);
+    }
 
     console.log(`${"─".repeat(60)}`);
     console.log(isScorigami ? "🚨 SCORIGAMI" : "📋 Regular");
@@ -407,6 +468,9 @@ async function main() {
     console.log(tweetText);
     console.log();
 
+    const saveLog = () =>
+      writeFileSync(TWEETED_PATH, JSON.stringify(tweeted, null, 2) + "\n");
+
     if (dryRun) {
       console.log("  [DRY RUN — not posting]\n");
       tweeted.tweets.push({
@@ -414,11 +478,12 @@ async function main() {
         tweetText,
         timestamp: new Date().toISOString(),
       });
+      saveLog();
       continue;
     }
 
     const result = await postTweet(tweetText);
-    if (result) {
+    if (result.ok) {
       console.log(`  ✓ Posted! Tweet ID: ${result.id}\n`);
       tweeted.tweets.push({
         key: matchKey(match),
@@ -426,14 +491,29 @@ async function main() {
         tweetText,
         timestamp: new Date().toISOString(),
       });
+      // Save immediately so a crash later in the loop can't lose this record
+      // and cause a duplicate tweet on the next run.
+      saveLog();
+    } else if (result.permanent) {
+      // Posting this exact tweet will never succeed (duplicate content,
+      // validation error). Record it as handled so the script doesn't retry
+      // it every 10 minutes for the rest of the tournament.
+      console.error(`  ✗ Permanent failure for ${matchKey(match)} — marking as handled (${result.detail})\n`);
+      tweeted.tweets.push({
+        key: matchKey(match),
+        tweetText,
+        timestamp: new Date().toISOString(),
+        failed: true,
+      });
+      saveLog();
     } else {
-      console.error(`  ✗ Failed to post tweet for ${matchKey(match)}\n`);
+      // Transient (rate limit, 5xx, network, bad credentials) — leave it
+      // unrecorded so the next run retries.
+      console.error(`  ✗ Transient failure for ${matchKey(match)} — will retry next run (${result.detail})\n`);
     }
   }
 
-  // Save tweeted log
-  writeFileSync(TWEETED_PATH, JSON.stringify(tweeted, null, 2) + "\n");
-  console.log(`Updated ${TWEETED_PATH}`);
+  console.log(`Done. Log at ${TWEETED_PATH}`);
 }
 
 main().catch((err) => {
