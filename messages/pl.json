@@ -19,7 +19,8 @@
     "neverHappened": "wciąż możliwe",
     "editionNumber": "23.",
     "editionLabel": "Edycja Mistrzostw Świata mężczyzn",
-    "tournaments": "Turnieje"
+    "tournaments": "Turnieje",
+    "lastUpdated": "Dane zaktualizowane {time}"
   },
   "views": {
     "heatmap": "Mapa ciepła",

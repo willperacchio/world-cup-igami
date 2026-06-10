@@ -19,7 +19,8 @@
     "neverHappened": "まだ可能性あり",
     "editionNumber": "第23回",
     "editionLabel": "男子ワールドカップ",
-    "tournaments": "大会"
+    "tournaments": "大会",
+    "lastUpdated": "データ更新日時：{time}"
   },
   "views": {
     "heatmap": "ヒートマップ",

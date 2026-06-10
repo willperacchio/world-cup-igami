@@ -19,7 +19,8 @@
     "neverHappened": "masih mungkin terjadi",
     "editionNumber": "ke-23",
     "editionLabel": "Edisi Piala Dunia Putra",
-    "tournaments": "Turnamen"
+    "tournaments": "Turnamen",
+    "lastUpdated": "Data diperbarui {time}"
   },
   "views": {
     "heatmap": "Peta Panas",

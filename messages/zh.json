@@ -19,7 +19,8 @@
     "neverHappened": "仍有可能",
     "editionNumber": "第23届",
     "editionLabel": "男子世界杯",
-    "tournaments": "届锦标赛"
+    "tournaments": "届锦标赛",
+    "lastUpdated": "数据更新于 {time}"
   },
   "views": {
     "heatmap": "热力图",

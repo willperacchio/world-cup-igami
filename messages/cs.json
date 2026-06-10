@@ -19,7 +19,8 @@
     "neverHappened": "stále možné",
     "editionNumber": "23.",
     "editionLabel": "ročník mužského mistrovství světa",
-    "tournaments": "Turnaje"
+    "tournaments": "Turnaje",
+    "lastUpdated": "Data aktualizována {time}"
   },
   "views": {
     "heatmap": "Heatmapa",

@@ -19,7 +19,8 @@
     "neverHappened": "încă posibile",
     "editionNumber": "a 23-a",
     "editionLabel": "Ediție a Cupei Mondiale masculine",
-    "tournaments": "Turnee"
+    "tournaments": "Turnee",
+    "lastUpdated": "Date actualizate {time}"
   },
   "views": {
     "heatmap": "Hartă termică",

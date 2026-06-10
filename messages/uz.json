@@ -19,7 +19,8 @@
     "neverHappened": "hali mumkin",
     "editionNumber": "23-",
     "editionLabel": "Erkaklar Jahon Kubogi o'tkazilishi",
-    "tournaments": "Turnirlar"
+    "tournaments": "Turnirlar",
+    "lastUpdated": "Ma'lumotlar yangilandi {time}"
   },
   "views": {
     "heatmap": "Issiqlik xaritasi",

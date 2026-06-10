@@ -19,7 +19,8 @@
     "neverHappened": "nog mogelijk",
     "editionNumber": "23e",
     "editionLabel": "Editie van het Mannen WK",
-    "tournaments": "Toernooien"
+    "tournaments": "Toernooien",
+    "lastUpdated": "Gegevens bijgewerkt {time}"
   },
   "views": {
     "heatmap": "Heatmap",

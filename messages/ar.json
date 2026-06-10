@@ -19,7 +19,8 @@
     "neverHappened": "محتملة الحدوث",
     "editionNumber": "23",
     "editionLabel": "نسخة من كأس العالم للرجال",
-    "tournaments": "البطولات"
+    "tournaments": "البطولات",
+    "lastUpdated": "تم تحديث البيانات {time}"
   },
   "views": {
     "heatmap": "خريطة الحرارة",

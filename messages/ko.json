@@ -19,7 +19,8 @@
     "neverHappened": "아직 가능",
     "editionNumber": "23번째",
     "editionLabel": "남자 월드컵 대회",
-    "tournaments": "대회"
+    "tournaments": "대회",
+    "lastUpdated": "데이터 업데이트: {time}"
   },
   "views": {
     "heatmap": "히트맵",

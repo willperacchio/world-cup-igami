@@ -19,7 +19,8 @@
     "neverHappened": "još moguće",
     "editionNumber": "23.",
     "editionLabel": "Izdanje Muškog Svjetskog prvenstva",
-    "tournaments": "Turniri"
+    "tournaments": "Turniri",
+    "lastUpdated": "Podaci ažurirani {time}"
   },
   "views": {
     "heatmap": "Toplotna mapa",

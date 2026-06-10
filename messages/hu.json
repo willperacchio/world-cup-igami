@@ -19,7 +19,8 @@
     "neverHappened": "még lehetséges",
     "editionNumber": "23.",
     "editionLabel": "Férfi Világbajnokság",
-    "tournaments": "Tornák"
+    "tournaments": "Tornák",
+    "lastUpdated": "Adatok frissítve: {time}"
   },
   "views": {
     "heatmap": "Hőtérkép",

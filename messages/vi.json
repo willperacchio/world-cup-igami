@@ -19,7 +19,8 @@
     "neverHappened": "vẫn có thể xảy ra",
     "editionNumber": "23",
     "editionLabel": "Lần tổ chức World Cup Nam",
-    "tournaments": "Giải đấu"
+    "tournaments": "Giải đấu",
+    "lastUpdated": "Dữ liệu được cập nhật {time}"
   },
   "views": {
     "heatmap": "Bản đồ nhiệt",

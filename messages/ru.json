@@ -19,7 +19,8 @@
     "neverHappened": "ещё возможно",
     "editionNumber": "23-й",
     "editionLabel": "чемпионат мира среди мужчин",
-    "tournaments": "Турниры"
+    "tournaments": "Турниры",
+    "lastUpdated": "Данные обновлены {time}"
   },
   "views": {
     "heatmap": "Тепловая карта",

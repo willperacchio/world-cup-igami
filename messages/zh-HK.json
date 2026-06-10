@@ -19,7 +19,8 @@
     "neverHappened": "仍有可能出現",
     "editionNumber": "第23屆",
     "editionLabel": "男子世界盃",
-    "tournaments": "屆賽事"
+    "tournaments": "屆賽事",
+    "lastUpdated": "資料更新於 {time}"
   },
   "views": {
     "heatmap": "熱圖",

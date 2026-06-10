@@ -19,7 +19,8 @@
     "neverHappened": "noch möglich",
     "editionNumber": "23.",
     "editionLabel": "Ausgabe der Männer-Weltmeisterschaft",
-    "tournaments": "Turniere"
+    "tournaments": "Turniere",
+    "lastUpdated": "Daten aktualisiert {time}"
   },
   "views": {
     "heatmap": "Heatmap",

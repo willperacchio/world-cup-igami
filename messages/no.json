@@ -19,7 +19,8 @@
     "neverHappened": "fortsatt mulig",
     "editionNumber": "23.",
     "editionLabel": "utgave av herre-VM",
-    "tournaments": "Turneringer"
+    "tournaments": "Turneringer",
+    "lastUpdated": "Data oppdatert {time}"
   },
   "views": {
     "heatmap": "Varmekart",

@@ -19,7 +19,8 @@
     "neverHappened": "bado yanawezekana",
     "editionNumber": "ya 23",
     "editionLabel": "Toleo la Kombe la Dunia la Wanaume",
-    "tournaments": "Mashindano"
+    "tournaments": "Mashindano",
+    "lastUpdated": "Data imesasishwa {time}"
   },
   "views": {
     "heatmap": "Ramani ya Joto",

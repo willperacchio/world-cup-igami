@@ -19,7 +19,8 @@
     "neverHappened": "hâlâ mümkün",
     "editionNumber": "23.",
     "editionLabel": "Erkekler Dünya Kupası Turnuvası",
-    "tournaments": "Turnuvalar"
+    "tournaments": "Turnuvalar",
+    "lastUpdated": "Veri {time} güncellendi"
   },
   "views": {
     "heatmap": "Isı Haritası",

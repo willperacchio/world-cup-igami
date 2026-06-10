@@ -19,7 +19,8 @@
     "neverHappened": "ще можливо",
     "editionNumber": "23-й",
     "editionLabel": "чемпіонат світу серед чоловіків",
-    "tournaments": "Турніри"
+    "tournaments": "Турніри",
+    "lastUpdated": "Дані оновлено {time}"
   },
   "views": {
     "heatmap": "Теплова карта",

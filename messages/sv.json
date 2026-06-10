@@ -19,7 +19,8 @@
     "neverHappened": "fortfarande möjliga",
     "editionNumber": "23:e",
     "editionLabel": "upplagan av Herr-VM",
-    "tournaments": "Turneringar"
+    "tournaments": "Turneringar",
+    "lastUpdated": "Data uppdaterad {time}"
   },
   "views": {
     "heatmap": "Värmekarta",

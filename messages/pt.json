@@ -19,7 +19,8 @@
     "neverHappened": "ainda possíveis",
     "editionNumber": "23ª",
     "editionLabel": "Edição da Copa do Mundo Masculina",
-    "tournaments": "Torneios"
+    "tournaments": "Torneios",
+    "lastUpdated": "Dados atualizados {time}"
   },
   "views": {
     "heatmap": "Mapa de Calor",

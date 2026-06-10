@@ -19,7 +19,8 @@
     "neverHappened": "هنوز ممکن",
     "editionNumber": "بیست‌وسوم",
     "editionLabel": "دوره جام جهانی مردان",
-    "tournaments": "دوره‌ها"
+    "tournaments": "دوره‌ها",
+    "lastUpdated": "داده‌ها در {time} به‌روزرسانی شدند"
   },
   "views": {
     "heatmap": "نقشه حرارتی",

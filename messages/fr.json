@@ -19,7 +19,8 @@
     "neverHappened": "encore possible",
     "editionNumber": "23e",
     "editionLabel": "Édition de la Coupe du Monde masculine",
-    "tournaments": "Tournois"
+    "tournaments": "Tournois",
+    "lastUpdated": "Données mises à jour {time}"
   },
   "views": {
     "heatmap": "Carte thermique",
