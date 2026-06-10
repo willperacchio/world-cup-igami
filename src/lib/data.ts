@@ -1,12 +1,16 @@
 import matchesData from "../../data/matches.json";
 import scorigamiData from "../../data/scorigami.json";
 import summaryData from "../../data/summary.json";
+import liveMatchesData from "../../data/live-matches.json";
 import type { Match, ScorigamiEntry, Summary } from "./types";
 import { getEffectiveTournamentYears } from "./tournament";
 
 export const matches = matchesData as Match[];
 export const scorigami = scorigamiData as ScorigamiEntry[];
 export const summary = summaryData as Summary;
+
+/** Build-time snapshot of when live data was last fetched ("" if never). */
+export const liveLastFetched: string = (liveMatchesData as { lastFetched: string }).lastFetched;
 
 export function getScorigamiGrid(): Map<string, ScorigamiEntry> {
   const map = new Map<string, ScorigamiEntry>();

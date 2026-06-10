@@ -19,7 +19,8 @@
     "neverHappened": "still possible",
     "editionNumber": "23rd",
     "editionLabel": "Edition of the Men's World Cup",
-    "tournaments": "Tournaments"
+    "tournaments": "Tournaments",
+    "lastUpdated": "Data updated {time}"
   },
   "views": {
     "heatmap": "Heatmap",

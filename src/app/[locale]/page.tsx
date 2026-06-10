@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { matches, scorigami, summary, getScorigamiGrid, buildGridFromMatches, tournamentYears } from "@/lib/data";
+import { matches, scorigami, summary, liveLastFetched, getScorigamiGrid, buildGridFromMatches, tournamentYears } from "@/lib/data";
 import { getUpcomingTournamentStatus } from "@/lib/tournament";
 import type { ScorigamiEntry } from "@/lib/types";
 import { useTimelinePlayer } from "@/hooks/useTimelinePlayer";
@@ -11,6 +11,7 @@ import MatchTable from "@/components/MatchTable";
 import MatchDetail from "@/components/MatchDetail";
 import FunFacts from "@/components/FunFacts";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
+import LastUpdated from "@/components/LastUpdated";
 import Footer from "@/components/Footer";
 
 // Pre-computed once at module load: every year that has at least one historical
@@ -126,6 +127,7 @@ export default function Home() {
             {t("stats.editionLabel")}
           </span>
         </div>
+        <LastUpdated initialTimestamp={liveLastFetched} />
       </header>
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 pb-10 space-y-6">

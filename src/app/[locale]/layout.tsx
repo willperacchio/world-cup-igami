@@ -35,6 +35,34 @@ const fraunces = Fraunces({
 
 const siteUrl = getSiteUrl();
 
+/**
+ * Per-key English fallback for translations. A shallow spread would let a
+ * locale's namespace object (e.g. its `stats`) replace English's entirely,
+ * so any key added to en.json but not yet translated would render as a raw
+ * key like "stats.lastUpdated" instead of falling back to English.
+ */
+function deepMerge(
+  base: Record<string, unknown>,
+  override: Record<string, unknown>,
+): Record<string, unknown> {
+  const out: Record<string, unknown> = { ...base };
+  for (const [key, value] of Object.entries(override)) {
+    const existing = out[key];
+    if (
+      value && typeof value === "object" && !Array.isArray(value) &&
+      existing && typeof existing === "object" && !Array.isArray(existing)
+    ) {
+      out[key] = deepMerge(
+        existing as Record<string, unknown>,
+        value as Record<string, unknown>,
+      );
+    } else {
+      out[key] = value;
+    }
+  }
+  return out;
+}
+
 export const metadata: Metadata = {
   title: "World Cupigami",
   description: "Every unique final score in Men's FIFA World Cup history",
@@ -94,7 +122,7 @@ export default async function RootLayout({
       // Fall back to English
     }
   }
-  const messages = { ...enMessages, ...localeMessages };
+  const messages = deepMerge(enMessages, localeMessages);
 
   return (
     <html
