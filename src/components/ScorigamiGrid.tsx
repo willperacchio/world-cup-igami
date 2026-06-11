@@ -34,10 +34,11 @@ export default function ScorigamiGrid({ grid, maxScore, onCellClick }: Props) {
             <tr key={row}>
               <td className="w-10 h-10 text-sm font-semibold text-amber-300 text-center sb-numeral">{row}</td>
               {Array.from({ length: displayMax + 1 }, (_, col) => {
+                // Lower-left triangle: losing score > winning score is
+                // impossible, so render plain background — visually distinct
+                // from "never" cells, which are possible but haven't happened.
                 if (col < row) {
-                  return (
-                    <td key={col} className="w-10 h-10 rounded bg-[#0a100e]/40" />
-                  );
+                  return <td key={col} className="w-10 h-10" />;
                 }
 
                 const key = `${row}-${col}`;
