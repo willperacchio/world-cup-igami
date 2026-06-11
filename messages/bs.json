@@ -42,7 +42,9 @@
     "common": "Uobičajeno",
     "veryCommon": "Vrlo uobičajeno",
     "neverHappened": "{high}–{low}: Nikad",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Heatmapa rezultata Svjetskog kupa",
+    "scorigamiHint": "\"1\" znači Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

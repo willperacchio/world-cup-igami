@@ -42,7 +42,9 @@
     "common": "Tez-tez",
     "veryCommon": "Juda tez-tez",
     "neverHappened": "{high}–{low}: Hech qachon bo'lmagan",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Jahon Kubogi hisoblar issiqlik xaritasi",
+    "scorigamiHint": "\"1\" scorigami ekanligini bildiradi"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

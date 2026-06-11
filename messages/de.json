@@ -42,7 +42,9 @@
     "common": "Häufig",
     "veryCommon": "Sehr häufig",
     "neverHappened": "{high}–{low}: Noch nie",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "WM-Ergebnis-Heatmap",
+    "scorigamiHint": "\"1\" bedeutet Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

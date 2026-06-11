@@ -42,7 +42,9 @@
     "common": "Vanligt",
     "veryCommon": "Mycket vanligt",
     "neverHappened": "{high}–{low}: Aldrig",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "VM-poängheatmap",
+    "scorigamiHint": "\"1\" betyder Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

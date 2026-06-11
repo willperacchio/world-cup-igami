@@ -42,7 +42,9 @@
     "common": "Često",
     "veryCommon": "Vrlo često",
     "neverHappened": "{high}–{low}: Nikad",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Toplinska karta rezultata Svjetskog prvenstva",
+    "scorigamiHint": "\"1\" znači Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

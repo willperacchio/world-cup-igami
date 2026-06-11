@@ -42,7 +42,9 @@
     "common": "Częsty",
     "veryCommon": "Bardzo częsty",
     "neverHappened": "{high}–{low}: Nigdy",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Mapa cieplna wyników Mistrzostw Świata",
+    "scorigamiHint": "\"1\" oznacza Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

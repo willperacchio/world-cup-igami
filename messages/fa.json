@@ -42,7 +42,9 @@
     "common": "رایج",
     "veryCommon": "خیلی رایج",
     "neverHappened": "{high}–{low}: هرگز",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "نقشه حرارتی نتایج جام جهانی",
+    "scorigamiHint": "«1» به معنای Scorigami است"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

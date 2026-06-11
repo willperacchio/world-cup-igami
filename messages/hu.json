@@ -42,7 +42,9 @@
     "common": "Gyakori",
     "veryCommon": "Nagyon gyakori",
     "neverHappened": "{high}–{low}: Soha nem volt",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Világkupa Eredmény Hőtérkép",
+    "scorigamiHint": "Az \"1\" azt jelenti: Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

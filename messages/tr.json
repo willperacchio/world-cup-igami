@@ -42,7 +42,9 @@
     "common": "Yaygın",
     "veryCommon": "Çok Yaygın",
     "neverHappened": "{high}–{low}: Hiç olmadı",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Dünya Kupası Skor Isı Haritası",
+    "scorigamiHint": "\"1\" Scorigami anlamına gelir"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

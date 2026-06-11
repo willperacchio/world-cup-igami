@@ -42,7 +42,9 @@
     "common": "Umum",
     "veryCommon": "Sangat Umum",
     "neverHappened": "{high}–{low}: Belum Pernah",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Peta Panas Skor Piala Dunia",
+    "scorigamiHint": "\"1\" berarti Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

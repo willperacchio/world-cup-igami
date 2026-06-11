@@ -42,7 +42,9 @@
     "common": "Kawaida",
     "veryCommon": "Kawaida Sana",
     "neverHappened": "{high}–{low}: Haijawahi",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Ramani ya Joto ya Matokeo ya Kombe la Dunia",
+    "scorigamiHint": "\"1\" inamaanisha Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

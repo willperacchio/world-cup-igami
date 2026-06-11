@@ -42,7 +42,9 @@
     "common": "보통",
     "veryCommon": "흔함",
     "neverHappened": "{high}–{low}: 없음",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "월드컵 점수 히트맵",
+    "scorigamiHint": "\"1\"은 scorigami를 의미합니다"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

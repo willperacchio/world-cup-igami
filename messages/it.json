@@ -42,7 +42,9 @@
     "common": "Comune",
     "veryCommon": "Molto comune",
     "neverHappened": "{high}–{low}: Mai",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Mappa di calore dei punteggi della Coppa del Mondo",
+    "scorigamiHint": "\"1\" significa Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

@@ -42,7 +42,9 @@
     "common": "Phổ biến",
     "veryCommon": "Rất phổ biến",
     "neverHappened": "{high}–{low}: Chưa từng xảy ra",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Bản đồ nhiệt tỷ số World Cup",
+    "scorigamiHint": "\"1\" nghĩa là Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

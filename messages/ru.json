@@ -42,7 +42,9 @@
     "common": "Распространённый",
     "veryCommon": "Очень распространённый",
     "neverHappened": "{high}–{low}: никогда",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Тепловая карта счётов чемпионата мира",
+    "scorigamiHint": "«1» означает Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

@@ -42,7 +42,9 @@
     "common": "常见",
     "veryCommon": "非常常见",
     "neverHappened": "{high}–{low}：从未发生",
-    "count": "{high}–{low}：{count}次"
+    "count": "{high}–{low}：{count}次",
+    "title": "世界杯比分热力图",
+    "scorigamiHint": "\"1\" 表示 Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami！",

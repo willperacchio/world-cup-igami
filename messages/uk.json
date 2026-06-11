@@ -42,7 +42,9 @@
     "common": "Поширений",
     "veryCommon": "Дуже поширений",
     "neverHappened": "{high}–{low}: Ніколи",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Теплова карта рахунків Чемпіонату світу",
+    "scorigamiHint": "«1» означає Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

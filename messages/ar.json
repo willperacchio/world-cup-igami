@@ -42,7 +42,9 @@
     "common": "شائعة",
     "veryCommon": "شائعة جداً",
     "neverHappened": "{high}–{low}: لم تحدث قط",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "خريطة حرارية لنتائج كأس العالم",
+    "scorigamiHint": "\"1\" تعني Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

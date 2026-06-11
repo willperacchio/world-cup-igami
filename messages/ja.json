@@ -42,7 +42,9 @@
     "common": "よくある",
     "veryCommon": "非常によくある",
     "neverHappened": "{high}–{low}：未達成",
-    "count": "{high}–{low}：{count}回"
+    "count": "{high}–{low}：{count}回",
+    "title": "ワールドカップ スコアヒートマップ",
+    "scorigamiHint": "「1」はscorigamiを意味します"
   },
   "detail": {
     "scorigamiTitle": "Scorigami！",

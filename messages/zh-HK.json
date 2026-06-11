@@ -42,7 +42,9 @@
     "common": "常見",
     "veryCommon": "非常常見",
     "neverHappened": "{high}–{low}：從未出現",
-    "count": "{high}–{low}：{count}×"
+    "count": "{high}–{low}：{count}×",
+    "title": "世界盃比分熱圖",
+    "scorigamiHint": "「1」代表 Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami！",

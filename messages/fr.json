@@ -42,7 +42,9 @@
     "common": "Courant",
     "veryCommon": "Très courant",
     "neverHappened": "{high}–{low} : Jamais",
-    "count": "{high}–{low} : {count}×"
+    "count": "{high}–{low} : {count}×",
+    "title": "Carte de chaleur des scores de la Coupe du Monde",
+    "scorigamiHint": "\"1\" signifie Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami !",

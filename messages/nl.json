@@ -42,7 +42,9 @@
     "common": "Gewoon",
     "veryCommon": "Zeer Gewoon",
     "neverHappened": "{high}–{low}: Nooit",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Heatmap van WK-scores",
+    "scorigamiHint": "\"1\" betekent Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

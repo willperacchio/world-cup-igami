@@ -42,7 +42,9 @@
     "common": "Común",
     "veryCommon": "Muy común",
     "neverHappened": "{high}–{low}: Nunca",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Mapa de calor de resultados del Mundial",
+    "scorigamiHint": "\"1\" significa Scorigami"
   },
   "detail": {
     "scorigamiTitle": "¡Scorigami!",

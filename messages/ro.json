@@ -42,7 +42,9 @@
     "common": "Comun",
     "veryCommon": "Foarte comun",
     "neverHappened": "{high}–{low}: Niciodată",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Hartă termică a scorurilor Cupei Mondiale",
+    "scorigamiHint": "\"1\" înseamnă Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

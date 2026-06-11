@@ -42,7 +42,9 @@
     "common": "Comum",
     "veryCommon": "Muito Comum",
     "neverHappened": "{high}–{low}: Nunca aconteceu",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Mapa de Calor de Placar da Copa do Mundo",
+    "scorigamiHint": "\"1\" significa Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

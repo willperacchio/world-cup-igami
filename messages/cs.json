@@ -42,7 +42,9 @@
     "common": "Běžný",
     "veryCommon": "Velmi běžný",
     "neverHappened": "{high}–{low}: Nikdy",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "Heatmapa skóre mistrovství světa",
+    "scorigamiHint": "\"1\" znamená Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
