@@ -173,6 +173,14 @@ export default function Home() {
 
         {view === "grid" && (
           <div className="space-y-4">
+            <div className="text-center space-y-1.5 pt-2">
+              <h2 className="font-display font-medium text-2xl sm:text-3xl text-stone-100">
+                {t("grid.title")}
+              </h2>
+              <p className="font-mono text-xs tracking-[0.12em] uppercase text-amber-300">
+                {t("grid.scorigamiHint")}
+              </p>
+            </div>
             {/* Timeline scrubber — scoreboard styling */}
             <div className="flex items-center gap-3 p-3 rounded-sm border border-amber-400/20 bg-[#161f1c]/40">
               <button
@@ -227,6 +235,21 @@ export default function Home() {
               <span className="text-base font-display font-medium sb-numeral min-w-[4ch] text-center text-amber-200">{selectedYear}</span>
             </div>
 
+            <ScorigamiGrid
+              grid={grid}
+              maxScore={summary.maxScore}
+              onCellClick={(entry, low, high) => setSelectedCell({ entry, low, high })}
+            />
+            {selectedCell && (
+              <MatchDetail
+                entry={selectedCell.entry}
+                allMatches={filteredMatches}
+                lowScore={selectedCell.low}
+                highScore={selectedCell.high}
+                onClose={() => setSelectedCell(null)}
+              />
+            )}
+
             {/* Awaiting-kickoff banner — appears only when the scrubber points at an
                 upcoming tournament that has no matches in the dataset yet. */}
             {upcomingStatus && (
@@ -246,21 +269,6 @@ export default function Home() {
                   </p>
                 </div>
               </aside>
-            )}
-
-            <ScorigamiGrid
-              grid={grid}
-              maxScore={summary.maxScore}
-              onCellClick={(entry, low, high) => setSelectedCell({ entry, low, high })}
-            />
-            {selectedCell && (
-              <MatchDetail
-                entry={selectedCell.entry}
-                allMatches={filteredMatches}
-                lowScore={selectedCell.low}
-                highScore={selectedCell.high}
-                onClose={() => setSelectedCell(null)}
-              />
             )}
           </div>
         )}

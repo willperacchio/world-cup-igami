@@ -19,20 +19,20 @@ export default function ScorigamiGrid({ grid, maxScore, onCellClick }: Props) {
 
   return (
     <div className="overflow-x-auto">
-      <p className="text-xs text-stone-400 mb-2 sb-numeral text-center">{t("description")}</p>
+      <p className="text-sm font-semibold text-stone-200 mb-2 sb-numeral text-center">{t("description")}</p>
       <table className="mx-auto" style={{ borderSpacing: "2px" }}>
         <thead>
           <tr>
             <th className="w-10 h-10 text-xs text-stone-500" />
             {Array.from({ length: displayMax + 1 }, (_, i) => (
-              <th key={i} className="w-10 h-10 text-xs font-medium text-amber-300/80 sb-numeral">{i}</th>
+              <th key={i} className="w-10 h-10 text-sm font-semibold text-amber-300 sb-numeral">{i}</th>
             ))}
           </tr>
         </thead>
         <tbody>
           {Array.from({ length: displayMax + 1 }, (_, row) => (
             <tr key={row}>
-              <td className="w-10 h-10 text-xs font-medium text-amber-300/80 text-center sb-numeral">{row}</td>
+              <td className="w-10 h-10 text-sm font-semibold text-amber-300 text-center sb-numeral">{row}</td>
               {Array.from({ length: displayMax + 1 }, (_, col) => {
                 if (col < row) {
                   return (

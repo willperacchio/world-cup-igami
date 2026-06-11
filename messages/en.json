@@ -42,7 +42,9 @@
     "common": "Common",
     "veryCommon": "Very Common",
     "neverHappened": "{high}–{low}: Never",
-    "count": "{high}–{low}: {count}×"
+    "count": "{high}–{low}: {count}×",
+    "title": "World Cup Score Heatmap",
+    "scorigamiHint": "\"1\" means Scorigami"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
