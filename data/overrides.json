@@ -1,0 +1,21 @@
+{
+  "matches": [
+    {
+      "date": "2026-06-11",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Mexico",
+      "awayTeam": "South Africa",
+      "homeCode": "MEX",
+      "awayCode": "RSA",
+      "homeScore": 2,
+      "awayScore": 0,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "Estadio Azteca",
+      "city": "Mexico City",
+      "country": "Mexico"
+    }
+  ]
+}
