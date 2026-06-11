@@ -55,6 +55,22 @@ export default function Home() {
     );
   }, [upcomingStatus, locale]);
 
+  // Precompute the cumulative state for every timeline position once, so each
+  // playback step is a constant-time lookup instead of refiltering all 964
+  // matches and rebuilding the grid. Keeps Play stepping at a steady rhythm.
+  const framesByIndex = useMemo(
+    () =>
+      tournamentYears.map((year) => {
+        const fm = matches.filter((m) => {
+          const yr = parseInt(m.tournament.replace(" FIFA Men's World Cup", ""));
+          return yr <= year;
+        });
+        const g = buildGridFromMatches(fm);
+        return { grid: g, filteredMatches: fm, filteredStats: { total: fm.length, unique: g.size } };
+      }),
+    [],
+  );
+
   const { grid, filteredMatches, filteredStats } = useMemo(() => {
     if (timeline.isAtEnd) {
       return {
@@ -63,13 +79,8 @@ export default function Home() {
         filteredStats: { total: summary.totalMatches, unique: summary.uniqueScores },
       };
     }
-    const fm = matches.filter((m) => {
-      const yr = parseInt(m.tournament.replace(" FIFA Men's World Cup", ""));
-      return yr <= selectedYear;
-    });
-    const g = buildGridFromMatches(fm);
-    return { grid: g, filteredMatches: fm, filteredStats: { total: fm.length, unique: g.size } };
-  }, [selectedYear, timeline.isAtEnd, fullGrid]);
+    return framesByIndex[timeline.index];
+  }, [timeline.index, timeline.isAtEnd, fullGrid, framesByIndex]);
 
   const displayMax = Math.min(summary.maxScore, 10);
   const totalPossible = ((displayMax + 1) * (displayMax + 2)) / 2;
