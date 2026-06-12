@@ -431,7 +431,7 @@
   {
     "lowScore": 1,
     "highScore": 2,
-    "count": 152,
+    "count": 153,
     "firstMatch": {
       "date": "1930-07-14",
       "tournament": "1930 FIFA Men's World Cup",
@@ -450,21 +450,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2022-12-17",
-      "tournament": "2022 FIFA Men's World Cup",
-      "stage": "third-place match",
-      "homeTeam": "Croatia",
-      "awayTeam": "Morocco",
-      "homeCode": "HRV",
-      "awayCode": "MAR",
+      "date": "2026-06-12",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "South Korea",
+      "awayTeam": "Czechia",
+      "homeCode": "KOR",
+      "awayCode": "CZE",
       "homeScore": 2,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
-      "penaltyScore": "0-0",
-      "stadium": "Khalifa International Stadium",
-      "city": "Al Rayyan",
-      "country": "Qatar"
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
     }
   },
   {
