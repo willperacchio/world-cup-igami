@@ -392,7 +392,7 @@
   {
     "lowScore": 1,
     "highScore": 1,
-    "count": 92,
+    "count": 93,
     "firstMatch": {
       "date": "1934-05-31",
       "tournament": "1934 FIFA Men's World Cup",
@@ -411,21 +411,21 @@
       "country": "Italy"
     },
     "lastMatch": {
-      "date": "2022-12-09",
-      "tournament": "2022 FIFA Men's World Cup",
-      "stage": "quarter-finals",
-      "homeTeam": "Croatia",
-      "awayTeam": "Brazil",
-      "homeCode": "HRV",
-      "awayCode": "BRA",
+      "date": "2026-06-12",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Canada",
+      "awayTeam": "Bosnia-Herzegovina",
+      "homeCode": "CAN",
+      "awayCode": "BIH",
       "homeScore": 1,
       "awayScore": 1,
-      "extraTime": true,
-      "penaltyShootout": true,
-      "penaltyScore": "4–2",
-      "stadium": "Education City Stadium",
-      "city": "Al Rayyan",
-      "country": "Qatar"
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
     }
   },
   {

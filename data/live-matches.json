@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-12T20:50:36.520Z",
+  "lastFetched": "2026-06-12T21:00:48.108Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -27,6 +27,23 @@
       "homeCode": "KOR",
       "awayCode": "CZE",
       "homeScore": 2,
+      "awayScore": 1,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-12",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Canada",
+      "awayTeam": "Bosnia-Herzegovina",
+      "homeCode": "CAN",
+      "awayCode": "BIH",
+      "homeScore": 1,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,

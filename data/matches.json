@@ -16420,5 +16420,22 @@
     "stadium": "",
     "city": "",
     "country": ""
+  },
+  {
+    "date": "2026-06-12",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Canada",
+    "awayTeam": "Bosnia-Herzegovina",
+    "homeCode": "CAN",
+    "awayCode": "BIH",
+    "homeScore": 1,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "",
+    "city": "",
+    "country": ""
   }
 ]
