@@ -69,6 +69,42 @@ export function mapStage(fdStage: string): string {
 }
 
 /**
+ * football-data.org's `tla` values are FIFA codes, but the historical CSV —
+ * and therefore the flag images in public/flags/ — use ISO 3166-1 alpha-3.
+ * Normalize the ones that differ so live matches render flags correctly.
+ * Codes not listed (including ENG/SCO/WAL/NIR, which have no ISO code and
+ * already match the flag filenames) pass through unchanged.
+ */
+const FIFA_TLA_TO_ISO3: Record<string, string> = {
+  ALG: "DZA", // Algeria
+  ANG: "AGO", // Angola
+  BUL: "BGR", // Bulgaria
+  CHI: "CHL", // Chile
+  CRC: "CRI", // Costa Rica
+  CRO: "HRV", // Croatia
+  DEN: "DNK", // Denmark
+  GER: "DEU", // Germany
+  GRE: "GRC", // Greece
+  HAI: "HTI", // Haiti
+  HON: "HND", // Honduras
+  KSA: "SAU", // Saudi Arabia
+  KUW: "KWT", // Kuwait
+  NED: "NLD", // Netherlands
+  PAR: "PRY", // Paraguay
+  POR: "PRT", // Portugal
+  RSA: "ZAF", // South Africa
+  SUI: "CHE", // Switzerland
+  TOG: "TGO", // Togo
+  TRI: "TTO", // Trinidad and Tobago
+  URU: "URY", // Uruguay
+  ZAM: "ZMB", // Zambia
+};
+
+export function mapTeamCode(tla: string): string {
+  return FIFA_TLA_TO_ISO3[tla] || tla;
+}
+
+/**
  * Map a football-data.org match payload onto our internal Match shape.
  * Returns null if the match is missing a final scoreline (e.g. it's still
  * scheduled or in progress).
@@ -103,8 +139,8 @@ export function mapMatch(m: FdMatch): InternalMatch | null {
     stage: mapStage(m.stage),
     homeTeam: m.homeTeam.name,
     awayTeam: m.awayTeam.name,
-    homeCode: m.homeTeam.tla || m.homeTeam.shortName || "",
-    awayCode: m.awayTeam.tla || m.awayTeam.shortName || "",
+    homeCode: mapTeamCode(m.homeTeam.tla || m.homeTeam.shortName || ""),
+    awayCode: mapTeamCode(m.awayTeam.tla || m.awayTeam.shortName || ""),
     homeScore: home,
     awayScore: away,
     extraTime,
