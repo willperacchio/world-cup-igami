@@ -59,8 +59,12 @@ interface TrendChartProps {
 export default function TrendChart({ chartKey, label, color, tournamentStats }: TrendChartProps) {
   const [hovered, setHovered] = useState<{ x: number; y: number; val: number; year: string } | null>(null);
 
+  // These are full-tournament-size trend lines. Once 2026 kicks off,
+  // computeTournamentStats emits a *partial* 2026 entry (e.g. 2 teams / 1 match
+  // after the opener), which would otherwise shadow the known full-tournament
+  // projection. Drop any real 2026 entry and always plot the known final size.
   const allWithGaps = [
-    ...tournamentStats,
+    ...tournamentStats.filter((s) => s.year !== "2026"),
     { year: "2026", teams: 48, matches: 104, goalsPerGame: 0, scorigamis: 0 },
   ];
   const minYear = 1930;
