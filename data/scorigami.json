@@ -392,7 +392,7 @@
   {
     "lowScore": 1,
     "highScore": 1,
-    "count": 93,
+    "count": 94,
     "firstMatch": {
       "date": "1934-05-31",
       "tournament": "1934 FIFA Men's World Cup",
@@ -411,13 +411,13 @@
       "country": "Italy"
     },
     "lastMatch": {
-      "date": "2026-06-12",
+      "date": "2026-06-13",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Canada",
-      "awayTeam": "Bosnia-Herzegovina",
-      "homeCode": "CAN",
-      "awayCode": "BIH",
+      "homeTeam": "Qatar",
+      "awayTeam": "Switzerland",
+      "homeCode": "QAT",
+      "awayCode": "CHE",
       "homeScore": 1,
       "awayScore": 1,
       "extraTime": false,
