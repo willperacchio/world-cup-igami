@@ -303,20 +303,36 @@ const TEAM_HASHTAGS: Record<string, string> = {
 };
 
 /**
+ * Fallback team tag for teams without a known supporter hashtag: the country
+ * name as a clean CamelCase tag (e.g. "South Africa" -> #SouthAfrica). Strips
+ * accents, apostrophes, spaces, and hyphens.
+ */
+function countryHashtag(name: string): string {
+  const cleaned = name
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "") // strip diacritics
+    .replace(/[^a-zA-Z0-9 -]/g, "") // drop apostrophes etc.
+    .split(/[ -]+/)
+    .filter(Boolean)
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join("");
+  return `#${cleaned}`;
+}
+
+/**
  * Discovery hashtags appended to every tweet: the evergreen tournament tag,
  * FIFA's per-match tag (home+away FIFA codes, e.g. #MEXRSA), and each team's
- * supporter tag when one is known.
+ * supporter tag — the known one if we have it, otherwise #CountryName.
  */
 function matchHashtags(match: Match): string {
-  const tags = [
+  const teamTag = (code: string, name: string) =>
+    TEAM_HASHTAGS[code.toUpperCase()] || countryHashtag(name);
+  return [
     `#FIFAWorldCup`,
     `#${fifaCode(match.homeCode)}${fifaCode(match.awayCode)}`,
-  ];
-  const home = TEAM_HASHTAGS[match.homeCode.toUpperCase()];
-  const away = TEAM_HASHTAGS[match.awayCode.toUpperCase()];
-  if (home) tags.push(home);
-  if (away) tags.push(away);
-  return tags.join(" ");
+    teamTag(match.homeCode, match.homeTeam),
+    teamTag(match.awayCode, match.awayTeam),
+  ].join(" ");
 }
 
 /**
