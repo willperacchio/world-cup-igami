@@ -285,11 +285,38 @@ function fifaCode(code: string): string {
 }
 
 /**
- * Discovery hashtags appended to every tweet: the evergreen tournament tag
- * plus FIFA's per-match tag (home+away FIFA codes, e.g. #MEXRSA).
+ * Per-team supporter hashtags — the tags each fanbase actually follows, so a
+ * tweet surfaces in their feed (e.g. #USMNT for the US). Keyed by ISO alpha-3
+ * (the codes our match data stores). Only well-established tags are included;
+ * teams without an entry simply get no team tag. Add more here as needed.
+ */
+const TEAM_HASHTAGS: Record<string, string> = {
+  USA: "#USMNT", CAN: "#CanMNT", MEX: "#ElTri",
+  ENG: "#ThreeLions", FRA: "#LesBleus", ESP: "#LaRoja",
+  NLD: "#Oranje", HRV: "#Vatreni", CHE: "#Nati",
+  BEL: "#RedDevils", ITA: "#Azzurri", DEU: "#DieMannschaft",
+  PRT: "#VamosPortugal", AUS: "#Socceroos", JPN: "#SamuraiBlue",
+  BRA: "#SeleçãoBrasileira", ARG: "#VamosArgentina", URY: "#LaCeleste",
+  NGA: "#SuperEagles", GHA: "#BlackStars", CIV: "#LesElephants",
+  CMR: "#LionsIndomptables", MAR: "#AtlasLions", SEN: "#LionsDeLaTeranga",
+  IRN: "#TeamMelli", SCO: "#TartanArmy", WAL: "#Cymru",
+};
+
+/**
+ * Discovery hashtags appended to every tweet: the evergreen tournament tag,
+ * FIFA's per-match tag (home+away FIFA codes, e.g. #MEXRSA), and each team's
+ * supporter tag when one is known.
  */
 function matchHashtags(match: Match): string {
-  return `#FIFAWorldCup #${fifaCode(match.homeCode)}${fifaCode(match.awayCode)}`;
+  const tags = [
+    `#FIFAWorldCup`,
+    `#${fifaCode(match.homeCode)}${fifaCode(match.awayCode)}`,
+  ];
+  const home = TEAM_HASHTAGS[match.homeCode.toUpperCase()];
+  const away = TEAM_HASHTAGS[match.awayCode.toUpperCase()];
+  if (home) tags.push(home);
+  if (away) tags.push(away);
+  return tags.join(" ");
 }
 
 /**
