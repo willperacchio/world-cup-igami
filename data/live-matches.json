@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-13T03:00:43.369Z",
+  "lastFetched": "2026-06-13T03:10:39.511Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -44,6 +44,23 @@
       "homeCode": "CAN",
       "awayCode": "BIH",
       "homeScore": 1,
+      "awayScore": 1,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-13",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "United States",
+      "awayTeam": "Paraguay",
+      "homeCode": "USA",
+      "awayCode": "PRY",
+      "homeScore": 4,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,

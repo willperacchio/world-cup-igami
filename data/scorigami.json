@@ -509,7 +509,7 @@
   {
     "lowScore": 1,
     "highScore": 4,
-    "count": 31,
+    "count": 32,
     "firstMatch": {
       "date": "1930-07-13",
       "tournament": "1930 FIFA Men's World Cup",
@@ -528,21 +528,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2022-12-05",
-      "tournament": "2022 FIFA Men's World Cup",
-      "stage": "round of 16",
-      "homeTeam": "Brazil",
-      "awayTeam": "South Korea",
-      "homeCode": "BRA",
-      "awayCode": "KOR",
+      "date": "2026-06-13",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "United States",
+      "awayTeam": "Paraguay",
+      "homeCode": "USA",
+      "awayCode": "PRY",
       "homeScore": 4,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
-      "penaltyScore": "0-0",
-      "stadium": "Stadium 974",
-      "city": "Doha",
-      "country": "Qatar"
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
     }
   },
   {
