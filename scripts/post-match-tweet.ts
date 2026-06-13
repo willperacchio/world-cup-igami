@@ -224,9 +224,12 @@ function flag(code: string): string {
     URU: "UY", UZB: "UZ", VAN: "VU", VEN: "VE", VIE: "VN", YEM: "YE",
     ZAM: "ZM", ZIM: "ZW", ENG: "GB", SCO: "GB", WAL: "GB", NIR: "GB",
     CUR: "CW", BOE: "BQ",
-    // ISO 3166-1 alpha-3 codes that differ from the FIFA TLA already above
+    // ISO 3166-1 alpha-3 codes — match data stores these (not FIFA TLAs) after
+    // ingestion, so every FIFA code above that differs needs its ISO twin here.
     HRV: "HR", DEU: "DE", NLD: "NL", BGR: "BG", PRT: "PT", GRC: "GR",
-    DNK: "DK", CHE: "CH", ZAF: "ZA",
+    DNK: "DK", CHE: "CH", ZAF: "ZA", TTO: "TT", CRI: "CR", HND: "HN",
+    PRY: "PY", URY: "UY", DZA: "DZ", AGO: "AO", KWT: "KW", HTI: "HT",
+    CHL: "CL", ZMB: "ZM", SAU: "SA", TGO: "TG",
     // Defunct nations — use successor or historical flag
     YUG: "RS", TCH: "CZ", URS: "RU", FRG: "DE", GDR: "DE", SCG: "RS",
     ZAI: "CD", DEI: "ID",
@@ -264,6 +267,32 @@ function yearsSinceFirst(): number {
 }
 
 /**
+ * FIFA's official match hashtags use FIFA 3-letter codes (e.g. #MEXRSA), but
+ * our match data stores ISO alpha-3 (ZAF) after ingestion. Map the codes that
+ * differ back to FIFA's so the hashtag matches what fans actually follow.
+ * Inverse of FIFA_TLA_TO_ISO3 in scripts/lib/fd-mapper.ts.
+ */
+const ISO3_TO_FIFA: Record<string, string> = {
+  DZA: "ALG", AGO: "ANG", BGR: "BUL", CHL: "CHI", CRI: "CRC", HRV: "CRO",
+  DNK: "DEN", DEU: "GER", GRC: "GRE", HTI: "HAI", HND: "HON", SAU: "KSA",
+  KWT: "KUW", NLD: "NED", PRY: "PAR", PRT: "POR", ZAF: "RSA", CHE: "SUI",
+  TGO: "TOG", TTO: "TRI", URY: "URU", ZMB: "ZAM",
+};
+
+function fifaCode(code: string): string {
+  const c = code.toUpperCase();
+  return ISO3_TO_FIFA[c] || c;
+}
+
+/**
+ * Discovery hashtags appended to every tweet: the evergreen tournament tag
+ * plus FIFA's per-match tag (home+away FIFA codes, e.g. #MEXRSA).
+ */
+function matchHashtags(match: Match): string {
+  return `#FIFAWorldCup #${fifaCode(match.homeCode)}${fifaCode(match.awayCode)}`;
+}
+
+/**
  * Approximate X's weighted tweet length. Counts astral-plane characters
  * (emoji, flags) as 2 and everything else as 1. Slightly overestimates flag
  * emoji (4 vs X's 2) and the trailing URL (raw length vs t.co's 23), which is
@@ -278,7 +307,10 @@ function approxTweetLength(text: string): number {
   return len;
 }
 
-const TWEET_LIMIT = 280;
+// The bot account has X Premium (25,000-char limit), so the full rich format
+// always fits and the compact fallback below effectively never triggers — it's
+// kept only as a safety net. Drop this to 280 if the account ever loses Premium.
+const TWEET_LIMIT = 25000;
 
 function composeScorigamiTweet(match: Match, entry: ScorigamiEntry, summary: Summary, compact = false): string {
   const hf = flag(match.homeCode);
@@ -324,6 +356,8 @@ function composeScorigamiTweet(match: Match, entry: ScorigamiEntry, summary: Sum
       `THIS SCORELINE HAS NEVER HAPPENED IN ${years} YEARS AND ${summary.totalMatches.toLocaleString()} MATCHES OF WORLD CUP HISTORY.`,
       ``,
       `${SITE_URL}`,
+      ``,
+      matchHashtags(match),
     ].join("\n");
   }
 
@@ -339,6 +373,8 @@ function composeScorigamiTweet(match: Match, entry: ScorigamiEntry, summary: Sum
     ``,
     `${uniqueNum} unique score. Only in the World Cup.`,
     `${SITE_URL}`,
+    ``,
+    matchHashtags(match),
   ];
 
   return lines.join("\n");
@@ -390,7 +426,7 @@ function composeNonScorigamiTweet(match: Match, entry: ScorigamiEntry, allMatche
     lines.push(`Previous: ${pf} ${prev.homeTeam} ${prev.homeScore}–${prev.awayScore} ${prev.awayTeam} ${pa} (${prevYear})`);
   }
 
-  lines.push(``, `${SITE_URL}`);
+  lines.push(``, `${SITE_URL}`, ``, matchHashtags(match));
 
   return lines.join("\n");
 }
