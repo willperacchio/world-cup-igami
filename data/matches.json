@@ -16488,5 +16488,22 @@
     "stadium": "",
     "city": "",
     "country": ""
+  },
+  {
+    "date": "2026-06-14",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Haiti",
+    "awayTeam": "Scotland",
+    "homeCode": "HTI",
+    "awayCode": "SCO",
+    "homeScore": 0,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "",
+    "city": "",
+    "country": ""
   }
 ]

@@ -41,7 +41,7 @@
   {
     "lowScore": 0,
     "highScore": 1,
-    "count": 182,
+    "count": 183,
     "firstMatch": {
       "date": "1930-07-15",
       "tournament": "1930 FIFA Men's World Cup",
@@ -60,21 +60,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2022-12-10",
-      "tournament": "2022 FIFA Men's World Cup",
-      "stage": "quarter-finals",
-      "homeTeam": "Morocco",
-      "awayTeam": "Portugal",
-      "homeCode": "MAR",
-      "awayCode": "PRT",
-      "homeScore": 1,
-      "awayScore": 0,
+      "date": "2026-06-14",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Haiti",
+      "awayTeam": "Scotland",
+      "homeCode": "HTI",
+      "awayCode": "SCO",
+      "homeScore": 0,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
-      "penaltyScore": "0-0",
-      "stadium": "Al Thumama Stadium",
-      "city": "Doha",
-      "country": "Qatar"
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
     }
   },
   {

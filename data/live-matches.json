@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-14T03:00:44.205Z",
+  "lastFetched": "2026-06-14T03:10:37.470Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -95,6 +95,23 @@
       "homeCode": "BRA",
       "awayCode": "MAR",
       "homeScore": 1,
+      "awayScore": 1,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-14",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Haiti",
+      "awayTeam": "Scotland",
+      "homeCode": "HTI",
+      "awayCode": "SCO",
+      "homeScore": 0,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
