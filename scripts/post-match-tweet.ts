@@ -185,9 +185,28 @@ async function postTweet(text: string): Promise<PostResult> {
 
 const SITE_URL = process.env.SITE_URL || "world-cup-igami.vercel.app";
 
+// England, Scotland, and Wales have dedicated emoji flags built from Unicode
+// tag sequences (e.g. 🏴󠁧󠁢󠁳󠁣󠁴󠁿). A regional-indicator pair like "GB" can't express them —
+// it renders the Union Jack — so emit the tag sequence directly. Northern
+// Ireland has no emoji flag, so it falls through to the UK flag below.
+function subdivisionFlag(sub: string): string {
+  return (
+    "\u{1F3F4}" +
+    [...sub].map((c) => String.fromCodePoint(0xe0000 + c.charCodeAt(0))).join("") +
+    "\u{E007F}"
+  );
+}
+const SUBDIVISION_FLAGS: Record<string, string> = {
+  ENG: subdivisionFlag("gbeng"),
+  SCO: subdivisionFlag("gbsct"),
+  WAL: subdivisionFlag("gbwls"),
+};
+
 /** Flag emoji lookup by country code */
 function flag(code: string): string {
   if (!code || code.length !== 3) return "";
+  const upper = code.toUpperCase();
+  if (SUBDIVISION_FLAGS[upper]) return SUBDIVISION_FLAGS[upper];
   // Map 3-letter to 2-letter ISO for regional indicator symbols
   const tlaToIso2: Record<string, string> = {
     AFG: "AF", ALB: "AL", ALG: "DZ", AND: "AD", ANG: "AO", ANT: "AG",
@@ -223,7 +242,7 @@ function flag(code: string): string {
     TKM: "TM", UGA: "UG", UKR: "UA", UAE: "AE", GBR: "GB", USA: "US",
     URU: "UY", UZB: "UZ", VAN: "VU", VEN: "VE", VIE: "VN", YEM: "YE",
     ZAM: "ZM", ZIM: "ZW", ENG: "GB", SCO: "GB", WAL: "GB", NIR: "GB",
-    CUR: "CW", BOE: "BQ",
+    CUR: "CW", CUW: "CW", BOE: "BQ",
     // ISO 3166-1 alpha-3 codes — match data stores these (not FIFA TLAs) after
     // ingestion, so every FIFA code above that differs needs its ISO twin here.
     HRV: "HR", DEU: "DE", NLD: "NL", BGR: "BG", PRT: "PT", GRC: "GR",
@@ -234,7 +253,7 @@ function flag(code: string): string {
     YUG: "RS", TCH: "CZ", URS: "RU", FRG: "DE", GDR: "DE", SCG: "RS",
     ZAI: "CD", DEI: "ID",
   };
-  const iso2 = tlaToIso2[code.toUpperCase()];
+  const iso2 = tlaToIso2[upper];
   if (!iso2) return "";
   return String.fromCodePoint(...[...iso2].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65));
 }
