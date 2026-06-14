@@ -72,9 +72,9 @@
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "",
-      "city": "",
-      "country": ""
+      "stadium": "Gillette Stadium",
+      "city": "Boston",
+      "country": "United States"
     }
   },
   {
@@ -111,9 +111,9 @@
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "",
-      "city": "",
-      "country": ""
+      "stadium": "BC Place",
+      "city": "Vancouver",
+      "country": "Canada"
     }
   },
   {
@@ -423,9 +423,9 @@
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "BMO Field",
-      "city": "Toronto",
-      "country": "Canada"
+      "stadium": "MetLife Stadium",
+      "city": "New Jersey",
+      "country": "United States"
     }
   },
   {
@@ -540,9 +540,9 @@
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "",
-      "city": "",
-      "country": ""
+      "stadium": "SoFi Stadium",
+      "city": "Los Angeles",
+      "country": "United States"
     }
   },
   {
