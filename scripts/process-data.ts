@@ -127,6 +127,31 @@ const { matches, liveAdded, overridesApplied } = mergeMatches(
 );
 const overridesAdded = overridesApplied;
 
+// Backfill venue for 2026 matches. football-data.org provides no venue for
+// World Cup matches, so live/override 2026 entries arrive with empty
+// stadium/city/country. data/venues-2026.json (built from FIFA's API by
+// scripts/build-venues.ts) supplies them, keyed by date + team codes.
+const venuesPath = join(dataDir, "venues-2026.json");
+let venuesAdded = 0;
+if (existsSync(venuesPath)) {
+  const venues = JSON.parse(readFileSync(venuesPath, "utf-8")) as Record<
+    string,
+    { stadium: string; city: string; country: string }
+  >;
+  for (const m of matches) {
+    if (m.city || !m.tournament.includes("2026")) continue;
+    const v =
+      venues[`${m.date}|${m.homeCode}|${m.awayCode}`] ||
+      venues[`${m.date}|${m.awayCode}|${m.homeCode}`];
+    if (v) {
+      if (!m.stadium) m.stadium = v.stadium;
+      m.city = v.city;
+      m.country = v.country;
+      venuesAdded++;
+    }
+  }
+}
+
 // Build scorigami matrix: key is "lowScore-highScore" to normalize
 const scorigamiMap = new Map<
   string,
@@ -180,6 +205,7 @@ console.log("Processed data:");
 console.log(`  ${historicalMatches.length} matches from historical CSV`);
 console.log(`  ${liveAdded} new match(es) from live-matches.json`);
 console.log(`  ${overridesAdded} override(s) applied`);
+console.log(`  ${venuesAdded} match(es) enriched with venue data`);
 console.log(`  ${summary.totalMatches} matches total`);
 console.log(`  ${summary.uniqueScores} unique score combinations`);
 console.log(`  Max score in a match: ${maxScore}`);

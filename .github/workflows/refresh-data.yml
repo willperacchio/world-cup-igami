@@ -48,6 +48,13 @@ jobs:
           DATA_FREEZE: ${{ vars.DATA_FREEZE }}
         run: npx tsx scripts/fetch-live-matches.ts
 
+      # Best-effort: refresh 2026 venue lookup from FIFA's API so knockout
+      # venues fill in as the bracket sets. A FIFA outage must not break the
+      # pipeline — the committed venues file from the last good run still works.
+      - name: Refresh 2026 venue lookup from FIFA
+        continue-on-error: true
+        run: npx tsx scripts/build-venues.ts
+
       - name: Rebuild matches.json / scorigami.json / summary.json
         run: npx tsx scripts/process-data.ts
 
@@ -64,7 +71,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/live-matches.json data/matches.json data/scorigami.json data/summary.json
-          git add data/tweeted-matches.json 2>/dev/null || true
+          git add data/tweeted-matches.json data/venues-2026.json 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No data changes — skipping commit."
           else

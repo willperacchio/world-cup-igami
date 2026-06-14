@@ -1,0 +1,362 @@
+{
+  "2026-06-11|MEX|ZAF": {
+    "stadium": "Estadio Azteca",
+    "city": "Mexico City",
+    "country": "Mexico"
+  },
+  "2026-06-12|CAN|BIH": {
+    "stadium": "BMO Field",
+    "city": "Toronto",
+    "country": "Canada"
+  },
+  "2026-06-12|KOR|CZE": {
+    "stadium": "Estadio Akron",
+    "city": "Guadalajara",
+    "country": "Mexico"
+  },
+  "2026-06-13|BRA|MAR": {
+    "stadium": "MetLife Stadium",
+    "city": "New Jersey",
+    "country": "United States"
+  },
+  "2026-06-13|QAT|CHE": {
+    "stadium": "Levi's Stadium",
+    "city": "San Francisco Bay Area",
+    "country": "United States"
+  },
+  "2026-06-13|USA|PRY": {
+    "stadium": "SoFi Stadium",
+    "city": "Los Angeles",
+    "country": "United States"
+  },
+  "2026-06-14|AUS|TUR": {
+    "stadium": "BC Place",
+    "city": "Vancouver",
+    "country": "Canada"
+  },
+  "2026-06-14|CIV|ECU": {
+    "stadium": "Lincoln Financial Field",
+    "city": "Philadelphia",
+    "country": "United States"
+  },
+  "2026-06-14|DEU|CUW": {
+    "stadium": "NRG Stadium",
+    "city": "Houston",
+    "country": "United States"
+  },
+  "2026-06-14|HTI|SCO": {
+    "stadium": "Gillette Stadium",
+    "city": "Boston",
+    "country": "United States"
+  },
+  "2026-06-14|NLD|JPN": {
+    "stadium": "AT&T Stadium",
+    "city": "Dallas",
+    "country": "United States"
+  },
+  "2026-06-15|BEL|EGY": {
+    "stadium": "Lumen Field",
+    "city": "Seattle",
+    "country": "United States"
+  },
+  "2026-06-15|ESP|CPV": {
+    "stadium": "Mercedes-Benz Stadium",
+    "city": "Atlanta",
+    "country": "United States"
+  },
+  "2026-06-15|SAU|URY": {
+    "stadium": "Hard Rock Stadium",
+    "city": "Miami",
+    "country": "United States"
+  },
+  "2026-06-15|SWE|TUN": {
+    "stadium": "Estadio BBVA",
+    "city": "Monterrey",
+    "country": "Mexico"
+  },
+  "2026-06-16|FRA|SEN": {
+    "stadium": "MetLife Stadium",
+    "city": "New Jersey",
+    "country": "United States"
+  },
+  "2026-06-16|IRN|NZL": {
+    "stadium": "SoFi Stadium",
+    "city": "Los Angeles",
+    "country": "United States"
+  },
+  "2026-06-16|IRQ|NOR": {
+    "stadium": "Gillette Stadium",
+    "city": "Boston",
+    "country": "United States"
+  },
+  "2026-06-17|ARG|DZA": {
+    "stadium": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "United States"
+  },
+  "2026-06-17|AUT|JOR": {
+    "stadium": "Levi's Stadium",
+    "city": "San Francisco Bay Area",
+    "country": "United States"
+  },
+  "2026-06-17|ENG|HRV": {
+    "stadium": "AT&T Stadium",
+    "city": "Dallas",
+    "country": "United States"
+  },
+  "2026-06-17|GHA|PAN": {
+    "stadium": "BMO Field",
+    "city": "Toronto",
+    "country": "Canada"
+  },
+  "2026-06-17|PRT|COD": {
+    "stadium": "NRG Stadium",
+    "city": "Houston",
+    "country": "United States"
+  },
+  "2026-06-18|CAN|QAT": {
+    "stadium": "BC Place",
+    "city": "Vancouver",
+    "country": "Canada"
+  },
+  "2026-06-18|CHE|BIH": {
+    "stadium": "SoFi Stadium",
+    "city": "Los Angeles",
+    "country": "United States"
+  },
+  "2026-06-18|CZE|ZAF": {
+    "stadium": "Mercedes-Benz Stadium",
+    "city": "Atlanta",
+    "country": "United States"
+  },
+  "2026-06-18|UZB|COL": {
+    "stadium": "Estadio Azteca",
+    "city": "Mexico City",
+    "country": "Mexico"
+  },
+  "2026-06-19|MEX|KOR": {
+    "stadium": "Estadio Akron",
+    "city": "Guadalajara",
+    "country": "Mexico"
+  },
+  "2026-06-19|SCO|MAR": {
+    "stadium": "Gillette Stadium",
+    "city": "Boston",
+    "country": "United States"
+  },
+  "2026-06-19|USA|AUS": {
+    "stadium": "Lumen Field",
+    "city": "Seattle",
+    "country": "United States"
+  },
+  "2026-06-20|BRA|HTI": {
+    "stadium": "Lincoln Financial Field",
+    "city": "Philadelphia",
+    "country": "United States"
+  },
+  "2026-06-20|DEU|CIV": {
+    "stadium": "BMO Field",
+    "city": "Toronto",
+    "country": "Canada"
+  },
+  "2026-06-20|NLD|SWE": {
+    "stadium": "NRG Stadium",
+    "city": "Houston",
+    "country": "United States"
+  },
+  "2026-06-20|TUR|PRY": {
+    "stadium": "Levi's Stadium",
+    "city": "San Francisco Bay Area",
+    "country": "United States"
+  },
+  "2026-06-21|BEL|IRN": {
+    "stadium": "SoFi Stadium",
+    "city": "Los Angeles",
+    "country": "United States"
+  },
+  "2026-06-21|ECU|CUW": {
+    "stadium": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "United States"
+  },
+  "2026-06-21|ESP|SAU": {
+    "stadium": "Mercedes-Benz Stadium",
+    "city": "Atlanta",
+    "country": "United States"
+  },
+  "2026-06-21|TUN|JPN": {
+    "stadium": "Estadio BBVA",
+    "city": "Monterrey",
+    "country": "Mexico"
+  },
+  "2026-06-21|URY|CPV": {
+    "stadium": "Hard Rock Stadium",
+    "city": "Miami",
+    "country": "United States"
+  },
+  "2026-06-22|ARG|AUT": {
+    "stadium": "AT&T Stadium",
+    "city": "Dallas",
+    "country": "United States"
+  },
+  "2026-06-22|FRA|IRQ": {
+    "stadium": "Lincoln Financial Field",
+    "city": "Philadelphia",
+    "country": "United States"
+  },
+  "2026-06-22|NZL|EGY": {
+    "stadium": "BC Place",
+    "city": "Vancouver",
+    "country": "Canada"
+  },
+  "2026-06-23|ENG|GHA": {
+    "stadium": "Gillette Stadium",
+    "city": "Boston",
+    "country": "United States"
+  },
+  "2026-06-23|JOR|DZA": {
+    "stadium": "Levi's Stadium",
+    "city": "San Francisco Bay Area",
+    "country": "United States"
+  },
+  "2026-06-23|NOR|SEN": {
+    "stadium": "MetLife Stadium",
+    "city": "New Jersey",
+    "country": "United States"
+  },
+  "2026-06-23|PAN|HRV": {
+    "stadium": "BMO Field",
+    "city": "Toronto",
+    "country": "Canada"
+  },
+  "2026-06-23|PRT|UZB": {
+    "stadium": "NRG Stadium",
+    "city": "Houston",
+    "country": "United States"
+  },
+  "2026-06-24|BIH|QAT": {
+    "stadium": "Lumen Field",
+    "city": "Seattle",
+    "country": "United States"
+  },
+  "2026-06-24|CHE|CAN": {
+    "stadium": "BC Place",
+    "city": "Vancouver",
+    "country": "Canada"
+  },
+  "2026-06-24|COL|COD": {
+    "stadium": "Estadio Akron",
+    "city": "Guadalajara",
+    "country": "Mexico"
+  },
+  "2026-06-24|MAR|HTI": {
+    "stadium": "Mercedes-Benz Stadium",
+    "city": "Atlanta",
+    "country": "United States"
+  },
+  "2026-06-24|SCO|BRA": {
+    "stadium": "Hard Rock Stadium",
+    "city": "Miami",
+    "country": "United States"
+  },
+  "2026-06-25|CUW|CIV": {
+    "stadium": "Lincoln Financial Field",
+    "city": "Philadelphia",
+    "country": "United States"
+  },
+  "2026-06-25|CZE|MEX": {
+    "stadium": "Estadio Azteca",
+    "city": "Mexico City",
+    "country": "Mexico"
+  },
+  "2026-06-25|ECU|DEU": {
+    "stadium": "MetLife Stadium",
+    "city": "New Jersey",
+    "country": "United States"
+  },
+  "2026-06-25|JPN|SWE": {
+    "stadium": "AT&T Stadium",
+    "city": "Dallas",
+    "country": "United States"
+  },
+  "2026-06-25|TUN|NLD": {
+    "stadium": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "United States"
+  },
+  "2026-06-25|ZAF|KOR": {
+    "stadium": "Estadio BBVA",
+    "city": "Monterrey",
+    "country": "Mexico"
+  },
+  "2026-06-26|NOR|FRA": {
+    "stadium": "Gillette Stadium",
+    "city": "Boston",
+    "country": "United States"
+  },
+  "2026-06-26|PRY|AUS": {
+    "stadium": "Levi's Stadium",
+    "city": "San Francisco Bay Area",
+    "country": "United States"
+  },
+  "2026-06-26|SEN|IRQ": {
+    "stadium": "BMO Field",
+    "city": "Toronto",
+    "country": "Canada"
+  },
+  "2026-06-26|TUR|USA": {
+    "stadium": "SoFi Stadium",
+    "city": "Los Angeles",
+    "country": "United States"
+  },
+  "2026-06-27|COD|UZB": {
+    "stadium": "Mercedes-Benz Stadium",
+    "city": "Atlanta",
+    "country": "United States"
+  },
+  "2026-06-27|COL|PRT": {
+    "stadium": "Hard Rock Stadium",
+    "city": "Miami",
+    "country": "United States"
+  },
+  "2026-06-27|CPV|SAU": {
+    "stadium": "NRG Stadium",
+    "city": "Houston",
+    "country": "United States"
+  },
+  "2026-06-27|EGY|IRN": {
+    "stadium": "Lumen Field",
+    "city": "Seattle",
+    "country": "United States"
+  },
+  "2026-06-27|HRV|GHA": {
+    "stadium": "Lincoln Financial Field",
+    "city": "Philadelphia",
+    "country": "United States"
+  },
+  "2026-06-27|NZL|BEL": {
+    "stadium": "BC Place",
+    "city": "Vancouver",
+    "country": "Canada"
+  },
+  "2026-06-27|PAN|ENG": {
+    "stadium": "MetLife Stadium",
+    "city": "New Jersey",
+    "country": "United States"
+  },
+  "2026-06-27|URY|ESP": {
+    "stadium": "Estadio Akron",
+    "city": "Guadalajara",
+    "country": "Mexico"
+  },
+  "2026-06-28|DZA|AUT": {
+    "stadium": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "United States"
+  },
+  "2026-06-28|JOR|ARG": {
+    "stadium": "AT&T Stadium",
+    "city": "Dallas",
+    "country": "United States"
+  }
+}

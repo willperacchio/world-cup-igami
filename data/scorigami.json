@@ -423,9 +423,9 @@
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "",
-      "city": "",
-      "country": ""
+      "stadium": "BMO Field",
+      "city": "Toronto",
+      "country": "Canada"
     }
   },
   {
@@ -462,9 +462,9 @@
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "",
-      "city": "",
-      "country": ""
+      "stadium": "Estadio Akron",
+      "city": "Guadalajara",
+      "country": "Mexico"
     }
   },
   {
