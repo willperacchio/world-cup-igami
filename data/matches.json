@@ -16505,5 +16505,22 @@
     "stadium": "",
     "city": "",
     "country": ""
+  },
+  {
+    "date": "2026-06-14",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Australia",
+    "awayTeam": "Turkey",
+    "homeCode": "AUS",
+    "awayCode": "TUR",
+    "homeScore": 2,
+    "awayScore": 0,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "",
+    "city": "",
+    "country": ""
   }
 ]
