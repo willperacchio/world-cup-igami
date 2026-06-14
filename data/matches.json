@@ -16539,5 +16539,22 @@
     "stadium": "NRG Stadium",
     "city": "Houston",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-14",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Netherlands",
+    "awayTeam": "Japan",
+    "homeCode": "NLD",
+    "awayCode": "JPN",
+    "homeScore": 2,
+    "awayScore": 2,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "AT&T Stadium",
+    "city": "Dallas",
+    "country": "United States"
   }
 ]

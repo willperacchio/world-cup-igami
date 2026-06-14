@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-14T21:53:39.335Z",
+  "lastFetched": "2026-06-14T22:10:31.093Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -147,6 +147,23 @@
       "awayCode": "CUW",
       "homeScore": 7,
       "awayScore": 1,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-14",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Netherlands",
+      "awayTeam": "Japan",
+      "homeCode": "NLD",
+      "awayCode": "JPN",
+      "homeScore": 2,
+      "awayScore": 2,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
