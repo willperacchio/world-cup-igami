@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-14T00:00:39.153Z",
+  "lastFetched": "2026-06-14T00:10:37.645Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -77,6 +77,23 @@
       "awayTeam": "Switzerland",
       "homeCode": "QAT",
       "awayCode": "CHE",
+      "homeScore": 1,
+      "awayScore": 1,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-13",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Brazil",
+      "awayTeam": "Morocco",
+      "homeCode": "BRA",
+      "awayCode": "MAR",
       "homeScore": 1,
       "awayScore": 1,
       "extraTime": false,
