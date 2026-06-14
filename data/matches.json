@@ -16522,5 +16522,22 @@
     "stadium": "BC Place",
     "city": "Vancouver",
     "country": "Canada"
+  },
+  {
+    "date": "2026-06-14",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Germany",
+    "awayTeam": "Curaçao",
+    "homeCode": "DEU",
+    "awayCode": "CUW",
+    "homeScore": 7,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "NRG Stadium",
+    "city": "Houston",
+    "country": "United States"
   }
 ]

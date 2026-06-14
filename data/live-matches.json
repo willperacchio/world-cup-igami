@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-14T18:50:34.939Z",
+  "lastFetched": "2026-06-14T19:00:43.533Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -130,6 +130,23 @@
       "awayCode": "TUR",
       "homeScore": 2,
       "awayScore": 0,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-14",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Germany",
+      "awayTeam": "Curaçao",
+      "homeCode": "DEU",
+      "awayCode": "CUW",
+      "homeScore": 7,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",

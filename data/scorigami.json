@@ -626,7 +626,7 @@
   {
     "lowScore": 1,
     "highScore": 7,
-    "count": 3,
+    "count": 4,
     "firstMatch": {
       "date": "1934-05-27",
       "tournament": "1934 FIFA Men's World Cup",
@@ -645,21 +645,21 @@
       "country": "Italy"
     },
     "lastMatch": {
-      "date": "2014-07-08",
-      "tournament": "2014 FIFA Men's World Cup",
-      "stage": "semi-finals",
-      "homeTeam": "Brazil",
-      "awayTeam": "Germany",
-      "homeCode": "BRA",
-      "awayCode": "DEU",
-      "homeScore": 1,
-      "awayScore": 7,
+      "date": "2026-06-14",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Germany",
+      "awayTeam": "Curaçao",
+      "homeCode": "DEU",
+      "awayCode": "CUW",
+      "homeScore": 7,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
-      "penaltyScore": "0-0",
-      "stadium": "Estádio Mineirão",
-      "city": "Belo Horizonte",
-      "country": "Brazil"
+      "penaltyScore": "",
+      "stadium": "NRG Stadium",
+      "city": "Houston",
+      "country": "United States"
     }
   },
   {
