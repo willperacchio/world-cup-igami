@@ -16590,5 +16590,22 @@
     "stadium": "Estadio BBVA",
     "city": "Monterrey",
     "country": "Mexico"
+  },
+  {
+    "date": "2026-06-15",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Spain",
+    "awayTeam": "Cape Verde Islands",
+    "homeCode": "ESP",
+    "awayCode": "CPV",
+    "homeScore": 0,
+    "awayScore": 0,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Mercedes-Benz Stadium",
+    "city": "Atlanta",
+    "country": "United States"
   }
 ]
