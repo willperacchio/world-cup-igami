@@ -16607,5 +16607,22 @@
     "stadium": "Mercedes-Benz Stadium",
     "city": "Atlanta",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-15",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Belgium",
+    "awayTeam": "Egypt",
+    "homeCode": "BEL",
+    "awayCode": "EGY",
+    "homeScore": 1,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Lumen Field",
+    "city": "Seattle",
+    "country": "United States"
   }
 ]

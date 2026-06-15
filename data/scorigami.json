@@ -392,7 +392,7 @@
   {
     "lowScore": 1,
     "highScore": 1,
-    "count": 95,
+    "count": 96,
     "firstMatch": {
       "date": "1934-05-31",
       "tournament": "1934 FIFA Men's World Cup",
@@ -411,20 +411,20 @@
       "country": "Italy"
     },
     "lastMatch": {
-      "date": "2026-06-13",
+      "date": "2026-06-15",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Brazil",
-      "awayTeam": "Morocco",
-      "homeCode": "BRA",
-      "awayCode": "MAR",
+      "homeTeam": "Belgium",
+      "awayTeam": "Egypt",
+      "homeCode": "BEL",
+      "awayCode": "EGY",
       "homeScore": 1,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "MetLife Stadium",
-      "city": "New Jersey",
+      "stadium": "Lumen Field",
+      "city": "Seattle",
       "country": "United States"
     }
   },
