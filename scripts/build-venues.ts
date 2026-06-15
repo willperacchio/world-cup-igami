@@ -58,8 +58,36 @@ function firstDesc(arr: any): string {
   return (arr && arr[0] && arr[0].Description) || "";
 }
 
+/**
+ * fetch() with retries on transient failures — network drops, 5xx, 429. The
+ * cron treats this script as best-effort, but a quick retry avoids skipping a
+ * venue refresh over a single blip.
+ */
+async function fetchWithRetry(
+  url: string,
+  init: RequestInit,
+  attempts = 4,
+): Promise<Response> {
+  let lastErr: unknown;
+  for (let i = 0; i < attempts; i++) {
+    try {
+      const res = await fetch(url, init);
+      if (res.status >= 500 || res.status === 429) {
+        throw new Error(`retryable status ${res.status}`);
+      }
+      return res;
+    } catch (err) {
+      lastErr = err;
+      if (i < attempts - 1) {
+        await new Promise((r) => setTimeout(r, 1000 * 2 ** i));
+      }
+    }
+  }
+  throw lastErr;
+}
+
 async function main() {
-  const res = await fetch(FIFA_URL, { headers: { Accept: "application/json" } });
+  const res = await fetchWithRetry(FIFA_URL, { headers: { Accept: "application/json" } });
   if (!res.ok) {
     throw new Error(`FIFA API request failed: ${res.status} ${res.statusText}`);
   }

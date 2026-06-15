@@ -25,6 +25,39 @@ interface FdResponse {
   resultSet?: { count: number; competitions?: string };
 }
 
+/**
+ * fetch() with retries on transient failures — network drops (e.g.
+ * UND_ERR_SOCKET "other side closed"), 5xx, and 429. A single blip shouldn't
+ * fail the whole cron cycle and delay a match tweet by 10 minutes. HTTP error
+ * responses (4xx other than 429) are returned as-is for the caller to handle.
+ */
+async function fetchWithRetry(
+  url: string,
+  init: RequestInit,
+  attempts = 4,
+): Promise<Response> {
+  let lastErr: unknown;
+  for (let i = 0; i < attempts; i++) {
+    try {
+      const res = await fetch(url, init);
+      if (res.status >= 500 || res.status === 429) {
+        throw new Error(`retryable status ${res.status}`);
+      }
+      return res;
+    } catch (err) {
+      lastErr = err;
+      if (i < attempts - 1) {
+        const backoffMs = 1000 * 2 ** i; // 1s, 2s, 4s
+        console.warn(
+          `fetch attempt ${i + 1}/${attempts} failed (${String(err)}); retrying in ${backoffMs}ms`,
+        );
+        await new Promise((r) => setTimeout(r, backoffMs));
+      }
+    }
+  }
+  throw lastErr;
+}
+
 async function main() {
   const token = process.env.FOOTBALL_ORG_AUTH_TOKEN;
   if (!token) {
@@ -42,9 +75,7 @@ async function main() {
   // Pull all matches for the World Cup competition; we'll filter to FINISHED
   // client-side so we keep one canonical request shape regardless of status.
   const url = "https://api.football-data.org/v4/competitions/WC/matches";
-  const res = await fetch(url, {
-    headers: { "X-Auth-Token": token },
-  });
+  const res = await fetchWithRetry(url, { headers: { "X-Auth-Token": token } });
 
   if (!res.ok) {
     const body = await res.text().catch(() => "<no body>");
