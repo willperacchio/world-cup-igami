@@ -16573,5 +16573,22 @@
     "stadium": "Lincoln Financial Field",
     "city": "Philadelphia",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-15",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Sweden",
+    "awayTeam": "Tunisia",
+    "homeCode": "SWE",
+    "awayCode": "TUN",
+    "homeScore": 5,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Estadio BBVA",
+    "city": "Monterrey",
+    "country": "Mexico"
   }
 ]

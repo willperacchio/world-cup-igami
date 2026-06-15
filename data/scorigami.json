@@ -548,7 +548,7 @@
   {
     "lowScore": 1,
     "highScore": 5,
-    "count": 7,
+    "count": 8,
     "firstMatch": {
       "date": "1938-06-16",
       "tournament": "1938 FIFA Men's World Cup",
@@ -567,21 +567,21 @@
       "country": "France"
     },
     "lastMatch": {
-      "date": "2014-06-13",
-      "tournament": "2014 FIFA Men's World Cup",
+      "date": "2026-06-15",
+      "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Spain",
-      "awayTeam": "Netherlands",
-      "homeCode": "ESP",
-      "awayCode": "NLD",
-      "homeScore": 1,
-      "awayScore": 5,
+      "homeTeam": "Sweden",
+      "awayTeam": "Tunisia",
+      "homeCode": "SWE",
+      "awayCode": "TUN",
+      "homeScore": 5,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
-      "penaltyScore": "0-0",
-      "stadium": "Arena Fonte Nova",
-      "city": "Salvador",
-      "country": "Brazil"
+      "penaltyScore": "",
+      "stadium": "Estadio BBVA",
+      "city": "Monterrey",
+      "country": "Mexico"
     }
   },
   {

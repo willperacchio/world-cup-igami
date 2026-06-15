@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-15T03:50:30.392Z",
+  "lastFetched": "2026-06-15T04:00:46.278Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -181,6 +181,23 @@
       "awayCode": "ECU",
       "homeScore": 1,
       "awayScore": 0,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-15",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Sweden",
+      "awayTeam": "Tunisia",
+      "homeCode": "SWE",
+      "awayCode": "TUN",
+      "homeScore": 5,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
