@@ -30,6 +30,8 @@ export interface FdMatch {
 
 export interface InternalMatch {
   date: string;
+  /** Full UTC kickoff timestamp (ISO 8601) for chronological sorting. */
+  kickoff: string;
   tournament: string;
   stage: string;
   homeTeam: string;
@@ -135,6 +137,7 @@ export function mapMatch(m: FdMatch): InternalMatch | null {
 
   return {
     date,
+    kickoff: m.utcDate,
     tournament,
     stage: mapStage(m.stage),
     homeTeam: m.homeTeam.name,

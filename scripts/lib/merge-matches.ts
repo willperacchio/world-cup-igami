@@ -11,6 +11,8 @@
 
 export interface MatchLike {
   date: string;
+  /** Optional full UTC kickoff timestamp; preferred over `date` for sorting. */
+  kickoff?: string;
   homeTeam: string;
   awayTeam: string;
 }
@@ -46,8 +48,13 @@ export function mergeMatches<T extends MatchLike>(
     merged.set(key(m), m);
   }
 
+  // Sort chronologically. Prefer the full kickoff timestamp when present (live
+  // matches) so same-day games order by actual kickoff time; fall back to the
+  // calendar date for historical matches. ISO strings sort lexically, and a
+  // bare "YYYY-MM-DD" sorts before any same-day "YYYY-MM-DDThh:..." timestamp.
+  const sortKey = (m: T) => m.kickoff || m.date;
   const matches = Array.from(merged.values()).sort((a, b) =>
-    a.date.localeCompare(b.date),
+    sortKey(a).localeCompare(sortKey(b)),
   );
 
   return { matches, liveAdded, overridesApplied };

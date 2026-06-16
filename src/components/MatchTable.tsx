@@ -66,7 +66,9 @@ export default function MatchTable({ matches, scorigami }: Props) {
     result.sort((a, b) => {
       let cmp = 0;
       if (sortField === "date") {
-        cmp = a.date.localeCompare(b.date);
+        // Prefer full kickoff timestamp (live 2026 matches) so same-day games
+        // sort by real kickoff time; historical matches fall back to date.
+        cmp = (a.kickoff || a.date).localeCompare(b.kickoff || b.date);
       } else if (sortField === "home") {
         cmp = a.homeTeam.localeCompare(b.homeTeam);
       } else if (sortField === "away") {

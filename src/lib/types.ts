@@ -1,5 +1,12 @@
 export interface Match {
   date: string;
+  /**
+   * Full UTC kickoff timestamp (ISO 8601), when known — set for live 2026
+   * matches from football-data.org. Lets same-day games sort by actual kickoff
+   * time so late-night Americas matches (which roll past midnight UTC) still
+   * order chronologically. Historical matches only have `date`.
+   */
+  kickoff?: string;
   tournament: string;
   stage: string;
   homeTeam: string;
