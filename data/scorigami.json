@@ -392,7 +392,7 @@
   {
     "lowScore": 1,
     "highScore": 1,
-    "count": 96,
+    "count": 97,
     "firstMatch": {
       "date": "1934-05-31",
       "tournament": "1934 FIFA Men's World Cup",
@@ -414,17 +414,17 @@
       "date": "2026-06-15",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Belgium",
-      "awayTeam": "Egypt",
-      "homeCode": "BEL",
-      "awayCode": "EGY",
+      "homeTeam": "Saudi Arabia",
+      "awayTeam": "Uruguay",
+      "homeCode": "SAU",
+      "awayCode": "URY",
       "homeScore": 1,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Lumen Field",
-      "city": "Seattle",
+      "stadium": "Hard Rock Stadium",
+      "city": "Miami",
       "country": "United States"
     }
   },

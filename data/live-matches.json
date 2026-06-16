@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-16T00:00:46.795Z",
+  "lastFetched": "2026-06-16T00:10:46.348Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -230,6 +230,23 @@
       "awayTeam": "Egypt",
       "homeCode": "BEL",
       "awayCode": "EGY",
+      "homeScore": 1,
+      "awayScore": 1,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-15",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Saudi Arabia",
+      "awayTeam": "Uruguay",
+      "homeCode": "SAU",
+      "awayCode": "URY",
       "homeScore": 1,
       "awayScore": 1,
       "extraTime": false,

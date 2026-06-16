@@ -16624,5 +16624,22 @@
     "stadium": "Lumen Field",
     "city": "Seattle",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-15",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Saudi Arabia",
+    "awayTeam": "Uruguay",
+    "homeCode": "SAU",
+    "awayCode": "URY",
+    "homeScore": 1,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Hard Rock Stadium",
+    "city": "Miami",
+    "country": "United States"
   }
 ]
