@@ -16406,6 +16406,7 @@
   },
   {
     "date": "2026-06-12",
+    "kickoff": "2026-06-12T02:00:00Z",
     "tournament": "2026 FIFA Men's World Cup",
     "stage": "group stage",
     "homeTeam": "South Korea",
@@ -16423,6 +16424,7 @@
   },
   {
     "date": "2026-06-12",
+    "kickoff": "2026-06-12T19:00:00Z",
     "tournament": "2026 FIFA Men's World Cup",
     "stage": "group stage",
     "homeTeam": "Canada",
@@ -16440,6 +16442,7 @@
   },
   {
     "date": "2026-06-13",
+    "kickoff": "2026-06-13T01:00:00Z",
     "tournament": "2026 FIFA Men's World Cup",
     "stage": "group stage",
     "homeTeam": "United States",
@@ -16457,6 +16460,7 @@
   },
   {
     "date": "2026-06-13",
+    "kickoff": "2026-06-13T19:00:00Z",
     "tournament": "2026 FIFA Men's World Cup",
     "stage": "group stage",
     "homeTeam": "Qatar",
@@ -16474,6 +16478,7 @@
   },
   {
     "date": "2026-06-13",
+    "kickoff": "2026-06-13T22:00:00Z",
     "tournament": "2026 FIFA Men's World Cup",
     "stage": "group stage",
     "homeTeam": "Brazil",
@@ -16491,6 +16496,7 @@
   },
   {
     "date": "2026-06-14",
+    "kickoff": "2026-06-14T01:00:00Z",
     "tournament": "2026 FIFA Men's World Cup",
     "stage": "group stage",
     "homeTeam": "Haiti",
@@ -16508,6 +16514,7 @@
   },
   {
     "date": "2026-06-14",
+    "kickoff": "2026-06-14T04:00:00Z",
     "tournament": "2026 FIFA Men's World Cup",
     "stage": "group stage",
     "homeTeam": "Australia",
@@ -16525,6 +16532,7 @@
   },
   {
     "date": "2026-06-14",
+    "kickoff": "2026-06-14T17:00:00Z",
     "tournament": "2026 FIFA Men's World Cup",
     "stage": "group stage",
     "homeTeam": "Germany",
@@ -16542,6 +16550,7 @@
   },
   {
     "date": "2026-06-14",
+    "kickoff": "2026-06-14T20:00:00Z",
     "tournament": "2026 FIFA Men's World Cup",
     "stage": "group stage",
     "homeTeam": "Netherlands",
@@ -16559,6 +16568,7 @@
   },
   {
     "date": "2026-06-14",
+    "kickoff": "2026-06-14T23:00:00Z",
     "tournament": "2026 FIFA Men's World Cup",
     "stage": "group stage",
     "homeTeam": "Ivory Coast",
@@ -16576,6 +16586,7 @@
   },
   {
     "date": "2026-06-15",
+    "kickoff": "2026-06-15T02:00:00Z",
     "tournament": "2026 FIFA Men's World Cup",
     "stage": "group stage",
     "homeTeam": "Sweden",
@@ -16593,6 +16604,7 @@
   },
   {
     "date": "2026-06-15",
+    "kickoff": "2026-06-15T16:00:00Z",
     "tournament": "2026 FIFA Men's World Cup",
     "stage": "group stage",
     "homeTeam": "Spain",
@@ -16610,6 +16622,7 @@
   },
   {
     "date": "2026-06-15",
+    "kickoff": "2026-06-15T19:00:00Z",
     "tournament": "2026 FIFA Men's World Cup",
     "stage": "group stage",
     "homeTeam": "Belgium",
@@ -16627,6 +16640,7 @@
   },
   {
     "date": "2026-06-15",
+    "kickoff": "2026-06-15T22:00:00Z",
     "tournament": "2026 FIFA Men's World Cup",
     "stage": "group stage",
     "homeTeam": "Saudi Arabia",
@@ -16644,6 +16658,7 @@
   },
   {
     "date": "2026-06-16",
+    "kickoff": "2026-06-16T01:00:00Z",
     "tournament": "2026 FIFA Men's World Cup",
     "stage": "group stage",
     "homeTeam": "Iran",
