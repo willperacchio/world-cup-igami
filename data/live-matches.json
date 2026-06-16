@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-16T03:00:42.206Z",
+  "lastFetched": "2026-06-16T03:10:38.012Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -249,6 +249,23 @@
       "awayCode": "URY",
       "homeScore": 1,
       "awayScore": 1,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-16",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Iran",
+      "awayTeam": "New Zealand",
+      "homeCode": "IRN",
+      "awayCode": "NZL",
+      "homeScore": 2,
+      "awayScore": 2,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",

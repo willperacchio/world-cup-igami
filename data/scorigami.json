@@ -704,7 +704,7 @@
   {
     "lowScore": 2,
     "highScore": 2,
-    "count": 36,
+    "count": 37,
     "firstMatch": {
       "date": "1950-06-28",
       "tournament": "1950 FIFA Men's World Cup",
@@ -723,20 +723,20 @@
       "country": "Brazil"
     },
     "lastMatch": {
-      "date": "2026-06-14",
+      "date": "2026-06-16",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Netherlands",
-      "awayTeam": "Japan",
-      "homeCode": "NLD",
-      "awayCode": "JPN",
+      "homeTeam": "Iran",
+      "awayTeam": "New Zealand",
+      "homeCode": "IRN",
+      "awayCode": "NZL",
       "homeScore": 2,
       "awayScore": 2,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "AT&T Stadium",
-      "city": "Dallas",
+      "stadium": "SoFi Stadium",
+      "city": "Los Angeles",
       "country": "United States"
     }
   },

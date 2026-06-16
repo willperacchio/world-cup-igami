@@ -16641,5 +16641,22 @@
     "stadium": "Hard Rock Stadium",
     "city": "Miami",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-16",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Iran",
+    "awayTeam": "New Zealand",
+    "homeCode": "IRN",
+    "awayCode": "NZL",
+    "homeScore": 2,
+    "awayScore": 2,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "SoFi Stadium",
+    "city": "Los Angeles",
+    "country": "United States"
   }
 ]
