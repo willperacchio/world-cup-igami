@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-16T21:00:49.127Z",
+  "lastFetched": "2026-06-16T21:10:45.039Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -282,6 +282,24 @@
       "awayCode": "NZL",
       "homeScore": 2,
       "awayScore": 2,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-16",
+      "kickoff": "2026-06-16T19:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "France",
+      "awayTeam": "Senegal",
+      "homeCode": "FRA",
+      "awayCode": "SEN",
+      "homeScore": 3,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",

@@ -475,7 +475,7 @@
   {
     "lowScore": 1,
     "highScore": 3,
-    "count": 68,
+    "count": 69,
     "firstMatch": {
       "date": "1930-07-14",
       "tournament": "1930 FIFA Men's World Cup",
@@ -494,21 +494,22 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2022-12-04",
-      "tournament": "2022 FIFA Men's World Cup",
-      "stage": "round of 16",
+      "date": "2026-06-16",
+      "kickoff": "2026-06-16T19:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
       "homeTeam": "France",
-      "awayTeam": "Poland",
+      "awayTeam": "Senegal",
       "homeCode": "FRA",
-      "awayCode": "POL",
+      "awayCode": "SEN",
       "homeScore": 3,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
-      "penaltyScore": "0-0",
-      "stadium": "Al Thumama Stadium",
-      "city": "Doha",
-      "country": "Qatar"
+      "penaltyScore": "",
+      "stadium": "MetLife Stadium",
+      "city": "New Jersey",
+      "country": "United States"
     }
   },
   {

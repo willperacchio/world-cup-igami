@@ -16673,5 +16673,23 @@
     "stadium": "SoFi Stadium",
     "city": "Los Angeles",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-16",
+    "kickoff": "2026-06-16T19:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "France",
+    "awayTeam": "Senegal",
+    "homeCode": "FRA",
+    "awayCode": "SEN",
+    "homeScore": 3,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "MetLife Stadium",
+    "city": "New Jersey",
+    "country": "United States"
   }
 ]
