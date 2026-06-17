@@ -16727,5 +16727,23 @@
     "stadium": "Arrowhead Stadium",
     "city": "Kansas City",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-17",
+    "kickoff": "2026-06-17T04:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Austria",
+    "awayTeam": "Jordan",
+    "homeCode": "AUT",
+    "awayCode": "JOR",
+    "homeScore": 3,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Levi's Stadium",
+    "city": "San Francisco Bay Area",
+    "country": "United States"
   }
 ]
