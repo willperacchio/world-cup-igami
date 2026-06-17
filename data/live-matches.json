@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-17T00:00:47.256Z",
+  "lastFetched": "2026-06-17T00:10:32.047Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -300,6 +300,24 @@
       "awayCode": "SEN",
       "homeScore": 3,
       "awayScore": 1,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-16",
+      "kickoff": "2026-06-16T22:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Iraq",
+      "awayTeam": "Norway",
+      "homeCode": "IRQ",
+      "awayCode": "NOR",
+      "homeScore": 1,
+      "awayScore": 4,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",

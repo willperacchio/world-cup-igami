@@ -16691,5 +16691,23 @@
     "stadium": "MetLife Stadium",
     "city": "New Jersey",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-16",
+    "kickoff": "2026-06-16T22:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Iraq",
+    "awayTeam": "Norway",
+    "homeCode": "IRQ",
+    "awayCode": "NOR",
+    "homeScore": 1,
+    "awayScore": 4,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Gillette Stadium",
+    "city": "Boston",
+    "country": "United States"
   }
 ]
