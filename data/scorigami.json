@@ -122,7 +122,7 @@
   {
     "lowScore": 0,
     "highScore": 3,
-    "count": 57,
+    "count": 58,
     "firstMatch": {
       "date": "1930-07-13",
       "tournament": "1930 FIFA Men's World Cup",
@@ -141,21 +141,22 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2022-12-13",
-      "tournament": "2022 FIFA Men's World Cup",
-      "stage": "semi-finals",
+      "date": "2026-06-17",
+      "kickoff": "2026-06-17T01:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
       "homeTeam": "Argentina",
-      "awayTeam": "Croatia",
+      "awayTeam": "Algeria",
       "homeCode": "ARG",
-      "awayCode": "HRV",
+      "awayCode": "DZA",
       "homeScore": 3,
       "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
-      "penaltyScore": "0-0",
-      "stadium": "Lusail Stadium",
-      "city": "Lusail",
-      "country": "Qatar"
+      "penaltyScore": "",
+      "stadium": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "country": "United States"
     }
   },
   {
