@@ -16781,5 +16781,23 @@
     "stadium": "AT&T Stadium",
     "city": "Dallas",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-17",
+    "kickoff": "2026-06-17T23:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Ghana",
+    "awayTeam": "Panama",
+    "homeCode": "GHA",
+    "awayCode": "PAN",
+    "homeScore": 1,
+    "awayScore": 0,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "BMO Field",
+    "city": "Toronto",
+    "country": "Canada"
   }
 ]

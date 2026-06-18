@@ -42,7 +42,7 @@
   {
     "lowScore": 0,
     "highScore": 1,
-    "count": 184,
+    "count": 185,
     "firstMatch": {
       "date": "1930-07-15",
       "tournament": "1930 FIFA Men's World Cup",
@@ -61,22 +61,22 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-06-14",
-      "kickoff": "2026-06-14T23:00:00Z",
+      "date": "2026-06-17",
+      "kickoff": "2026-06-17T23:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Ivory Coast",
-      "awayTeam": "Ecuador",
-      "homeCode": "CIV",
-      "awayCode": "ECU",
+      "homeTeam": "Ghana",
+      "awayTeam": "Panama",
+      "homeCode": "GHA",
+      "awayCode": "PAN",
       "homeScore": 1,
       "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Lincoln Financial Field",
-      "city": "Philadelphia",
-      "country": "United States"
+      "stadium": "BMO Field",
+      "city": "Toronto",
+      "country": "Canada"
     }
   },
   {
