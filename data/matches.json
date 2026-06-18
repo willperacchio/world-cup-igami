@@ -16799,5 +16799,23 @@
     "stadium": "BMO Field",
     "city": "Toronto",
     "country": "Canada"
+  },
+  {
+    "date": "2026-06-18",
+    "kickoff": "2026-06-18T02:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Uzbekistan",
+    "awayTeam": "Colombia",
+    "homeCode": "UZB",
+    "awayCode": "COL",
+    "homeScore": 1,
+    "awayScore": 3,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Estadio Azteca",
+    "city": "Mexico City",
+    "country": "Mexico"
   }
 ]
