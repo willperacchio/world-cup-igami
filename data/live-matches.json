@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-18T17:50:36.378Z",
+  "lastFetched": "2026-06-18T18:00:44.770Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -426,6 +426,24 @@
       "awayCode": "COL",
       "homeScore": 1,
       "awayScore": 3,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-18",
+      "kickoff": "2026-06-18T16:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Czechia",
+      "awayTeam": "South Africa",
+      "homeCode": "CZE",
+      "awayCode": "ZAF",
+      "homeScore": 1,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",

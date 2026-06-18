@@ -16817,5 +16817,23 @@
     "stadium": "Estadio Azteca",
     "city": "Mexico City",
     "country": "Mexico"
+  },
+  {
+    "date": "2026-06-18",
+    "kickoff": "2026-06-18T16:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Czechia",
+    "awayTeam": "South Africa",
+    "homeCode": "CZE",
+    "awayCode": "ZAF",
+    "homeScore": 1,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Mercedes-Benz Stadium",
+    "city": "Atlanta",
+    "country": "United States"
   }
 ]
