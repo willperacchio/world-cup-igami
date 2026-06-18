@@ -516,7 +516,7 @@
   {
     "lowScore": 1,
     "highScore": 4,
-    "count": 33,
+    "count": 34,
     "firstMatch": {
       "date": "1930-07-13",
       "tournament": "1930 FIFA Men's World Cup",
@@ -535,21 +535,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-06-16",
-      "kickoff": "2026-06-16T22:00:00Z",
+      "date": "2026-06-18",
+      "kickoff": "2026-06-18T19:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Iraq",
-      "awayTeam": "Norway",
-      "homeCode": "IRQ",
-      "awayCode": "NOR",
-      "homeScore": 1,
-      "awayScore": 4,
+      "homeTeam": "Switzerland",
+      "awayTeam": "Bosnia-Herzegovina",
+      "homeCode": "CHE",
+      "awayCode": "BIH",
+      "homeScore": 4,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Gillette Stadium",
-      "city": "Boston",
+      "stadium": "SoFi Stadium",
+      "city": "Los Angeles",
       "country": "United States"
     }
   },

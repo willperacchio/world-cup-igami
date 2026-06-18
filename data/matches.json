@@ -16835,5 +16835,23 @@
     "stadium": "Mercedes-Benz Stadium",
     "city": "Atlanta",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-18",
+    "kickoff": "2026-06-18T19:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Switzerland",
+    "awayTeam": "Bosnia-Herzegovina",
+    "homeCode": "CHE",
+    "awayCode": "BIH",
+    "homeScore": 4,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "SoFi Stadium",
+    "city": "Los Angeles",
+    "country": "United States"
   }
 ]
