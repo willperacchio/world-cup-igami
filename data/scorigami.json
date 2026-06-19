@@ -82,7 +82,7 @@
   {
     "lowScore": 0,
     "highScore": 2,
-    "count": 113,
+    "count": 114,
     "firstMatch": {
       "date": "1938-06-12",
       "tournament": "1938 FIFA Men's World Cup",
@@ -101,22 +101,22 @@
       "country": "France"
     },
     "lastMatch": {
-      "date": "2026-06-14",
-      "kickoff": "2026-06-14T04:00:00Z",
+      "date": "2026-06-19",
+      "kickoff": "2026-06-19T19:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Australia",
-      "awayTeam": "Turkey",
-      "homeCode": "AUS",
-      "awayCode": "TUR",
+      "homeTeam": "United States",
+      "awayTeam": "Australia",
+      "homeCode": "USA",
+      "awayCode": "AUS",
       "homeScore": 2,
       "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "BC Place",
-      "city": "Vancouver",
-      "country": "Canada"
+      "stadium": "Lumen Field",
+      "city": "Seattle",
+      "country": "United States"
     }
   },
   {
