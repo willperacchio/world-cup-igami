@@ -240,7 +240,7 @@
   {
     "lowScore": 0,
     "highScore": 6,
-    "count": 5,
+    "count": 6,
     "firstMatch": {
       "date": "1938-06-05",
       "tournament": "1938 FIFA Men's World Cup",
@@ -259,21 +259,22 @@
       "country": "France"
     },
     "lastMatch": {
-      "date": "2006-06-16",
-      "tournament": "2006 FIFA Men's World Cup",
+      "date": "2026-06-18",
+      "kickoff": "2026-06-18T22:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Argentina",
-      "awayTeam": "Serbia and Montenegro",
-      "homeCode": "ARG",
-      "awayCode": "SCG",
+      "homeTeam": "Canada",
+      "awayTeam": "Qatar",
+      "homeCode": "CAN",
+      "awayCode": "QAT",
       "homeScore": 6,
       "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
-      "penaltyScore": "0-0",
-      "stadium": "Arena AufShalke",
-      "city": "Gelsenkirchen",
-      "country": "Germany"
+      "penaltyScore": "",
+      "stadium": "BC Place",
+      "city": "Vancouver",
+      "country": "Canada"
     }
   },
   {
