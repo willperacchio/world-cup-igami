@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-20T21:50:40.130Z",
+  "lastFetched": "2026-06-20T22:00:42.365Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -587,6 +587,24 @@
       "homeCode": "NLD",
       "awayCode": "SWE",
       "homeScore": 5,
+      "awayScore": 1,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-20",
+      "kickoff": "2026-06-20T20:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Germany",
+      "awayTeam": "Ivory Coast",
+      "homeCode": "DEU",
+      "awayCode": "CIV",
+      "homeScore": 2,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
