@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-20T18:50:38.392Z",
+  "lastFetched": "2026-06-20T19:01:02.222Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -569,6 +569,24 @@
       "homeCode": "TUR",
       "awayCode": "PRY",
       "homeScore": 0,
+      "awayScore": 1,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-20",
+      "kickoff": "2026-06-20T17:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Netherlands",
+      "awayTeam": "Sweden",
+      "homeCode": "NLD",
+      "awayCode": "SWE",
+      "homeScore": 5,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,

@@ -16961,5 +16961,23 @@
     "stadium": "Levi's Stadium",
     "city": "San Francisco Bay Area",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-20",
+    "kickoff": "2026-06-20T17:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Netherlands",
+    "awayTeam": "Sweden",
+    "homeCode": "NLD",
+    "awayCode": "SWE",
+    "homeScore": 5,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "NRG Stadium",
+    "city": "Houston",
+    "country": "United States"
   }
 ]
