@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-20T05:00:43.380Z",
+  "lastFetched": "2026-06-20T05:10:43.605Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -552,6 +552,24 @@
       "awayCode": "HTI",
       "homeScore": 3,
       "awayScore": 0,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-20",
+      "kickoff": "2026-06-20T03:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Turkey",
+      "awayTeam": "Paraguay",
+      "homeCode": "TUR",
+      "awayCode": "PRY",
+      "homeScore": 0,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",

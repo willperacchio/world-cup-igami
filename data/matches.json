@@ -16943,5 +16943,23 @@
     "stadium": "Lincoln Financial Field",
     "city": "Philadelphia",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-20",
+    "kickoff": "2026-06-20T03:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Turkey",
+    "awayTeam": "Paraguay",
+    "homeCode": "TUR",
+    "awayCode": "PRY",
+    "homeScore": 0,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Levi's Stadium",
+    "city": "San Francisco Bay Area",
+    "country": "United States"
   }
 ]
