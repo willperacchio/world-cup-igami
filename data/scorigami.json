@@ -122,7 +122,7 @@
   {
     "lowScore": 0,
     "highScore": 3,
-    "count": 58,
+    "count": 59,
     "firstMatch": {
       "date": "1930-07-13",
       "tournament": "1930 FIFA Men's World Cup",
@@ -141,21 +141,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-06-17",
-      "kickoff": "2026-06-17T01:00:00Z",
+      "date": "2026-06-20",
+      "kickoff": "2026-06-20T00:30:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Argentina",
-      "awayTeam": "Algeria",
-      "homeCode": "ARG",
-      "awayCode": "DZA",
+      "homeTeam": "Brazil",
+      "awayTeam": "Haiti",
+      "homeCode": "BRA",
+      "awayCode": "HTI",
       "homeScore": 3,
       "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Arrowhead Stadium",
-      "city": "Kansas City",
+      "stadium": "Lincoln Financial Field",
+      "city": "Philadelphia",
       "country": "United States"
     }
   },
