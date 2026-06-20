@@ -42,7 +42,7 @@
   {
     "lowScore": 0,
     "highScore": 1,
-    "count": 186,
+    "count": 187,
     "firstMatch": {
       "date": "1930-07-15",
       "tournament": "1930 FIFA Men's World Cup",
@@ -62,21 +62,21 @@
     },
     "lastMatch": {
       "date": "2026-06-19",
-      "kickoff": "2026-06-19T01:00:00Z",
+      "kickoff": "2026-06-19T22:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Mexico",
-      "awayTeam": "South Korea",
-      "homeCode": "MEX",
-      "awayCode": "KOR",
-      "homeScore": 1,
-      "awayScore": 0,
+      "homeTeam": "Scotland",
+      "awayTeam": "Morocco",
+      "homeCode": "SCO",
+      "awayCode": "MAR",
+      "homeScore": 0,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Estadio Akron",
-      "city": "Guadalajara",
-      "country": "Mexico"
+      "stadium": "Gillette Stadium",
+      "city": "Boston",
+      "country": "United States"
     }
   },
   {
