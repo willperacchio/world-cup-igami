@@ -17033,5 +17033,23 @@
     "stadium": "Estadio BBVA",
     "city": "Monterrey",
     "country": "Mexico"
+  },
+  {
+    "date": "2026-06-21",
+    "kickoff": "2026-06-21T16:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Spain",
+    "awayTeam": "Saudi Arabia",
+    "homeCode": "ESP",
+    "awayCode": "SAU",
+    "homeScore": 4,
+    "awayScore": 0,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Mercedes-Benz Stadium",
+    "city": "Atlanta",
+    "country": "United States"
   }
 ]

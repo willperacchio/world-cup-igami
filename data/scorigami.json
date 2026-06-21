@@ -162,7 +162,7 @@
   {
     "lowScore": 0,
     "highScore": 4,
-    "count": 25,
+    "count": 26,
     "firstMatch": {
       "date": "1930-07-17",
       "tournament": "1930 FIFA Men's World Cup",
@@ -182,21 +182,21 @@
     },
     "lastMatch": {
       "date": "2026-06-21",
-      "kickoff": "2026-06-21T04:00:00Z",
+      "kickoff": "2026-06-21T16:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Tunisia",
-      "awayTeam": "Japan",
-      "homeCode": "TUN",
-      "awayCode": "JPN",
-      "homeScore": 0,
-      "awayScore": 4,
+      "homeTeam": "Spain",
+      "awayTeam": "Saudi Arabia",
+      "homeCode": "ESP",
+      "awayCode": "SAU",
+      "homeScore": 4,
+      "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Estadio BBVA",
-      "city": "Monterrey",
-      "country": "Mexico"
+      "stadium": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "country": "United States"
     }
   },
   {

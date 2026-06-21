@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-21T18:00:48.436Z",
+  "lastFetched": "2026-06-21T18:07:54.068Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -642,6 +642,24 @@
       "awayCode": "JPN",
       "homeScore": 0,
       "awayScore": 4,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-21",
+      "kickoff": "2026-06-21T16:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Spain",
+      "awayTeam": "Saudi Arabia",
+      "homeCode": "ESP",
+      "awayCode": "SAU",
+      "homeScore": 4,
+      "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
