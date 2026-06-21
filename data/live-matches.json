@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-21T21:00:48.798Z",
+  "lastFetched": "2026-06-21T21:10:34.208Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -659,6 +659,24 @@
       "homeCode": "ESP",
       "awayCode": "SAU",
       "homeScore": 4,
+      "awayScore": 0,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-21",
+      "kickoff": "2026-06-21T19:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Belgium",
+      "awayTeam": "Iran",
+      "homeCode": "BEL",
+      "awayCode": "IRN",
+      "homeScore": 0,
       "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
