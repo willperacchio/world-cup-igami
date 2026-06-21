@@ -162,7 +162,7 @@
   {
     "lowScore": 0,
     "highScore": 4,
-    "count": 24,
+    "count": 25,
     "firstMatch": {
       "date": "1930-07-17",
       "tournament": "1930 FIFA Men's World Cup",
@@ -181,21 +181,22 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2014-06-18",
-      "tournament": "2014 FIFA Men's World Cup",
+      "date": "2026-06-21",
+      "kickoff": "2026-06-21T04:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Cameroon",
-      "awayTeam": "Croatia",
-      "homeCode": "CMR",
-      "awayCode": "HRV",
+      "homeTeam": "Tunisia",
+      "awayTeam": "Japan",
+      "homeCode": "TUN",
+      "awayCode": "JPN",
       "homeScore": 0,
       "awayScore": 4,
       "extraTime": false,
       "penaltyShootout": false,
-      "penaltyScore": "0-0",
-      "stadium": "Arena da Amazônia",
-      "city": "Manaus",
-      "country": "Brazil"
+      "penaltyScore": "",
+      "stadium": "Estadio BBVA",
+      "city": "Monterrey",
+      "country": "Mexico"
     }
   },
   {
