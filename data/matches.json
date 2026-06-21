@@ -16997,5 +16997,23 @@
     "stadium": "BMO Field",
     "city": "Toronto",
     "country": "Canada"
+  },
+  {
+    "date": "2026-06-21",
+    "kickoff": "2026-06-21T00:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Ecuador",
+    "awayTeam": "Curaçao",
+    "homeCode": "ECU",
+    "awayCode": "CUW",
+    "homeScore": 0,
+    "awayScore": 0,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "United States"
   }
 ]

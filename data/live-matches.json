@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-21T01:50:34.158Z",
+  "lastFetched": "2026-06-21T02:00:43.437Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -606,6 +606,24 @@
       "awayCode": "CIV",
       "homeScore": 2,
       "awayScore": 1,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-21",
+      "kickoff": "2026-06-21T00:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Ecuador",
+      "awayTeam": "Curaçao",
+      "homeCode": "ECU",
+      "awayCode": "CUW",
+      "homeScore": 0,
+      "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",

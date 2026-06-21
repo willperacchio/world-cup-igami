@@ -2,7 +2,7 @@
   {
     "lowScore": 0,
     "highScore": 0,
-    "count": 79,
+    "count": 80,
     "firstMatch": {
       "date": "1958-06-11",
       "tournament": "1958 FIFA Men's World Cup",
@@ -21,21 +21,21 @@
       "country": "Sweden"
     },
     "lastMatch": {
-      "date": "2026-06-15",
-      "kickoff": "2026-06-15T16:00:00Z",
+      "date": "2026-06-21",
+      "kickoff": "2026-06-21T00:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Spain",
-      "awayTeam": "Cape Verde Islands",
-      "homeCode": "ESP",
-      "awayCode": "CPV",
+      "homeTeam": "Ecuador",
+      "awayTeam": "Curaçao",
+      "homeCode": "ECU",
+      "awayCode": "CUW",
       "homeScore": 0,
       "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Mercedes-Benz Stadium",
-      "city": "Atlanta",
+      "stadium": "Arrowhead Stadium",
+      "city": "Kansas City",
       "country": "United States"
     }
   },
