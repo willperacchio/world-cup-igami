@@ -17069,5 +17069,23 @@
     "stadium": "SoFi Stadium",
     "city": "Los Angeles",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-21",
+    "kickoff": "2026-06-21T22:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Uruguay",
+    "awayTeam": "Cape Verde Islands",
+    "homeCode": "URY",
+    "awayCode": "CPV",
+    "homeScore": 2,
+    "awayScore": 2,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Hard Rock Stadium",
+    "city": "Miami",
+    "country": "United States"
   }
 ]

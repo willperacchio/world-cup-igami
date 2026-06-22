@@ -716,7 +716,7 @@
   {
     "lowScore": 2,
     "highScore": 2,
-    "count": 37,
+    "count": 38,
     "firstMatch": {
       "date": "1950-06-28",
       "tournament": "1950 FIFA Men's World Cup",
@@ -735,21 +735,21 @@
       "country": "Brazil"
     },
     "lastMatch": {
-      "date": "2026-06-16",
-      "kickoff": "2026-06-16T01:00:00Z",
+      "date": "2026-06-21",
+      "kickoff": "2026-06-21T22:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Iran",
-      "awayTeam": "New Zealand",
-      "homeCode": "IRN",
-      "awayCode": "NZL",
+      "homeTeam": "Uruguay",
+      "awayTeam": "Cape Verde Islands",
+      "homeCode": "URY",
+      "awayCode": "CPV",
       "homeScore": 2,
       "awayScore": 2,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "SoFi Stadium",
-      "city": "Los Angeles",
+      "stadium": "Hard Rock Stadium",
+      "city": "Miami",
       "country": "United States"
     }
   },
