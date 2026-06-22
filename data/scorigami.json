@@ -478,7 +478,7 @@
   {
     "lowScore": 1,
     "highScore": 3,
-    "count": 71,
+    "count": 72,
     "firstMatch": {
       "date": "1930-07-14",
       "tournament": "1930 FIFA Men's World Cup",
@@ -497,22 +497,22 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-06-18",
-      "kickoff": "2026-06-18T02:00:00Z",
+      "date": "2026-06-22",
+      "kickoff": "2026-06-22T01:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Uzbekistan",
-      "awayTeam": "Colombia",
-      "homeCode": "UZB",
-      "awayCode": "COL",
+      "homeTeam": "New Zealand",
+      "awayTeam": "Egypt",
+      "homeCode": "NZL",
+      "awayCode": "EGY",
       "homeScore": 1,
       "awayScore": 3,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Estadio Azteca",
-      "city": "Mexico City",
-      "country": "Mexico"
+      "stadium": "BC Place",
+      "city": "Vancouver",
+      "country": "Canada"
     }
   },
   {

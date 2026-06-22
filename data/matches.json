@@ -17087,5 +17087,23 @@
     "stadium": "Hard Rock Stadium",
     "city": "Miami",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-22",
+    "kickoff": "2026-06-22T01:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "New Zealand",
+    "awayTeam": "Egypt",
+    "homeCode": "NZL",
+    "awayCode": "EGY",
+    "homeScore": 1,
+    "awayScore": 3,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "BC Place",
+    "city": "Vancouver",
+    "country": "Canada"
   }
 ]

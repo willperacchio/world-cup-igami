@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-22T03:00:42.803Z",
+  "lastFetched": "2026-06-22T03:10:43.498Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -696,6 +696,24 @@
       "awayCode": "CPV",
       "homeScore": 2,
       "awayScore": 2,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-22",
+      "kickoff": "2026-06-22T01:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "New Zealand",
+      "awayTeam": "Egypt",
+      "homeCode": "NZL",
+      "awayCode": "EGY",
+      "homeScore": 1,
+      "awayScore": 3,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
