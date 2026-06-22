@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-22T19:00:48.055Z",
+  "lastFetched": "2026-06-22T19:10:39.773Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -714,6 +714,24 @@
       "awayCode": "EGY",
       "homeScore": 1,
       "awayScore": 3,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-22",
+      "kickoff": "2026-06-22T17:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Argentina",
+      "awayTeam": "Austria",
+      "homeCode": "ARG",
+      "awayCode": "AUT",
+      "homeScore": 2,
+      "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
