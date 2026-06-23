@@ -17195,5 +17195,23 @@
     "stadium": "NRG Stadium",
     "city": "Houston",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-23",
+    "kickoff": "2026-06-23T20:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "England",
+    "awayTeam": "Ghana",
+    "homeCode": "ENG",
+    "awayCode": "GHA",
+    "homeScore": 0,
+    "awayScore": 0,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Gillette Stadium",
+    "city": "Boston",
+    "country": "United States"
   }
 ]

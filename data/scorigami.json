@@ -2,7 +2,7 @@
   {
     "lowScore": 0,
     "highScore": 0,
-    "count": 81,
+    "count": 82,
     "firstMatch": {
       "date": "1958-06-11",
       "tournament": "1958 FIFA Men's World Cup",
@@ -21,21 +21,21 @@
       "country": "Sweden"
     },
     "lastMatch": {
-      "date": "2026-06-21",
-      "kickoff": "2026-06-21T19:00:00Z",
+      "date": "2026-06-23",
+      "kickoff": "2026-06-23T20:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Belgium",
-      "awayTeam": "Iran",
-      "homeCode": "BEL",
-      "awayCode": "IRN",
+      "homeTeam": "England",
+      "awayTeam": "Ghana",
+      "homeCode": "ENG",
+      "awayCode": "GHA",
       "homeScore": 0,
       "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "SoFi Stadium",
-      "city": "Los Angeles",
+      "stadium": "Gillette Stadium",
+      "city": "Boston",
       "country": "United States"
     }
   },
