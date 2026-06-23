@@ -202,7 +202,7 @@
   {
     "lowScore": 0,
     "highScore": 5,
-    "count": 7,
+    "count": 8,
     "firstMatch": {
       "date": "1954-06-16",
       "tournament": "1954 FIFA Men's World Cup",
@@ -221,21 +221,22 @@
       "country": "Switzerland"
     },
     "lastMatch": {
-      "date": "2018-06-14",
-      "tournament": "2018 FIFA Men's World Cup",
+      "date": "2026-06-23",
+      "kickoff": "2026-06-23T17:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Russia",
-      "awayTeam": "Saudi Arabia",
-      "homeCode": "RUS",
-      "awayCode": "SAU",
+      "homeTeam": "Portugal",
+      "awayTeam": "Uzbekistan",
+      "homeCode": "PRT",
+      "awayCode": "UZB",
       "homeScore": 5,
       "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
-      "penaltyScore": "0-0",
-      "stadium": "Luzhniki Stadium",
-      "city": "Moscow",
-      "country": "Russia"
+      "penaltyScore": "",
+      "stadium": "NRG Stadium",
+      "city": "Houston",
+      "country": "United States"
     }
   },
   {
