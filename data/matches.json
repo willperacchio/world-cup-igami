@@ -17141,5 +17141,23 @@
     "stadium": "Lincoln Financial Field",
     "city": "Philadelphia",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-23",
+    "kickoff": "2026-06-23T00:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Norway",
+    "awayTeam": "Senegal",
+    "homeCode": "NOR",
+    "awayCode": "SEN",
+    "homeScore": 3,
+    "awayScore": 2,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "MetLife Stadium",
+    "city": "New Jersey",
+    "country": "United States"
   }
 ]

@@ -756,7 +756,7 @@
   {
     "lowScore": 2,
     "highScore": 3,
-    "count": 43,
+    "count": 44,
     "firstMatch": {
       "date": "1934-05-27",
       "tournament": "1934 FIFA Men's World Cup",
@@ -775,21 +775,22 @@
       "country": "Italy"
     },
     "lastMatch": {
-      "date": "2022-12-02",
-      "tournament": "2022 FIFA Men's World Cup",
+      "date": "2026-06-23",
+      "kickoff": "2026-06-23T00:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Serbia",
-      "awayTeam": "Switzerland",
-      "homeCode": "SRB",
-      "awayCode": "CHE",
-      "homeScore": 2,
-      "awayScore": 3,
+      "homeTeam": "Norway",
+      "awayTeam": "Senegal",
+      "homeCode": "NOR",
+      "awayCode": "SEN",
+      "homeScore": 3,
+      "awayScore": 2,
       "extraTime": false,
       "penaltyShootout": false,
-      "penaltyScore": "0-0",
-      "stadium": "Stadium 974",
-      "city": "Doha",
-      "country": "Qatar"
+      "penaltyScore": "",
+      "stadium": "MetLife Stadium",
+      "city": "New Jersey",
+      "country": "United States"
     }
   },
   {
