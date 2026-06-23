@@ -17123,5 +17123,23 @@
     "stadium": "AT&T Stadium",
     "city": "Dallas",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-22",
+    "kickoff": "2026-06-22T21:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "France",
+    "awayTeam": "Iraq",
+    "homeCode": "FRA",
+    "awayCode": "IRQ",
+    "homeScore": 3,
+    "awayScore": 0,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Lincoln Financial Field",
+    "city": "Philadelphia",
+    "country": "United States"
   }
 ]
