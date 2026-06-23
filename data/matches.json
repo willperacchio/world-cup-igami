@@ -17159,5 +17159,23 @@
     "stadium": "MetLife Stadium",
     "city": "New Jersey",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-23",
+    "kickoff": "2026-06-23T03:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Jordan",
+    "awayTeam": "Algeria",
+    "homeCode": "JOR",
+    "awayCode": "DZA",
+    "homeScore": 1,
+    "awayScore": 2,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Levi's Stadium",
+    "city": "San Francisco Bay Area",
+    "country": "United States"
   }
 ]

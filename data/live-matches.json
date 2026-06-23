@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-23T05:00:42.987Z",
+  "lastFetched": "2026-06-23T05:10:38.312Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -767,6 +767,24 @@
       "homeCode": "NOR",
       "awayCode": "SEN",
       "homeScore": 3,
+      "awayScore": 2,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-23",
+      "kickoff": "2026-06-23T03:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Jordan",
+      "awayTeam": "Algeria",
+      "homeCode": "JOR",
+      "awayCode": "DZA",
+      "homeScore": 1,
       "awayScore": 2,
       "extraTime": false,
       "penaltyShootout": false,
