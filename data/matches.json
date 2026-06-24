@@ -17213,5 +17213,23 @@
     "stadium": "Gillette Stadium",
     "city": "Boston",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-23",
+    "kickoff": "2026-06-23T23:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Panama",
+    "awayTeam": "Croatia",
+    "homeCode": "PAN",
+    "awayCode": "HRV",
+    "homeScore": 0,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "BMO Field",
+    "city": "Toronto",
+    "country": "Canada"
   }
 ]
