@@ -439,7 +439,7 @@
   {
     "lowScore": 1,
     "highScore": 2,
-    "count": 155,
+    "count": 156,
     "firstMatch": {
       "date": "1930-07-14",
       "tournament": "1930 FIFA Men's World Cup",
@@ -458,28 +458,28 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-06-23",
-      "kickoff": "2026-06-23T03:00:00Z",
+      "date": "2026-06-24",
+      "kickoff": "2026-06-24T19:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Jordan",
-      "awayTeam": "Algeria",
-      "homeCode": "JOR",
-      "awayCode": "DZA",
-      "homeScore": 1,
-      "awayScore": 2,
+      "homeTeam": "Switzerland",
+      "awayTeam": "Canada",
+      "homeCode": "CHE",
+      "awayCode": "CAN",
+      "homeScore": 2,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Levi's Stadium",
-      "city": "San Francisco Bay Area",
-      "country": "United States"
+      "stadium": "BC Place",
+      "city": "Vancouver",
+      "country": "Canada"
     }
   },
   {
     "lowScore": 1,
     "highScore": 3,
-    "count": 72,
+    "count": 73,
     "firstMatch": {
       "date": "1930-07-14",
       "tournament": "1930 FIFA Men's World Cup",
@@ -498,22 +498,22 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-06-22",
-      "kickoff": "2026-06-22T01:00:00Z",
+      "date": "2026-06-24",
+      "kickoff": "2026-06-24T19:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "New Zealand",
-      "awayTeam": "Egypt",
-      "homeCode": "NZL",
-      "awayCode": "EGY",
-      "homeScore": 1,
-      "awayScore": 3,
+      "homeTeam": "Bosnia-Herzegovina",
+      "awayTeam": "Qatar",
+      "homeCode": "BIH",
+      "awayCode": "QAT",
+      "homeScore": 3,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "BC Place",
-      "city": "Vancouver",
-      "country": "Canada"
+      "stadium": "Lumen Field",
+      "city": "Seattle",
+      "country": "United States"
     }
   },
   {

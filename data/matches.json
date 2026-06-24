@@ -17249,5 +17249,41 @@
     "stadium": "Estadio Akron",
     "city": "Guadalajara",
     "country": "Mexico"
+  },
+  {
+    "date": "2026-06-24",
+    "kickoff": "2026-06-24T19:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Switzerland",
+    "awayTeam": "Canada",
+    "homeCode": "CHE",
+    "awayCode": "CAN",
+    "homeScore": 2,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "BC Place",
+    "city": "Vancouver",
+    "country": "Canada"
+  },
+  {
+    "date": "2026-06-24",
+    "kickoff": "2026-06-24T19:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Bosnia-Herzegovina",
+    "awayTeam": "Qatar",
+    "homeCode": "BIH",
+    "awayCode": "QAT",
+    "homeScore": 3,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Lumen Field",
+    "city": "Seattle",
+    "country": "United States"
   }
 ]
