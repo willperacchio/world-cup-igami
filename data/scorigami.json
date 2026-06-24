@@ -42,7 +42,7 @@
   {
     "lowScore": 0,
     "highScore": 1,
-    "count": 189,
+    "count": 190,
     "firstMatch": {
       "date": "1930-07-15",
       "tournament": "1930 FIFA Men's World Cup",
@@ -61,22 +61,22 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-06-23",
-      "kickoff": "2026-06-23T23:00:00Z",
+      "date": "2026-06-24",
+      "kickoff": "2026-06-24T02:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Panama",
-      "awayTeam": "Croatia",
-      "homeCode": "PAN",
-      "awayCode": "HRV",
-      "homeScore": 0,
-      "awayScore": 1,
+      "homeTeam": "Colombia",
+      "awayTeam": "Congo DR",
+      "homeCode": "COL",
+      "awayCode": "COD",
+      "homeScore": 1,
+      "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "BMO Field",
-      "city": "Toronto",
-      "country": "Canada"
+      "stadium": "Estadio Akron",
+      "city": "Guadalajara",
+      "country": "Mexico"
     }
   },
   {

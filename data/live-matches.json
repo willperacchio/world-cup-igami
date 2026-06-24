@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-24T03:50:41.456Z",
+  "lastFetched": "2026-06-24T04:00:38.023Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -840,6 +840,24 @@
       "awayCode": "HRV",
       "homeScore": 0,
       "awayScore": 1,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-24",
+      "kickoff": "2026-06-24T02:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Colombia",
+      "awayTeam": "Congo DR",
+      "homeCode": "COL",
+      "awayCode": "COD",
+      "homeScore": 1,
+      "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
