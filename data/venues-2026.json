@@ -358,5 +358,10 @@
     "stadium": "AT&T Stadium",
     "city": "Dallas",
     "country": "United States"
+  },
+  "2026-06-28|ZAF|CAN": {
+    "stadium": "SoFi Stadium",
+    "city": "Los Angeles",
+    "country": "United States"
   }
 }
