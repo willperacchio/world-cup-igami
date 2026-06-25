@@ -17357,5 +17357,41 @@
     "stadium": "Estadio BBVA",
     "city": "Monterrey",
     "country": "Mexico"
+  },
+  {
+    "date": "2026-06-25",
+    "kickoff": "2026-06-25T20:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Ecuador",
+    "awayTeam": "Germany",
+    "homeCode": "ECU",
+    "awayCode": "DEU",
+    "homeScore": 2,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "MetLife Stadium",
+    "city": "New Jersey",
+    "country": "United States"
+  },
+  {
+    "date": "2026-06-25",
+    "kickoff": "2026-06-25T20:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Curaçao",
+    "awayTeam": "Ivory Coast",
+    "homeCode": "CUW",
+    "awayCode": "CIV",
+    "homeScore": 0,
+    "awayScore": 2,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Lincoln Financial Field",
+    "city": "Philadelphia",
+    "country": "United States"
   }
 ]
