@@ -122,7 +122,7 @@
   {
     "lowScore": 0,
     "highScore": 3,
-    "count": 60,
+    "count": 61,
     "firstMatch": {
       "date": "1930-07-13",
       "tournament": "1930 FIFA Men's World Cup",
@@ -141,21 +141,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-06-22",
-      "kickoff": "2026-06-22T21:00:00Z",
+      "date": "2026-06-24",
+      "kickoff": "2026-06-24T22:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "France",
-      "awayTeam": "Iraq",
-      "homeCode": "FRA",
-      "awayCode": "IRQ",
-      "homeScore": 3,
-      "awayScore": 0,
+      "homeTeam": "Scotland",
+      "awayTeam": "Brazil",
+      "homeCode": "SCO",
+      "awayCode": "BRA",
+      "homeScore": 0,
+      "awayScore": 3,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Lincoln Financial Field",
-      "city": "Philadelphia",
+      "stadium": "Hard Rock Stadium",
+      "city": "Miami",
       "country": "United States"
     }
   },
@@ -797,7 +797,7 @@
   {
     "lowScore": 2,
     "highScore": 4,
-    "count": 18,
+    "count": 19,
     "firstMatch": {
       "date": "1930-07-30",
       "tournament": "1930 FIFA Men's World Cup",
@@ -816,21 +816,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-06-17",
-      "kickoff": "2026-06-17T20:00:00Z",
+      "date": "2026-06-24",
+      "kickoff": "2026-06-24T22:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "England",
-      "awayTeam": "Croatia",
-      "homeCode": "ENG",
-      "awayCode": "HRV",
+      "homeTeam": "Morocco",
+      "awayTeam": "Haiti",
+      "homeCode": "MAR",
+      "awayCode": "HTI",
       "homeScore": 4,
       "awayScore": 2,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "AT&T Stadium",
-      "city": "Dallas",
+      "stadium": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
       "country": "United States"
     }
   },

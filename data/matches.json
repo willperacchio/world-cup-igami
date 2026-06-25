@@ -17285,5 +17285,41 @@
     "stadium": "Lumen Field",
     "city": "Seattle",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-24",
+    "kickoff": "2026-06-24T22:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Morocco",
+    "awayTeam": "Haiti",
+    "homeCode": "MAR",
+    "awayCode": "HTI",
+    "homeScore": 4,
+    "awayScore": 2,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Mercedes-Benz Stadium",
+    "city": "Atlanta",
+    "country": "United States"
+  },
+  {
+    "date": "2026-06-24",
+    "kickoff": "2026-06-24T22:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Scotland",
+    "awayTeam": "Brazil",
+    "homeCode": "SCO",
+    "awayCode": "BRA",
+    "homeScore": 0,
+    "awayScore": 3,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Hard Rock Stadium",
+    "city": "Miami",
+    "country": "United States"
   }
 ]
