@@ -17465,5 +17465,41 @@
     "stadium": "Levi's Stadium",
     "city": "San Francisco Bay Area",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-26",
+    "kickoff": "2026-06-26T19:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Norway",
+    "awayTeam": "France",
+    "homeCode": "NOR",
+    "awayCode": "FRA",
+    "homeScore": 1,
+    "awayScore": 4,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Gillette Stadium",
+    "city": "Boston",
+    "country": "United States"
+  },
+  {
+    "date": "2026-06-26",
+    "kickoff": "2026-06-26T19:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Senegal",
+    "awayTeam": "Iraq",
+    "homeCode": "SEN",
+    "awayCode": "IRQ",
+    "homeScore": 5,
+    "awayScore": 0,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "BMO Field",
+    "city": "Toronto",
+    "country": "Canada"
   }
 ]

@@ -202,7 +202,7 @@
   {
     "lowScore": 0,
     "highScore": 5,
-    "count": 8,
+    "count": 9,
     "firstMatch": {
       "date": "1954-06-16",
       "tournament": "1954 FIFA Men's World Cup",
@@ -221,22 +221,22 @@
       "country": "Switzerland"
     },
     "lastMatch": {
-      "date": "2026-06-23",
-      "kickoff": "2026-06-23T17:00:00Z",
+      "date": "2026-06-26",
+      "kickoff": "2026-06-26T19:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Portugal",
-      "awayTeam": "Uzbekistan",
-      "homeCode": "PRT",
-      "awayCode": "UZB",
+      "homeTeam": "Senegal",
+      "awayTeam": "Iraq",
+      "homeCode": "SEN",
+      "awayCode": "IRQ",
       "homeScore": 5,
       "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "NRG Stadium",
-      "city": "Houston",
-      "country": "United States"
+      "stadium": "BMO Field",
+      "city": "Toronto",
+      "country": "Canada"
     }
   },
   {
@@ -519,7 +519,7 @@
   {
     "lowScore": 1,
     "highScore": 4,
-    "count": 34,
+    "count": 35,
     "firstMatch": {
       "date": "1930-07-13",
       "tournament": "1930 FIFA Men's World Cup",
@@ -538,21 +538,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-06-18",
-      "kickoff": "2026-06-18T19:00:00Z",
+      "date": "2026-06-26",
+      "kickoff": "2026-06-26T19:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Switzerland",
-      "awayTeam": "Bosnia-Herzegovina",
-      "homeCode": "CHE",
-      "awayCode": "BIH",
-      "homeScore": 4,
-      "awayScore": 1,
+      "homeTeam": "Norway",
+      "awayTeam": "France",
+      "homeCode": "NOR",
+      "awayCode": "FRA",
+      "homeScore": 1,
+      "awayScore": 4,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "SoFi Stadium",
-      "city": "Los Angeles",
+      "stadium": "Gillette Stadium",
+      "city": "Boston",
       "country": "United States"
     }
   },
