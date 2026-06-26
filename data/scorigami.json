@@ -757,7 +757,7 @@
   {
     "lowScore": 2,
     "highScore": 3,
-    "count": 44,
+    "count": 45,
     "firstMatch": {
       "date": "1934-05-27",
       "tournament": "1934 FIFA Men's World Cup",
@@ -776,21 +776,21 @@
       "country": "Italy"
     },
     "lastMatch": {
-      "date": "2026-06-23",
-      "kickoff": "2026-06-23T00:00:00Z",
+      "date": "2026-06-26",
+      "kickoff": "2026-06-26T02:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Norway",
-      "awayTeam": "Senegal",
-      "homeCode": "NOR",
-      "awayCode": "SEN",
+      "homeTeam": "Turkey",
+      "awayTeam": "United States",
+      "homeCode": "TUR",
+      "awayCode": "USA",
       "homeScore": 3,
       "awayScore": 2,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "MetLife Stadium",
-      "city": "New Jersey",
+      "stadium": "SoFi Stadium",
+      "city": "Los Angeles",
       "country": "United States"
     }
   },
