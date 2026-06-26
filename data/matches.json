@@ -17393,5 +17393,41 @@
     "stadium": "Lincoln Financial Field",
     "city": "Philadelphia",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-25",
+    "kickoff": "2026-06-25T23:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Tunisia",
+    "awayTeam": "Netherlands",
+    "homeCode": "TUN",
+    "awayCode": "NLD",
+    "homeScore": 1,
+    "awayScore": 3,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "United States"
+  },
+  {
+    "date": "2026-06-25",
+    "kickoff": "2026-06-25T23:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Japan",
+    "awayTeam": "Sweden",
+    "homeCode": "JPN",
+    "awayCode": "SWE",
+    "homeScore": 1,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "AT&T Stadium",
+    "city": "Dallas",
+    "country": "United States"
   }
 ]

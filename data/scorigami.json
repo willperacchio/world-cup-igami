@@ -399,7 +399,7 @@
   {
     "lowScore": 1,
     "highScore": 1,
-    "count": 99,
+    "count": 100,
     "firstMatch": {
       "date": "1934-05-31",
       "tournament": "1934 FIFA Men's World Cup",
@@ -418,21 +418,21 @@
       "country": "Italy"
     },
     "lastMatch": {
-      "date": "2026-06-18",
-      "kickoff": "2026-06-18T16:00:00Z",
+      "date": "2026-06-25",
+      "kickoff": "2026-06-25T23:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Czechia",
-      "awayTeam": "South Africa",
-      "homeCode": "CZE",
-      "awayCode": "ZAF",
+      "homeTeam": "Japan",
+      "awayTeam": "Sweden",
+      "homeCode": "JPN",
+      "awayCode": "SWE",
       "homeScore": 1,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Mercedes-Benz Stadium",
-      "city": "Atlanta",
+      "stadium": "AT&T Stadium",
+      "city": "Dallas",
       "country": "United States"
     }
   },
@@ -479,7 +479,7 @@
   {
     "lowScore": 1,
     "highScore": 3,
-    "count": 73,
+    "count": 74,
     "firstMatch": {
       "date": "1930-07-14",
       "tournament": "1930 FIFA Men's World Cup",
@@ -498,21 +498,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-06-24",
-      "kickoff": "2026-06-24T19:00:00Z",
+      "date": "2026-06-25",
+      "kickoff": "2026-06-25T23:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Bosnia-Herzegovina",
-      "awayTeam": "Qatar",
-      "homeCode": "BIH",
-      "awayCode": "QAT",
-      "homeScore": 3,
-      "awayScore": 1,
+      "homeTeam": "Tunisia",
+      "awayTeam": "Netherlands",
+      "homeCode": "TUN",
+      "awayCode": "NLD",
+      "homeScore": 1,
+      "awayScore": 3,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Lumen Field",
-      "city": "Seattle",
+      "stadium": "Arrowhead Stadium",
+      "city": "Kansas City",
       "country": "United States"
     }
   },
