@@ -559,7 +559,7 @@
   {
     "lowScore": 1,
     "highScore": 5,
-    "count": 9,
+    "count": 10,
     "firstMatch": {
       "date": "1938-06-16",
       "tournament": "1938 FIFA Men's World Cup",
@@ -578,22 +578,22 @@
       "country": "France"
     },
     "lastMatch": {
-      "date": "2026-06-20",
-      "kickoff": "2026-06-20T17:00:00Z",
+      "date": "2026-06-27",
+      "kickoff": "2026-06-27T03:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Netherlands",
-      "awayTeam": "Sweden",
-      "homeCode": "NLD",
-      "awayCode": "SWE",
-      "homeScore": 5,
-      "awayScore": 1,
+      "homeTeam": "New Zealand",
+      "awayTeam": "Belgium",
+      "homeCode": "NZL",
+      "awayCode": "BEL",
+      "homeScore": 1,
+      "awayScore": 5,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "NRG Stadium",
-      "city": "Houston",
-      "country": "United States"
+      "stadium": "BC Place",
+      "city": "Vancouver",
+      "country": "Canada"
     }
   },
   {
