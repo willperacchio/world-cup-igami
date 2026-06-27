@@ -2,7 +2,7 @@
   {
     "lowScore": 0,
     "highScore": 0,
-    "count": 83,
+    "count": 84,
     "firstMatch": {
       "date": "1958-06-11",
       "tournament": "1958 FIFA Men's World Cup",
@@ -21,28 +21,28 @@
       "country": "Sweden"
     },
     "lastMatch": {
-      "date": "2026-06-26",
-      "kickoff": "2026-06-26T02:00:00Z",
+      "date": "2026-06-27",
+      "kickoff": "2026-06-27T00:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Paraguay",
-      "awayTeam": "Australia",
-      "homeCode": "PRY",
-      "awayCode": "AUS",
+      "homeTeam": "Cape Verde Islands",
+      "awayTeam": "Saudi Arabia",
+      "homeCode": "CPV",
+      "awayCode": "SAU",
       "homeScore": 0,
       "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Levi's Stadium",
-      "city": "San Francisco Bay Area",
+      "stadium": "NRG Stadium",
+      "city": "Houston",
       "country": "United States"
     }
   },
   {
     "lowScore": 0,
     "highScore": 1,
-    "count": 191,
+    "count": 192,
     "firstMatch": {
       "date": "1930-07-15",
       "tournament": "1930 FIFA Men's World Cup",
@@ -61,21 +61,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-06-25",
-      "kickoff": "2026-06-25T01:00:00Z",
+      "date": "2026-06-27",
+      "kickoff": "2026-06-27T00:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "South Africa",
-      "awayTeam": "South Korea",
-      "homeCode": "ZAF",
-      "awayCode": "KOR",
-      "homeScore": 1,
-      "awayScore": 0,
+      "homeTeam": "Uruguay",
+      "awayTeam": "Spain",
+      "homeCode": "URY",
+      "awayCode": "ESP",
+      "homeScore": 0,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Estadio BBVA",
-      "city": "Monterrey",
+      "stadium": "Estadio Akron",
+      "city": "Guadalajara",
       "country": "Mexico"
     }
   },

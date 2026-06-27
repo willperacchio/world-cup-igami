@@ -17501,5 +17501,41 @@
     "stadium": "BMO Field",
     "city": "Toronto",
     "country": "Canada"
+  },
+  {
+    "date": "2026-06-27",
+    "kickoff": "2026-06-27T00:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Uruguay",
+    "awayTeam": "Spain",
+    "homeCode": "URY",
+    "awayCode": "ESP",
+    "homeScore": 0,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Estadio Akron",
+    "city": "Guadalajara",
+    "country": "Mexico"
+  },
+  {
+    "date": "2026-06-27",
+    "kickoff": "2026-06-27T00:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Cape Verde Islands",
+    "awayTeam": "Saudi Arabia",
+    "homeCode": "CPV",
+    "awayCode": "SAU",
+    "homeScore": 0,
+    "awayScore": 0,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "NRG Stadium",
+    "city": "Houston",
+    "country": "United States"
   }
 ]

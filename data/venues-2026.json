@@ -369,9 +369,19 @@
     "city": "Houston",
     "country": "United States"
   },
+  "2026-06-29|DEU|PRY": {
+    "stadium": "Gillette Stadium",
+    "city": "Boston",
+    "country": "United States"
+  },
   "2026-06-30|CIV|NOR": {
     "stadium": "AT&T Stadium",
     "city": "Dallas",
+    "country": "United States"
+  },
+  "2026-06-30|FRA|SWE": {
+    "stadium": "MetLife Stadium",
+    "city": "New Jersey",
     "country": "United States"
   },
   "2026-06-30|NLD|MAR": {
@@ -382,6 +392,11 @@
   "2026-07-02|USA|BIH": {
     "stadium": "Levi's Stadium",
     "city": "San Francisco Bay Area",
+    "country": "United States"
+  },
+  "2026-07-03|ARG|CPV": {
+    "stadium": "Hard Rock Stadium",
+    "city": "Miami",
     "country": "United States"
   }
 }
