@@ -17573,5 +17573,41 @@
     "stadium": "Lumen Field",
     "city": "Seattle",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-27",
+    "kickoff": "2026-06-27T21:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Panama",
+    "awayTeam": "England",
+    "homeCode": "PAN",
+    "awayCode": "ENG",
+    "homeScore": 0,
+    "awayScore": 2,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "MetLife Stadium",
+    "city": "New Jersey",
+    "country": "United States"
+  },
+  {
+    "date": "2026-06-27",
+    "kickoff": "2026-06-27T21:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Croatia",
+    "awayTeam": "Ghana",
+    "homeCode": "HRV",
+    "awayCode": "GHA",
+    "homeScore": 2,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Lincoln Financial Field",
+    "city": "Philadelphia",
+    "country": "United States"
   }
 ]

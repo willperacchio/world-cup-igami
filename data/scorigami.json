@@ -82,7 +82,7 @@
   {
     "lowScore": 0,
     "highScore": 2,
-    "count": 116,
+    "count": 117,
     "firstMatch": {
       "date": "1938-06-12",
       "tournament": "1938 FIFA Men's World Cup",
@@ -101,21 +101,21 @@
       "country": "France"
     },
     "lastMatch": {
-      "date": "2026-06-25",
-      "kickoff": "2026-06-25T20:00:00Z",
+      "date": "2026-06-27",
+      "kickoff": "2026-06-27T21:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Curaçao",
-      "awayTeam": "Ivory Coast",
-      "homeCode": "CUW",
-      "awayCode": "CIV",
+      "homeTeam": "Panama",
+      "awayTeam": "England",
+      "homeCode": "PAN",
+      "awayCode": "ENG",
       "homeScore": 0,
       "awayScore": 2,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Lincoln Financial Field",
-      "city": "Philadelphia",
+      "stadium": "MetLife Stadium",
+      "city": "New Jersey",
       "country": "United States"
     }
   },
@@ -439,7 +439,7 @@
   {
     "lowScore": 1,
     "highScore": 2,
-    "count": 157,
+    "count": 158,
     "firstMatch": {
       "date": "1930-07-14",
       "tournament": "1930 FIFA Men's World Cup",
@@ -458,21 +458,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-06-25",
-      "kickoff": "2026-06-25T20:00:00Z",
+      "date": "2026-06-27",
+      "kickoff": "2026-06-27T21:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Ecuador",
-      "awayTeam": "Germany",
-      "homeCode": "ECU",
-      "awayCode": "DEU",
+      "homeTeam": "Croatia",
+      "awayTeam": "Ghana",
+      "homeCode": "HRV",
+      "awayCode": "GHA",
       "homeScore": 2,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "MetLife Stadium",
-      "city": "New Jersey",
+      "stadium": "Lincoln Financial Field",
+      "city": "Philadelphia",
       "country": "United States"
     }
   },
