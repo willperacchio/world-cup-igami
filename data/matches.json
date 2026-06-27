@@ -17555,5 +17555,23 @@
     "stadium": "BC Place",
     "city": "Vancouver",
     "country": "Canada"
+  },
+  {
+    "date": "2026-06-27",
+    "kickoff": "2026-06-27T03:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Egypt",
+    "awayTeam": "Iran",
+    "homeCode": "EGY",
+    "awayCode": "IRN",
+    "homeScore": 1,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Lumen Field",
+    "city": "Seattle",
+    "country": "United States"
   }
 ]

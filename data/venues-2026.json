@@ -398,5 +398,10 @@
     "stadium": "Hard Rock Stadium",
     "city": "Miami",
     "country": "United States"
+  },
+  "2026-07-03|AUS|EGY": {
+    "stadium": "AT&T Stadium",
+    "city": "Dallas",
+    "country": "United States"
   }
 }

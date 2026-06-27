@@ -399,7 +399,7 @@
   {
     "lowScore": 1,
     "highScore": 1,
-    "count": 100,
+    "count": 101,
     "firstMatch": {
       "date": "1934-05-31",
       "tournament": "1934 FIFA Men's World Cup",
@@ -418,21 +418,21 @@
       "country": "Italy"
     },
     "lastMatch": {
-      "date": "2026-06-25",
-      "kickoff": "2026-06-25T23:00:00Z",
+      "date": "2026-06-27",
+      "kickoff": "2026-06-27T03:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Japan",
-      "awayTeam": "Sweden",
-      "homeCode": "JPN",
-      "awayCode": "SWE",
+      "homeTeam": "Egypt",
+      "awayTeam": "Iran",
+      "homeCode": "EGY",
+      "awayCode": "IRN",
       "homeScore": 1,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "AT&T Stadium",
-      "city": "Dallas",
+      "stadium": "Lumen Field",
+      "city": "Seattle",
       "country": "United States"
     }
   },
