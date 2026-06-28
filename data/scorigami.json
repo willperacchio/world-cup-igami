@@ -479,7 +479,7 @@
   {
     "lowScore": 1,
     "highScore": 3,
-    "count": 75,
+    "count": 76,
     "firstMatch": {
       "date": "1930-07-14",
       "tournament": "1930 FIFA Men's World Cup",
@@ -498,21 +498,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-06-27",
-      "kickoff": "2026-06-27T23:30:00Z",
+      "date": "2026-06-28",
+      "kickoff": "2026-06-28T02:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "group stage",
-      "homeTeam": "Congo DR",
-      "awayTeam": "Uzbekistan",
-      "homeCode": "COD",
-      "awayCode": "UZB",
-      "homeScore": 3,
-      "awayScore": 1,
+      "homeTeam": "Jordan",
+      "awayTeam": "Argentina",
+      "homeCode": "JOR",
+      "awayCode": "ARG",
+      "homeScore": 1,
+      "awayScore": 3,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Mercedes-Benz Stadium",
-      "city": "Atlanta",
+      "stadium": "AT&T Stadium",
+      "city": "Dallas",
       "country": "United States"
     }
   },

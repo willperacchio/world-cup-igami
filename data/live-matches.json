@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-28T03:50:30.095Z",
+  "lastFetched": "2026-06-28T04:00:41.767Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1254,6 +1254,24 @@
       "awayCode": "UZB",
       "homeScore": 3,
       "awayScore": 1,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-28",
+      "kickoff": "2026-06-28T02:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Jordan",
+      "awayTeam": "Argentina",
+      "homeCode": "JOR",
+      "awayCode": "ARG",
+      "homeScore": 1,
+      "awayScore": 3,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
