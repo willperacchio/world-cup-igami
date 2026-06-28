@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-28T01:30:37.474Z",
+  "lastFetched": "2026-06-28T01:40:35.115Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1236,6 +1236,24 @@
       "awayCode": "PRT",
       "homeScore": 0,
       "awayScore": 0,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-27",
+      "kickoff": "2026-06-27T23:30:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Congo DR",
+      "awayTeam": "Uzbekistan",
+      "homeCode": "COD",
+      "awayCode": "UZB",
+      "homeScore": 3,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
