@@ -17609,5 +17609,23 @@
     "stadium": "Lincoln Financial Field",
     "city": "Philadelphia",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-27",
+    "kickoff": "2026-06-27T23:30:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Colombia",
+    "awayTeam": "Portugal",
+    "homeCode": "COL",
+    "awayCode": "PRT",
+    "homeScore": 0,
+    "awayScore": 0,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Hard Rock Stadium",
+    "city": "Miami",
+    "country": "United States"
   }
 ]

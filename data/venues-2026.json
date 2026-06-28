@@ -394,6 +394,11 @@
     "city": "Mexico City",
     "country": "Mexico"
   },
+  "2026-07-02|PRT|HRV": {
+    "stadium": "BMO Field",
+    "city": "Toronto",
+    "country": "Canada"
+  },
   "2026-07-02|USA|BIH": {
     "stadium": "Levi's Stadium",
     "city": "San Francisco Bay Area",
@@ -407,6 +412,11 @@
   "2026-07-03|AUS|EGY": {
     "stadium": "AT&T Stadium",
     "city": "Dallas",
+    "country": "United States"
+  },
+  "2026-07-04|COL|GHA": {
+    "stadium": "Arrowhead Stadium",
+    "city": "Kansas City",
     "country": "United States"
   }
 }
