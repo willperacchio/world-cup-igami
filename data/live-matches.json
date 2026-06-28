@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-28T20:50:34.873Z",
+  "lastFetched": "2026-06-28T21:00:43.916Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1290,6 +1290,24 @@
       "awayCode": "AUT",
       "homeScore": 3,
       "awayScore": 3,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-28",
+      "kickoff": "2026-06-28T19:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 32",
+      "homeTeam": "South Africa",
+      "awayTeam": "Canada",
+      "homeCode": "ZAF",
+      "awayCode": "CAN",
+      "homeScore": 0,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
