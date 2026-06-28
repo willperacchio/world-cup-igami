@@ -954,7 +954,7 @@
   {
     "lowScore": 3,
     "highScore": 3,
-    "count": 7,
+    "count": 8,
     "firstMatch": {
       "date": "1938-06-05",
       "tournament": "1938 FIFA Men's World Cup",
@@ -973,21 +973,22 @@
       "country": "France"
     },
     "lastMatch": {
-      "date": "2022-12-18",
-      "tournament": "2022 FIFA Men's World Cup",
-      "stage": "final",
-      "homeTeam": "Argentina",
-      "awayTeam": "France",
-      "homeCode": "ARG",
-      "awayCode": "FRA",
+      "date": "2026-06-28",
+      "kickoff": "2026-06-28T02:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "group stage",
+      "homeTeam": "Algeria",
+      "awayTeam": "Austria",
+      "homeCode": "DZA",
+      "awayCode": "AUT",
       "homeScore": 3,
       "awayScore": 3,
-      "extraTime": true,
-      "penaltyShootout": true,
-      "penaltyScore": "4–2",
-      "stadium": "Lusail Stadium",
-      "city": "Lusail",
-      "country": "Qatar"
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "Arrowhead Stadium",
+      "city": "Kansas City",
+      "country": "United States"
     }
   },
   {

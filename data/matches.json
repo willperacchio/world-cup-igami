@@ -17663,5 +17663,23 @@
     "stadium": "AT&T Stadium",
     "city": "Dallas",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-28",
+    "kickoff": "2026-06-28T02:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "group stage",
+    "homeTeam": "Algeria",
+    "awayTeam": "Austria",
+    "homeCode": "DZA",
+    "awayCode": "AUT",
+    "homeScore": 3,
+    "awayScore": 3,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "United States"
   }
 ]
