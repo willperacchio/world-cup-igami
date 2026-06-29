@@ -1228,7 +1228,7 @@
   {
     "lowScore": 5,
     "highScore": 6,
-    "count": 1,
+    "count": 2,
     "firstMatch": {
       "date": "1938-06-05",
       "tournament": "1938 FIFA Men's World Cup",
@@ -1247,21 +1247,22 @@
       "country": "France"
     },
     "lastMatch": {
-      "date": "1938-06-05",
-      "tournament": "1938 FIFA Men's World Cup",
-      "stage": "round of 16",
-      "homeTeam": "Brazil",
-      "awayTeam": "Poland",
-      "homeCode": "BRA",
-      "awayCode": "POL",
-      "homeScore": 6,
-      "awayScore": 5,
+      "date": "2026-06-29",
+      "kickoff": "2026-06-29T20:30:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 32",
+      "homeTeam": "Germany",
+      "awayTeam": "Paraguay",
+      "homeCode": "DEU",
+      "awayCode": "PRY",
+      "homeScore": 5,
+      "awayScore": 6,
       "extraTime": true,
-      "penaltyShootout": false,
-      "penaltyScore": "0-0",
-      "stadium": "Stade de la Meinau",
-      "city": "Strasbourg",
-      "country": "France"
+      "penaltyShootout": true,
+      "penaltyScore": "4-5",
+      "stadium": "Gillette Stadium",
+      "city": "Boston",
+      "country": "United States"
     }
   },
   {

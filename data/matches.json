@@ -17717,5 +17717,23 @@
     "stadium": "NRG Stadium",
     "city": "Houston",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-29",
+    "kickoff": "2026-06-29T20:30:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "round of 32",
+    "homeTeam": "Germany",
+    "awayTeam": "Paraguay",
+    "homeCode": "DEU",
+    "awayCode": "PRY",
+    "homeScore": 5,
+    "awayScore": 6,
+    "extraTime": true,
+    "penaltyShootout": true,
+    "penaltyScore": "4-5",
+    "stadium": "Gillette Stadium",
+    "city": "Boston",
+    "country": "United States"
   }
 ]

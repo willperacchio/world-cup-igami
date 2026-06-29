@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-29T23:20:36.227Z",
+  "lastFetched": "2026-06-29T23:30:33.269Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1329,6 +1329,24 @@
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-29",
+      "kickoff": "2026-06-29T20:30:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 32",
+      "homeTeam": "Germany",
+      "awayTeam": "Paraguay",
+      "homeCode": "DEU",
+      "awayCode": "PRY",
+      "homeScore": 5,
+      "awayScore": 6,
+      "extraTime": true,
+      "penaltyShootout": true,
+      "penaltyScore": "4-5",
       "stadium": "",
       "city": "",
       "country": ""
