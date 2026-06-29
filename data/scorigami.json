@@ -399,7 +399,7 @@
   {
     "lowScore": 1,
     "highScore": 1,
-    "count": 101,
+    "count": 102,
     "firstMatch": {
       "date": "1934-05-31",
       "tournament": "1934 FIFA Men's World Cup",
@@ -418,21 +418,21 @@
       "country": "Italy"
     },
     "lastMatch": {
-      "date": "2026-06-27",
-      "kickoff": "2026-06-27T03:00:00Z",
+      "date": "2026-06-29",
+      "kickoff": "2026-06-29T20:30:00Z",
       "tournament": "2026 FIFA Men's World Cup",
-      "stage": "group stage",
-      "homeTeam": "Egypt",
-      "awayTeam": "Iran",
-      "homeCode": "EGY",
-      "awayCode": "IRN",
+      "stage": "round of 32",
+      "homeTeam": "Germany",
+      "awayTeam": "Paraguay",
+      "homeCode": "DEU",
+      "awayCode": "PRY",
       "homeScore": 1,
       "awayScore": 1,
-      "extraTime": false,
-      "penaltyShootout": false,
-      "penaltyScore": "",
-      "stadium": "Lumen Field",
-      "city": "Seattle",
+      "extraTime": true,
+      "penaltyShootout": true,
+      "penaltyScore": "4-5",
+      "stadium": "Gillette Stadium",
+      "city": "Boston",
       "country": "United States"
     }
   },
@@ -1228,7 +1228,7 @@
   {
     "lowScore": 5,
     "highScore": 6,
-    "count": 2,
+    "count": 1,
     "firstMatch": {
       "date": "1938-06-05",
       "tournament": "1938 FIFA Men's World Cup",
@@ -1247,22 +1247,21 @@
       "country": "France"
     },
     "lastMatch": {
-      "date": "2026-06-29",
-      "kickoff": "2026-06-29T20:30:00Z",
-      "tournament": "2026 FIFA Men's World Cup",
-      "stage": "round of 32",
-      "homeTeam": "Germany",
-      "awayTeam": "Paraguay",
-      "homeCode": "DEU",
-      "awayCode": "PRY",
-      "homeScore": 5,
-      "awayScore": 6,
+      "date": "1938-06-05",
+      "tournament": "1938 FIFA Men's World Cup",
+      "stage": "round of 16",
+      "homeTeam": "Brazil",
+      "awayTeam": "Poland",
+      "homeCode": "BRA",
+      "awayCode": "POL",
+      "homeScore": 6,
+      "awayScore": 5,
       "extraTime": true,
-      "penaltyShootout": true,
-      "penaltyScore": "4-5",
-      "stadium": "Gillette Stadium",
-      "city": "Boston",
-      "country": "United States"
+      "penaltyShootout": false,
+      "penaltyScore": "0-0",
+      "stadium": "Stade de la Meinau",
+      "city": "Strasbourg",
+      "country": "France"
     }
   },
   {

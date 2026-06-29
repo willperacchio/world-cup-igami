@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-29T23:40:31.225Z",
+  "lastFetched": "2026-06-29T23:50:37.515Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1342,8 +1342,8 @@
       "awayTeam": "Paraguay",
       "homeCode": "DEU",
       "awayCode": "PRY",
-      "homeScore": 5,
-      "awayScore": 6,
+      "homeScore": 1,
+      "awayScore": 1,
       "extraTime": true,
       "penaltyShootout": true,
       "penaltyScore": "4-5",
