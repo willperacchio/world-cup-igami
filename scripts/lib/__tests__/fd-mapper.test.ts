@@ -88,14 +88,19 @@ describe("mapMatch", () => {
     expect(m.awayScore).toBe(2);
   });
 
-  it("uses score.fullTime for shootout games (penalties don't change scoreline)", () => {
+  it("derives shootout scoreline from regularTime+extraTime, not penalty-inclusive fullTime", () => {
+    // football-data sums regular + extra + penalties into fullTime for
+    // shootouts: a 1-1 that goes to a 4-5 shootout reports fullTime 5-6. The
+    // scoreline for scorigami must be 1-1, not 5-6. (Germany 1-1 Paraguay, 2026)
     const shootout = makeFdMatch({
       score: {
         winner: "AWAY_TEAM",
         duration: "PENALTY_SHOOTOUT",
-        fullTime: { home: 1, away: 1 },
+        fullTime: { home: 5, away: 6 },
         halfTime: { home: 0, away: 1 },
-        penalties: { home: 3, away: 5 },
+        regularTime: { home: 1, away: 1 },
+        extraTime: { home: 0, away: 0 },
+        penalties: { home: 4, away: 5 },
       },
     });
     const m = mapMatch(shootout)!;
@@ -103,22 +108,42 @@ describe("mapMatch", () => {
     expect(m.awayScore).toBe(1);
     expect(m.extraTime).toBe(true);
     expect(m.penaltyShootout).toBe(true);
-    expect(m.penaltyScore).toBe("3-5");
+    expect(m.penaltyScore).toBe("4-5");
   });
 
-  it("leaves penaltyScore empty when the API didn't include penalty detail", () => {
-    const m = mapMatch(
-      makeFdMatch({
-        score: {
-          winner: "AWAY_TEAM",
-          duration: "PENALTY_SHOOTOUT",
-          fullTime: { home: 1, away: 1 },
-          halfTime: { home: 0, away: 1 },
-        },
-      }),
-    )!;
-    expect(m.penaltyShootout).toBe(true);
-    expect(m.penaltyScore).toBe("");
+  it("counts extra-time goals in a shootout scoreline (regularTime+extraTime)", () => {
+    // 1-1 after 90, 2-2 after ET, then a 3-2 shootout → fullTime 5-4. Scoreline 2-2.
+    const shootout = makeFdMatch({
+      score: {
+        winner: "HOME_TEAM",
+        duration: "PENALTY_SHOOTOUT",
+        fullTime: { home: 5, away: 4 },
+        halfTime: { home: 1, away: 0 },
+        regularTime: { home: 1, away: 1 },
+        extraTime: { home: 1, away: 1 },
+        penalties: { home: 3, away: 2 },
+      },
+    });
+    const m = mapMatch(shootout)!;
+    expect(m.homeScore).toBe(2);
+    expect(m.awayScore).toBe(2);
+    expect(m.penaltyScore).toBe("3-2");
+  });
+
+  it("backs out penalties from fullTime when regularTime is absent", () => {
+    const shootout = makeFdMatch({
+      score: {
+        winner: "AWAY_TEAM",
+        duration: "PENALTY_SHOOTOUT",
+        fullTime: { home: 4, away: 6 },
+        halfTime: { home: 0, away: 1 },
+        penalties: { home: 3, away: 5 },
+      },
+    });
+    const m = mapMatch(shootout)!;
+    expect(m.homeScore).toBe(1);
+    expect(m.awayScore).toBe(1);
+    expect(m.penaltyScore).toBe("3-5");
   });
 
   it("falls back to shortName when tla is missing", () => {

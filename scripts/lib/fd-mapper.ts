@@ -111,20 +111,45 @@ export function mapTeamCode(tla: string): string {
  * Returns null if the match is missing a final scoreline (e.g. it's still
  * scheduled or in progress).
  *
- * For scorigami purposes the final scoreline is regulation + extra time;
- * penalty shootouts do not modify the scoreline. football-data.org's
- * `score.fullTime` follows this convention, so we use it directly.
+ * For scorigami purposes the final scoreline is regulation + extra time, with
+ * penalty shootouts NOT counting toward it. football-data.org's `score.fullTime`
+ * does NOT follow this convention for shootouts: it sums regularTime + extraTime
+ * + penalties (e.g. a 1-1 that goes to a 4-5 shootout reports fullTime 5-6). So
+ * for shootouts we derive the scoreline from regularTime + extraTime instead.
  */
 export function mapMatch(m: FdMatch): InternalMatch | null {
-  const home = m.score.fullTime.home;
-  const away = m.score.fullTime.away;
+  const penaltyShootoutFlag = m.score.duration === "PENALTY_SHOOTOUT";
+  let home: number | null;
+  let away: number | null;
+  if (penaltyShootoutFlag) {
+    const rt = m.score.regularTime;
+    const et = m.score.extraTime;
+    if (rt?.home != null && rt?.away != null) {
+      home = rt.home + (et?.home ?? 0);
+      away = rt.away + (et?.away ?? 0);
+    } else if (
+      m.score.fullTime.home != null &&
+      m.score.fullTime.away != null &&
+      m.score.penalties?.home != null &&
+      m.score.penalties?.away != null
+    ) {
+      // Fallback: back out the penalties from the penalty-inclusive fullTime.
+      home = m.score.fullTime.home - m.score.penalties.home;
+      away = m.score.fullTime.away - m.score.penalties.away;
+    } else {
+      return null;
+    }
+  } else {
+    home = m.score.fullTime.home;
+    away = m.score.fullTime.away;
+  }
   if (home == null || away == null) return null;
 
   const date = m.utcDate.slice(0, 10); // YYYY-MM-DD
   const year = date.slice(0, 4);
   const tournament = `${year} FIFA Men's World Cup`;
 
-  const penaltyShootout = m.score.duration === "PENALTY_SHOOTOUT";
+  const penaltyShootout = penaltyShootoutFlag;
   const extraTime =
     m.score.duration === "EXTRA_TIME" || penaltyShootout;
 
