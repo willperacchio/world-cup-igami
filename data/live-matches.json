@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-29T19:00:38.517Z",
+  "lastFetched": "2026-06-29T19:10:34.052Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1307,6 +1307,24 @@
       "homeCode": "ZAF",
       "awayCode": "CAN",
       "homeScore": 0,
+      "awayScore": 1,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-29",
+      "kickoff": "2026-06-29T17:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 32",
+      "homeTeam": "Brazil",
+      "awayTeam": "Japan",
+      "homeCode": "BRA",
+      "awayCode": "JPN",
+      "homeScore": 2,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,

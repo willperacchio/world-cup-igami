@@ -17699,5 +17699,23 @@
     "stadium": "SoFi Stadium",
     "city": "Los Angeles",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-29",
+    "kickoff": "2026-06-29T17:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "round of 32",
+    "homeTeam": "Brazil",
+    "awayTeam": "Japan",
+    "homeCode": "BRA",
+    "awayCode": "JPN",
+    "homeScore": 2,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "NRG Stadium",
+    "city": "Houston",
+    "country": "United States"
   }
 ]

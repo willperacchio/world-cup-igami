@@ -439,7 +439,7 @@
   {
     "lowScore": 1,
     "highScore": 2,
-    "count": 158,
+    "count": 159,
     "firstMatch": {
       "date": "1930-07-14",
       "tournament": "1930 FIFA Men's World Cup",
@@ -458,21 +458,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-06-27",
-      "kickoff": "2026-06-27T21:00:00Z",
+      "date": "2026-06-29",
+      "kickoff": "2026-06-29T17:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
-      "stage": "group stage",
-      "homeTeam": "Croatia",
-      "awayTeam": "Ghana",
-      "homeCode": "HRV",
-      "awayCode": "GHA",
+      "stage": "round of 32",
+      "homeTeam": "Brazil",
+      "awayTeam": "Japan",
+      "homeCode": "BRA",
+      "awayCode": "JPN",
       "homeScore": 2,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Lincoln Financial Field",
-      "city": "Philadelphia",
+      "stadium": "NRG Stadium",
+      "city": "Houston",
       "country": "United States"
     }
   },
