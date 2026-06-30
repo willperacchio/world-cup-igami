@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-06-30T03:50:30.857Z",
+  "lastFetched": "2026-06-30T04:00:44.031Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1347,6 +1347,24 @@
       "extraTime": true,
       "penaltyShootout": true,
       "penaltyScore": "3-4",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-06-30",
+      "kickoff": "2026-06-30T01:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 32",
+      "homeTeam": "Netherlands",
+      "awayTeam": "Morocco",
+      "homeCode": "NLD",
+      "awayCode": "MAR",
+      "homeScore": 1,
+      "awayScore": 1,
+      "extraTime": true,
+      "penaltyShootout": true,
+      "penaltyScore": "2-3",
       "stadium": "",
       "city": "",
       "country": ""

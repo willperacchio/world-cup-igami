@@ -17735,5 +17735,23 @@
     "stadium": "Gillette Stadium",
     "city": "Boston",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-30",
+    "kickoff": "2026-06-30T01:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "round of 32",
+    "homeTeam": "Netherlands",
+    "awayTeam": "Morocco",
+    "homeCode": "NLD",
+    "awayCode": "MAR",
+    "homeScore": 1,
+    "awayScore": 1,
+    "extraTime": true,
+    "penaltyShootout": true,
+    "penaltyScore": "2-3",
+    "stadium": "Estadio BBVA",
+    "city": "Monterrey",
+    "country": "Mexico"
   }
 ]
