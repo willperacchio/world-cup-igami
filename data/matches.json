@@ -17753,5 +17753,23 @@
     "stadium": "Estadio BBVA",
     "city": "Monterrey",
     "country": "Mexico"
+  },
+  {
+    "date": "2026-06-30",
+    "kickoff": "2026-06-30T17:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "round of 32",
+    "homeTeam": "Ivory Coast",
+    "awayTeam": "Norway",
+    "homeCode": "CIV",
+    "awayCode": "NOR",
+    "homeScore": 1,
+    "awayScore": 2,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "AT&T Stadium",
+    "city": "Dallas",
+    "country": "United States"
   }
 ]
