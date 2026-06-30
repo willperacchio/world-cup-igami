@@ -17771,5 +17771,23 @@
     "stadium": "AT&T Stadium",
     "city": "Dallas",
     "country": "United States"
+  },
+  {
+    "date": "2026-06-30",
+    "kickoff": "2026-06-30T21:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "round of 32",
+    "homeTeam": "France",
+    "awayTeam": "Sweden",
+    "homeCode": "FRA",
+    "awayCode": "SWE",
+    "homeScore": 3,
+    "awayScore": 0,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "MetLife Stadium",
+    "city": "New Jersey",
+    "country": "United States"
   }
 ]
