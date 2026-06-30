@@ -443,5 +443,10 @@
     "stadium": "Arrowhead Stadium",
     "city": "Kansas City",
     "country": "United States"
+  },
+  "2026-07-05|BRA|NOR": {
+    "stadium": "MetLife Stadium",
+    "city": "New Jersey",
+    "country": "United States"
   }
 }
