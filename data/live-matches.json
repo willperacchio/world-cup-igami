@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-01T22:49:38.158Z",
+  "lastFetched": "2026-07-01T22:50:35.765Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1435,6 +1435,24 @@
       "homeScore": 2,
       "awayScore": 1,
       "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-01",
+      "kickoff": "2026-07-01T20:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 32",
+      "homeTeam": "Belgium",
+      "awayTeam": "Senegal",
+      "homeCode": "BEL",
+      "awayCode": "SEN",
+      "homeScore": 3,
+      "awayScore": 2,
+      "extraTime": true,
       "penaltyShootout": false,
       "penaltyScore": "",
       "stadium": "",
