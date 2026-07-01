@@ -453,5 +453,10 @@
     "stadium": "MetLife Stadium",
     "city": "New Jersey",
     "country": "United States"
+  },
+  "2026-07-06|MEX|ENG": {
+    "stadium": "Estadio Azteca",
+    "city": "Mexico City",
+    "country": "Mexico"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-01T18:00:37.984Z",
+  "lastFetched": "2026-07-01T18:10:39.938Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1416,6 +1416,24 @@
       "awayCode": "ECU",
       "homeScore": 2,
       "awayScore": 0,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-01",
+      "kickoff": "2026-07-01T16:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 32",
+      "homeTeam": "England",
+      "awayTeam": "Congo DR",
+      "homeCode": "ENG",
+      "awayCode": "COD",
+      "homeScore": 2,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
