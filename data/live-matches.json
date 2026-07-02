@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-02T20:50:37.872Z",
+  "lastFetched": "2026-07-02T21:00:45.548Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1469,6 +1469,24 @@
       "homeCode": "USA",
       "awayCode": "BIH",
       "homeScore": 2,
+      "awayScore": 0,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-02",
+      "kickoff": "2026-07-02T19:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 32",
+      "homeTeam": "Spain",
+      "awayTeam": "Austria",
+      "homeCode": "ESP",
+      "awayCode": "AUT",
+      "homeScore": 3,
       "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,

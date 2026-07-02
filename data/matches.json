@@ -17861,5 +17861,23 @@
     "stadium": "Levi's Stadium",
     "city": "San Francisco Bay Area",
     "country": "United States"
+  },
+  {
+    "date": "2026-07-02",
+    "kickoff": "2026-07-02T19:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "round of 32",
+    "homeTeam": "Spain",
+    "awayTeam": "Austria",
+    "homeCode": "ESP",
+    "awayCode": "AUT",
+    "homeScore": 3,
+    "awayScore": 0,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "SoFi Stadium",
+    "city": "Los Angeles",
+    "country": "United States"
   }
 ]
