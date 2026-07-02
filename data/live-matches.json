@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-02T02:00:42.558Z",
+  "lastFetched": "2026-07-02T02:10:30.589Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1453,6 +1453,24 @@
       "homeScore": 3,
       "awayScore": 2,
       "extraTime": true,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-02",
+      "kickoff": "2026-07-02T00:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 32",
+      "homeTeam": "United States",
+      "awayTeam": "Bosnia-Herzegovina",
+      "homeCode": "USA",
+      "awayCode": "BIH",
+      "homeScore": 2,
+      "awayScore": 0,
+      "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
       "stadium": "",
