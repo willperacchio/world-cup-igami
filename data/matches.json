@@ -17915,5 +17915,23 @@
     "stadium": "BC Place",
     "city": "Vancouver",
     "country": "Canada"
+  },
+  {
+    "date": "2026-07-03",
+    "kickoff": "2026-07-03T18:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "round of 32",
+    "homeTeam": "Australia",
+    "awayTeam": "Egypt",
+    "homeCode": "AUS",
+    "awayCode": "EGY",
+    "homeScore": 1,
+    "awayScore": 1,
+    "extraTime": true,
+    "penaltyShootout": true,
+    "penaltyScore": "2-4",
+    "stadium": "AT&T Stadium",
+    "city": "Dallas",
+    "country": "United States"
   }
 ]

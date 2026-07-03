@@ -399,7 +399,7 @@
   {
     "lowScore": 1,
     "highScore": 1,
-    "count": 103,
+    "count": 104,
     "firstMatch": {
       "date": "1934-05-31",
       "tournament": "1934 FIFA Men's World Cup",
@@ -418,22 +418,22 @@
       "country": "Italy"
     },
     "lastMatch": {
-      "date": "2026-06-30",
-      "kickoff": "2026-06-30T01:00:00Z",
+      "date": "2026-07-03",
+      "kickoff": "2026-07-03T18:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "round of 32",
-      "homeTeam": "Netherlands",
-      "awayTeam": "Morocco",
-      "homeCode": "NLD",
-      "awayCode": "MAR",
+      "homeTeam": "Australia",
+      "awayTeam": "Egypt",
+      "homeCode": "AUS",
+      "awayCode": "EGY",
       "homeScore": 1,
       "awayScore": 1,
       "extraTime": true,
       "penaltyShootout": true,
-      "penaltyScore": "2-3",
-      "stadium": "Estadio BBVA",
-      "city": "Monterrey",
-      "country": "Mexico"
+      "penaltyScore": "2-4",
+      "stadium": "AT&T Stadium",
+      "city": "Dallas",
+      "country": "United States"
     }
   },
   {

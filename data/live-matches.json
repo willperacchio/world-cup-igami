@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-03T20:50:44.848Z",
+  "lastFetched": "2026-07-03T21:00:48.818Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1527,6 +1527,24 @@
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-03",
+      "kickoff": "2026-07-03T18:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 32",
+      "homeTeam": "Australia",
+      "awayTeam": "Egypt",
+      "homeCode": "AUS",
+      "awayCode": "EGY",
+      "homeScore": 1,
+      "awayScore": 1,
+      "extraTime": true,
+      "penaltyShootout": true,
+      "penaltyScore": "2-4",
       "stadium": "",
       "city": "",
       "country": ""
