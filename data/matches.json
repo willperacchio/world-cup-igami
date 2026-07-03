@@ -17879,5 +17879,23 @@
     "stadium": "SoFi Stadium",
     "city": "Los Angeles",
     "country": "United States"
+  },
+  {
+    "date": "2026-07-02",
+    "kickoff": "2026-07-02T23:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "round of 32",
+    "homeTeam": "Portugal",
+    "awayTeam": "Croatia",
+    "homeCode": "PRT",
+    "awayCode": "HRV",
+    "homeScore": 2,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "BMO Field",
+    "city": "Toronto",
+    "country": "Canada"
   }
 ]
