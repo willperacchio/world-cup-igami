@@ -17987,5 +17987,23 @@
     "stadium": "NRG Stadium",
     "city": "Houston",
     "country": "United States"
+  },
+  {
+    "date": "2026-07-04",
+    "kickoff": "2026-07-04T21:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "round of 16",
+    "homeTeam": "Paraguay",
+    "awayTeam": "France",
+    "homeCode": "PRY",
+    "awayCode": "FRA",
+    "homeScore": 0,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Lincoln Financial Field",
+    "city": "Philadelphia",
+    "country": "United States"
   }
 ]

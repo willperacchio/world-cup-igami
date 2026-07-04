@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-04T23:00:52.688Z",
+  "lastFetched": "2026-07-04T23:10:48.180Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1596,6 +1596,24 @@
       "awayCode": "MAR",
       "homeScore": 0,
       "awayScore": 3,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-04",
+      "kickoff": "2026-07-04T21:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 16",
+      "homeTeam": "Paraguay",
+      "awayTeam": "France",
+      "homeCode": "PRY",
+      "awayCode": "FRA",
+      "homeScore": 0,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
