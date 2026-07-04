@@ -122,7 +122,7 @@
   {
     "lowScore": 0,
     "highScore": 3,
-    "count": 64,
+    "count": 65,
     "firstMatch": {
       "date": "1930-07-13",
       "tournament": "1930 FIFA Men's World Cup",
@@ -141,21 +141,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-07-02",
-      "kickoff": "2026-07-02T19:00:00Z",
+      "date": "2026-07-04",
+      "kickoff": "2026-07-04T17:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
-      "stage": "round of 32",
-      "homeTeam": "Spain",
-      "awayTeam": "Austria",
-      "homeCode": "ESP",
-      "awayCode": "AUT",
-      "homeScore": 3,
-      "awayScore": 0,
+      "stage": "round of 16",
+      "homeTeam": "Canada",
+      "awayTeam": "Morocco",
+      "homeCode": "CAN",
+      "awayCode": "MAR",
+      "homeScore": 0,
+      "awayScore": 3,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "SoFi Stadium",
-      "city": "Los Angeles",
+      "stadium": "NRG Stadium",
+      "city": "Houston",
       "country": "United States"
     }
   },

@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-04T19:00:52.034Z",
+  "lastFetched": "2026-07-04T19:10:47.266Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1578,6 +1578,24 @@
       "awayCode": "GHA",
       "homeScore": 1,
       "awayScore": 0,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-04",
+      "kickoff": "2026-07-04T17:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 16",
+      "homeTeam": "Canada",
+      "awayTeam": "Morocco",
+      "homeCode": "CAN",
+      "awayCode": "MAR",
+      "homeScore": 0,
+      "awayScore": 3,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
