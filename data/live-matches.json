@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-04T03:30:42.878Z",
+  "lastFetched": "2026-07-04T03:40:37.423Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1561,6 +1561,24 @@
       "homeScore": 3,
       "awayScore": 2,
       "extraTime": true,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-04",
+      "kickoff": "2026-07-04T01:30:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 32",
+      "homeTeam": "Colombia",
+      "awayTeam": "Ghana",
+      "homeCode": "COL",
+      "awayCode": "GHA",
+      "homeScore": 1,
+      "awayScore": 0,
+      "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
       "stadium": "",

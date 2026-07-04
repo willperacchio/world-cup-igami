@@ -42,7 +42,7 @@
   {
     "lowScore": 0,
     "highScore": 1,
-    "count": 193,
+    "count": 194,
     "firstMatch": {
       "date": "1930-07-15",
       "tournament": "1930 FIFA Men's World Cup",
@@ -61,21 +61,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-06-28",
-      "kickoff": "2026-06-28T19:00:00Z",
+      "date": "2026-07-04",
+      "kickoff": "2026-07-04T01:30:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "round of 32",
-      "homeTeam": "South Africa",
-      "awayTeam": "Canada",
-      "homeCode": "ZAF",
-      "awayCode": "CAN",
-      "homeScore": 0,
-      "awayScore": 1,
+      "homeTeam": "Colombia",
+      "awayTeam": "Ghana",
+      "homeCode": "COL",
+      "awayCode": "GHA",
+      "homeScore": 1,
+      "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "SoFi Stadium",
-      "city": "Los Angeles",
+      "stadium": "Arrowhead Stadium",
+      "city": "Kansas City",
       "country": "United States"
     }
   },

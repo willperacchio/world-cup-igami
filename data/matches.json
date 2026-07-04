@@ -17951,5 +17951,23 @@
     "stadium": "Hard Rock Stadium",
     "city": "Miami",
     "country": "United States"
+  },
+  {
+    "date": "2026-07-04",
+    "kickoff": "2026-07-04T01:30:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "round of 32",
+    "homeTeam": "Colombia",
+    "awayTeam": "Ghana",
+    "homeCode": "COL",
+    "awayCode": "GHA",
+    "homeScore": 1,
+    "awayScore": 0,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "United States"
   }
 ]
