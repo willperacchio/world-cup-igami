@@ -478,5 +478,10 @@
     "stadium": "Lumen Field",
     "city": "Seattle",
     "country": "United States"
+  },
+  "2026-07-09|FRA|MAR": {
+    "stadium": "Gillette Stadium",
+    "city": "Boston",
+    "country": "United States"
   }
 }
