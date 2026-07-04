@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-04T00:40:37.145Z",
+  "lastFetched": "2026-07-04T00:50:38.817Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1545,6 +1545,24 @@
       "extraTime": true,
       "penaltyShootout": true,
       "penaltyScore": "2-4",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-03",
+      "kickoff": "2026-07-03T22:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 32",
+      "homeTeam": "Argentina",
+      "awayTeam": "Cape Verde Islands",
+      "homeCode": "ARG",
+      "awayCode": "CPV",
+      "homeScore": 3,
+      "awayScore": 2,
+      "extraTime": true,
+      "penaltyShootout": false,
+      "penaltyScore": "",
       "stadium": "",
       "city": "",
       "country": ""

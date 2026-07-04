@@ -757,7 +757,7 @@
   {
     "lowScore": 2,
     "highScore": 3,
-    "count": 46,
+    "count": 47,
     "firstMatch": {
       "date": "1934-05-27",
       "tournament": "1934 FIFA Men's World Cup",
@@ -776,21 +776,21 @@
       "country": "Italy"
     },
     "lastMatch": {
-      "date": "2026-07-01",
-      "kickoff": "2026-07-01T20:00:00Z",
+      "date": "2026-07-03",
+      "kickoff": "2026-07-03T22:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "round of 32",
-      "homeTeam": "Belgium",
-      "awayTeam": "Senegal",
-      "homeCode": "BEL",
-      "awayCode": "SEN",
+      "homeTeam": "Argentina",
+      "awayTeam": "Cape Verde Islands",
+      "homeCode": "ARG",
+      "awayCode": "CPV",
       "homeScore": 3,
       "awayScore": 2,
       "extraTime": true,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Lumen Field",
-      "city": "Seattle",
+      "stadium": "Hard Rock Stadium",
+      "city": "Miami",
       "country": "United States"
     }
   },
