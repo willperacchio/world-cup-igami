@@ -42,7 +42,7 @@
   {
     "lowScore": 0,
     "highScore": 1,
-    "count": 195,
+    "count": 193,
     "firstMatch": {
       "date": "1930-07-15",
       "tournament": "1930 FIFA Men's World Cup",
@@ -61,21 +61,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-07-04",
-      "kickoff": "2026-07-04T21:00:00Z",
+      "date": "2026-06-28",
+      "kickoff": "2026-06-28T19:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
-      "stage": "round of 16",
-      "homeTeam": "Paraguay",
-      "awayTeam": "France",
-      "homeCode": "PRY",
-      "awayCode": "FRA",
+      "stage": "round of 32",
+      "homeTeam": "South Africa",
+      "awayTeam": "Canada",
+      "homeCode": "ZAF",
+      "awayCode": "CAN",
       "homeScore": 0,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Lincoln Financial Field",
-      "city": "Philadelphia",
+      "stadium": "SoFi Stadium",
+      "city": "Los Angeles",
       "country": "United States"
     }
   },
@@ -122,7 +122,7 @@
   {
     "lowScore": 0,
     "highScore": 3,
-    "count": 65,
+    "count": 64,
     "firstMatch": {
       "date": "1930-07-13",
       "tournament": "1930 FIFA Men's World Cup",
@@ -141,21 +141,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-07-04",
-      "kickoff": "2026-07-04T17:00:00Z",
+      "date": "2026-07-02",
+      "kickoff": "2026-07-02T19:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
-      "stage": "round of 16",
-      "homeTeam": "Canada",
-      "awayTeam": "Morocco",
-      "homeCode": "CAN",
-      "awayCode": "MAR",
-      "homeScore": 0,
-      "awayScore": 3,
+      "stage": "round of 32",
+      "homeTeam": "Spain",
+      "awayTeam": "Austria",
+      "homeCode": "ESP",
+      "awayCode": "AUT",
+      "homeScore": 3,
+      "awayScore": 0,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "NRG Stadium",
-      "city": "Houston",
+      "stadium": "SoFi Stadium",
+      "city": "Los Angeles",
       "country": "United States"
     }
   },
@@ -399,7 +399,7 @@
   {
     "lowScore": 1,
     "highScore": 1,
-    "count": 104,
+    "count": 103,
     "firstMatch": {
       "date": "1934-05-31",
       "tournament": "1934 FIFA Men's World Cup",
@@ -418,22 +418,22 @@
       "country": "Italy"
     },
     "lastMatch": {
-      "date": "2026-07-03",
-      "kickoff": "2026-07-03T18:00:00Z",
+      "date": "2026-06-30",
+      "kickoff": "2026-06-30T01:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "round of 32",
-      "homeTeam": "Australia",
-      "awayTeam": "Egypt",
-      "homeCode": "AUS",
-      "awayCode": "EGY",
+      "homeTeam": "Netherlands",
+      "awayTeam": "Morocco",
+      "homeCode": "NLD",
+      "awayCode": "MAR",
       "homeScore": 1,
       "awayScore": 1,
       "extraTime": true,
       "penaltyShootout": true,
-      "penaltyScore": "2-4",
-      "stadium": "AT&T Stadium",
-      "city": "Dallas",
-      "country": "United States"
+      "penaltyScore": "2-3",
+      "stadium": "Estadio BBVA",
+      "city": "Monterrey",
+      "country": "Mexico"
     }
   },
   {
@@ -757,7 +757,7 @@
   {
     "lowScore": 2,
     "highScore": 3,
-    "count": 47,
+    "count": 46,
     "firstMatch": {
       "date": "1934-05-27",
       "tournament": "1934 FIFA Men's World Cup",
@@ -776,21 +776,21 @@
       "country": "Italy"
     },
     "lastMatch": {
-      "date": "2026-07-03",
-      "kickoff": "2026-07-03T22:00:00Z",
+      "date": "2026-07-01",
+      "kickoff": "2026-07-01T20:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "round of 32",
-      "homeTeam": "Argentina",
-      "awayTeam": "Cape Verde Islands",
-      "homeCode": "ARG",
-      "awayCode": "CPV",
+      "homeTeam": "Belgium",
+      "awayTeam": "Senegal",
+      "homeCode": "BEL",
+      "awayCode": "SEN",
       "homeScore": 3,
       "awayScore": 2,
       "extraTime": true,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Hard Rock Stadium",
-      "city": "Miami",
+      "stadium": "Lumen Field",
+      "city": "Seattle",
       "country": "United States"
     }
   },
