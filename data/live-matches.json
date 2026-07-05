@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-05T22:00:57.522Z",
+  "lastFetched": "2026-07-05T22:10:50.796Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1614,6 +1614,24 @@
       "awayCode": "FRA",
       "homeScore": 0,
       "awayScore": 1,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-05",
+      "kickoff": "2026-07-05T20:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 16",
+      "homeTeam": "Brazil",
+      "awayTeam": "Norway",
+      "homeCode": "BRA",
+      "awayCode": "NOR",
+      "homeScore": 1,
+      "awayScore": 2,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",

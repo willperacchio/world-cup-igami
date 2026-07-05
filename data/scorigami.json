@@ -439,7 +439,7 @@
   {
     "lowScore": 1,
     "highScore": 2,
-    "count": 162,
+    "count": 163,
     "firstMatch": {
       "date": "1930-07-14",
       "tournament": "1930 FIFA Men's World Cup",
@@ -458,22 +458,22 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-07-02",
-      "kickoff": "2026-07-02T23:00:00Z",
+      "date": "2026-07-05",
+      "kickoff": "2026-07-05T20:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
-      "stage": "round of 32",
-      "homeTeam": "Portugal",
-      "awayTeam": "Croatia",
-      "homeCode": "PRT",
-      "awayCode": "HRV",
-      "homeScore": 2,
-      "awayScore": 1,
+      "stage": "round of 16",
+      "homeTeam": "Brazil",
+      "awayTeam": "Norway",
+      "homeCode": "BRA",
+      "awayCode": "NOR",
+      "homeScore": 1,
+      "awayScore": 2,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "BMO Field",
-      "city": "Toronto",
-      "country": "Canada"
+      "stadium": "MetLife Stadium",
+      "city": "New Jersey",
+      "country": "United States"
     }
   },
   {
