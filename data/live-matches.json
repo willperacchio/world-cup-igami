@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-06T21:00:57.619Z",
+  "lastFetched": "2026-07-06T21:10:48.918Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1650,6 +1650,24 @@
       "awayCode": "ENG",
       "homeScore": 2,
       "awayScore": 3,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-06",
+      "kickoff": "2026-07-06T19:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 16",
+      "homeTeam": "Portugal",
+      "awayTeam": "Spain",
+      "homeCode": "PRT",
+      "awayCode": "ESP",
+      "homeScore": 0,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",

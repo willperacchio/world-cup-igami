@@ -42,7 +42,7 @@
   {
     "lowScore": 0,
     "highScore": 1,
-    "count": 195,
+    "count": 196,
     "firstMatch": {
       "date": "1930-07-15",
       "tournament": "1930 FIFA Men's World Cup",
@@ -61,21 +61,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-07-04",
-      "kickoff": "2026-07-04T21:00:00Z",
+      "date": "2026-07-06",
+      "kickoff": "2026-07-06T19:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
       "stage": "round of 16",
-      "homeTeam": "Paraguay",
-      "awayTeam": "France",
-      "homeCode": "PRY",
-      "awayCode": "FRA",
+      "homeTeam": "Portugal",
+      "awayTeam": "Spain",
+      "homeCode": "PRT",
+      "awayCode": "ESP",
       "homeScore": 0,
       "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Lincoln Financial Field",
-      "city": "Philadelphia",
+      "stadium": "AT&T Stadium",
+      "city": "Dallas",
       "country": "United States"
     }
   },
