@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-06T03:00:52.064Z",
+  "lastFetched": "2026-07-06T03:10:50.731Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1632,6 +1632,24 @@
       "awayCode": "NOR",
       "homeScore": 1,
       "awayScore": 2,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-06",
+      "kickoff": "2026-07-06T01:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 16",
+      "homeTeam": "Mexico",
+      "awayTeam": "England",
+      "homeCode": "MEX",
+      "awayCode": "ENG",
+      "homeScore": 2,
+      "awayScore": 3,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",

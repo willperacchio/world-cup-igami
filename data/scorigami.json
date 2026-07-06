@@ -757,7 +757,7 @@
   {
     "lowScore": 2,
     "highScore": 3,
-    "count": 47,
+    "count": 48,
     "firstMatch": {
       "date": "1934-05-27",
       "tournament": "1934 FIFA Men's World Cup",
@@ -776,22 +776,22 @@
       "country": "Italy"
     },
     "lastMatch": {
-      "date": "2026-07-03",
-      "kickoff": "2026-07-03T22:00:00Z",
+      "date": "2026-07-06",
+      "kickoff": "2026-07-06T01:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
-      "stage": "round of 32",
-      "homeTeam": "Argentina",
-      "awayTeam": "Cape Verde Islands",
-      "homeCode": "ARG",
-      "awayCode": "CPV",
-      "homeScore": 3,
-      "awayScore": 2,
-      "extraTime": true,
+      "stage": "round of 16",
+      "homeTeam": "Mexico",
+      "awayTeam": "England",
+      "homeCode": "MEX",
+      "awayCode": "ENG",
+      "homeScore": 2,
+      "awayScore": 3,
+      "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Hard Rock Stadium",
-      "city": "Miami",
-      "country": "United States"
+      "stadium": "Estadio Azteca",
+      "city": "Mexico City",
+      "country": "Mexico"
     }
   },
   {
