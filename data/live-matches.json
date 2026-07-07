@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-07T18:01:03.843Z",
+  "lastFetched": "2026-07-07T18:10:53.192Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1686,6 +1686,24 @@
       "awayCode": "BEL",
       "homeScore": 1,
       "awayScore": 4,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-07",
+      "kickoff": "2026-07-07T16:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 16",
+      "homeTeam": "Argentina",
+      "awayTeam": "Egypt",
+      "homeCode": "ARG",
+      "awayCode": "EGY",
+      "homeScore": 3,
+      "awayScore": 2,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
