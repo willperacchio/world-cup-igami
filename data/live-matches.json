@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-07T01:50:47.968Z",
+  "lastFetched": "2026-07-07T02:00:58.425Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1668,6 +1668,24 @@
       "awayCode": "ESP",
       "homeScore": 0,
       "awayScore": 1,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-07",
+      "kickoff": "2026-07-07T00:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "round of 16",
+      "homeTeam": "United States",
+      "awayTeam": "Belgium",
+      "homeCode": "USA",
+      "awayCode": "BEL",
+      "homeScore": 1,
+      "awayScore": 4,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
