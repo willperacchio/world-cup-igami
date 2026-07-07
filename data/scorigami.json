@@ -2,7 +2,7 @@
   {
     "lowScore": 0,
     "highScore": 0,
-    "count": 85,
+    "count": 86,
     "firstMatch": {
       "date": "1958-06-11",
       "tournament": "1958 FIFA Men's World Cup",
@@ -21,22 +21,22 @@
       "country": "Sweden"
     },
     "lastMatch": {
-      "date": "2026-06-27",
-      "kickoff": "2026-06-27T23:30:00Z",
+      "date": "2026-07-07",
+      "kickoff": "2026-07-07T20:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
-      "stage": "group stage",
-      "homeTeam": "Colombia",
-      "awayTeam": "Portugal",
-      "homeCode": "COL",
-      "awayCode": "PRT",
+      "stage": "round of 16",
+      "homeTeam": "Switzerland",
+      "awayTeam": "Colombia",
+      "homeCode": "CHE",
+      "awayCode": "COL",
       "homeScore": 0,
       "awayScore": 0,
-      "extraTime": false,
-      "penaltyShootout": false,
-      "penaltyScore": "",
-      "stadium": "Hard Rock Stadium",
-      "city": "Miami",
-      "country": "United States"
+      "extraTime": true,
+      "penaltyShootout": true,
+      "penaltyScore": "4-3",
+      "stadium": "BC Place",
+      "city": "Vancouver",
+      "country": "Canada"
     }
   },
   {
