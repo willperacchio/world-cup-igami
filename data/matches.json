@@ -18131,5 +18131,23 @@
     "stadium": "Gillette Stadium",
     "city": "Boston",
     "country": "United States"
+  },
+  {
+    "date": "2026-07-10",
+    "kickoff": "2026-07-10T19:00:00Z",
+    "tournament": "2026 FIFA Men's World Cup",
+    "stage": "quarter-finals",
+    "homeTeam": "Spain",
+    "awayTeam": "Belgium",
+    "homeCode": "ESP",
+    "awayCode": "BEL",
+    "homeScore": 2,
+    "awayScore": 1,
+    "extraTime": false,
+    "penaltyShootout": false,
+    "penaltyScore": "",
+    "stadium": "SoFi Stadium",
+    "city": "Los Angeles",
+    "country": "United States"
   }
 ]

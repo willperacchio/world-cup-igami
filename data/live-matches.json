@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-10T20:50:44.295Z",
+  "lastFetched": "2026-07-10T21:00:53.521Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1740,6 +1740,24 @@
       "awayCode": "MAR",
       "homeScore": 2,
       "awayScore": 0,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-10",
+      "kickoff": "2026-07-10T19:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "quarter-finals",
+      "homeTeam": "Spain",
+      "awayTeam": "Belgium",
+      "homeCode": "ESP",
+      "awayCode": "BEL",
+      "homeScore": 2,
+      "awayScore": 1,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
