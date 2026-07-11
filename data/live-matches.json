@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-11T23:40:47.359Z",
+  "lastFetched": "2026-07-11T23:50:44.418Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1759,6 +1759,24 @@
       "homeScore": 2,
       "awayScore": 1,
       "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-11",
+      "kickoff": "2026-07-11T21:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "quarter-finals",
+      "homeTeam": "Norway",
+      "awayTeam": "England",
+      "homeCode": "NOR",
+      "awayCode": "ENG",
+      "homeScore": 1,
+      "awayScore": 2,
+      "extraTime": true,
       "penaltyShootout": false,
       "penaltyScore": "",
       "stadium": "",
