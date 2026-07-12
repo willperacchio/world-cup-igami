@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-12T03:45:07.366Z",
+  "lastFetched": "2026-07-12T03:50:49.493Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1776,6 +1776,24 @@
       "awayCode": "ENG",
       "homeScore": 1,
       "awayScore": 2,
+      "extraTime": true,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-12",
+      "kickoff": "2026-07-12T01:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "quarter-finals",
+      "homeTeam": "Argentina",
+      "awayTeam": "Switzerland",
+      "homeCode": "ARG",
+      "awayCode": "CHE",
+      "homeScore": 3,
+      "awayScore": 1,
       "extraTime": true,
       "penaltyShootout": false,
       "penaltyScore": "",
