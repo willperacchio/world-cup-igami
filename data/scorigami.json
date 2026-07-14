@@ -82,7 +82,7 @@
   {
     "lowScore": 0,
     "highScore": 2,
-    "count": 121,
+    "count": 122,
     "firstMatch": {
       "date": "1938-06-12",
       "tournament": "1938 FIFA Men's World Cup",
@@ -101,21 +101,21 @@
       "country": "France"
     },
     "lastMatch": {
-      "date": "2026-07-09",
-      "kickoff": "2026-07-09T20:00:00Z",
+      "date": "2026-07-14",
+      "kickoff": "2026-07-14T19:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
-      "stage": "quarter-finals",
+      "stage": "semi-finals",
       "homeTeam": "France",
-      "awayTeam": "Morocco",
+      "awayTeam": "Spain",
       "homeCode": "FRA",
-      "awayCode": "MAR",
-      "homeScore": 2,
-      "awayScore": 0,
+      "awayCode": "ESP",
+      "homeScore": 0,
+      "awayScore": 2,
       "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Gillette Stadium",
-      "city": "Boston",
+      "stadium": "AT&T Stadium",
+      "city": "Dallas",
       "country": "United States"
     }
   },
