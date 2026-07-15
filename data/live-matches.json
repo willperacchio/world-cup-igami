@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2026-07-15T21:00:51.435Z",
+  "lastFetched": "2026-07-15T21:09:43.662Z",
   "matches": [
     {
       "date": "2026-06-11",
@@ -1811,6 +1811,24 @@
       "homeCode": "FRA",
       "awayCode": "ESP",
       "homeScore": 0,
+      "awayScore": 2,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "",
+      "city": "",
+      "country": ""
+    },
+    {
+      "date": "2026-07-15",
+      "kickoff": "2026-07-15T19:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "semi-finals",
+      "homeTeam": "England",
+      "awayTeam": "Argentina",
+      "homeCode": "ENG",
+      "awayCode": "ARG",
+      "homeScore": 1,
       "awayScore": 2,
       "extraTime": false,
       "penaltyShootout": false,

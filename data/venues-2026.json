@@ -508,5 +508,15 @@
     "stadium": "Mercedes-Benz Stadium",
     "city": "Atlanta",
     "country": "United States"
+  },
+  "2026-07-18|FRA|ENG": {
+    "stadium": "Hard Rock Stadium",
+    "city": "Miami",
+    "country": "United States"
+  },
+  "2026-07-19|ESP|ARG": {
+    "stadium": "MetLife Stadium",
+    "city": "New Jersey",
+    "country": "United States"
   }
 }

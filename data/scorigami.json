@@ -439,7 +439,7 @@
   {
     "lowScore": 1,
     "highScore": 2,
-    "count": 165,
+    "count": 166,
     "firstMatch": {
       "date": "1930-07-14",
       "tournament": "1930 FIFA Men's World Cup",
@@ -458,21 +458,21 @@
       "country": "Uruguay"
     },
     "lastMatch": {
-      "date": "2026-07-11",
-      "kickoff": "2026-07-11T21:00:00Z",
+      "date": "2026-07-15",
+      "kickoff": "2026-07-15T19:00:00Z",
       "tournament": "2026 FIFA Men's World Cup",
-      "stage": "quarter-finals",
-      "homeTeam": "Norway",
-      "awayTeam": "England",
-      "homeCode": "NOR",
-      "awayCode": "ENG",
+      "stage": "semi-finals",
+      "homeTeam": "England",
+      "awayTeam": "Argentina",
+      "homeCode": "ENG",
+      "awayCode": "ARG",
       "homeScore": 1,
       "awayScore": 2,
-      "extraTime": true,
+      "extraTime": false,
       "penaltyShootout": false,
       "penaltyScore": "",
-      "stadium": "Hard Rock Stadium",
-      "city": "Miami",
+      "stadium": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
       "country": "United States"
     }
   },
