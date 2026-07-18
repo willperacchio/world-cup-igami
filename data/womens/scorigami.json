@@ -286,7 +286,7 @@
     "firstMatch": {
       "date": "1991-11-24",
       "tournament": "1991 FIFA Women's World Cup",
-      "stage": "quarter-final",
+      "stage": "quarter-finals",
       "homeTeam": "United States",
       "awayTeam": "Chinese Taipei",
       "homeCode": "USA",
@@ -482,7 +482,7 @@
     "firstMatch": {
       "date": "1995-06-13",
       "tournament": "1995 FIFA Women's World Cup",
-      "stage": "quarter-final",
+      "stage": "quarter-finals",
       "homeTeam": "Sweden",
       "awayTeam": "China",
       "homeCode": "SWE",
@@ -738,7 +738,7 @@
     "lastMatch": {
       "date": "2003-10-02",
       "tournament": "2003 FIFA Women's World Cup",
-      "stage": "quarter-final",
+      "stage": "quarter-finals",
       "homeTeam": "Germany",
       "awayTeam": "Russia",
       "homeCode": "DEU",
@@ -918,7 +918,7 @@
     "firstMatch": {
       "date": "1991-11-27",
       "tournament": "1991 FIFA Women's World Cup",
-      "stage": "semi-final",
+      "stage": "semi-finals",
       "homeTeam": "Germany",
       "awayTeam": "United States",
       "homeCode": "DEU",
@@ -1035,7 +1035,7 @@
     "firstMatch": {
       "date": "1999-07-01",
       "tournament": "1999 FIFA Women's World Cup",
-      "stage": "quarter-final",
+      "stage": "quarter-finals",
       "homeTeam": "Brazil",
       "awayTeam": "Nigeria",
       "homeCode": "BRA",
@@ -1052,7 +1052,7 @@
     "lastMatch": {
       "date": "1999-07-01",
       "tournament": "1999 FIFA Women's World Cup",
-      "stage": "quarter-final",
+      "stage": "quarter-finals",
       "homeTeam": "Brazil",
       "awayTeam": "Nigeria",
       "homeCode": "BRA",

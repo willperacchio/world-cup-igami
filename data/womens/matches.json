@@ -308,7 +308,7 @@
   {
     "date": "1991-11-24",
     "tournament": "1991 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Denmark",
     "awayTeam": "Germany",
     "homeCode": "DNK",
@@ -325,7 +325,7 @@
   {
     "date": "1991-11-24",
     "tournament": "1991 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "China",
     "awayTeam": "Sweden",
     "homeCode": "CHN",
@@ -342,7 +342,7 @@
   {
     "date": "1991-11-24",
     "tournament": "1991 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Norway",
     "awayTeam": "Italy",
     "homeCode": "NOR",
@@ -359,7 +359,7 @@
   {
     "date": "1991-11-24",
     "tournament": "1991 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "United States",
     "awayTeam": "Chinese Taipei",
     "homeCode": "USA",
@@ -376,7 +376,7 @@
   {
     "date": "1991-11-27",
     "tournament": "1991 FIFA Women's World Cup",
-    "stage": "semi-final",
+    "stage": "semi-finals",
     "homeTeam": "Sweden",
     "awayTeam": "Norway",
     "homeCode": "SWE",
@@ -393,7 +393,7 @@
   {
     "date": "1991-11-27",
     "tournament": "1991 FIFA Women's World Cup",
-    "stage": "semi-final",
+    "stage": "semi-finals",
     "homeTeam": "Germany",
     "awayTeam": "United States",
     "homeCode": "DEU",
@@ -750,7 +750,7 @@
   {
     "date": "1995-06-13",
     "tournament": "1995 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Japan",
     "awayTeam": "United States",
     "homeCode": "JPN",
@@ -767,7 +767,7 @@
   {
     "date": "1995-06-13",
     "tournament": "1995 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Norway",
     "awayTeam": "Denmark",
     "homeCode": "NOR",
@@ -784,7 +784,7 @@
   {
     "date": "1995-06-13",
     "tournament": "1995 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Germany",
     "awayTeam": "England",
     "homeCode": "DEU",
@@ -801,7 +801,7 @@
   {
     "date": "1995-06-13",
     "tournament": "1995 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Sweden",
     "awayTeam": "China",
     "homeCode": "SWE",
@@ -818,7 +818,7 @@
   {
     "date": "1995-06-15",
     "tournament": "1995 FIFA Women's World Cup",
-    "stage": "semi-final",
+    "stage": "semi-finals",
     "homeTeam": "United States",
     "awayTeam": "Norway",
     "homeCode": "USA",
@@ -835,7 +835,7 @@
   {
     "date": "1995-06-15",
     "tournament": "1995 FIFA Women's World Cup",
-    "stage": "semi-final",
+    "stage": "semi-finals",
     "homeTeam": "Germany",
     "awayTeam": "China",
     "homeCode": "DEU",
@@ -1294,7 +1294,7 @@
   {
     "date": "1999-06-30",
     "tournament": "1999 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "China",
     "awayTeam": "Russia",
     "homeCode": "CHN",
@@ -1311,7 +1311,7 @@
   {
     "date": "1999-06-30",
     "tournament": "1999 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Norway",
     "awayTeam": "Sweden",
     "homeCode": "NOR",
@@ -1328,7 +1328,7 @@
   {
     "date": "1999-07-01",
     "tournament": "1999 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "United States",
     "awayTeam": "Germany",
     "homeCode": "USA",
@@ -1345,7 +1345,7 @@
   {
     "date": "1999-07-01",
     "tournament": "1999 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Brazil",
     "awayTeam": "Nigeria",
     "homeCode": "BRA",
@@ -1362,7 +1362,7 @@
   {
     "date": "1999-07-04",
     "tournament": "1999 FIFA Women's World Cup",
-    "stage": "semi-final",
+    "stage": "semi-finals",
     "homeTeam": "United States",
     "awayTeam": "Brazil",
     "homeCode": "USA",
@@ -1379,7 +1379,7 @@
   {
     "date": "1999-07-04",
     "tournament": "1999 FIFA Women's World Cup",
-    "stage": "semi-final",
+    "stage": "semi-finals",
     "homeTeam": "Norway",
     "awayTeam": "China",
     "homeCode": "NOR",
@@ -1838,7 +1838,7 @@
   {
     "date": "2003-10-01",
     "tournament": "2003 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Brazil",
     "awayTeam": "Sweden",
     "homeCode": "BRA",
@@ -1855,7 +1855,7 @@
   {
     "date": "2003-10-01",
     "tournament": "2003 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "United States",
     "awayTeam": "Norway",
     "homeCode": "USA",
@@ -1872,7 +1872,7 @@
   {
     "date": "2003-10-02",
     "tournament": "2003 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Germany",
     "awayTeam": "Russia",
     "homeCode": "DEU",
@@ -1889,7 +1889,7 @@
   {
     "date": "2003-10-02",
     "tournament": "2003 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "China",
     "awayTeam": "Canada",
     "homeCode": "CHN",
@@ -1906,7 +1906,7 @@
   {
     "date": "2003-10-05",
     "tournament": "2003 FIFA Women's World Cup",
-    "stage": "semi-final",
+    "stage": "semi-finals",
     "homeTeam": "United States",
     "awayTeam": "Germany",
     "homeCode": "USA",
@@ -1923,7 +1923,7 @@
   {
     "date": "2003-10-05",
     "tournament": "2003 FIFA Women's World Cup",
-    "stage": "semi-final",
+    "stage": "semi-finals",
     "homeTeam": "Sweden",
     "awayTeam": "Canada",
     "homeCode": "SWE",
@@ -2382,7 +2382,7 @@
   {
     "date": "2007-09-22",
     "tournament": "2007 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Germany",
     "awayTeam": "North Korea",
     "homeCode": "DEU",
@@ -2399,7 +2399,7 @@
   {
     "date": "2007-09-22",
     "tournament": "2007 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "United States",
     "awayTeam": "England",
     "homeCode": "USA",
@@ -2416,7 +2416,7 @@
   {
     "date": "2007-09-23",
     "tournament": "2007 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Norway",
     "awayTeam": "China",
     "homeCode": "NOR",
@@ -2433,7 +2433,7 @@
   {
     "date": "2007-09-23",
     "tournament": "2007 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Brazil",
     "awayTeam": "Australia",
     "homeCode": "BRA",
@@ -2450,7 +2450,7 @@
   {
     "date": "2007-09-26",
     "tournament": "2007 FIFA Women's World Cup",
-    "stage": "semi-final",
+    "stage": "semi-finals",
     "homeTeam": "Germany",
     "awayTeam": "Norway",
     "homeCode": "DEU",
@@ -2467,7 +2467,7 @@
   {
     "date": "2007-09-27",
     "tournament": "2007 FIFA Women's World Cup",
-    "stage": "semi-final",
+    "stage": "semi-finals",
     "homeTeam": "United States",
     "awayTeam": "Brazil",
     "homeCode": "USA",
@@ -2926,7 +2926,7 @@
   {
     "date": "2011-07-09",
     "tournament": "2011 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "England",
     "awayTeam": "France",
     "homeCode": "ENG",
@@ -2943,7 +2943,7 @@
   {
     "date": "2011-07-09",
     "tournament": "2011 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Germany",
     "awayTeam": "Japan",
     "homeCode": "DEU",
@@ -2960,7 +2960,7 @@
   {
     "date": "2011-07-10",
     "tournament": "2011 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Sweden",
     "awayTeam": "Australia",
     "homeCode": "SWE",
@@ -2977,7 +2977,7 @@
   {
     "date": "2011-07-10",
     "tournament": "2011 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Brazil",
     "awayTeam": "United States",
     "homeCode": "BRA",
@@ -2994,7 +2994,7 @@
   {
     "date": "2011-07-13",
     "tournament": "2011 FIFA Women's World Cup",
-    "stage": "semi-final",
+    "stage": "semi-finals",
     "homeTeam": "France",
     "awayTeam": "United States",
     "homeCode": "FRA",
@@ -3011,7 +3011,7 @@
   {
     "date": "2011-07-13",
     "tournament": "2011 FIFA Women's World Cup",
-    "stage": "semi-final",
+    "stage": "semi-finals",
     "homeTeam": "Japan",
     "awayTeam": "Sweden",
     "homeCode": "JPN",
@@ -3810,7 +3810,7 @@
   {
     "date": "2015-06-26",
     "tournament": "2015 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Germany",
     "awayTeam": "France",
     "homeCode": "DEU",
@@ -3827,7 +3827,7 @@
   {
     "date": "2015-06-26",
     "tournament": "2015 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "China",
     "awayTeam": "United States",
     "homeCode": "CHN",
@@ -3844,7 +3844,7 @@
   {
     "date": "2015-06-27",
     "tournament": "2015 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Australia",
     "awayTeam": "Japan",
     "homeCode": "AUS",
@@ -3861,7 +3861,7 @@
   {
     "date": "2015-06-27",
     "tournament": "2015 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "England",
     "awayTeam": "Canada",
     "homeCode": "ENG",
@@ -3878,7 +3878,7 @@
   {
     "date": "2015-06-30",
     "tournament": "2015 FIFA Women's World Cup",
-    "stage": "semi-final",
+    "stage": "semi-finals",
     "homeTeam": "United States",
     "awayTeam": "Germany",
     "homeCode": "USA",
@@ -3895,7 +3895,7 @@
   {
     "date": "2015-07-01",
     "tournament": "2015 FIFA Women's World Cup",
-    "stage": "semi-final",
+    "stage": "semi-finals",
     "homeTeam": "Japan",
     "awayTeam": "England",
     "homeCode": "JPN",
@@ -4694,7 +4694,7 @@
   {
     "date": "2019-06-27",
     "tournament": "2019 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Norway",
     "awayTeam": "England",
     "homeCode": "NOR",
@@ -4711,7 +4711,7 @@
   {
     "date": "2019-06-28",
     "tournament": "2019 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "France",
     "awayTeam": "United States",
     "homeCode": "FRA",
@@ -4728,7 +4728,7 @@
   {
     "date": "2019-06-29",
     "tournament": "2019 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Italy",
     "awayTeam": "Netherlands",
     "homeCode": "ITA",
@@ -4745,7 +4745,7 @@
   {
     "date": "2019-06-29",
     "tournament": "2019 FIFA Women's World Cup",
-    "stage": "quarter-final",
+    "stage": "quarter-finals",
     "homeTeam": "Germany",
     "awayTeam": "Sweden",
     "homeCode": "DEU",
@@ -4762,7 +4762,7 @@
   {
     "date": "2019-07-02",
     "tournament": "2019 FIFA Women's World Cup",
-    "stage": "semi-final",
+    "stage": "semi-finals",
     "homeTeam": "England",
     "awayTeam": "United States",
     "homeCode": "ENG",
@@ -4779,7 +4779,7 @@
   {
     "date": "2019-07-03",
     "tournament": "2019 FIFA Women's World Cup",
-    "stage": "semi-final",
+    "stage": "semi-finals",
     "homeTeam": "Netherlands",
     "awayTeam": "Sweden",
     "homeCode": "NLD",

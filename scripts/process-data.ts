@@ -76,14 +76,22 @@ interface Match {
   country: string;
 }
 
+// The CSV's women's rows use singular stage names ("quarter-final") where the
+// men's rows — and the UI's i18n keys — use plural. Normalize at ingestion.
+const STAGE_NORMALIZE: Record<string, string> = {
+  "quarter-final": "quarter-finals",
+  "semi-final": "semi-finals",
+};
+
 const allMatches = lines.slice(1).map((line) => {
   const cols = parseCSVLine(line);
   const homeId = getCol(cols, "home_team_id");
   const awayId = getCol(cols, "away_team_id");
+  const rawStage = getCol(cols, "stage_name");
   return {
     date: getCol(cols, "match_date"),
     tournament: getCol(cols, "tournament_name"),
-    stage: getCol(cols, "stage_name"),
+    stage: STAGE_NORMALIZE[rawStage] || rawStage,
     homeTeam: resolveTeamName(getCol(cols, "home_team_name"), homeId),
     awayTeam: resolveTeamName(getCol(cols, "away_team_name"), awayId),
     homeCode: getCol(cols, "home_team_code"),
