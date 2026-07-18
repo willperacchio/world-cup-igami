@@ -1226,6 +1226,47 @@
     }
   },
   {
+    "lowScore": 4,
+    "highScore": 6,
+    "count": 1,
+    "firstMatch": {
+      "date": "2026-07-18",
+      "kickoff": "2026-07-18T21:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "third-place match",
+      "homeTeam": "France",
+      "awayTeam": "England",
+      "homeCode": "FRA",
+      "awayCode": "ENG",
+      "homeScore": 4,
+      "awayScore": 6,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "Hard Rock Stadium",
+      "city": "Miami",
+      "country": "United States"
+    },
+    "lastMatch": {
+      "date": "2026-07-18",
+      "kickoff": "2026-07-18T21:00:00Z",
+      "tournament": "2026 FIFA Men's World Cup",
+      "stage": "third-place match",
+      "homeTeam": "France",
+      "awayTeam": "England",
+      "homeCode": "FRA",
+      "awayCode": "ENG",
+      "homeScore": 4,
+      "awayScore": 6,
+      "extraTime": false,
+      "penaltyShootout": false,
+      "penaltyScore": "",
+      "stadium": "Hard Rock Stadium",
+      "city": "Miami",
+      "country": "United States"
+    }
+  },
+  {
     "lowScore": 5,
     "highScore": 6,
     "count": 1,
