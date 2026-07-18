@@ -2,8 +2,8 @@
   "header": {
     "title": "World Cupigami",
     "kicker": "A scorigami project",
-    "subtitle": "Every unique final score in Men's FIFA World Cup history",
-    "subtitleWomens": "Every unique final score in Women's FIFA World Cup history",
+    "subtitle": "Every unique final score in FIFA (Men's) World Cup history",
+    "subtitleWomens": "Every unique final score in FIFA Women's World Cup history",
     "editionMens": "Men's",
     "editionWomens": "Women's"
   },
@@ -12,11 +12,11 @@
     "description": "Scorigami is the concept of a final score that has never happened before in a sport's history. The idea was popularized by Jon Bois, whose brilliant work on NFL scorigami inspired this project.",
     "watchVideo": "Watch the original video",
     "whyBuilt": "I built World Cupigami to bring a little American sporting culture to the world's biggest stage — in the spirit of sharing that makes the World Cup special. Scorigami works a bit differently in soccer than in American football, since goals are scored one at a time rather than in chunks of 2, 3, 6, 7, or 8. That makes new scorigamis rarer and more meaningful.",
-    "mensOnly": "This currently covers the Men's FIFA World Cup only. A Women's World Cup edition is coming soon.",
+    "mensOnly": "This currently covers the FIFA (Men's) World Cup only. A Women's World Cup edition is coming soon.",
     "pointTitle": "What's the point of this?",
     "pointDescription": "Honestly? Nothing. It's just fun if you're a sports analytics nerd like me. But if there's one good thing that can come out of this — when your team scores a scorigami, consider donating to a charity in the losing team's country. A historic scoreline is a great excuse to do some good in the world.",
-    "editionNoteMens": "This page covers the Men's FIFA World Cup — the Women's World Cup edition is one toggle away, top right.",
-    "editionNoteWomens": "This page covers the Women's FIFA World Cup, from the first tournament in 1991 through today."
+    "editionNoteMens": "This page covers the FIFA (Men's) World Cup — the Women's World Cup edition is one toggle away, top right.",
+    "editionNoteWomens": "This page covers the FIFA Women's World Cup, from the first tournament in 1991 through today."
   },
   "stats": {
     "matches": "matches",
@@ -37,7 +37,7 @@
   "upcoming": {
     "kickerLabel": "Awaiting kickoff",
     "title": "{year} World Cup hasn't started yet",
-    "description": "The {year} FIFA Men's World Cup kicks off on {date}. Match results will land here in real time as games finish — and the heatmap above shows the state of scorigami right before the tournament begins.",
+    "description": "The {year} FIFA (Men's) World Cup kicks off on {date}. Match results will land here in real time as games finish — and the heatmap above shows the state of scorigami right before the tournament begins.",
     "kickoffDateFormat": "MMMM d, yyyy",
     "descriptionWomens": "The {year} FIFA Women's World Cup kicks off on {date}. Match results will land here in real time as games finish — and the heatmap above shows the state of scorigami right before the tournament begins."
   },
