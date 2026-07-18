@@ -31,9 +31,19 @@ describe("getRarity", () => {
     expect(getRarity(100, 100)).toBe("veryCommon");
   });
 
-  it("handles boundary at 0.02 (exact threshold goes to rare)", () => {
-    // ratio = 2/100 = 0.02 → not < 0.02, so "rare"
-    expect(getRarity(2, 100)).toBe("rare");
+  it("classifies 2–3 occurrences as veryRare when still uncommon vs max", () => {
+    // Absolute rule: counts 2–3 with ratio < 0.15 are veryRare even when the
+    // pure ratio test wouldn't fire. Keeps small datasets (women's edition,
+    // max 64) from having an unreachable veryRare bucket.
+    expect(getRarity(2, 100)).toBe("veryRare");
+    expect(getRarity(3, 64)).toBe("veryRare");
+    expect(getRarity(2, 64)).toBe("veryRare");
+    // 4+ occurrences fall through to the ratio rules in small datasets
+    expect(getRarity(4, 64)).toBe("rare");
+    // In tiny subsets (timeline early decades) a 3-count can be near the max —
+    // the ratio guard keeps it out of veryRare.
+    expect(getRarity(3, 4)).toBe("veryCommon");
+    expect(getRarity(2, 5)).toBe("veryCommon");
   });
 
   it("handles boundary at 0.15 (exact threshold goes to common)", () => {

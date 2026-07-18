@@ -143,7 +143,7 @@ export default function ScorigamiApp({
   }, [timeline.index, timeline.isAtEnd, fullGrid, framesByIndex, matches, summary]);
 
   const editionHref = (target: Edition) =>
-    target === "mens" ? `/${locale}` : `/${locale}/womens`;
+    target === "mens" ? `/${locale}` : `/${locale}/w`;
 
   return (
     <div className="min-h-screen text-stone-200">

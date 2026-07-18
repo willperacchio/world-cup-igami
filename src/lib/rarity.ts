@@ -16,7 +16,11 @@ export type OccurredRarity = Exclude<Rarity, "never">;
  *
  * Thresholds:
  * - unique: exactly 1 occurrence
- * - veryRare: < 2% of the max count
+ * - veryRare: < 2% of the max count, or 2–3 occurrences that are still
+ *   uncommon (< 15% of max). The pure ratio test starves smaller datasets:
+ *   the women's edition maxes at 64, making "2+ occurrences under 2%"
+ *   impossible. The absolute rule matches the men's bucket exactly
+ *   (2% of 196 = counts 2–3), so the men's grid is unchanged.
  * - rare: < 15% of the max count
  * - common: < 40% of the max count
  * - veryCommon: >= 40% of the max count
@@ -25,7 +29,7 @@ export function getRarity(count: number, maxCount: number): Rarity {
   if (count === 0) return "never";
   if (count === 1) return "unique";
   const ratio = count / maxCount;
-  if (ratio < 0.02) return "veryRare";
+  if (ratio < 0.02 || (count <= 3 && ratio < 0.15)) return "veryRare";
   if (ratio < 0.15) return "rare";
   if (ratio < 0.4) return "common";
   return "veryCommon";
