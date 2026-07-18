@@ -22,29 +22,80 @@ interface SpanAnnotation {
 
 type Annotation = PointAnnotation | SpanAnnotation;
 
-/** Pre-defined callout annotations for each chart. */
-const ANNOTATIONS: Record<string, Annotation[]> = {
-  teams: [
-    { year: 1982, text: "→ 24 teams", anchor: "start", dy: -6 },
-    { year: 1998, text: "→ 32 teams", anchor: "start", dy: -6 },
-    { year: 2026, text: "→ 48 teams", anchor: "end", dy: -6 },
-  ],
-  matches: [
-    { year: 1982, text: "52 games", anchor: "start", dy: -6 },
-    { year: 1998, text: "64 games", anchor: "start", dy: -6 },
-    { year: 2026, text: "104 games", anchor: "end", dy: -6 },
-  ],
-  goalsPerGame: [
-    { year: 1954, text: "5.38 GPG", anchor: "start", dy: -6 },
-    { year: 2022, text: "2.56 GPG", anchor: "end", dy: -6 },
-  ],
-  scorigamis: [
-    { year: 1930, text: "1st WC: 9 new", anchor: "start", dy: -6 },
-    { year: 1954, text: "8 new scores", anchor: "start", dy: -6 },
-    { year: 1982, text: "1 new", anchor: "start", dy: -6 },
-    { year: 2022, text: "1 new", anchor: "end", dy: -6 },
-    { type: "span", fromYear: 1982, toYear: 2022, text: "The Great Drought-igami" },
-  ],
+/** Per-edition chart configuration: year range, annotations, projections. */
+export interface TrendEditionConfig {
+  minYear: number;
+  maxYear: number;
+  /** X-axis year labels. */
+  labelYears: number[];
+  /** Shade the WWII gap (men's edition only — women's starts in 1991). */
+  showWWII: boolean;
+  /**
+   * Known full-size point for the upcoming tournament, appended as a dashed
+   * projection on the teams/matches charts.
+   */
+  projection: { year: string; teams: number; matches: number };
+  annotations: Record<string, Annotation[]>;
+}
+
+export const MENS_TREND_CONFIG: TrendEditionConfig = {
+  minYear: 1930,
+  maxYear: 2026,
+  labelYears: [1930, 1950, 1970, 1990, 2010, 2026],
+  showWWII: true,
+  projection: { year: "2026", teams: 48, matches: 104 },
+  annotations: {
+    teams: [
+      { year: 1982, text: "→ 24 teams", anchor: "start", dy: -6 },
+      { year: 1998, text: "→ 32 teams", anchor: "start", dy: -6 },
+      { year: 2026, text: "→ 48 teams", anchor: "end", dy: -6 },
+    ],
+    matches: [
+      { year: 1982, text: "52 games", anchor: "start", dy: -6 },
+      { year: 1998, text: "64 games", anchor: "start", dy: -6 },
+      { year: 2026, text: "104 games", anchor: "end", dy: -6 },
+    ],
+    goalsPerGame: [
+      { year: 1954, text: "5.38 GPG", anchor: "start", dy: -6 },
+      { year: 2022, text: "2.56 GPG", anchor: "end", dy: -6 },
+    ],
+    scorigamis: [
+      { year: 1930, text: "1st WC: 9 new", anchor: "start", dy: -6 },
+      { year: 1954, text: "8 new scores", anchor: "start", dy: -6 },
+      { year: 1982, text: "1 new", anchor: "start", dy: -6 },
+      { year: 2022, text: "1 new", anchor: "end", dy: -6 },
+      { type: "span", fromYear: 1982, toYear: 2022, text: "The Great Drought-igami" },
+    ],
+  },
+};
+
+export const WOMENS_TREND_CONFIG: TrendEditionConfig = {
+  minYear: 1991,
+  maxYear: 2027,
+  labelYears: [1991, 2003, 2015, 2027],
+  showWWII: false,
+  projection: { year: "2027", teams: 32, matches: 64 },
+  annotations: {
+    teams: [
+      { year: 1991, text: "12 teams", anchor: "start", dy: -6 },
+      { year: 1999, text: "→ 16 teams", anchor: "start", dy: -6 },
+      { year: 2015, text: "→ 24 teams", anchor: "start", dy: -6 },
+      { year: 2023, text: "→ 32 teams", anchor: "end", dy: -6 },
+    ],
+    matches: [
+      { year: 1991, text: "26 games", anchor: "start", dy: -6 },
+      { year: 2015, text: "52 games", anchor: "start", dy: -6 },
+      { year: 2023, text: "64 games", anchor: "end", dy: -6 },
+    ],
+    goalsPerGame: [
+      { year: 1999, text: "3.84 GPG", anchor: "start", dy: -6 },
+      { year: 2023, text: "2.56 GPG", anchor: "end", dy: -6 },
+    ],
+    scorigamis: [
+      { year: 1991, text: "1st WC: 12 new", anchor: "start", dy: -6 },
+      { year: 2019, text: "13–0 lands here", anchor: "end", dy: -6 },
+    ],
+  },
 };
 
 // ── Component ──
@@ -54,25 +105,30 @@ interface TrendChartProps {
   label: string;
   color: string;
   tournamentStats: TournamentStats[];
+  /** Edition-specific range/annotations/projection. Defaults to men's. */
+  config?: TrendEditionConfig;
 }
 
-export default function TrendChart({ chartKey, label, color, tournamentStats }: TrendChartProps) {
+export default function TrendChart({ chartKey, label, color, tournamentStats, config = MENS_TREND_CONFIG }: TrendChartProps) {
   const [hovered, setHovered] = useState<{ x: number; y: number; val: number; year: string } | null>(null);
 
-  // These are full-tournament-size trend lines. Once 2026 kicks off,
-  // computeTournamentStats emits a *partial* 2026 entry (e.g. 2 teams / 1 match
-  // after the opener), which would otherwise shadow the known full-tournament
-  // projection. Drop any real 2026 entry and always plot the known final size.
+  const projYear = config.projection.year;
+
+  // These are full-tournament-size trend lines. Once the upcoming tournament
+  // kicks off, computeTournamentStats emits a *partial* entry for it (e.g.
+  // 2 teams / 1 match after the opener), which would otherwise shadow the
+  // known full-tournament projection. Drop any real entry for the projection
+  // year and always plot the known final size.
   const allWithGaps = [
-    ...tournamentStats.filter((s) => s.year !== "2026"),
-    { year: "2026", teams: 48, matches: 104, goalsPerGame: 0, scorigamis: 0 },
+    ...tournamentStats.filter((s) => s.year !== projYear),
+    { year: projYear, teams: config.projection.teams, matches: config.projection.matches, goalsPerGame: 0, scorigamis: 0 },
   ];
-  const minYear = 1930;
-  const maxYear = 2026;
+  const minYear = config.minYear;
+  const maxYear = config.maxYear;
   const yearRange = maxYear - minYear;
 
   const dataPoints = allWithGaps.filter(
-    (s) => s.year !== "2026" || chartKey === "teams" || chartKey === "matches",
+    (s) => s.year !== projYear || chartKey === "teams" || chartKey === "matches",
   );
 
   const values = dataPoints.map((s) => s[chartKey]);
@@ -80,7 +136,7 @@ export default function TrendChart({ chartKey, label, color, tournamentStats }: 
   const max = rawMax * 1.15; // 15% breathing room
   const range = max || 1;
 
-  const annotations = ANNOTATIONS[chartKey] || [];
+  const annotations = config.annotations[chartKey] || [];
   const hasSpan = annotations.some((a) => a.type === "span");
 
   // Layout
@@ -95,19 +151,20 @@ export default function TrendChart({ chartKey, label, color, tournamentStats }: 
 
   const points = dataPoints.map((s) => {
     const yr = parseInt(s.year);
-    return { x: yearToX(yr), y: valToY(s[chartKey]), val: s[chartKey], year: s.year, is2026: s.year === "2026" };
+    return { x: yearToX(yr), y: valToY(s[chartKey]), val: s[chartKey], year: s.year, isProjection: s.year === projYear };
   });
 
-  const realPoints = points.filter((p) => !p.is2026);
-  const point2026 = points.find((p) => p.is2026);
+  const realPoints = points.filter((p) => !p.isProjection);
+  const point2026 = points.find((p) => p.isProjection);
 
-  // Split line path at WWII gap (1938–1950)
-  const preWar = realPoints.filter((p) => parseInt(p.year) <= 1938);
-  const postWar = realPoints.filter((p) => parseInt(p.year) >= 1950);
+  // Split line path at WWII gap (1938–1950) — men's edition only; the women's
+  // tournament started in 1991 so its line never splits.
+  const preWar = config.showWWII ? realPoints.filter((p) => parseInt(p.year) <= 1938) : [];
+  const postWar = config.showWWII ? realPoints.filter((p) => parseInt(p.year) >= 1950) : realPoints;
   const toPath = (pts: typeof realPoints) =>
     pts.length > 0 ? pts.map((p, i) => `${i === 0 ? "M" : "L"}${p.x},${p.y}`).join(" ") : "";
 
-  const labelYears = [1930, 1950, 1970, 1990, 2010, 2026];
+  const labelYears = config.labelYears;
   const wwiiX1 = yearToX(1940);
   const wwiiX2 = yearToX(1948);
 
@@ -136,11 +193,15 @@ export default function TrendChart({ chartKey, label, color, tournamentStats }: 
           </g>
         ))}
 
-        {/* WWII shaded region */}
-        <rect x={wwiiX1 - 1} y={pad.top} width={wwiiX2 - wwiiX1 + 2} height={plotH} fill="currentColor" opacity={0.03} />
-        <line x1={wwiiX1} y1={pad.top} x2={wwiiX1} y2={pad.top + plotH} stroke="currentColor" strokeOpacity={0.1} strokeDasharray="2,2" />
-        <line x1={wwiiX2} y1={pad.top} x2={wwiiX2} y2={pad.top + plotH} stroke="currentColor" strokeOpacity={0.1} strokeDasharray="2,2" />
-        <text x={(wwiiX1 + wwiiX2) / 2} y={pad.top + plotH / 2 + 2} textAnchor="middle" fontSize={5} fill="currentColor" opacity={0.25}>WWII</text>
+        {/* WWII shaded region (men's edition only) */}
+        {config.showWWII && (
+          <>
+            <rect x={wwiiX1 - 1} y={pad.top} width={wwiiX2 - wwiiX1 + 2} height={plotH} fill="currentColor" opacity={0.03} />
+            <line x1={wwiiX1} y1={pad.top} x2={wwiiX1} y2={pad.top + plotH} stroke="currentColor" strokeOpacity={0.1} strokeDasharray="2,2" />
+            <line x1={wwiiX2} y1={pad.top} x2={wwiiX2} y2={pad.top + plotH} stroke="currentColor" strokeOpacity={0.1} strokeDasharray="2,2" />
+            <text x={(wwiiX1 + wwiiX2) / 2} y={pad.top + plotH / 2 + 2} textAnchor="middle" fontSize={5} fill="currentColor" opacity={0.25}>WWII</text>
+          </>
+        )}
 
         {/* Data lines — split at WWII with dashed connector */}
         {toPath(preWar) && <path d={toPath(preWar)} fill="none" stroke={color} strokeWidth={2} strokeLinejoin="round" />}

@@ -10,13 +10,26 @@ import { computeFunFacts, type HostScorigami } from "@/lib/stats";
 import { Flag } from "./Flag";
 import { MatchScoreline } from "./MatchScoreline";
 import { TrendChart, GoalDistributionHistogram, ScoreDistribution } from "./charts";
+import { MENS_TREND_CONFIG, WOMENS_TREND_CONFIG } from "./charts/TrendChart";
+
+export type Edition = "mens" | "womens";
+
+/**
+ * Near-miss scorelines for the frontier section — plausible scores that have
+ * never happened in that edition's history. Hand-picked per edition.
+ */
+const FRONTIER_SCORES: Record<Edition, string[]> = {
+  mens: ["5–4", "8–1", "5–5", "6–4", "10–0"],
+  womens: ["5–4", "4–4", "6–2", "8–1", "9–0"],
+};
 
 interface Props {
   matches: Match[];
   scorigami: ScorigamiEntry[];
+  edition?: Edition;
 }
 
-export default function FunFacts({ matches, scorigami }: Props) {
+export default function FunFacts({ matches, scorigami, edition = "mens" }: Props) {
   const t = useTranslations("funFacts");
   const tStages = useTranslations("stages");
 
@@ -471,10 +484,13 @@ export default function FunFacts({ matches, scorigami }: Props) {
               label={label}
               color={color}
               tournamentStats={facts.tournamentStats}
+              config={edition === "womens" ? WOMENS_TREND_CONFIG : MENS_TREND_CONFIG}
             />
           ))}
         </div>
-        <p className="text-xs text-zinc-400 mt-2 text-center">{t("wwiiNote")}</p>
+        {edition === "mens" && (
+          <p className="text-xs text-zinc-400 mt-2 text-center">{t("wwiiNote")}</p>
+        )}
       </section>
 
       {/* Scorigami frontier */}
@@ -482,7 +498,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
         <h3 className="font-bold mb-2">{t("frontierTitle")}</h3>
         <p className="text-sm text-zinc-500 mb-3">{t("frontierDesc")}</p>
         <div className="flex flex-wrap gap-2">
-          {["5–4", "8–1", "5–5", "6–4", "10–0"].map((score) => (
+          {FRONTIER_SCORES[edition].map((score) => (
             <span
               key={score}
               className="px-3 py-1.5 rounded-full border border-dashed border-amber-400 text-amber-600 dark:text-amber-400 text-sm font-mono font-bold"

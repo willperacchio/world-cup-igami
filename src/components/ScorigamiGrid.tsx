@@ -15,7 +15,9 @@ export default function ScorigamiGrid({ grid, maxScore, onCellClick }: Props) {
   const [hoveredCell, setHoveredCell] = useState<string | null>(null);
   const t = useTranslations("grid");
   const maxCount = Math.max(...Array.from(grid.values()).map((e) => e.count));
-  const displayMax = Math.min(maxScore, 10);
+  // Show the full score range for the dataset (men's tops out at 10; the
+  // women's edition needs 13 for USA 13–0 Thailand, 2019).
+  const displayMax = maxScore;
 
   return (
     <div className="overflow-x-auto">

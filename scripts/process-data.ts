@@ -9,7 +9,7 @@
  * Run via: `npx tsx scripts/process-data.ts`
  */
 
-import { readFileSync, writeFileSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import { join } from "path";
 import { mergeMatches } from "./lib/merge-matches";
 
@@ -152,50 +152,57 @@ if (existsSync(venuesPath)) {
   }
 }
 
-// Build scorigami matrix: key is "lowScore-highScore" to normalize
-const scorigamiMap = new Map<
-  string,
-  { count: number; firstMatch: Match; lastMatch: Match }
->();
+// Build scorigami matrix + summary for a set of matches. Shared between the
+// men's and women's editions — each edition is its own scorigami universe.
+function buildOutputs(sorted: Match[]) {
+  const scorigamiMap = new Map<
+    string,
+    { count: number; firstMatch: Match; lastMatch: Match }
+  >();
 
-for (const match of matches) {
-  const low = Math.min(match.homeScore, match.awayScore);
-  const high = Math.max(match.homeScore, match.awayScore);
-  const key = `${low}-${high}`;
+  for (const match of sorted) {
+    const low = Math.min(match.homeScore, match.awayScore);
+    const high = Math.max(match.homeScore, match.awayScore);
+    const key = `${low}-${high}`;
 
-  const existing = scorigamiMap.get(key);
-  if (!existing) {
-    scorigamiMap.set(key, { count: 1, firstMatch: match, lastMatch: match });
-  } else {
-    existing.count++;
-    existing.lastMatch = match;
+    const existing = scorigamiMap.get(key);
+    if (!existing) {
+      scorigamiMap.set(key, { count: 1, firstMatch: match, lastMatch: match });
+    } else {
+      existing.count++;
+      existing.lastMatch = match;
+    }
   }
+
+  const scorigami = Array.from(scorigamiMap.entries())
+    .map(([key, val]) => {
+      const [low, high] = key.split("-").map(Number);
+      return {
+        lowScore: low,
+        highScore: high,
+        count: val.count,
+        firstMatch: val.firstMatch,
+        lastMatch: val.lastMatch,
+      };
+    })
+    .sort((a, b) => a.lowScore - b.lowScore || a.highScore - b.highScore);
+
+  const maxScore = Math.max(...sorted.map((m) => Math.max(m.homeScore, m.awayScore)));
+
+  const summary = {
+    totalMatches: sorted.length,
+    uniqueScores: scorigami.length,
+    maxScore,
+    dateRange: {
+      first: sorted[0].date,
+      last: sorted[sorted.length - 1].date,
+    },
+  };
+
+  return { scorigami, summary };
 }
 
-const scorigami = Array.from(scorigamiMap.entries())
-  .map(([key, val]) => {
-    const [low, high] = key.split("-").map(Number);
-    return {
-      lowScore: low,
-      highScore: high,
-      count: val.count,
-      firstMatch: val.firstMatch,
-      lastMatch: val.lastMatch,
-    };
-  })
-  .sort((a, b) => a.lowScore - b.lowScore || a.highScore - b.highScore);
-
-const maxScore = Math.max(...matches.map((m) => Math.max(m.homeScore, m.awayScore)));
-
-const summary = {
-  totalMatches: matches.length,
-  uniqueScores: scorigami.length,
-  maxScore,
-  dateRange: {
-    first: matches[0].date,
-    last: matches[matches.length - 1].date,
-  },
-};
+const { scorigami, summary } = buildOutputs(matches);
 
 writeFileSync(join(dataDir, "matches.json"), JSON.stringify(matches, null, 2));
 writeFileSync(join(dataDir, "scorigami.json"), JSON.stringify(scorigami, null, 2));
@@ -208,5 +215,44 @@ console.log(`  ${overridesAdded} override(s) applied`);
 console.log(`  ${venuesAdded} match(es) enriched with venue data`);
 console.log(`  ${summary.totalMatches} matches total`);
 console.log(`  ${summary.uniqueScores} unique score combinations`);
-console.log(`  Max score in a match: ${maxScore}`);
+console.log(`  Max score in a match: ${summary.maxScore}`);
 console.log(`  Date range: ${summary.dateRange.first} to ${summary.dateRange.last}`);
+
+// ─── Women's edition ────────────────────────────────────────────────────────
+// Separate scorigami universe: Women's World Cups 1991–2019 from the same CSV,
+// plus the 2023 tournament backfilled from FIFA's API (data/womens-2023.json,
+// written by scripts/backfill-womens-2023.ts). Live 2027 results will merge in
+// the same way the men's live feed does today.
+const womensHistorical: Match[] = allMatches.filter((m) =>
+  m.tournament.includes("Women's World Cup"),
+);
+
+const womens2023Path = join(dataDir, "womens-2023.json");
+const womens2023: Match[] = existsSync(womens2023Path)
+  ? (JSON.parse(readFileSync(womens2023Path, "utf-8")) as { matches: Match[] }).matches
+  : [];
+
+const womensOverridesPath = join(dataDir, "womens-overrides.json");
+let womensOverrides: Match[] = [];
+if (existsSync(womensOverridesPath)) {
+  const rawW = JSON.parse(readFileSync(womensOverridesPath, "utf-8")) as
+    | Match[]
+    | { matches: Match[] };
+  womensOverrides = Array.isArray(rawW) ? rawW : rawW.matches;
+}
+
+const womensMerge = mergeMatches(womensHistorical, womens2023, womensOverrides);
+const womensOut = buildOutputs(womensMerge.matches);
+
+mkdirSync(join(dataDir, "womens"), { recursive: true });
+writeFileSync(join(dataDir, "womens/matches.json"), JSON.stringify(womensMerge.matches, null, 2));
+writeFileSync(join(dataDir, "womens/scorigami.json"), JSON.stringify(womensOut.scorigami, null, 2));
+writeFileSync(join(dataDir, "womens/summary.json"), JSON.stringify(womensOut.summary, null, 2));
+
+console.log("Women's edition:");
+console.log(`  ${womensHistorical.length} matches from historical CSV (1991–2019)`);
+console.log(`  ${womensMerge.liveAdded} match(es) from womens-2023.json`);
+console.log(`  ${womensOut.summary.totalMatches} matches total`);
+console.log(`  ${womensOut.summary.uniqueScores} unique score combinations`);
+console.log(`  Max score in a match: ${womensOut.summary.maxScore}`);
+console.log(`  Date range: ${womensOut.summary.dateRange.first} to ${womensOut.summary.dateRange.last}`);

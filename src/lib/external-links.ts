@@ -29,7 +29,11 @@ const matchLinks: Record<string, MatchLinkEntry> = matchLinksData as Record<
 >;
 
 function getYear(match: Match): string {
-  return match.tournament.replace(" FIFA Men's World Cup", "").trim();
+  return match.tournament.replace(/ FIFA (?:Men's|Women's) World Cup/, "").trim();
+}
+
+function isWomens(match: Match): boolean {
+  return match.tournament.includes("Women's");
 }
 
 function matchKey(match: Match): string {
@@ -53,7 +57,9 @@ export function getWikipediaUrl(match: Match): string {
 
   // Fallback: link to the main tournament page
   const year = getYear(match);
-  return `${WIKIPEDIA_BASE}/wiki/${year}_FIFA_World_Cup`;
+  return isWomens(match)
+    ? `${WIKIPEDIA_BASE}/wiki/${year}_FIFA_Women%27s_World_Cup`
+    : `${WIKIPEDIA_BASE}/wiki/${year}_FIFA_World_Cup`;
 }
 
 /**
@@ -70,7 +76,7 @@ export function getFifaUrl(match: Match): string {
 
   // Fallback: FIFA search
   const year = getYear(match);
-  const query = `${match.homeTeam} ${match.awayTeam} ${year} World Cup`;
+  const query = `${match.homeTeam} ${match.awayTeam} ${year} ${isWomens(match) ? "Women's World Cup" : "World Cup"}`;
   return `${FIFA_BASE}/en/search#q=${encodeURIComponent(query)}`;
 }
 

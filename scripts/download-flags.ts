@@ -29,6 +29,13 @@ const flagFiles: Record<string, string> = {
   "CUB": "Flag_of_Cuba.svg",
   "CZE": "Flag_of_the_Czech_Republic.svg",
   "DNK": "Flag_of_Denmark.svg",
+  // Women's World Cup teams not in the men's dataset
+  "TWN": "Flag_of_Chinese_Taipei_for_Olympic_games.svg",
+  "GNQ": "Flag_of_Equatorial_Guinea.svg",
+  "THA": "Flag_of_Thailand.svg",
+  "PHL": "Flag_of_the_Philippines.svg",
+  "VNM": "Flag_of_Vietnam.svg",
+  "ZMB": "Flag_of_Zambia.svg",
   "DZA": "Flag_of_Algeria.svg",
   "ECU": "Flag_of_Ecuador.svg",
   "ENG": "Flag_of_England.svg",

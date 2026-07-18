@@ -20,14 +20,23 @@ export const UPCOMING_TOURNAMENTS: UpcomingTournament[] = [
   { year: 2026, firstMatchDate: "2026-06-11", lastMatchDate: "2026-07-19" },
 ];
 
+/** Women's edition: 2027 FIFA Women's World Cup in Brazil. */
+export const WOMENS_UPCOMING_TOURNAMENTS: UpcomingTournament[] = [
+  { year: 2027, firstMatchDate: "2027-06-24", lastMatchDate: "2027-07-25" },
+];
+
 /**
- * Merge historical match years with the years from UPCOMING_TOURNAMENTS,
- * deduplicate, and return sorted ascending. Used by lib/data.ts to compute
- * `tournamentYears` for the timeline scrubber.
+ * Merge historical match years with the years from the given upcoming list,
+ * deduplicate, and return sorted ascending. Used by lib/data*.ts to compute
+ * `tournamentYears` for the timeline scrubber. Defaults to the men's list so
+ * existing callers keep working.
  */
-export function getEffectiveTournamentYears(matchYears: number[]): number[] {
+export function getEffectiveTournamentYears(
+  matchYears: number[],
+  upcoming: UpcomingTournament[] = UPCOMING_TOURNAMENTS,
+): number[] {
   const all = new Set(matchYears);
-  for (const t of UPCOMING_TOURNAMENTS) all.add(t.year);
+  for (const t of upcoming) all.add(t.year);
   return [...all].sort((a, b) => a - b);
 }
 
@@ -40,9 +49,10 @@ export function getEffectiveTournamentYears(matchYears: number[]): number[] {
 export function getUpcomingTournamentStatus(
   year: number,
   matchYears: number[],
+  upcoming: UpcomingTournament[] = UPCOMING_TOURNAMENTS,
 ): UpcomingTournament | null {
-  const upcoming = UPCOMING_TOURNAMENTS.find((t) => t.year === year);
-  if (!upcoming) return null;
+  const found = upcoming.find((t) => t.year === year);
+  if (!found) return null;
   if (matchYears.includes(year)) return null;
-  return upcoming;
+  return found;
 }
