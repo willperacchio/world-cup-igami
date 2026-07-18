@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { buildGridFromMatches } from "@/lib/data";
 import {
@@ -185,10 +186,11 @@ export default function ScorigamiApp({
           </div>
           <div className="flex flex-col items-end gap-2">
             <LocaleSwitcher />
-            {/* Edition toggle */}
+            {/* Edition toggle — client-side navigation, no full page reload */}
             <div className="flex rounded-sm border border-amber-400/30 font-mono text-[10px] tracking-[0.1em] uppercase overflow-hidden">
-              <a
+              <Link
                 href={editionHref("mens")}
+                prefetch
                 className={`px-2.5 py-1.5 transition-colors ${
                   edition === "mens"
                     ? "bg-amber-300 text-zinc-900"
@@ -196,9 +198,10 @@ export default function ScorigamiApp({
                 }`}
               >
                 {t("header.editionMens")}
-              </a>
-              <a
+              </Link>
+              <Link
                 href={editionHref("womens")}
+                prefetch
                 className={`px-2.5 py-1.5 transition-colors ${
                   edition === "womens"
                     ? "text-zinc-900"
@@ -207,7 +210,7 @@ export default function ScorigamiApp({
                 style={edition === "womens" ? { background: W_ACCENT } : undefined}
               >
                 {t("header.editionWomens")}
-              </a>
+              </Link>
             </div>
           </div>
         </div>
