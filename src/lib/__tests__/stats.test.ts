@@ -157,30 +157,25 @@ describe("computeMostRecentScorigami", () => {
 });
 
 describe("computeGoalDistribution", () => {
-  it("buckets goals correctly up to maxBucket", () => {
+  it("gives every exact total its own bucket, up to the dataset max", () => {
     const matches = [
       makeMatch({ homeScore: 0, awayScore: 0 }), // 0 total
       makeMatch({ homeScore: 1, awayScore: 1 }), // 2 total
       makeMatch({ homeScore: 1, awayScore: 1 }), // 2 total
-      makeMatch({ homeScore: 6, awayScore: 7 }), // 13 total → goes into 12+ bucket
+      makeMatch({ homeScore: 6, awayScore: 7 }), // 13 total → own bucket, no 12+
     ];
-    const result = computeGoalDistribution(matches, 12);
-    expect(result).toHaveLength(13); // 0..12
+    const result = computeGoalDistribution(matches);
+    expect(result).toHaveLength(14); // 0..13
     expect(result[0].count).toBe(1); // 0 goals
     expect(result[2].count).toBe(2); // 2 goals
-    expect(result[12].count).toBe(1); // 12+ bucket
-  });
-
-  it("uses custom maxBucket", () => {
-    const matches = [makeMatch({ homeScore: 5, awayScore: 5 })]; // 10 total
-    const result = computeGoalDistribution(matches, 8);
-    expect(result).toHaveLength(9); // 0..8
-    expect(result[8].count).toBe(1); // 10 goes into 8+ bucket
+    expect(result[12].count).toBe(0);
+    expect(result[13].count).toBe(1); // 13 goals stands alone
   });
 
   it("returns zeros for empty buckets", () => {
     const matches = [makeMatch({ homeScore: 3, awayScore: 0 })]; // 3 total
-    const result = computeGoalDistribution(matches, 5);
+    const result = computeGoalDistribution(matches);
+    expect(result).toHaveLength(4); // 0..3
     expect(result[0].count).toBe(0);
     expect(result[1].count).toBe(0);
     expect(result[3].count).toBe(1);

@@ -257,20 +257,21 @@ export function computeHostScorigamis(scorigami: ScorigamiEntry[]): HostScorigam
 }
 
 /**
- * Bucket match total goals into a histogram.
- * Goals above `maxBucket` are collapsed into a single "N+" bucket.
+ * Bucket match total goals into a histogram, one bar per exact total from 0 to
+ * the dataset's true maximum — no "N+" collapsing (the women's edition tops
+ * out at 13 with USA 13–0 Thailand, which deserves its own bar).
  */
 export function computeGoalDistribution(
   matches: Match[],
-  maxBucket = 12,
 ): { totalGoals: number; count: number }[] {
   const counts: Record<number, number> = {};
+  let maxTotal = 0;
   for (const m of matches) {
     const total = m.homeScore + m.awayScore;
-    const bucket = total >= maxBucket ? maxBucket : total;
-    counts[bucket] = (counts[bucket] || 0) + 1;
+    counts[total] = (counts[total] || 0) + 1;
+    if (total > maxTotal) maxTotal = total;
   }
-  return Array.from({ length: maxBucket + 1 }, (_, i) => ({
+  return Array.from({ length: maxTotal + 1 }, (_, i) => ({
     totalGoals: i,
     count: counts[i] || 0,
   }));

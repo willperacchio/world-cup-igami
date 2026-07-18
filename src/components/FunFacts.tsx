@@ -20,7 +20,7 @@ export type Edition = "mens" | "womens";
  */
 const FRONTIER_SCORES: Record<Edition, string[]> = {
   mens: ["5–4", "8–1", "5–5", "6–4", "10–0"],
-  womens: ["5–4", "4–4", "6–2", "8–1", "9–0"],
+  womens: ["5–3", "4–4", "6–2", "8–1", "9–0"],
 };
 
 interface Props {
@@ -359,7 +359,9 @@ export default function FunFacts({ matches, scorigami, edition = "mens" }: Props
 
               {/* Right: Unique penaltigamis */}
               {unique.length > 0 && (() => {
-                // Find the only penalty scoreline (grid cell) that occurred just once
+                // Penalty scorelines (grid cells) that occurred just once. The
+                // "only unique penalty score" callout is only meaningful when
+                // there's exactly one — the women's edition has several.
                 const uniquePenOnly = penGrid.filter((c) => c.count === 1);
                 return (
                   <div className="min-w-0 space-y-4">
@@ -379,7 +381,7 @@ export default function FunFacts({ matches, scorigami, edition = "mens" }: Props
                         ))}
                       </div>
                     </div>
-                    {uniquePenOnly.length > 0 && (
+                    {uniquePenOnly.length === 1 && (
                       <div className="rounded-sm border border-amber-400/30 bg-amber-400/5 px-3 py-2.5">
                         <p className="text-xs text-stone-500 font-mono uppercase tracking-wider mb-1">
                           Only unique penalty score
@@ -507,7 +509,9 @@ export default function FunFacts({ matches, scorigami, edition = "mens" }: Props
             </span>
           ))}
         </div>
-        <p className="text-sm text-zinc-400 mt-3">{t("frontierNote")}</p>
+        <p className="text-sm text-zinc-400 mt-3">
+          {t(edition === "womens" ? "frontierNoteWomens" : "frontierNote")}
+        </p>
       </section>
     </div>
   );

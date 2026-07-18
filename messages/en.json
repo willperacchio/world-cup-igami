@@ -99,7 +99,8 @@
     "liveDataFrom": "Live 2026 results from",
     "liveDataSource": "football-data.org",
     "conceptCredit": "Scorigami concept by Jon Bois",
-    "disclaimer": "FIFA World Cup™ is a trademark of FIFA. This site is not affiliated with, endorsed by, or connected to FIFA."
+    "disclaimer": "FIFA World Cup™ is a trademark of FIFA. This site is not affiliated with, endorsed by, or connected to FIFA.",
+    "dataFromWomens": "2023 results sourced from FIFA"
   },
   "funFacts": {
     "mostRecentTitle": "Most Recent Scorigami",
@@ -146,7 +147,8 @@
     "penaltigamiOnlyPenScore": "The only penalty scoreline that has occurred just once. Every other shootout result (like 4-2 or 5-3) has happened multiple times.",
     "frontierTitle": "The Scorigami Frontier",
     "frontierDesc": "These scores have never happened but are the most likely to occur next.",
-    "frontierNote": "With the 2026 World Cup expanding to 48 teams and 104 matches, more mismatches could finally break new ground."
+    "frontierNote": "With the 2026 World Cup expanding to 48 teams and 104 matches, more mismatches could finally break new ground.",
+    "frontierNoteWomens": "With 32 teams and 64 matches at the 2027 World Cup in Brazil, every mismatch is a chance to break new ground."
   },
   "locale": {}
 }
