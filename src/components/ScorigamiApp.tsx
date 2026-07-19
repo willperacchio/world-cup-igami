@@ -18,7 +18,9 @@ import MatchDetail from "@/components/MatchDetail";
 import FunFacts, { type Edition } from "@/components/FunFacts";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
 import LastUpdated from "@/components/LastUpdated";
+import ScorigamiCelebration from "@/components/ScorigamiCelebration";
 import Footer from "@/components/Footer";
+import { useIsRecent } from "@/hooks/useIsRecent";
 
 /** Accent for the women's edition "W" mark — rose against the scoreboard gold. */
 const W_ACCENT = "#fda4af";
@@ -141,6 +143,18 @@ export default function ScorigamiApp({
     }
     return framesByIndex[timeline.index];
   }, [timeline.index, timeline.isAtEnd, fullGrid, framesByIndex, matches, summary]);
+
+  // The most-recent scorigami (newest scoreline to appear) and whether it's
+  // fresh enough to celebrate. Men's only, per the "not for the women's" call.
+  const mostRecentScorigami = useMemo(() => {
+    let best: ScorigamiEntry | null = null;
+    for (const e of scorigami) {
+      if (!best || e.firstMatch.date > best.firstMatch.date) best = e;
+    }
+    return best?.firstMatch;
+  }, [scorigami]);
+  const isFreshScorigami = useIsRecent(mostRecentScorigami?.date);
+  const celebrate = edition === "mens" && isFreshScorigami;
 
   const editionHref = (target: Edition) =>
     target === "mens" ? `/mens/${locale}` : `/womens/${locale}`;
@@ -267,6 +281,15 @@ export default function ScorigamiApp({
       </header>
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 pb-10 space-y-6">
+        {/* Fun Facts renders its own celebration in place of the most-recent
+            card, so only show the top banner on the other views. */}
+        {celebrate && mostRecentScorigami && view !== "facts" && (
+          <ScorigamiCelebration
+            match={mostRecentScorigami}
+            uniqueNumber={summary.uniqueScores}
+            totalMatches={summary.totalMatches}
+          />
+        )}
         <section className={`rounded-sm border-l-2 ${acc.borderAccent} bg-[#161f1c]/60 p-5 space-y-2 text-sm text-stone-300 leading-relaxed`}>
           <h2 className="font-display font-medium text-lg text-stone-100">{t("explainer.title")}</h2>
           <p>

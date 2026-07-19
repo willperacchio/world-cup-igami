@@ -11,6 +11,8 @@ import { Flag } from "./Flag";
 import { MatchScoreline } from "./MatchScoreline";
 import { TrendChart, GoalDistributionHistogram, ScoreDistribution } from "./charts";
 import { MENS_TREND_CONFIG, WOMENS_TREND_CONFIG } from "./charts/TrendChart";
+import ScorigamiCelebration from "./ScorigamiCelebration";
+import { useIsRecent } from "@/hooks/useIsRecent";
 
 export type Edition = "mens" | "womens";
 
@@ -37,6 +39,10 @@ export default function FunFacts({ matches, scorigami, edition = "mens" }: Props
 
   const maxCount = facts.mostCommon[0]?.count ?? 1;
 
+  // Celebrate the most-recent scorigami when it just happened (men's only).
+  const isFreshScorigami = useIsRecent(facts.mostRecent?.date);
+  const celebrate = edition === "mens" && isFreshScorigami;
+
   // Wrap the shared component for the compact scoreline used throughout this view.
   function matchLine(m: Match) {
     return <MatchScoreline match={m} orient="winner" showLinks linkVariant="icons" />;
@@ -44,8 +50,15 @@ export default function FunFacts({ matches, scorigami, edition = "mens" }: Props
 
   return (
     <div className="space-y-8">
-      {/* Most recent scorigami */}
-      {facts.mostRecent && (
+      {/* Most recent scorigami — celebratory banner when it just happened,
+          otherwise the evergreen record card. */}
+      {facts.mostRecent && celebrate ? (
+        <ScorigamiCelebration
+          match={facts.mostRecent}
+          uniqueNumber={scorigami.length}
+          totalMatches={matches.length}
+        />
+      ) : facts.mostRecent ? (
         <section className="rounded-lg border border-amber-300 dark:border-amber-600 bg-amber-50 dark:bg-amber-900/20 p-5">
           <h3 className="font-bold text-amber-700 dark:text-amber-400 mb-2">{t("mostRecentTitle")}</h3>
           <div className="text-sm space-y-1">
@@ -56,7 +69,7 @@ export default function FunFacts({ matches, scorigami, edition = "mens" }: Props
             <p className="text-zinc-500 text-sm">{t("mostRecentNote")}</p>
           </div>
         </section>
-      )}
+      ) : null}
 
       <div className="flex flex-col md:grid md:grid-cols-2 gap-6 min-w-0">
         {/* True scorigamis */}
