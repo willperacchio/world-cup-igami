@@ -31,19 +31,22 @@ export interface TrendEditionConfig {
   /** Shade the WWII gap (men's edition only — women's starts in 1991). */
   showWWII: boolean;
   /**
-   * Known full-size point for the upcoming tournament, appended as a dashed
-   * projection on the teams/matches charts.
+   * Known full-size point for an UPCOMING tournament, appended as a dashed
+   * projection on the teams/matches charts (and excluded from the GPG /
+   * scorigamis charts, which aren't meaningful until it's played). Omit once
+   * the tournament is complete so its real data plots as a solid point.
    */
-  projection: { year: string; teams: number; matches: number };
+  projection?: { year: string; teams: number; matches: number };
   annotations: Record<string, Annotation[]>;
 }
 
+// The 2026 men's tournament is complete, so it plots as real data (solid) on
+// every chart — no projection placeholder, and its new scorigami is included.
 export const MENS_TREND_CONFIG: TrendEditionConfig = {
   minYear: 1930,
   maxYear: 2026,
   labelYears: [1930, 1950, 1970, 1990, 2010, 2026],
   showWWII: true,
-  projection: { year: "2026", teams: 48, matches: 104 },
   annotations: {
     teams: [
       { year: 1982, text: "→ 24 teams", anchor: "start", dy: -6 },
@@ -63,8 +66,8 @@ export const MENS_TREND_CONFIG: TrendEditionConfig = {
       { year: 1930, text: "1st WC: 9 new", anchor: "start", dy: -6 },
       { year: 1954, text: "8 new scores", anchor: "start", dy: -6 },
       { year: 1982, text: "1 new", anchor: "start", dy: -6 },
-      { year: 2022, text: "1 new", anchor: "end", dy: -6 },
-      { type: "span", fromYear: 1982, toYear: 2022, text: "The Great Drought-igami" },
+      { year: 2026, text: "1 new", anchor: "end", dy: -6 },
+      { type: "span", fromYear: 1982, toYear: 2026, text: "The Great Drought-igami" },
     ],
   },
 };
@@ -112,17 +115,18 @@ interface TrendChartProps {
 export default function TrendChart({ chartKey, label, color, tournamentStats, config = MENS_TREND_CONFIG }: TrendChartProps) {
   const [hovered, setHovered] = useState<{ x: number; y: number; val: number; year: string } | null>(null);
 
-  const projYear = config.projection.year;
+  const projection = config.projection;
+  const projYear = projection?.year ?? null;
 
-  // These are full-tournament-size trend lines. Once the upcoming tournament
-  // kicks off, computeTournamentStats emits a *partial* entry for it (e.g.
-  // 2 teams / 1 match after the opener), which would otherwise shadow the
-  // known full-tournament projection. Drop any real entry for the projection
-  // year and always plot the known final size.
-  const allWithGaps = [
-    ...tournamentStats.filter((s) => s.year !== projYear),
-    { year: projYear, teams: config.projection.teams, matches: config.projection.matches, goalsPerGame: 0, scorigamis: 0 },
-  ];
+  // For an upcoming tournament (projection set), drop any partial real entry
+  // for it and plot the known full-tournament size as a dashed projection.
+  // For a completed tournament (no projection), plot its real data as-is.
+  const allWithGaps = projection
+    ? [
+        ...tournamentStats.filter((s) => s.year !== projYear),
+        { year: projection.year, teams: projection.teams, matches: projection.matches, goalsPerGame: 0, scorigamis: 0 },
+      ]
+    : tournamentStats;
   const minYear = config.minYear;
   const maxYear = config.maxYear;
   const yearRange = maxYear - minYear;
