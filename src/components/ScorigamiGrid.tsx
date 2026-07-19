@@ -61,19 +61,13 @@ export default function ScorigamiGrid({ grid, maxScore, onCellClick, womens = fa
                     : t("neverHappened", { low: row, high: col });
 
                 return (
-                  <td key={col} className="w-10 h-10 p-0 relative">
-                    {isHighlighted && (
-                      <span
-                        aria-hidden
-                        className="pointer-events-none absolute inset-0 rounded ring-2 ring-amber-200 animate-ping"
-                      />
-                    )}
+                  <td key={col} className="w-10 h-10 p-0">
                     <div
                       role="button"
                       tabIndex={0}
                       aria-label={isHighlighted ? `${ariaLabel} — most recent scorigami` : ariaLabel}
                       className={`w-10 h-10 flex items-center justify-center text-xs font-medium rounded cursor-pointer transition-transform sb-numeral outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:scale-125 focus-visible:z-10 focus-visible:relative ${cellClasses[rarity]} ${
-                        isHighlighted ? "relative z-10 scale-110 ring-2 ring-amber-200 shadow-[0_0_12px_rgba(252,211,77,0.7)]" : ""
+                        isHighlighted ? "sb-pulse" : ""
                       } ${
                         isHovered ? "scale-125 z-10 relative ring-2 ring-amber-300" : ""
                       }`}
