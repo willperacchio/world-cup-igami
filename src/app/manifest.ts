@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "World Cupigami",
     short_name: "Cupigami",
     description:
-      "Every unique final score in Men's FIFA World Cup history. Track scorigamis live during the 2026 World Cup.",
+      "Every unique final score in FIFA (Men's) World Cup history. Track scorigamis live during the 2026 World Cup.",
     start_url: "/",
     display: "standalone",
     background_color: "#0a0f0d",

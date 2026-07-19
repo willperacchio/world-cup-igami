@@ -94,8 +94,10 @@ const FIFA_TLA_TO_ISO3: Record<string, string> = {
   NED: "NLD", // Netherlands
   PAR: "PRY", // Paraguay
   POR: "PRT", // Portugal
+  PHI: "PHL", // Philippines
   RSA: "ZAF", // South Africa
   SUI: "CHE", // Switzerland
+  VIE: "VNM", // Vietnam
   TOG: "TGO", // Togo
   TRI: "TTO", // Trinidad and Tobago
   URU: "URY", // Uruguay

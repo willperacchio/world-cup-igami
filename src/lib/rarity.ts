@@ -16,7 +16,11 @@ export type OccurredRarity = Exclude<Rarity, "never">;
  *
  * Thresholds:
  * - unique: exactly 1 occurrence
- * - veryRare: < 2% of the max count
+ * - veryRare: < 2% of the max count, or 2–3 occurrences that are still
+ *   uncommon (< 15% of max). The pure ratio test starves smaller datasets:
+ *   the women's edition maxes at 64, making "2+ occurrences under 2%"
+ *   impossible. The absolute rule matches the men's bucket exactly
+ *   (2% of 196 = counts 2–3), so the men's grid is unchanged.
  * - rare: < 15% of the max count
  * - common: < 40% of the max count
  * - veryCommon: >= 40% of the max count
@@ -25,7 +29,7 @@ export function getRarity(count: number, maxCount: number): Rarity {
   if (count === 0) return "never";
   if (count === 1) return "unique";
   const ratio = count / maxCount;
-  if (ratio < 0.02) return "veryRare";
+  if (ratio < 0.02 || (count <= 3 && ratio < 0.15)) return "veryRare";
   if (ratio < 0.15) return "rare";
   if (ratio < 0.4) return "common";
   return "veryCommon";
@@ -46,6 +50,19 @@ export const RARITY_CELL_CLASSES: Record<Rarity, string> = {
 };
 
 /**
+ * Women's edition: the "unique" hero cell is rose instead of orange, so the
+ * graphics read as the women's edition at a glance. Everything else is shared.
+ */
+export const RARITY_CELL_CLASSES_WOMENS: Record<Rarity, string> = {
+  ...RARITY_CELL_CLASSES,
+  unique: "bg-rose-500 text-zinc-900",
+};
+
+export function rarityCellClasses(womens = false): Record<Rarity, string> {
+  return womens ? RARITY_CELL_CLASSES_WOMENS : RARITY_CELL_CLASSES;
+}
+
+/**
  * Static hex colors for SVG charts (can't use Tailwind dark: in SVG).
  * Mirrors the scoreboard cell palette so charts and grid feel like one system.
  */
@@ -57,9 +74,19 @@ export const RARITY_CHART_COLORS: Record<OccurredRarity, string> = {
   unique: "#f97316",     // orange-500 (hot — hero)
 };
 
+/** Women's edition: the "unique" hero is rose-500 instead of orange. */
+export const RARITY_CHART_COLORS_WOMENS: Record<OccurredRarity, string> = {
+  ...RARITY_CHART_COLORS,
+  unique: "#f43f5e", // rose-500
+};
+
+export function rarityChartColors(womens = false): Record<OccurredRarity, string> {
+  return womens ? RARITY_CHART_COLORS_WOMENS : RARITY_CHART_COLORS;
+}
+
 /** Get the chart hex color for a given count. */
-export function getRarityChartColor(count: number, maxCount: number): string {
+export function getRarityChartColor(count: number, maxCount: number, womens = false): string {
   const rarity = getRarity(count, maxCount);
   if (rarity === "never") return "#1d2825"; // scoreboard "void" fallback
-  return RARITY_CHART_COLORS[rarity];
+  return rarityChartColors(womens)[rarity];
 }

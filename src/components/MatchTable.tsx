@@ -9,11 +9,13 @@ import { Flag } from "./Flag";
 interface Props {
   matches: Match[];
   scorigami: ScorigamiEntry[];
+  /** Full tournament name to include in the filter before it has matches. */
+  upcomingTournament?: string;
 }
 
 const PAGE_SIZE = 100;
 
-export default function MatchTable({ matches, scorigami }: Props) {
+export default function MatchTable({ matches, scorigami, upcomingTournament = "2026 FIFA Men's World Cup" }: Props) {
   const [search, setSearch] = useState("");
   const [tournamentFilter, setTournamentFilter] = useState("all");
   const [stageFilter, setStageFilter] = useState("all");
@@ -35,10 +37,9 @@ export default function MatchTable({ matches, scorigami }: Props) {
 
   const tournaments = useMemo(() => {
     const fromData = [...new Set(matches.map((m) => m.tournament))];
-    const upcoming = "2026 FIFA Men's World Cup";
-    if (!fromData.includes(upcoming)) fromData.push(upcoming);
+    if (!fromData.includes(upcomingTournament)) fromData.push(upcomingTournament);
     return fromData.sort().reverse();
-  }, [matches]);
+  }, [matches, upcomingTournament]);
 
   const stages = useMemo(() => {
     const order = ["group stage", "second group stage", "round of 32", "round of 16", "quarter-finals", "semi-finals", "third-place match", "final round", "final"];
@@ -115,7 +116,7 @@ export default function MatchTable({ matches, scorigami }: Props) {
         >
           <option value="all">{t("allTournaments")}</option>
           {tournaments.map((tourney) => (
-            <option key={tourney} value={tourney}>{tourney.replace(" FIFA Men's World Cup", "")}</option>
+            <option key={tourney} value={tourney}>{tourney.replace(/ FIFA (?:Men's|Women's) World Cup/, "")}</option>
           ))}
         </select>
         <select
@@ -175,7 +176,7 @@ export default function MatchTable({ matches, scorigami }: Props) {
               </td>
               <td className="py-2 px-2 text-zinc-500 text-xs">{tStages(m.stage)}</td>
               <td className="py-2 px-2 text-zinc-400 text-xs">{m.city}, {m.country}</td>
-              <td className="py-2 px-2 text-zinc-400 text-xs">{m.tournament.replace(" FIFA Men's World Cup", "")}</td>
+              <td className="py-2 px-2 text-zinc-400 text-xs">{m.tournament.replace(/ FIFA (?:Men's|Women's) World Cup/, "")}</td>
               <td className="py-2 px-2 text-center">
                 {scorigamiKeys.has(`${m.date}|${m.homeTeam}|${m.awayTeam}`) && "⚽"}
               </td>

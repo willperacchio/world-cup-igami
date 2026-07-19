@@ -26,7 +26,6 @@ export default function GoalDistributionHistogram({
   } | null>(null);
 
   const maxCount = Math.max(...goalDistribution.map((d) => d.count));
-  const maxBucket = goalDistribution[goalDistribution.length - 1]?.totalGoals ?? 12;
 
   // Layout
   const w = 340;
@@ -68,7 +67,7 @@ export default function GoalDistributionHistogram({
           const y = pad.top + plotH - barH;
           const pct = ((d.count / totalMatches) * 100).toFixed(1);
           const isHovered = hovered?.totalGoals === d.totalGoals;
-          const label = d.totalGoals === maxBucket ? `${maxBucket}+` : `${d.totalGoals}`;
+          const label = `${d.totalGoals}`;
 
           return (
             <g key={d.totalGoals}>
@@ -102,7 +101,7 @@ export default function GoalDistributionHistogram({
 
         {/* Tooltip */}
         {hovered && (() => {
-          const label = hovered.totalGoals === maxBucket ? `${maxBucket}+` : `${hovered.totalGoals}`;
+          const label = `${hovered.totalGoals}`;
           const text = `${label} goals: ${hovered.count} matches (${hovered.pct}%)`;
           const tw = text.length * 5.5 + 14;
           const th = 18;

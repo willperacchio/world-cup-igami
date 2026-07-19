@@ -65,7 +65,7 @@ function deepMerge(
 
 export const metadata: Metadata = {
   title: "World Cupigami",
-  description: "Every unique final score in Men's FIFA World Cup history",
+  description: "Every unique final score in FIFA (Men's) World Cup history",
   metadataBase: new URL(siteUrl),
   icons: {
     icon: [
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "World Cupigami",
     description:
-      "Every unique final score in Men's FIFA World Cup history. Track scorigamis live during the 2026 World Cup.",
+      "Every unique final score in FIFA (Men's) World Cup history. Track scorigamis live during the 2026 World Cup.",
     url: siteUrl,
     siteName: "World Cupigami",
     images: [
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "World Cupigami",
     description:
-      "Every unique final score in Men's FIFA World Cup history. Track scorigamis live during the 2026 World Cup.",
+      "Every unique final score in FIFA (Men's) World Cup history. Track scorigamis live during the 2026 World Cup.",
     images: ["/logo-512.png"],
     creator: "@WorldCupigami",
     site: "@WorldCupigami",

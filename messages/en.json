@@ -2,16 +2,21 @@
   "header": {
     "title": "World Cupigami",
     "kicker": "A scorigami project",
-    "subtitle": "Every unique final score in Men's FIFA World Cup history"
+    "subtitle": "Every unique final score in FIFA (Men's) World Cup history",
+    "subtitleWomens": "Every unique final score in FIFA Women's World Cup history",
+    "editionMens": "Men's",
+    "editionWomens": "Women's"
   },
   "explainer": {
     "title": "What is Scorigami?",
     "description": "Scorigami is the concept of a final score that has never happened before in a sport's history. The idea was popularized by Jon Bois, whose brilliant work on NFL scorigami inspired this project.",
     "watchVideo": "Watch the original video",
     "whyBuilt": "I built World Cupigami to bring a little American sporting culture to the world's biggest stage — in the spirit of sharing that makes the World Cup special. Scorigami works a bit differently in soccer than in American football, since goals are scored one at a time rather than in chunks of 2, 3, 6, 7, or 8. That makes new scorigamis rarer and more meaningful.",
-    "mensOnly": "This currently covers the Men's FIFA World Cup only. A Women's World Cup edition is coming soon.",
+    "mensOnly": "This currently covers the FIFA (Men's) World Cup only. A Women's World Cup edition is coming soon.",
     "pointTitle": "What's the point of this?",
-    "pointDescription": "Honestly? Nothing. It's just fun if you're a sports analytics nerd like me. But if there's one good thing that can come out of this — when your team scores a scorigami, consider donating to a charity in the losing team's country. A historic scoreline is a great excuse to do some good in the world."
+    "pointDescription": "Honestly? Nothing. It's just fun if you're a sports analytics nerd like me. But if there's one good thing that can come out of this — when your team scores a scorigami, consider donating to a charity in the losing team's country. A historic scoreline is a great excuse to do some good in the world.",
+    "editionNoteMens": "This page covers the FIFA (Men's) World Cup — the Women's World Cup edition is one toggle away, top right.",
+    "editionNoteWomens": "This page covers the FIFA Women's World Cup, from the first tournament in 1991 through today."
   },
   "stats": {
     "matches": "matches",
@@ -20,7 +25,9 @@
     "editionNumber": "23rd",
     "editionLabel": "Edition of the Men's World Cup",
     "tournaments": "Tournaments",
-    "lastUpdated": "Data updated {time}"
+    "lastUpdated": "Data updated {time}",
+    "editionNumberWomens": "10th",
+    "editionLabelWomens": "Edition of the Women's World Cup"
   },
   "views": {
     "heatmap": "Heatmap",
@@ -30,8 +37,9 @@
   "upcoming": {
     "kickerLabel": "Awaiting kickoff",
     "title": "{year} World Cup hasn't started yet",
-    "description": "The {year} FIFA Men's World Cup kicks off on {date}. Match results will land here in real time as games finish — and the heatmap above shows the state of scorigami right before the tournament begins.",
-    "kickoffDateFormat": "MMMM d, yyyy"
+    "description": "The {year} FIFA (Men's) World Cup kicks off on {date}. Match results will land here in real time as games finish — and the heatmap above shows the state of scorigami right before the tournament begins.",
+    "kickoffDateFormat": "MMMM d, yyyy",
+    "descriptionWomens": "The {year} FIFA Women's World Cup kicks off on {date}. Match results will land here in real time as games finish — and the heatmap above shows the state of scorigami right before the tournament begins."
   },
   "grid": {
     "description": "Rows = losing score · Columns = winning score · Scores shown as winner–loser · Click any cell",
@@ -44,7 +52,8 @@
     "neverHappened": "{high}–{low}: Never",
     "count": "{high}–{low}: {count}×",
     "title": "World Cup Score Heatmap",
-    "scorigamiHint": "\"1\" means Scorigami"
+    "scorigamiHint": "\"1\" means Scorigami",
+    "titleWomens": "Women's World Cup Score Heatmap"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",
@@ -90,7 +99,8 @@
     "liveDataFrom": "Live 2026 results from",
     "liveDataSource": "football-data.org",
     "conceptCredit": "Scorigami concept by Jon Bois",
-    "disclaimer": "FIFA World Cup™ is a trademark of FIFA. This site is not affiliated with, endorsed by, or connected to FIFA."
+    "disclaimer": "FIFA World Cup™ is a trademark of FIFA. This site is not affiliated with, endorsed by, or connected to FIFA.",
+    "dataFromWomens": "2023 results sourced from FIFA"
   },
   "funFacts": {
     "mostRecentTitle": "Most Recent Scorigami",
@@ -137,7 +147,13 @@
     "penaltigamiOnlyPenScore": "The only penalty scoreline that has occurred just once. Every other shootout result (like 4-2 or 5-3) has happened multiple times.",
     "frontierTitle": "The Scorigami Frontier",
     "frontierDesc": "These scores have never happened but are the most likely to occur next.",
-    "frontierNote": "With the 2026 World Cup expanding to 48 teams and 104 matches, more mismatches could finally break new ground."
+    "frontierNote": "With the 2026 World Cup expanding to 48 teams and 104 matches, more mismatches could finally break new ground.",
+    "frontierNoteWomens": "With 32 teams and 64 matches at the 2027 World Cup in Brazil, every mismatch is a chance to break new ground."
   },
-  "locale": {}
+  "locale": {},
+  "celebration": {
+    "kicker": "New Scorigami!",
+    "body": "The first ever {score} — a brand-new scoreline in {years} years and {total} matches of World Cup history.",
+    "ordinalLine": "{ordinal} unique scoreline"
+  }
 }

@@ -25,7 +25,13 @@ export default function LocaleSwitcher() {
 
   function switchLocale(newLocale: string) {
     const segments = pathname.split("/");
-    segments[1] = newLocale;
+    // Edition-first URLs (/mens/{locale}/... or /womens/{locale}/...) carry
+    // the locale in the second segment; legacy locale-first paths in the first.
+    if (segments[1] === "mens" || segments[1] === "womens") {
+      segments[2] = newLocale;
+    } else {
+      segments[1] = newLocale;
+    }
     router.push(segments.join("/"));
     setOpen(false);
   }

@@ -67,7 +67,7 @@ export function orientMatch(m: Match): OrientedMatch {
 
 /** Extract the tournament year from a tournament name string. */
 export function parseTournamentYear(tournament: string): string {
-  return tournament.replace(" FIFA Men's World Cup", "");
+  return tournament.replace(/ FIFA (?:Men's|Women's) World Cup/, "");
 }
 
 /** Parse the numeric year from a match's tournament field. */

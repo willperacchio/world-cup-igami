@@ -10,19 +10,38 @@ import { computeFunFacts, type HostScorigami } from "@/lib/stats";
 import { Flag } from "./Flag";
 import { MatchScoreline } from "./MatchScoreline";
 import { TrendChart, GoalDistributionHistogram, ScoreDistribution } from "./charts";
+import { MENS_TREND_CONFIG, WOMENS_TREND_CONFIG } from "./charts/TrendChart";
+import ScorigamiCelebration from "./ScorigamiCelebration";
+import { useIsRecent } from "@/hooks/useIsRecent";
+
+export type Edition = "mens" | "womens";
+
+/**
+ * Near-miss scorelines for the frontier section — plausible scores that have
+ * never happened in that edition's history. Hand-picked per edition.
+ */
+const FRONTIER_SCORES: Record<Edition, string[]> = {
+  mens: ["5–4", "8–1", "5–5", "6–4", "10–0"],
+  womens: ["5–3", "4–4", "6–2", "8–1", "9–0"],
+};
 
 interface Props {
   matches: Match[];
   scorigami: ScorigamiEntry[];
+  edition?: Edition;
 }
 
-export default function FunFacts({ matches, scorigami }: Props) {
+export default function FunFacts({ matches, scorigami, edition = "mens" }: Props) {
   const t = useTranslations("funFacts");
   const tStages = useTranslations("stages");
 
   const facts = useMemo(() => computeFunFacts(matches, scorigami), [matches, scorigami]);
 
   const maxCount = facts.mostCommon[0]?.count ?? 1;
+
+  // Celebrate the most-recent scorigami when it just happened (men's only).
+  const isFreshScorigami = useIsRecent(facts.mostRecent?.date);
+  const celebrate = edition === "mens" && isFreshScorigami;
 
   // Wrap the shared component for the compact scoreline used throughout this view.
   function matchLine(m: Match) {
@@ -31,8 +50,15 @@ export default function FunFacts({ matches, scorigami }: Props) {
 
   return (
     <div className="space-y-8">
-      {/* Most recent scorigami */}
-      {facts.mostRecent && (
+      {/* Most recent scorigami — celebratory banner when it just happened,
+          otherwise the evergreen record card. */}
+      {facts.mostRecent && celebrate ? (
+        <ScorigamiCelebration
+          match={facts.mostRecent}
+          uniqueNumber={scorigami.length}
+          totalMatches={matches.length}
+        />
+      ) : facts.mostRecent ? (
         <section className="rounded-lg border border-amber-300 dark:border-amber-600 bg-amber-50 dark:bg-amber-900/20 p-5">
           <h3 className="font-bold text-amber-700 dark:text-amber-400 mb-2">{t("mostRecentTitle")}</h3>
           <div className="text-sm space-y-1">
@@ -43,7 +69,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
             <p className="text-zinc-500 text-sm">{t("mostRecentNote")}</p>
           </div>
         </section>
-      )}
+      ) : null}
 
       <div className="flex flex-col md:grid md:grid-cols-2 gap-6 min-w-0">
         {/* True scorigamis */}
@@ -87,7 +113,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
                     className="h-2 rounded-full"
                     style={{
                       width: `${(s.count / maxCount) * 100}%`,
-                      backgroundColor: getRarityChartColor(s.count, maxCount),
+                      backgroundColor: getRarityChartColor(s.count, maxCount, edition === "womens"),
                     }}
                   />
                   <span className="text-zinc-500 text-xs">{s.count}×</span>
@@ -101,7 +127,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
         </section>
 
         {/* Score distribution visualizations */}
-        <ScoreDistribution mostCommon={facts.mostCommon} totalMatches={matches.length} />
+        <ScoreDistribution mostCommon={facts.mostCommon} totalMatches={matches.length} womens={edition === "womens"} />
 
         {/* Highest-scoring matches */}
         <section className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4 min-w-0 overflow-hidden">
@@ -346,7 +372,9 @@ export default function FunFacts({ matches, scorigami }: Props) {
 
               {/* Right: Unique penaltigamis */}
               {unique.length > 0 && (() => {
-                // Find the only penalty scoreline (grid cell) that occurred just once
+                // Penalty scorelines (grid cells) that occurred just once. The
+                // "only unique penalty score" callout is only meaningful when
+                // there's exactly one — the women's edition has several.
                 const uniquePenOnly = penGrid.filter((c) => c.count === 1);
                 return (
                   <div className="min-w-0 space-y-4">
@@ -366,7 +394,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
                         ))}
                       </div>
                     </div>
-                    {uniquePenOnly.length > 0 && (
+                    {uniquePenOnly.length === 1 && (
                       <div className="rounded-sm border border-amber-400/30 bg-amber-400/5 px-3 py-2.5">
                         <p className="text-xs text-stone-500 font-mono uppercase tracking-wider mb-1">
                           Only unique penalty score
@@ -471,10 +499,13 @@ export default function FunFacts({ matches, scorigami }: Props) {
               label={label}
               color={color}
               tournamentStats={facts.tournamentStats}
+              config={edition === "womens" ? WOMENS_TREND_CONFIG : MENS_TREND_CONFIG}
             />
           ))}
         </div>
-        <p className="text-xs text-zinc-400 mt-2 text-center">{t("wwiiNote")}</p>
+        {edition === "mens" && (
+          <p className="text-xs text-zinc-400 mt-2 text-center">{t("wwiiNote")}</p>
+        )}
       </section>
 
       {/* Scorigami frontier */}
@@ -482,7 +513,7 @@ export default function FunFacts({ matches, scorigami }: Props) {
         <h3 className="font-bold mb-2">{t("frontierTitle")}</h3>
         <p className="text-sm text-zinc-500 mb-3">{t("frontierDesc")}</p>
         <div className="flex flex-wrap gap-2">
-          {["5–4", "8–1", "5–5", "6–4", "10–0"].map((score) => (
+          {FRONTIER_SCORES[edition].map((score) => (
             <span
               key={score}
               className="px-3 py-1.5 rounded-full border border-dashed border-amber-400 text-amber-600 dark:text-amber-400 text-sm font-mono font-bold"
@@ -491,7 +522,9 @@ export default function FunFacts({ matches, scorigami }: Props) {
             </span>
           ))}
         </div>
-        <p className="text-sm text-zinc-400 mt-3">{t("frontierNote")}</p>
+        <p className="text-sm text-zinc-400 mt-3">
+          {t(edition === "womens" ? "frontierNoteWomens" : "frontierNote")}
+        </p>
       </section>
     </div>
   );

@@ -56,3 +56,27 @@ input[type="range"].sb-range {
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.02em;
 }
+
+/* Scorigami celebration: a slow gold shine sweeps across the banner. Subtle —
+   one pass every ~6s, disabled for reduced-motion users. */
+.sb-celebrate::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(252, 211, 77, 0.14) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  animation: sb-shine 6s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes sb-shine {
+  0%, 100% { transform: translateX(-100%); }
+  25%, 75% { transform: translateX(100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sb-celebrate::after { animation: none; }
+}

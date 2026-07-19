@@ -7,7 +7,7 @@ const SOCIAL_LINKS = [
   { href: "https://x.com/WorldCupigami", label: "Twitter", Icon: TwitterIcon },
 ] as const;
 
-export default function Footer() {
+export default function Footer({ edition = "mens" }: { edition?: "mens" | "womens" }) {
   const t = useTranslations("footer");
 
   return (
@@ -25,17 +25,21 @@ export default function Footer() {
           </a>{" "}
           {t("author")}
         </div>
-        <div>
-          {t("liveDataFrom")}{" "}
-          <a
-            href="https://www.football-data.org"
-            className="underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t("liveDataSource")}
-          </a>
-        </div>
+        {edition === "mens" ? (
+          <div>
+            {t("liveDataFrom")}{" "}
+            <a
+              href="https://www.football-data.org"
+              className="underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("liveDataSource")}
+            </a>
+          </div>
+        ) : (
+          <div>{t("dataFromWomens")}</div>
+        )}
         <div>
           {t("conceptCredit")}{" "}
           (<a
