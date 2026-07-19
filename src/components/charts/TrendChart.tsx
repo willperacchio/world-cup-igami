@@ -67,7 +67,7 @@ export const MENS_TREND_CONFIG: TrendEditionConfig = {
       { year: 1954, text: "8 new scores", anchor: "start", dy: -6 },
       { year: 1982, text: "1 new", anchor: "start", dy: -6 },
       { year: 2026, text: "1 new", anchor: "end", dy: -6 },
-      { type: "span", fromYear: 1982, toYear: 2026, text: "The Great Drought-igami" },
+      { type: "span", fromYear: 1986, toYear: 2018, text: "The Great Drought-igami" },
     ],
   },
 };
