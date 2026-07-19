@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import type { Match } from "@/lib/types";
 import { MatchScoreline } from "./MatchScoreline";
+import { useSoccerBurst } from "@/hooks/useSoccerBurst";
 
 interface Props {
   match: Match;
@@ -28,6 +29,10 @@ export default function ScorigamiCelebration({ match, uniqueNumber, totalMatches
   const t = useTranslations("celebration");
   const tStages = useTranslations("stages");
 
+  // Same ⚽ burst as the highlighted grid cell, fired from wherever the
+  // cursor enters the banner (or its center on keyboard focus).
+  const { spawnBurstAt, spawnBurstFromElement, burstPortal } = useSoccerBurst();
+
   const high = Math.max(match.homeScore, match.awayScore);
   const low = Math.min(match.homeScore, match.awayScore);
   const score = `${high}–${low}`;
@@ -36,6 +41,9 @@ export default function ScorigamiCelebration({ match, uniqueNumber, totalMatches
   return (
     <aside
       className={`sb-celebrate relative overflow-hidden rounded-sm border border-amber-300/70 bg-[#1a1608]/70 px-5 py-4 ${className}`}
+      onMouseEnter={(e) => spawnBurstAt(e.clientX, e.clientY)}
+      tabIndex={-1}
+      onFocus={(e) => spawnBurstFromElement(e.currentTarget)}
     >
       <div className="flex items-center gap-2 font-mono text-[10px] tracking-[0.22em] uppercase text-amber-300 mb-2">
         <span className="text-base leading-none">🎉</span>
@@ -51,6 +59,7 @@ export default function ScorigamiCelebration({ match, uniqueNumber, totalMatches
         {tStages(match.stage)}
         {match.city ? ` · ${match.city}, ${match.country}` : ""} · {t("ordinalLine", { ordinal: ordinal(uniqueNumber) })}
       </p>
+      {burstPortal}
     </aside>
   );
 }
