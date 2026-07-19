@@ -21,7 +21,7 @@ export type Edition = "mens" | "womens";
  * never happened in that edition's history. Hand-picked per edition.
  */
 const FRONTIER_SCORES: Record<Edition, string[]> = {
-  mens: ["5–4", "8–1", "5–5", "6–4", "10–0"],
+  mens: ["5–4", "8–1", "5–5", "7–4", "10–0"],
   womens: ["5–3", "4–4", "6–2", "8–1", "9–0"],
 };
 
