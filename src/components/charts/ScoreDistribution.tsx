@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import type { ScorigamiEntry } from "@/lib/types";
-import { getRarity, RARITY_CHART_COLORS, type OccurredRarity } from "@/lib/rarity";
+import { getRarity, rarityChartColors, type OccurredRarity } from "@/lib/rarity";
 
 interface Props {
   mostCommon: ScorigamiEntry[];
   totalMatches: number;
+  /** Women's edition: "unique" segments render rose instead of orange. */
+  womens?: boolean;
 }
 
 // ── Treemap layout (squarified, recursive) ──
@@ -101,18 +103,19 @@ const RARITY_LABELS: { label: string; rarity: OccurredRarity }[] = [
   { label: "Unique", rarity: "unique" },
 ];
 
-export default function ScoreDistribution({ mostCommon, totalMatches }: Props) {
+export default function ScoreDistribution({ mostCommon, totalMatches, womens = false }: Props) {
   const [donutHover, setDonutHover] = useState<{ label: string; count: number; pct: string } | null>(null);
   const [treemapHover, setTreemapHover] = useState<{ label: string; count: number; pct: string; x: number; y: number } | null>(null);
 
   const maxCount = mostCommon[0]?.count ?? 1;
+  const chartColors = rarityChartColors(womens);
 
   // Group scores by rarity for donut slices
   const rarityGroups = RARITY_LABELS.map((rl) => ({
     ...rl,
     count: 0,
     scores: [] as string[],
-    color: RARITY_CHART_COLORS[rl.rarity],
+    color: chartColors[rl.rarity],
   }));
   for (const s of mostCommon) {
     const r = getRarity(s.count, maxCount);
@@ -129,7 +132,7 @@ export default function ScoreDistribution({ mostCommon, totalMatches }: Props) {
   const treemapItems: TreemapItem[] = mostCommon.map((s) => ({
     label: `${s.highScore}–${s.lowScore}`,
     count: s.count,
-    color: RARITY_CHART_COLORS[getRarity(s.count, maxCount) as OccurredRarity] ?? "#71717a",
+    color: chartColors[getRarity(s.count, maxCount) as OccurredRarity] ?? "#71717a",
   }));
 
   // Donut geometry. Pre-compute each slice's start angle without mutating a

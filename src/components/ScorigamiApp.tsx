@@ -395,6 +395,7 @@ export default function ScorigamiApp({
             <ScorigamiGrid
               grid={grid}
               maxScore={summary.maxScore}
+              womens={isW}
               onCellClick={(entry, low, high) => setSelectedCell({ entry, low, high })}
             />
             {selectedCell && (

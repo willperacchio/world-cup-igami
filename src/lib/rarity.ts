@@ -50,6 +50,19 @@ export const RARITY_CELL_CLASSES: Record<Rarity, string> = {
 };
 
 /**
+ * Women's edition: the "unique" hero cell is rose instead of orange, so the
+ * graphics read as the women's edition at a glance. Everything else is shared.
+ */
+export const RARITY_CELL_CLASSES_WOMENS: Record<Rarity, string> = {
+  ...RARITY_CELL_CLASSES,
+  unique: "bg-rose-500 text-zinc-900",
+};
+
+export function rarityCellClasses(womens = false): Record<Rarity, string> {
+  return womens ? RARITY_CELL_CLASSES_WOMENS : RARITY_CELL_CLASSES;
+}
+
+/**
  * Static hex colors for SVG charts (can't use Tailwind dark: in SVG).
  * Mirrors the scoreboard cell palette so charts and grid feel like one system.
  */
@@ -61,9 +74,19 @@ export const RARITY_CHART_COLORS: Record<OccurredRarity, string> = {
   unique: "#f97316",     // orange-500 (hot — hero)
 };
 
+/** Women's edition: the "unique" hero is rose-500 instead of orange. */
+export const RARITY_CHART_COLORS_WOMENS: Record<OccurredRarity, string> = {
+  ...RARITY_CHART_COLORS,
+  unique: "#f43f5e", // rose-500
+};
+
+export function rarityChartColors(womens = false): Record<OccurredRarity, string> {
+  return womens ? RARITY_CHART_COLORS_WOMENS : RARITY_CHART_COLORS;
+}
+
 /** Get the chart hex color for a given count. */
-export function getRarityChartColor(count: number, maxCount: number): string {
+export function getRarityChartColor(count: number, maxCount: number, womens = false): string {
   const rarity = getRarity(count, maxCount);
   if (rarity === "never") return "#1d2825"; // scoreboard "void" fallback
-  return RARITY_CHART_COLORS[rarity];
+  return rarityChartColors(womens)[rarity];
 }

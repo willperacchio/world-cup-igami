@@ -113,7 +113,7 @@ export default function FunFacts({ matches, scorigami, edition = "mens" }: Props
                     className="h-2 rounded-full"
                     style={{
                       width: `${(s.count / maxCount) * 100}%`,
-                      backgroundColor: getRarityChartColor(s.count, maxCount),
+                      backgroundColor: getRarityChartColor(s.count, maxCount, edition === "womens"),
                     }}
                   />
                   <span className="text-zinc-500 text-xs">{s.count}×</span>
@@ -127,7 +127,7 @@ export default function FunFacts({ matches, scorigami, edition = "mens" }: Props
         </section>
 
         {/* Score distribution visualizations */}
-        <ScoreDistribution mostCommon={facts.mostCommon} totalMatches={matches.length} />
+        <ScoreDistribution mostCommon={facts.mostCommon} totalMatches={matches.length} womens={edition === "womens"} />
 
         {/* Highest-scoring matches */}
         <section className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4 min-w-0 overflow-hidden">

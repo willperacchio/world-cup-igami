@@ -3,17 +3,20 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import type { ScorigamiEntry } from "@/lib/types";
-import { getRarity, RARITY_CELL_CLASSES } from "@/lib/rarity";
+import { getRarity, rarityCellClasses } from "@/lib/rarity";
 
 interface Props {
   grid: Map<string, ScorigamiEntry>;
   maxScore: number;
   onCellClick: (entry: ScorigamiEntry | null, low: number, high: number) => void;
+  /** Women's edition: "unique" cells render rose instead of orange. */
+  womens?: boolean;
 }
 
-export default function ScorigamiGrid({ grid, maxScore, onCellClick }: Props) {
+export default function ScorigamiGrid({ grid, maxScore, onCellClick, womens = false }: Props) {
   const [hoveredCell, setHoveredCell] = useState<string | null>(null);
   const t = useTranslations("grid");
+  const cellClasses = rarityCellClasses(womens);
   const maxCount = Math.max(...Array.from(grid.values()).map((e) => e.count));
   // Show the full score range for the dataset (men's tops out at 10; the
   // women's edition needs 13 for USA 13–0 Thailand, 2019).
@@ -60,7 +63,7 @@ export default function ScorigamiGrid({ grid, maxScore, onCellClick }: Props) {
                       role="button"
                       tabIndex={0}
                       aria-label={ariaLabel}
-                      className={`w-10 h-10 flex items-center justify-center text-xs font-medium rounded cursor-pointer transition-transform sb-numeral outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:scale-125 focus-visible:z-10 focus-visible:relative ${RARITY_CELL_CLASSES[rarity]} ${
+                      className={`w-10 h-10 flex items-center justify-center text-xs font-medium rounded cursor-pointer transition-transform sb-numeral outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:scale-125 focus-visible:z-10 focus-visible:relative ${cellClasses[rarity]} ${
                         isHovered ? "scale-125 z-10 relative ring-2 ring-amber-300" : ""
                       }`}
                       onMouseEnter={() => setHoveredCell(key)}
@@ -88,7 +91,7 @@ export default function ScorigamiGrid({ grid, maxScore, onCellClick }: Props) {
         <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-slate-400" /> {t("common")}</span>
         <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-stone-300" /> {t("rare")}</span>
         <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-amber-400" /> {t("veryRare")}</span>
-        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-orange-500" /> {t("unique")}</span>
+        <span className="flex items-center gap-1.5"><span className={`w-3 h-3 rounded ${womens ? "bg-rose-500" : "bg-orange-500"}`} /> {t("unique")}</span>
         <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-[#0a100e] border border-[#1d2825]" /> {t("never")}</span>
       </div>
     </div>
