@@ -11,9 +11,11 @@ interface Props {
   onCellClick: (entry: ScorigamiEntry | null, low: number, high: number) => void;
   /** Women's edition: "unique" cells render rose instead of orange. */
   womens?: boolean;
+  /** `${low}-${high}` cell to spotlight with a pulse — the most-recent scorigami. */
+  highlightKey?: string | null;
 }
 
-export default function ScorigamiGrid({ grid, maxScore, onCellClick, womens = false }: Props) {
+export default function ScorigamiGrid({ grid, maxScore, onCellClick, womens = false, highlightKey = null }: Props) {
   const [hoveredCell, setHoveredCell] = useState<string | null>(null);
   const t = useTranslations("grid");
   const cellClasses = rarityCellClasses(womens);
@@ -51,6 +53,7 @@ export default function ScorigamiGrid({ grid, maxScore, onCellClick, womens = fa
                 const count = entry?.count ?? 0;
                 const rarity = getRarity(count, maxCount);
                 const isHovered = hoveredCell === key;
+                const isHighlighted = highlightKey === key && count > 0;
 
                 const ariaLabel =
                   count > 0
@@ -58,12 +61,20 @@ export default function ScorigamiGrid({ grid, maxScore, onCellClick, womens = fa
                     : t("neverHappened", { low: row, high: col });
 
                 return (
-                  <td key={col} className="w-10 h-10 p-0">
+                  <td key={col} className="w-10 h-10 p-0 relative">
+                    {isHighlighted && (
+                      <span
+                        aria-hidden
+                        className="pointer-events-none absolute inset-0 rounded ring-2 ring-amber-200 animate-ping"
+                      />
+                    )}
                     <div
                       role="button"
                       tabIndex={0}
-                      aria-label={ariaLabel}
+                      aria-label={isHighlighted ? `${ariaLabel} — most recent scorigami` : ariaLabel}
                       className={`w-10 h-10 flex items-center justify-center text-xs font-medium rounded cursor-pointer transition-transform sb-numeral outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:scale-125 focus-visible:z-10 focus-visible:relative ${cellClasses[rarity]} ${
+                        isHighlighted ? "relative z-10 scale-110 ring-2 ring-amber-200 shadow-[0_0_12px_rgba(252,211,77,0.7)]" : ""
+                      } ${
                         isHovered ? "scale-125 z-10 relative ring-2 ring-amber-300" : ""
                       }`}
                       onMouseEnter={() => setHoveredCell(key)}

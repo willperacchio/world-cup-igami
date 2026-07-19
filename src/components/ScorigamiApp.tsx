@@ -156,6 +156,13 @@ export default function ScorigamiApp({
   const isFreshScorigami = useIsRecent(mostRecentScorigami?.date);
   const celebrate = edition === "mens" && isFreshScorigami;
 
+  // When celebrating, pulse the most-recent scoreline's cell on the heatmap.
+  // Grid cells are keyed `${losingScore}-${winningScore}` = `${low}-${high}`.
+  const highlightKey =
+    celebrate && mostRecentScorigami
+      ? `${Math.min(mostRecentScorigami.homeScore, mostRecentScorigami.awayScore)}-${Math.max(mostRecentScorigami.homeScore, mostRecentScorigami.awayScore)}`
+      : null;
+
   const editionHref = (target: Edition) =>
     target === "mens" ? `/mens/${locale}` : `/womens/${locale}`;
 
@@ -396,6 +403,7 @@ export default function ScorigamiApp({
               grid={grid}
               maxScore={summary.maxScore}
               womens={isW}
+              highlightKey={highlightKey}
               onCellClick={(entry, low, high) => setSelectedCell({ entry, low, high })}
             />
             {selectedCell && (
