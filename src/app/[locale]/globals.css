@@ -80,6 +80,35 @@ input[type="range"].sb-range {
   }
 }
 
+/* Soccer-ball burst when hovering the most-recent scorigami cell. Balls are
+   fixed-positioned (portaled to <body>) so no scroll container clips them.
+   Each ball flies outward along --dx/--dy with spin and a fade. */
+.sb-ball {
+  position: fixed;
+  pointer-events: none;
+  z-index: 60;
+  animation: sb-ball-fly var(--dur) cubic-bezier(0.2, 0.6, 0.35, 1) var(--delay) both;
+}
+@keyframes sb-ball-fly {
+  0% {
+    transform: translate(-50%, -50%) scale(0.35) rotate(0deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(1) rotate(420deg);
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sb-ball {
+    animation: none;
+    opacity: 0;
+  }
+}
+
 /* Scorigami celebration: a slow gold shine sweeps across the banner. Subtle —
    one pass every ~6s, disabled for reduced-motion users. */
 .sb-celebrate::after {

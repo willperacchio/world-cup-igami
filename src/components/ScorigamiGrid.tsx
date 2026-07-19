@@ -1,9 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { createPortal } from "react-dom";
 import { useTranslations } from "next-intl";
 import type { ScorigamiEntry } from "@/lib/types";
 import { getRarity, rarityCellClasses } from "@/lib/rarity";
+
+interface BurstBall {
+  id: number;
+  dx: number;
+  dy: number;
+  dur: number;
+  delay: number;
+  size: number;
+}
+
+interface Burst {
+  id: number;
+  x: number;
+  y: number;
+  balls: BurstBall[];
+}
 
 interface Props {
   grid: Map<string, ScorigamiEntry>;
@@ -17,7 +34,41 @@ interface Props {
 
 export default function ScorigamiGrid({ grid, maxScore, onCellClick, womens = false, highlightKey = null }: Props) {
   const [hoveredCell, setHoveredCell] = useState<string | null>(null);
+  const [bursts, setBursts] = useState<Burst[]>([]);
+  const burstIdRef = useRef(0);
+  const lastBurstAtRef = useRef(0);
   const t = useTranslations("grid");
+
+  // Celebration flourish: hovering (or focusing) the most-recent scorigami
+  // cell fires a burst of soccer balls from the cell. Portaled to <body> so
+  // the grid's scroll container can't clip it; throttled so wiggling the
+  // cursor doesn't spam; skipped entirely for reduced-motion users.
+  function spawnBurst(el: HTMLElement) {
+    const now = performance.now();
+    if (now - lastBurstAtRef.current < 700) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    lastBurstAtRef.current = now;
+
+    const rect = el.getBoundingClientRect();
+    const id = ++burstIdRef.current;
+    const balls: BurstBall[] = Array.from({ length: 12 }, (_, i) => {
+      const angle = (i / 12) * Math.PI * 2 + Math.random() * 0.5;
+      const dist = 55 + Math.random() * 75;
+      return {
+        id: i,
+        dx: Math.cos(angle) * dist,
+        // Slight downward bias so the balls feel like they drop back to earth.
+        dy: Math.sin(angle) * dist + 25 + Math.random() * 30,
+        dur: 0.7 + Math.random() * 0.4,
+        delay: Math.random() * 0.1,
+        size: 13 + Math.random() * 9,
+      };
+    });
+    setBursts((prev) => [...prev, { id, x: rect.left + rect.width / 2, y: rect.top + rect.height / 2, balls }]);
+    setTimeout(() => {
+      setBursts((prev) => prev.filter((b) => b.id !== id));
+    }, 1400);
+  }
   const cellClasses = rarityCellClasses(womens);
   const maxCount = Math.max(...Array.from(grid.values()).map((e) => e.count));
   // Show the full score range for the dataset (men's tops out at 10; the
@@ -71,8 +122,14 @@ export default function ScorigamiGrid({ grid, maxScore, onCellClick, womens = fa
                       } ${
                         isHovered ? "scale-125 z-10 relative ring-2 ring-amber-300" : ""
                       }`}
-                      onMouseEnter={() => setHoveredCell(key)}
+                      onMouseEnter={(e) => {
+                        setHoveredCell(key);
+                        if (isHighlighted) spawnBurst(e.currentTarget);
+                      }}
                       onMouseLeave={() => setHoveredCell(null)}
+                      onFocus={(e) => {
+                        if (isHighlighted) spawnBurst(e.currentTarget);
+                      }}
                       onClick={() => onCellClick(entry ?? null, row, col)}
                       onKeyDown={(e) => {
                         if (e.key === "Enter" || e.key === " ") {
@@ -99,6 +156,33 @@ export default function ScorigamiGrid({ grid, maxScore, onCellClick, womens = fa
         <span className="flex items-center gap-1.5"><span className={`w-3 h-3 rounded ${womens ? "bg-rose-500" : "bg-orange-500"}`} /> {t("unique")}</span>
         <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-[#0a100e] border border-[#1d2825]" /> {t("never")}</span>
       </div>
+      {/* Soccer-ball bursts — portaled so no scroll container clips them. */}
+      {bursts.length > 0 &&
+        createPortal(
+          <>
+            {bursts.flatMap((burst) =>
+              burst.balls.map((ball) => (
+                <span
+                  key={`${burst.id}-${ball.id}`}
+                  aria-hidden
+                  className="sb-ball"
+                  style={{
+                    left: burst.x,
+                    top: burst.y,
+                    fontSize: ball.size,
+                    "--dx": `${ball.dx}px`,
+                    "--dy": `${ball.dy}px`,
+                    "--dur": `${ball.dur}s`,
+                    "--delay": `${ball.delay}s`,
+                  } as React.CSSProperties}
+                >
+                  ⚽
+                </span>
+              )),
+            )}
+          </>,
+          document.body,
+        )}
     </div>
   );
 }
