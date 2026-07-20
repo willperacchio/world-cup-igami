@@ -1,0 +1,37 @@
+name: 2027 reactivation reminder
+
+on:
+  schedule:
+    # June 17, 13:00 UTC (~9am ET) — one week before the 2027 Women's World
+    # Cup kickoff (June 24, 2027). Cron has no year field, so a year guard in
+    # the job skips every June 17 except 2027's.
+    - cron: "0 13 17 6 *"
+  # Manual test — bypasses the year guard. Close the issue it opens.
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Open reminder issue (assignment sends an email notification)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$(date -u +%Y)" != "2027" ]; then
+            echo "Not 2027 — skipping."
+            exit 0
+          fi
+          gh issue create \
+            --title "⚽ Women's World Cup 2027 kicks off June 24 — reactivate World Cupigami" \
+            --assignee willperacchio \
+            --body "One week to kickoff: **June 24 – July 25, 2027, Brazil**.
+
+          The pipeline wakes itself on June 24 — DATA_FREEZE auto-expires at kickoff and the 30-minute tournament crons take over — but the women's live fetch, the tweet bot, and the account tiers all need you first.
+
+          Work through [REACTIVATION.md](https://github.com/willperacchio/world-cup-igami/blob/main/REACTIVATION.md) top to bottom.
+
+          _Automated by \`.github/workflows/reactivation-reminder.yml\`. If this was a manual test run, just close me._"

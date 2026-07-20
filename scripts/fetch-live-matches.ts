@@ -68,8 +68,18 @@ async function main() {
   }
 
   if (process.env.DATA_FREEZE === "true") {
-    console.warn("DATA_FREEZE=true — skipping fetch (kill switch active).");
-    return;
+    // Off-season kill switch — auto-expires at the 2027 Women's World Cup
+    // kickoff so the pipeline wakes itself on day one (see REACTIVATION.md).
+    const kickoff2027 = Date.parse("2027-06-24T00:00:00Z");
+    if (Date.now() < kickoff2027) {
+      console.warn(
+        "DATA_FREEZE=true — skipping fetch (kill switch active until 2027-06-24).",
+      );
+      return;
+    }
+    console.warn(
+      "DATA_FREEZE=true but the 2027 WWC has kicked off — freeze auto-expired, fetching.",
+    );
   }
 
   // Pull all matches for the World Cup competition; we'll filter to FINISHED

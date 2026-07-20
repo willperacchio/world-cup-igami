@@ -1,5 +1,9 @@
 # World Cupigami
 
+> **💤 Dormant until the 2027 Women's World Cup (Brazil, June 24 – July 25, 2027).**
+> The pipeline is frozen and wakes itself at kickoff — see **[REACTIVATION.md](REACTIVATION.md)**
+> for what happens automatically and the pre-kickoff checklist.
+
 Every unique final score in Men's FIFA World Cup history — a "scorigami" heatmap inspired by Jon Bois's NFL scorigami work, applied to the World Cup ahead of the 2026 tournament.
 
 Built on Next.js 16 (App Router), Tailwind v4, next-intl (32 locales), and the Fjelstul World Cup Database. Live results for the 2026 tournament come from [football-data.org](https://www.football-data.org).

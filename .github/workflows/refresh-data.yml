@@ -2,13 +2,17 @@ name: Refresh live World Cup data
 
 on:
   schedule:
-    # OFF-SEASON MODE (2026 men's tournament complete): one keepalive run per
-    # day. Before the 2027 Women's World Cup (June 24, 2027):
-    #   1. restore a frequent schedule here (e.g. "7,37 * * * *" as backstop),
-    #   2. re-enable the cron-job.org job firing workflow_dispatch every 10
-    #      minutes (the primary trigger — GitHub throttles its own scheduler),
-    #   3. wire the women's live fetch + tweet steps (see fetch-live-matches).
+    # OFF-SEASON MODE (2026 men's tournament complete) — see REACTIVATION.md
+    # for the full 2027 checklist. Daily keepalive; the fetch itself is a
+    # no-op while DATA_FREEZE is active.
     - cron: "7 4 * * *"
+    # 2027 Women's World Cup auto-wake (Brazil, June 24 – July 25, 2027):
+    # every 30 minutes inside the tournament window. DATA_FREEZE auto-expires
+    # at kickoff (scripts/fetch-live-matches.ts), so these go live on day one
+    # without touching settings. For match-minute latency, also re-enable the
+    # cron-job.org workflow_dispatch job (GitHub's scheduler throttles).
+    - cron: "7,37 * 24-30 6 *"
+    - cron: "7,37 * 1-25 7 *"
   workflow_dispatch:
     inputs:
       reason:
@@ -110,4 +114,23 @@ jobs:
                 exit 1
               fi
             done
+          fi
+
+      # GitHub auto-disables scheduled workflows after ~60 days without repo
+      # activity. During the off-season freeze no data commits happen, so push
+      # an empty keepalive commit whenever the repo has been quiet 45+ days.
+      # This keeps the daily run, the 2027 auto-wake crons above, and the
+      # reactivation-reminder workflow alive through the dormancy.
+      - name: Keepalive commit if repo has been idle 45+ days
+        run: |
+          LAST=$(git log -1 --format=%ct)
+          NOW=$(date +%s)
+          IDLE_DAYS=$(( (NOW - LAST) / 86400 ))
+          if [ "$IDLE_DAYS" -ge 45 ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit --allow-empty -m "chore: off-season keepalive (repo idle ${IDLE_DAYS}d) — keeps scheduled workflows enabled"
+            git push
+          else
+            echo "Repo active ${IDLE_DAYS}d ago — no keepalive needed."
           fi
