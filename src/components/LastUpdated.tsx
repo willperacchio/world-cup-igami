@@ -39,6 +39,12 @@ function formatRelative(iso: string, locale: string): string | null {
   return rtf.format(-Math.round(diffHours / 24), "day");
 }
 
+/** Whether the pipeline is actively refreshing (last fetch within 3 days). */
+function isFreshEnough(iso: string): boolean {
+  const ageDays = (Date.now() - Date.parse(iso)) / 86_400_000;
+  return Number.isFinite(ageDays) && ageDays <= 3;
+}
+
 export default function LastUpdated({ initialTimestamp }: Props) {
   const t = useTranslations("stats");
   const locale = useLocale();
@@ -78,6 +84,12 @@ export default function LastUpdated({ initialTimestamp }: Props) {
   }, []);
 
   if (!mounted || !timestamp) return null;
+  // Off-season auto-hide: the "live" indicator only makes sense while the
+  // data pipeline is actively refreshing. Once the last fetch is older than
+  // 3 days (cron slowed or paused between tournaments), showing "updated
+  // N weeks ago" reads as broken — hide instead. Reappears automatically
+  // when the pipeline spins back up.
+  if (!isFreshEnough(timestamp)) return null;
   const relative = formatRelative(timestamp, locale);
   if (!relative) return null;
 

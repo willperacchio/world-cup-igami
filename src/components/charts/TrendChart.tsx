@@ -60,7 +60,7 @@ export const MENS_TREND_CONFIG: TrendEditionConfig = {
     ],
     goalsPerGame: [
       { year: 1954, text: "5.38 GPG", anchor: "start", dy: -6 },
-      { year: 2022, text: "2.56 GPG", anchor: "end", dy: -6 },
+      { year: 2026, text: "2.96 GPG", anchor: "end", dy: -6 },
     ],
     scorigamis: [
       { year: 1930, text: "1st WC: 9 new", anchor: "start", dy: -6 },

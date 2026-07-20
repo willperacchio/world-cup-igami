@@ -12,7 +12,6 @@
     "description": "Scorigami is the concept of a final score that has never happened before in a sport's history. The idea was popularized by Jon Bois, whose brilliant work on NFL scorigami inspired this project.",
     "watchVideo": "Watch the original video",
     "whyBuilt": "I built World Cupigami to bring a little American sporting culture to the world's biggest stage — in the spirit of sharing that makes the World Cup special. Scorigami works a bit differently in soccer than in American football, since goals are scored one at a time rather than in chunks of 2, 3, 6, 7, or 8. That makes new scorigamis rarer and more meaningful.",
-    "mensOnly": "This currently covers the FIFA (Men's) World Cup only. A Women's World Cup edition is coming soon.",
     "pointTitle": "What's the point of this?",
     "pointDescription": "Honestly? Nothing. It's just fun if you're a sports analytics nerd like me. But if there's one good thing that can come out of this — when your team scores a scorigami, consider donating to a charity in the losing team's country. A historic scoreline is a great excuse to do some good in the world.",
     "editionNoteMens": "This page covers the FIFA (Men's) World Cup — the Women's World Cup edition is one toggle away, top right.",
@@ -147,7 +146,7 @@
     "penaltigamiOnlyPenScore": "The only penalty scoreline that has occurred just once. Every other shootout result (like 4-2 or 5-3) has happened multiple times.",
     "frontierTitle": "The Scorigami Frontier",
     "frontierDesc": "These scores have never happened but are the most likely to occur next.",
-    "frontierNote": "With the 2026 World Cup expanding to 48 teams and 104 matches, more mismatches could finally break new ground.",
+    "frontierNote": "The 48-team, 104-match 2026 World Cup produced exactly one new scoreline — the 6–4. The frontier reopens in 2030.",
     "frontierNoteWomens": "With 32 teams and 64 matches at the 2027 World Cup in Brazil, every mismatch is a chance to break new ground."
   },
   "locale": {},

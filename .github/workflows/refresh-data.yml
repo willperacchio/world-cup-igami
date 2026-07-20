@@ -2,12 +2,13 @@ name: Refresh live World Cup data
 
 on:
   schedule:
-    # Backstop only — the primary trigger is an external cron-job.org job
-    # that fires workflow_dispatch every 10 minutes (GitHub's scheduler
-    # throttles high-frequency crons to every 2-4 hours, so it can't be the
-    # primary). Offset to :07/:37 so the backstop never fires at the same
-    # moment as the external :00/:10/:20... schedule.
-    - cron: "7,37 * * * *"
+    # OFF-SEASON MODE (2026 men's tournament complete): one keepalive run per
+    # day. Before the 2027 Women's World Cup (June 24, 2027):
+    #   1. restore a frequent schedule here (e.g. "7,37 * * * *" as backstop),
+    #   2. re-enable the cron-job.org job firing workflow_dispatch every 10
+    #      minutes (the primary trigger — GitHub throttles its own scheduler),
+    #   3. wire the women's live fetch + tweet steps (see fetch-live-matches).
+    - cron: "7 4 * * *"
   workflow_dispatch:
     inputs:
       reason:
