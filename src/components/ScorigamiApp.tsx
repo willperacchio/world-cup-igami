@@ -133,7 +133,24 @@ export default function ScorigamiApp({
     [matches, tournamentYears],
   );
 
+  // Solo mode: show only the selected tournament's matches instead of the
+  // cumulative all-time view — e.g. "just 2026". Counts (and the stats strip)
+  // then describe that single tournament.
+  const [soloMode, setSoloMode] = useState(false);
+  const soloFramesByIndex = useMemo(
+    () =>
+      tournamentYears.map((year) => {
+        const fm = matches.filter(
+          (m) => parseInt(parseTournamentYear(m.tournament)) === year,
+        );
+        const g = buildGridFromMatches(fm);
+        return { grid: g, filteredMatches: fm, filteredStats: { total: fm.length, unique: g.size } };
+      }),
+    [matches, tournamentYears],
+  );
+
   const { grid, filteredMatches, filteredStats } = useMemo(() => {
+    if (soloMode) return soloFramesByIndex[timeline.index];
     if (timeline.isAtEnd) {
       return {
         grid: fullGrid,
@@ -142,7 +159,7 @@ export default function ScorigamiApp({
       };
     }
     return framesByIndex[timeline.index];
-  }, [timeline.index, timeline.isAtEnd, fullGrid, framesByIndex, matches, summary]);
+  }, [soloMode, soloFramesByIndex, timeline.index, timeline.isAtEnd, fullGrid, framesByIndex, matches, summary]);
 
   // The most-recent scorigami (newest scoreline to appear) and whether it's
   // fresh enough to celebrate. Men's only, per the "not for the women's" call.
@@ -344,8 +361,27 @@ export default function ScorigamiApp({
                 {t(edition === "womens" ? "grid.titleWomens" : "grid.title")}
               </h2>
               <p className={`font-mono text-xs tracking-[0.12em] uppercase ${acc.strong}`}>
-                {t("grid.scorigamiHint")}
+                {soloMode
+                  ? t("grid.scorigamiHintSolo", { year: selectedYear })
+                  : t("grid.scorigamiHint")}
               </p>
+              {/* All-time vs single-tournament view toggle */}
+              <div className="flex justify-center pt-1">
+                <div className={`inline-flex rounded-sm border ${acc.border} font-mono text-[10px] tracking-[0.1em] uppercase overflow-hidden`}>
+                  <button
+                    onClick={() => setSoloMode(false)}
+                    className={`px-2.5 py-1 transition-colors ${!soloMode ? acc.ctrlActive : "text-stone-300 hover:text-stone-100"}`}
+                  >
+                    {t("grid.modeCumulative")}
+                  </button>
+                  <button
+                    onClick={() => setSoloMode(true)}
+                    className={`px-2.5 py-1 transition-colors ${soloMode ? acc.ctrlActive : "text-stone-300 hover:text-stone-100"}`}
+                  >
+                    {t("grid.modeSolo", { year: selectedYear })}
+                  </button>
+                </div>
+              </div>
             </div>
             {/* Timeline scrubber — scoreboard styling */}
             <div className={`flex items-center gap-3 p-3 rounded-sm border ${acc.borderFaint} bg-[#161f1c]/40`}>

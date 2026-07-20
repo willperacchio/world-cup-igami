@@ -1,8 +1,8 @@
+// Alphabetical by native display name (Latin scripts first, then Greek,
+// Cyrillic, Arabic-script, and Asian scripts) — this order drives the
+// language dropdown.
 export const locales = [
-  // Host countries
-  "en", "es", "fr",
-  // Alphabetical
-  "id", "bs", "cs", "de", "hr", "it", "sw",
+  "id", "bs", "cs", "de", "en", "es", "fr", "hr", "it", "sw",
   "hu", "nl", "no", "uz", "pl", "pt", "ro", "sv", "vi", "tr",
   "el", "ru", "uk", "ar", "fa", "hi", "th", "zh", "zh-HK", "ja", "ko",
 ] as const;
@@ -15,8 +15,8 @@ export const localeConfig: Record<Locale, { name: string; flag: string }> = {
   cs: { name: "Čeština", flag: "🇨🇿" },
   de: { name: "Deutsch", flag: "🇩🇪" },
   en: { name: "English", flag: "🇺🇸" },
-  es: { name: "Español", flag: "🇲🇽" },
-  fr: { name: "Français", flag: "🇨🇦" },
+  es: { name: "Español", flag: "🇪🇸" },
+  fr: { name: "Français", flag: "🇫🇷" },
   hr: { name: "Hrvatski", flag: "🇭🇷" },
   it: { name: "Italiano", flag: "🇮🇹" },
   sw: { name: "Kiswahili", flag: "🇰🇪" },
@@ -25,7 +25,7 @@ export const localeConfig: Record<Locale, { name: string; flag: string }> = {
   no: { name: "Norsk", flag: "🇳🇴" },
   uz: { name: "Oʻzbekcha", flag: "🇺🇿" },
   pl: { name: "Polski", flag: "🇵🇱" },
-  pt: { name: "Português", flag: "🇧🇷" },
+  pt: { name: "Português", flag: "🇵🇹" },
   ro: { name: "Română", flag: "🇷🇴" },
   sv: { name: "Svenska", flag: "🇸🇪" },
   vi: { name: "Tiếng Việt", flag: "🇻🇳" },

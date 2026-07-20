@@ -100,10 +100,14 @@ export default function FunFacts({ matches, scorigami, edition = "mens" }: Props
           )}
         </section>
 
-        {/* Most common scorelines */}
-        <section className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4 min-w-0 overflow-hidden">
+        {/* Most common scorelines — matches the height of the Unique
+            Scorigamis card beside it: h-0/min-h-full keeps this card's long
+            list from driving the grid row height, while the flex column lets
+            the list fill the card and scroll internally. On mobile (stacked)
+            a fixed cap applies instead. */}
+        <section className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4 min-w-0 overflow-hidden flex flex-col md:h-0 md:min-h-full">
           <h3 className="font-bold mb-3">{t("mostCommonTitle")}</h3>
-          <div className="space-y-2 text-sm max-h-[333px] overflow-y-auto">
+          <div className="space-y-2 text-sm max-h-[333px] md:max-h-none md:flex-1 min-h-0 overflow-y-auto">
             {facts.mostCommon.map((s, i) => (
               <div key={`${s.lowScore}-${s.highScore}`} className="flex items-center gap-3 py-1 border-b border-zinc-100 dark:border-zinc-800 last:border-0">
                 <span className="text-zinc-400 text-xs w-4">{i + 1}.</span>
