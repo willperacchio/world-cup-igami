@@ -54,8 +54,9 @@
     "scorigamiHint": "\"1\" means Scorigami",
     "titleWomens": "Women's World Cup Score Heatmap",
     "modeCumulative": "All-time",
-    "modeSolo": "{year} only",
-    "scorigamiHintSolo": "Counts show {year} matches only"
+    "modeSolo": "{year} World Cup",
+    "scorigamiHintSolo": "Counts show {year} matches only",
+    "viewLabel": "Showing"
   },
   "detail": {
     "scorigamiTitle": "Scorigami!",

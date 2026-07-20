@@ -365,22 +365,37 @@ export default function ScorigamiApp({
                   ? t("grid.scorigamiHintSolo", { year: selectedYear })
                   : t("grid.scorigamiHint")}
               </p>
-              {/* All-time vs single-tournament view toggle */}
-              <div className="flex justify-center pt-1">
-                <div className={`inline-flex rounded-sm border ${acc.border} font-mono text-[10px] tracking-[0.1em] uppercase overflow-hidden`}>
-                  <button
-                    onClick={() => setSoloMode(false)}
-                    className={`px-2.5 py-1 transition-colors ${!soloMode ? acc.ctrlActive : "text-stone-300 hover:text-stone-100"}`}
-                  >
-                    {t("grid.modeCumulative")}
-                  </button>
-                  <button
-                    onClick={() => setSoloMode(true)}
-                    className={`px-2.5 py-1 transition-colors ${soloMode ? acc.ctrlActive : "text-stone-300 hover:text-stone-100"}`}
-                  >
-                    {t("grid.modeSolo", { year: selectedYear })}
-                  </button>
-                </div>
+              {/* Tournament view picker: all-time cumulative, or one specific
+                  tournament. Choosing a year also moves the scrubber there. */}
+              <div className="flex items-center justify-center gap-2 pt-1.5">
+                <label
+                  htmlFor="tournament-view"
+                  className="font-mono text-[11px] tracking-[0.1em] uppercase text-stone-400"
+                >
+                  {t("grid.viewLabel")}
+                </label>
+                <select
+                  id="tournament-view"
+                  value={soloMode ? String(selectedYear) : "all"}
+                  onChange={(e) => {
+                    setSelectedCell(null);
+                    if (e.target.value === "all") {
+                      setSoloMode(false);
+                      timeline.setIndex(tournamentYears.length - 1);
+                    } else {
+                      setSoloMode(true);
+                      timeline.setIndex(tournamentYears.indexOf(parseInt(e.target.value)));
+                    }
+                  }}
+                  className={`px-3 py-1.5 rounded-sm border ${acc.border} bg-[#161f1c] font-mono text-xs tracking-[0.06em] uppercase ${acc.strong} cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300`}
+                >
+                  <option value="all">{t("grid.modeCumulative")}</option>
+                  {[...tournamentYears].reverse().map((yr) => (
+                    <option key={yr} value={yr}>
+                      {t("grid.modeSolo", { year: yr })}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
             {/* Timeline scrubber — scoreboard styling */}
