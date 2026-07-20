@@ -14,12 +14,21 @@ new scorigami — France 6–4 England, third place).
 
 ## Before kickoff (work top to bottom)
 
-1. **Data source for WWC 2027.** Check whether football-data.org carries the
-   Women's World Cup on the current tier. If not, use the FIFA API
-   (competition id **103**; find the 2027 season id — see
-   `scripts/backfill-womens-2023.ts` for the request shape). Write the fetch →
-   merge into the women's pipeline (`data/womens/*`;
-   `womens-overrides.json` is supported).
+1. **Data source for WWC 2027: football-data.org, Standard tier (€49/mo).**
+   Verified July 2026 against their coverage matrix: the FIFA Women's World
+   Cup is included from Tier 2 ("Standard") up — it's just not on the free
+   tier, which is why `/v4/competitions` doesn't show it on the current
+   token. Plan: upgrade for the tournament window (~June+July 2027 ≈ €98
+   total), then `GET /v4/competitions` to find the WWC code/id (invisible
+   until upgraded), and reuse `scripts/fetch-live-matches.ts` nearly as-is —
+   swap the competition code, write into the women's pipeline
+   (`data/womens/*`; `womens-overrides.json` supported), and extend
+   `scripts/lib/fd-mapper.ts` with women's team-name normalizations so fd.org
+   names match the existing FIFA-sourced history.
+   *Fallback if fd.org's WWC data disappoints:* FIFA API, competition id
+   **103** (find the 2027 season id — see `scripts/backfill-womens-2023.ts`
+   for the request shape). Consider one test month of Standard in May 2027 to
+   sanity-check data quality before the tournament.
 2. **Re-upgrade accounts:** football-data.org tier (if used), Vercel plan
    (tournament deploy volume), X API tier.
 3. **Secrets check** (Settings → Secrets → Actions): `FOOTBALL_ORG_AUTH_TOKEN`,
