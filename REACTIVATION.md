@@ -31,7 +31,13 @@ new scorigami — France 6–4 England, third place).
    swap the competition code, write into the women's pipeline
    (`data/womens/*`; `womens-overrides.json` supported), and extend
    `scripts/lib/fd-mapper.ts` with women's team-name normalizations so fd.org
-   names match the existing FIFA-sourced history.
+   names match the existing FIFA-sourced history. The women's fetch must write
+   **`data/womens/live-matches.json`** with a `lastFetched` field — that
+   powers the women's "Data updated N ago" indicator: `LastUpdated` and the
+   women's page just need `womensLiveLastFetched` passed through (the component
+   is already edition-aware and points at `data/womens/live-matches.json`; its
+   3-day off-season auto-hide then governs the women's edition identically to
+   men's).
    *Fallback if fd.org's WWC data disappoints:* FIFA API, competition id
    **103** (find the 2027 season id — see `scripts/backfill-womens-2023.ts`
    for the request shape). Consider one test month of Standard in May 2027 to

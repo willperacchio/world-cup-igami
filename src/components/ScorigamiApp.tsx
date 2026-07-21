@@ -299,8 +299,8 @@ export default function ScorigamiApp({
             {t(setup.editionLabelKey)}
           </span>
         </div>
-        {edition === "mens" && liveLastFetched !== undefined && (
-          <LastUpdated initialTimestamp={liveLastFetched} />
+        {liveLastFetched !== undefined && (
+          <LastUpdated initialTimestamp={liveLastFetched} edition={edition} />
         )}
       </header>
 

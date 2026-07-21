@@ -16,12 +16,23 @@ import { useTranslations, useLocale } from "next-intl";
  * fetch timestamp exists yet.
  */
 
-const RAW_URL =
-  "https://raw.githubusercontent.com/willperacchio/world-cup-igami/main/data/live-matches.json";
+/**
+ * Each edition refreshes from its own live-data file so the indicator (and its
+ * off-season auto-hide) is correct per edition. The women's file only exists
+ * once the 2027 WWC live pipeline is wired (see REACTIVATION.md); until then
+ * the women's page passes no timestamp and nothing renders.
+ */
+const RAW_URL: Record<"mens" | "womens", string> = {
+  mens: "https://raw.githubusercontent.com/willperacchio/world-cup-igami/main/data/live-matches.json",
+  womens:
+    "https://raw.githubusercontent.com/willperacchio/world-cup-igami/main/data/womens/live-matches.json",
+};
 
 interface Props {
-  /** Build-time lastFetched value from data/live-matches.json ("" if never fetched). */
+  /** Build-time lastFetched value from the edition's live-matches.json ("" if never fetched). */
   initialTimestamp: string;
+  /** Which edition's live data to poll. Defaults to men's. */
+  edition?: "mens" | "womens";
 }
 
 function formatRelative(iso: string, locale: string): string | null {
@@ -45,7 +56,10 @@ function isFreshEnough(iso: string): boolean {
   return Number.isFinite(ageDays) && ageDays <= 3;
 }
 
-export default function LastUpdated({ initialTimestamp }: Props) {
+export default function LastUpdated({
+  initialTimestamp,
+  edition = "mens",
+}: Props) {
   const t = useTranslations("stats");
   const locale = useLocale();
   const [timestamp, setTimestamp] = useState(initialTimestamp);
@@ -64,7 +78,7 @@ export default function LastUpdated({ initialTimestamp }: Props) {
     let cancelled = false;
     const refresh = async () => {
       try {
-        const res = await fetch(RAW_URL, { cache: "no-store" });
+        const res = await fetch(RAW_URL[edition], { cache: "no-store" });
         if (!res.ok) return;
         const data = (await res.json()) as { lastFetched?: string };
         if (!cancelled && data.lastFetched) setTimestamp(data.lastFetched);
@@ -81,7 +95,7 @@ export default function LastUpdated({ initialTimestamp }: Props) {
       clearInterval(fetchInterval);
       clearInterval(tickInterval);
     };
-  }, []);
+  }, [edition]);
 
   if (!mounted || !timestamp) return null;
   // Off-season auto-hide: the "live" indicator only makes sense while the
