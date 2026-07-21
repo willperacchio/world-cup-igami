@@ -76,6 +76,27 @@ new scorigami — France 6–4 England, third place).
   final numbers, `[translate]` tag on the commit.
 - Celebration banner/pulse auto-expire 30 days after the last scorigami.
 
+## Branding / logo assets
+
+Two logo sets, both stylised scorigami heatmaps (staircase descending
+top-left → bottom-right, common blues → the unique-score cell at the
+bottom-right tip):
+
+- **Men's (gold):** source `src/app/icon.svg` → `public/logo-512.png`,
+  `public/logo-1024.png`, `src/app/apple-icon.png`, `public/favicon.ico`.
+- **Women's (rose):** source `public/icon-w.svg` (orange `#F47C20` →
+  rose-500 `#F43F5E`, ring → `#FDA4AF`) → `public/logo-512-w.png`,
+  `logo-1024-w.png`, `apple-icon-w.png`, `favicon-w.ico`. Wired into
+  `src/app/[locale]/w/layout.tsx` metadata (icons + OG + Twitter card).
+
+`favicon.ico` lives in `public/` (not `src/app/`) on purpose: an app-dir
+`favicon.ico` is auto-emitted on *every* route and can't be overridden
+per-edition, which would leak the men's gold favicon onto the women's page.
+
+To edit a logo: change the `.svg`, then re-render every size with sharp
+(`density: 384`, `.resize(size).png()`) — the same one-off Node snippet used
+in git history for commit `3261879f`/this commit. Keep both sets in sync.
+
 ## Local dev gotchas
 
 - This Mac recreates a corrupted ref file `.git/refs/remotes/origin/main 2` —
