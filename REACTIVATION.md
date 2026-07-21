@@ -19,9 +19,13 @@ new scorigami — France 6–4 England, third place).
    Cup is included from Tier 2 ("Standard") up. The account's current plan —
    "Free w/ Livescores" (€12/mo) — has the same 12-competition coverage as
    the free tier (livescores only, no extra competitions), which is why
-   `/v4/competitions` doesn't show the WWC on the current token. Plan:
-   upgrade €12 → €49 for the tournament window (June+July 2027, ~€74 extra
-   total; confirm Standard includes livescores when upgrading), then
+   `/v4/competitions` doesn't show the WWC on the current token. **The
+   subscription was cancelled July 2026** (dormancy cost-saving), so the
+   account is now on the free tier. Plan: subscribe to Standard (€49/mo) for
+   the tournament window — June + July 2027, ~€98 total; confirm Standard
+   includes livescores. The `FOOTBALL_ORG_AUTH_TOKEN` GitHub secret can stay
+   as-is: tokens are tied to the account, not the plan, so re-subscribing
+   re-unlocks the WWC on the same token — no secret change needed. Then
    `GET /v4/competitions` to find the WWC code/id (invisible
    until upgraded), and reuse `scripts/fetch-live-matches.ts` nearly as-is —
    swap the competition code, write into the women's pipeline
