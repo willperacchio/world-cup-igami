@@ -6,15 +6,15 @@
     </linearGradient>
   </defs>
   <rect x="10.24" y="10.24" width="491.52" height="491.52" rx="115.2" fill="url(#tile)" stroke="#23262C" stroke-width="6.144"/>
-  <rect x="57.96" y="349.03" width="101.17" height="101.17" rx="23.51" fill="none" stroke="#F4C430" stroke-width="8.40" opacity="0.55"/>
+  <rect x="352.87" y="349.03" width="101.17" height="101.17" rx="23.51" fill="none" stroke="#F4C430" stroke-width="8.40" opacity="0.55"/>
 <rect x="66.56" y="62.72" width="83.97" height="83.97" rx="15.11" ry="15.11" fill="#496585" />
 <rect x="164.86" y="62.72" width="83.97" height="83.97" rx="15.11" ry="15.11" fill="#5E7C9C" />
 <rect x="263.17" y="62.72" width="83.97" height="83.97" rx="15.11" ry="15.11" fill="#D2D4D6" />
 <rect x="361.47" y="62.72" width="83.97" height="83.97" rx="15.11" ry="15.11" fill="#EBAE3C" />
-<rect x="66.56" y="161.02" width="83.97" height="83.97" rx="15.11" ry="15.11" fill="#5E7C9C" />
-<rect x="164.86" y="161.02" width="83.97" height="83.97" rx="15.11" ry="15.11" fill="#D2D4D6" />
-<rect x="263.17" y="161.02" width="83.97" height="83.97" rx="15.11" ry="15.11" fill="#EBAE3C" />
-<rect x="66.56" y="259.33" width="83.97" height="83.97" rx="15.11" ry="15.11" fill="#D2D4D6" />
-<rect x="164.86" y="259.33" width="83.97" height="83.97" rx="15.11" ry="15.11" fill="#F47C20" />
-<rect x="66.56" y="357.63" width="83.97" height="83.97" rx="15.11" ry="15.11" fill="#F47C20" />
+<rect x="164.86" y="161.02" width="83.97" height="83.97" rx="15.11" ry="15.11" fill="#5E7C9C" />
+<rect x="263.17" y="161.02" width="83.97" height="83.97" rx="15.11" ry="15.11" fill="#D2D4D6" />
+<rect x="361.47" y="161.02" width="83.97" height="83.97" rx="15.11" ry="15.11" fill="#EBAE3C" />
+<rect x="263.17" y="259.33" width="83.97" height="83.97" rx="15.11" ry="15.11" fill="#D2D4D6" />
+<rect x="361.47" y="259.33" width="83.97" height="83.97" rx="15.11" ry="15.11" fill="#F47C20" />
+<rect x="361.47" y="357.63" width="83.97" height="83.97" rx="15.11" ry="15.11" fill="#F47C20" />
 </svg>
