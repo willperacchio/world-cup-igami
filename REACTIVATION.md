@@ -16,10 +16,13 @@ new scorigami — France 6–4 England, third place).
 
 1. **Data source for WWC 2027: football-data.org, Standard tier (€49/mo).**
    Verified July 2026 against their coverage matrix: the FIFA Women's World
-   Cup is included from Tier 2 ("Standard") up — it's just not on the free
-   tier, which is why `/v4/competitions` doesn't show it on the current
-   token. Plan: upgrade for the tournament window (~June+July 2027 ≈ €98
-   total), then `GET /v4/competitions` to find the WWC code/id (invisible
+   Cup is included from Tier 2 ("Standard") up. The account's current plan —
+   "Free w/ Livescores" (€12/mo) — has the same 12-competition coverage as
+   the free tier (livescores only, no extra competitions), which is why
+   `/v4/competitions` doesn't show the WWC on the current token. Plan:
+   upgrade €12 → €49 for the tournament window (June+July 2027, ~€74 extra
+   total; confirm Standard includes livescores when upgrading), then
+   `GET /v4/competitions` to find the WWC code/id (invisible
    until upgraded), and reuse `scripts/fetch-live-matches.ts` nearly as-is —
    swap the competition code, write into the women's pipeline
    (`data/womens/*`; `womens-overrides.json` supported), and extend
